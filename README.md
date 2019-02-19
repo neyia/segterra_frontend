@@ -1,3 +1,5 @@
 # segterra_frontend
-segterra only frontend
-a
+
+#show locally installed plugins
+# '-g' for global 
+$ npm list --depth=0
