@@ -1,0 +1,36 @@
+@import "../general/variables";
+@import "../general/mixins";
+
+
+.link {
+  transition: all 0.2s ease-out;
+  text-decoration: none;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.link-primary {
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+  color: #00aaff;
+
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    color: #46c3ff;
+  }
+
+  &:active {
+    text-decoration: underline;
+    color: #0096e1;
+  }
+
+  &--disabled {
+    text-decoration: none;
+    color: #00aaff;
+    opacity: 0.3;
+
+  }
+}
