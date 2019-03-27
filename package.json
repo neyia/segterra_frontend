@@ -1,43 +1,45 @@
 {
   "name": "segterra_frontend",
   "version": "1.0.0",
-  "description": "segterra only frontend a",
-  "main": "gulpfile1.js",
-  "dependencies": {
-    "gulp": "^4.0.0"
-  },
-  "devDependencies": {
-    "autoprefixer": "^9.4.7",
-    "browser-sync": "^2.26.3",
-    "cssnano": "^4.1.10",
-    "del": "^3.0.0",
-    "fs": "0.0.1-security",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-clean-css": "^4.0.0",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-less": "^4.0.1",
-    "gulp-plumber": "^1.2.1",
-    "gulp-postcss": "^8.0.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.1",
-    "imagemin-jpeg-recompress": "^6.0.0",
-    "imagemin-pngquant": "^7.0.0",
-    "path": "^0.12.7",
-    "postcss": "^7.0.14",
-    "svgstore": "^3.0.0-2"
-  },
+  "description": "blog_template",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "dev": "gulp dev"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/neyia/segterra_frontend.git"
   },
-  "author": "",
+  "author": "Pavel Kuznetsov",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/neyia/segterra_frontend/issues"
   },
-  "homepage": "https://github.com/neyia/segterra_frontend#readme"
+  "homepage": "https://github.com/neyia/segterra_frontend#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-cheerio": "^0.6.3",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-file-include": "^2.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-less": "^4.0.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-path": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-purgecss": "^1.1.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svgmin": "^2.1.0",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-uglify": "^3.0.2",
+    "imagemin-jpegoptim": "^6.0.0",
+    "webpack-stream": "^5.2.1"
+  }
 }

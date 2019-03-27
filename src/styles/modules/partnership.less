@@ -1,0 +1,27 @@
+.partnership {
+    padding: @section_padding 0 @section_padding_max;
+
+    @media (min-width: (@screen_width)) {
+        padding: @section_padding_max 0;
+    }
+
+    @media (max-width: 601.98px) {
+        padding: @section_padding_min 0 @section_padding_max;
+    }
+}
+
+.partnership__logo {
+    margin-top: 40px;
+    height: 100px;
+
+    @media (max-width: (@small_screen_width)) {
+        margin-top: 30px;
+    }
+}
+
+.partnership__logo img {
+    display: block;
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+}

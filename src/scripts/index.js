@@ -1,3 +1,6 @@
+
+alert('hello');
+
 /*pop-up's BEGIN---*/
 var testPopup = document.getElementById('test-popup');
 var testBtn = document.getElementById('test');
