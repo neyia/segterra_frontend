@@ -1,0 +1,44 @@
+.contacts {
+  background: @darkerBG;
+  padding: calc(@sectionPadding - 20px) 0;
+
+  @media (min-width: @screenWidth) {
+    padding: calc(@maxSectionPadding - 20px) 0;
+  }
+
+  @media (max-width: 849.98px) {
+    padding: @minSectionPadding 0;
+  }
+}
+
+.form__contacts {
+  max-width: 370px;
+  margin: 4.99vw auto 0;
+  line-height: 20px;
+  font-size: @infoFontSize;
+
+  @media (min-width: @screenWidth) {
+    margin-top: 60px;
+  }
+
+  label {
+    font-weight: 600;
+  }
+
+  input, select {
+    border: 1px solid @inputBorder;
+    background: #fff;
+    width: 100%;
+    margin: 10px 0 30px;
+    padding: 8px 10px;
+  }
+
+  select {
+    cursor: pointer;
+  }
+
+  button {
+    margin-top: 10px;
+    padding: 0 25px;
+  }
+}

@@ -1,0 +1,36 @@
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  background: none;
+  border: none;
+  border-radius: 3px;
+  padding: 0 20px;
+  font-size: @infoFontSize;
+  line-height: 33px;
+  transition: .2s;
+  height: 36px;
+}
+
+.btn_primary {
+  font-weight: 600;
+  color: #fff;
+  background-color: @btnPrimaryBG;
+  margin-top: 30px;
+}
+
+.btn_primary:hover {
+  background-color: @btnBGHover;
+}
+
+.btn_primary:active {
+  color: @btnFontActive;
+  background-color: @btnBGActive;
+}
+
+.btn:disabled {
+  opacity: .3;
+}
+
+.btn:disabled:hover {
+  background-color: @btnPrimaryBG;
+}

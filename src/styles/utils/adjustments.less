@@ -1,0 +1,57 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: @mainFont;
+  line-height: @mainLineHeight;
+  font-size: @mainFontSize;
+  font-weight: @mainFontWeight;
+  color: @mainFontColor;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+p {
+  margin: 0;
+}
+
+input {
+  background: none;
+  border: none;
+  color: currentColor;
+}
+
+input::placeholder {
+  color: currentColor;
+}
+
+//SVG icons
+
+.icon {
+   display: inline-block;
+   width: 1em;
+   height: 1em;
+   stroke-width: 0;
+   stroke: currentColor;
+   fill: currentColor;
+ }
