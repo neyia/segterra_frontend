@@ -2,13 +2,14 @@ const gulp = require('gulp'),
     fileinclude = require('gulp-file-include'), //include html components
     less = require('gulp-less'),
     autoprefixer = require('gulp-autoprefixer'),
-    cssnano = require('gulp-cssnano'),
+    cleancss = require('gulp-clean-css'),
+    purgecss = require('gulp-purgecss'),
     notify = require("gulp-notify"),
     sourcemaps = require('gulp-sourcemaps'),
     imagemin = require('gulp-imagemin'),
     imgJpeg = require('imagemin-jpegoptim'),
     browserSync = require('browser-sync').create(),
-    svgSprite = require('gulp-svg-sprite'),
+    svgSprite = require('gulp-svg-sprite'),/// if using dirty svg
     svgmin = require('gulp-svgmin'),
     cheerio = require('gulp-cheerio'),
     replace = require('gulp-replace'),
@@ -61,11 +62,14 @@ gulp.task('styles', () => {
     return gulp.src(path.src.style)
         //.pipe(sourcemaps.init())
         .pipe(less())
+        .pipe(purgecss({
+            content: ["src/**/*.html"]
+        }))
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(cssnano())
+        .pipe(cleancss({level: {1: {specialComments: 0}}}))
         .on("error", notify.onError({
             title: "styles"
         }))
@@ -117,6 +121,7 @@ gulp.task('serve', function() {
         server: {
             baseDir: "./build"
         },
+        tunnel: true,
         notify: false
     });
 });

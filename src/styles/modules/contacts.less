@@ -1,44 +1,62 @@
 .contacts {
-  background: @darkerBG;
-  padding: calc(@sectionPadding - 20px) 0;
+    background: @white_smoke;
+    padding: calc(@section_padding - 20px) 0;
 
-  @media (min-width: @screenWidth) {
-    padding: calc(@maxSectionPadding - 20px) 0;
-  }
+    @media (min-width: (@screen_width)) {
+        padding: calc(@section_padding_max - 20px) 0;
+    }
 
-  @media (max-width: 849.98px) {
-    padding: @minSectionPadding 0;
-  }
+    @media (max-width: 849.98px) {
+        padding: @section_padding_min 0;
+    }
 }
 
 .form__contacts {
-  max-width: 370px;
-  margin: 4.99vw auto 0;
-  line-height: 20px;
-  font-size: @infoFontSize;
+    max-width: 370px;
+    margin: 4.99vw auto 0;
+    line-height: 20px;
+    font-size: @info_font_size;
 
-  @media (min-width: @screenWidth) {
-    margin-top: 60px;
-  }
+    @media (min-width: (@screen_width)) {
+        margin-top: 60px;
+    }
 
-  label {
-    font-weight: 600;
-  }
+    label {
+        font-weight: 600;
+    }
 
-  input, select {
-    border: 1px solid @inputBorder;
-    background: #fff;
-    width: 100%;
-    margin: 10px 0 30px;
-    padding: 8px 10px;
-  }
+    input {
+        border: 1px solid @link_water;
+        background: #fff;
+        width: 100%;
+        margin: 10px 0 30px;
+        padding: 8px 10px;
+    }
 
-  select {
-    cursor: pointer;
-  }
+    input::placeholder {
+        color: @spindle;
+    }
 
-  button {
-    margin-top: 10px;
-    padding: 0 25px;
-  }
+    select {
+        cursor: pointer;
+        appearance: none;
+        width: 100%;
+        background: none;
+        padding: 8px 10px;
+    }
+
+    select::-ms-expand {
+        display: none;
+    }
+
+    button {
+        margin-top: 10px;
+        padding: 0 25px;
+    }
+
+    .select-wrapper {
+        position: relative;
+        margin: 10px 0 30px;
+        background: #fff;
+    }
 }

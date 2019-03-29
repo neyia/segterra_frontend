@@ -8,15 +8,17 @@
             <p><input type="text" id="lastname" name="lastname" placeholder="Last name*" required></p>
             <label for="email">Email*</label>
             <p><input type="text" id="email" name="email" placeholder="Email*" required></p>
-            <!--svg class="icon icon-arrow icon-select">
-                <use xlink:href="./assets/svg/sprite.symbol.svg#arrow-down"/>
-            </svg>-->
             <label for="goal">What is your main goal?</label>
-            <select name="goal" id="goal" class="goal">
-                <option disabled selected value="">Please select</option>
-                <option value="I love it">I love it</option>
-                <option value="I really love it!">I really love it!</option>
-            </select>
+            <p class="select-wrapper">
+                <svg class="icon icon-select">
+                    <use xlink:href="assets/sprite.svg#arrow-down"/>
+                </svg>
+                <select name="goal" id="goal" class="goal">
+                    <option disabled selected value="">Please select</option>
+                    <option value="I love it">I love it</option>
+                    <option value="I really love it!">I really love it!</option>
+                </select>
+            </p>
             <div class="text-align_center">
                 <button type="submit" class="btn btn_primary" id="submitForm" disabled>Submit</button>
             </div>
