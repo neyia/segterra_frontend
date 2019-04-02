@@ -12,11 +12,11 @@
 }
 
 .step-list {
-    display: flex;
+    .flex();
     margin: 50px -29px 0;
 
     @media (max-width: 819.98px) {
-        flex-wrap: wrap;
+        .flex-wrap();
     }
 
     @media (max-width: 450px) {
@@ -27,10 +27,10 @@
 .step-list__item {
     text-align: center;
     margin: 0 29px;
-    width: calc(25% - 2 * 29px);
+    width: calc(~"25% - 2 * 29px");
 
     @media (max-width: 819.98px) {
-        width: calc(50% - 2 * 29px);
+        width: calc(~"50% - 2 * 29px");
     }
 
     @media (max-width: 450px) {
