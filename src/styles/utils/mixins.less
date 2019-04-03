@@ -1,209 +1,209 @@
 .box-sizing (@type: border-box) {
-    -webkit-box-sizing: @type;
-    -moz-box-sizing:    @type;
-    box-sizing:         @type;
+    -webkit-box-sizing : @type;
+    -moz-box-sizing    : @type;
+    box-sizing         : @type;
 }
 
 .flex (@display:flex) {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: @display;
+    display : -webkit-box;
+    display : -moz-box;
+    display : -ms-flexbox;
+    display : @display;
 }
 
 .flex-direction (@display:row) {
-    -webkit-flex-direction: @display;
-    -moz-flex-direction:    @display;
-    -ms-flex-direction:     @display;
-    -o-flex-direction:      @display;
-    flex-direction:         @display;
+    -webkit-flex-direction : @display;
+    -moz-flex-direction    : @display;
+    -ms-flex-direction     : @display;
+    -o-flex-direction      : @display;
+    flex-direction         : @display;
 }
 
 .inline-flex(@display:inline-flex) {
-    display: -ms-inline-flexbox;
-    display: @display;
+    display : -ms-inline-flexbox;
+    display : @display;
 }
 
 .justify-content (@display:center) {
-    -webkit-box-pack:        @display;
-    -webkit-justify-content: @display;
-    -ms-flex-pack:           @display;
-    justify-content:         @display;
+    -webkit-box-pack        : @display;
+    -webkit-justify-content : @display;
+    -ms-flex-pack           : @display;
+    justify-content         : @display;
 }
 
 .align-items(@display:center) {
-    -webkit-box-align: @display;
-    -ms-flex-align:    @display;
-    align-items:       @display;
+    -webkit-box-align : @display;
+    -ms-flex-align    : @display;
+    align-items       : @display;
 }
 
 .align-self(@display:center) {
-    -webkit-align-self:  @display;
-    -ms-flex-item-align: @display;
-    align-self:          @display;
+    -webkit-align-self  : @display;
+    -ms-flex-item-align : @display;
+    align-self          : @display;
 }
 
 .flex-flow (@first:row, @last:wrap) {
-    -webkit-flex-flow: @first @last;
-    flex-flow:         @first @last;
+    -webkit-flex-flow : @first @last;
+    flex-flow         : @first @last;
 }
 
 .flex-shrink(@shrink: 1) {
-    -webkit-flex-shrink: @shrink;
-    -ms-flex-shrink:     @shrink;
-    flex-shrink:         @shrink;
+    -webkit-flex-shrink : @shrink;
+    -ms-flex-shrink     : @shrink;
+    flex-shrink         : @shrink;
 }
 
 .flex-grow(@grow: 1) {
-    -webkit-box-flex:  @grow;
-    -ms-flex-positive: @grow;
-    flex-grow:         @grow;
+    -webkit-box-flex  : @grow;
+    -ms-flex-positive : @grow;
+    flex-grow         : @grow;
 }
 
 .flex-basis(@width: auto) {
-    -webkit-flex-basis:      @width;
-    -ms-flex-preferred-size: @width;
-    flex-basis:              @width;
+    -webkit-flex-basis      : @width;
+    -ms-flex-preferred-size : @width;
+    flex-basis              : @width;
 }
 
 .flex-flex (@grow:1,@shrink:0,@basis:auto) {
-    -webkit-flex: @grow @shrink @basis;
-    -ms-flex:     @grow @shrink @basis;
-    flex:         @grow @shrink @basis;
+    -webkit-flex : @grow @shrink @basis;
+    -ms-flex     : @grow @shrink @basis;
+    flex         : @grow @shrink @basis;
 }
 
 .flex-none(@width: none) {
-    -webkit-box-flex: 0;
-    -webkit-flex:     none;
-    -ms-flex:         none;
-    flex:             @width;
+    -webkit-box-flex : 0;
+    -webkit-flex     : none;
+    -ms-flex         : none;
+    flex             : @width;
 }
 
 .flex-wrap(@wrap:wrap) {
-    -webkit-flex-wrap: @wrap;
-    -ms-flex-wrap:     @wrap;
-    flex-wrap:         @wrap;
+    -webkit-flex-wrap : @wrap;
+    -ms-flex-wrap     : @wrap;
+    flex-wrap         : @wrap;
 }
 
 .order(@count:@count) {
-    -webkit-box-ordinal-group:  @count;
-    -webkit-order:              @count;
-    -ms-flex-order:             @count;
-    order:                      @count;
+    -webkit-box-ordinal-group : @count;
+    -webkit-order             : @count;
+    -ms-flex-order            : @count;
+    order                     : @count;
 }
 
 .box-shadow(@f:0px, @s:1px, @t:0px, @color:#64c000) {
-    -webkit-box-shadow: @f @s @t @color;
-    -moz-box-shadow:    @f @s @t @color;
-    box-shadow:         @f @s @t @color;
+    -webkit-box-shadow : @f @s @t @color;
+    -moz-box-shadow    : @f @s @t @color;
+    box-shadow         : @f @s @t @color;
 }
 
 .border-radius (@radius: 11px) {
     /*noinspection CssOptimizeSimilarProperties*/
-    -moz-border-radius:    @radius;
-    -khtml-border-radius:  @radius;
-    -o-border-radius:      @radius;
-    -ms-border-radius:     @radius;
-    -icab-border-radius:   @radius;
-    -webkit-border-radius: @radius;
-    border-radius:         @radius;
+    -moz-border-radius    : @radius;
+    -khtml-border-radius  : @radius;
+    -o-border-radius      : @radius;
+    -ms-border-radius     : @radius;
+    -icab-border-radius   : @radius;
+    -webkit-border-radius : @radius;
+    border-radius         : @radius;
 }
 
 .border-radius-top-left (@radius: 11px) {
-    -moz-border-top-left-radius:    @radius;
-    -khtml-border-top-left-radius:  @radius;
-    -o-border-top-left-radius:      @radius;
-    -ms-border-top-left-radius:     @radius;
-    -icab-border-top-left-radius:   @radius;
-    -webkit-border-top-left-radius: @radius;
-    border-top-left-radius:         @radius;
+    -moz-border-top-left-radius    : @radius;
+    -khtml-border-top-left-radius  : @radius;
+    -o-border-top-left-radius      : @radius;
+    -ms-border-top-left-radius     : @radius;
+    -icab-border-top-left-radius   : @radius;
+    -webkit-border-top-left-radius : @radius;
+    border-top-left-radius         : @radius;
 }
 
 .border-radius-top-right (@radius: 11px) {
-    -moz-border-top-right-radius:    @radius;
-    -khtml-border-top-right-radius:  @radius;
-    -o-border-top-right-radius:      @radius;
-    -ms-border-top-right-radius:     @radius;
-    -icab-border-top-right-radius:   @radius;
-    -webkit-border-top-right-radius: @radius;
-    border-top-right-radius:         @radius;
+    -moz-border-top-right-radius    : @radius;
+    -khtml-border-top-right-radius  : @radius;
+    -o-border-top-right-radius      : @radius;
+    -ms-border-top-right-radius     : @radius;
+    -icab-border-top-right-radius   : @radius;
+    -webkit-border-top-right-radius : @radius;
+    border-top-right-radius         : @radius;
 }
 
 .border-radius-bottom-left (@radius: 11px) {
-    -moz-border-bottom-left-radius:    @radius;
-    -khtml-border-bottom-left-radius:  @radius;
-    -o-border-bottom-left-radius:      @radius;
-    -ms-border-bottom-left-radius:     @radius;
-    -icab-border-bottom-left-radius:   @radius;
-    -webkit-border-bottom-left-radius: @radius;
-    border-bottom-left-radius:         @radius;
+    -moz-border-bottom-left-radius    : @radius;
+    -khtml-border-bottom-left-radius  : @radius;
+    -o-border-bottom-left-radius      : @radius;
+    -ms-border-bottom-left-radius     : @radius;
+    -icab-border-bottom-left-radius   : @radius;
+    -webkit-border-bottom-left-radius : @radius;
+    border-bottom-left-radius         : @radius;
 }
 
 .border-radius-bottom-right (@radius: 11px) {
-    -moz-border-bottom-right-radius:    @radius;
-    -khtml-border-bottom-right-radius:  @radius;
-    -o-border-bottom-right-radius:      @radius;
-    -ms-border-bottom-right-radius:     @radius;
-    -icab-border-bottom-right-radius:   @radius;
-    -webkit-border-bottom-right-radius: @radius;
-    border-bottom-right-radius:         @radius;
+    -moz-border-bottom-right-radius    : @radius;
+    -khtml-border-bottom-right-radius  : @radius;
+    -o-border-bottom-right-radius      : @radius;
+    -ms-border-bottom-right-radius     : @radius;
+    -icab-border-bottom-right-radius   : @radius;
+    -webkit-border-bottom-right-radius : @radius;
+    border-bottom-right-radius         : @radius;
 }
 
 .opacity(@opacity: 50) {
-    filter:         progid:DXImageTransform.Microsoft.Alpha(opacity=@opacity);
-    -moz-opacity:   0.01*@opacity;
-    -khtml-opacity: 0.01*@opacity;
-    opacity:        0.01*@opacity;
+    filter         : progid:DXImageTransform.Microsoft.Alpha(opacity=@opacity);
+    -moz-opacity   : 0.01*@opacity;
+    -khtml-opacity : 0.01*@opacity;
+    opacity        : 0.01*@opacity;
 }
 
 .font-styles(@font_size: 14px, @line_height: 14px,@font_weight: 400) {
-    font-size:   @font_size;
-    line-height: @line_height;
-    font-weight: @font_weight;
+    font-size   : @font_size;
+    line-height : @line_height;
+    font-weight : @font_weight;
 }
 
 .appearance {
-    -webkit-appearance:  none;
-    -moz-appearance:     none;
-    -ms-appearance:      none;
-    -webkit-user-select: none;
-    -moz-user-select:    none;
-    -ms-user-select:     none;
-    user-select:         none;
-    touch-action:        manipulation;
+    -webkit-appearance  : none;
+    -moz-appearance     : none;
+    -ms-appearance      : none;
+    -webkit-user-select : none;
+    -moz-user-select    : none;
+    -ms-user-select     : none;
+    user-select         : none;
+    touch-action        : manipulation;
 }
 
 .transition (@item:all,@time:0.2s,@var:ease-out) {
-    -webkit-transition: @item @time @var;
-    -moz-transition:    @item @time @var;
-    -o-transition:      @item @time @var;
-    transition:         @item @time @var;
+    -webkit-transition : @item @time @var;
+    -moz-transition    : @item @time @var;
+    -o-transition      : @item @time @var;
+    transition         : @item @time @var;
 }
 
 .translateX(@distance:0) {
-    -webkit-transform: translateX(@distance);
-    -moz-transform:    translateX(@distance);
-    -ms-transform:     translateX(@distance);
-    -o-transform:      translateX(@distance);
-    transform:         translateX(@distance);
+    -webkit-transform : translateX(@distance);
+    -moz-transform    : translateX(@distance);
+    -ms-transform     : translateX(@distance);
+    -o-transform      : translateX(@distance);
+    transform         : translateX(@distance);
 }
 
 .translate(@distanceX:0, @distanceY:0) {
-    -webkit-transform: translate(@distanceX @distanceY);
-    -ms-transform:     translate(@distanceX @distanceY);
-    transform:         translate(@distanceX @distanceY);
+    -webkit-transform : translate(@distanceX @distanceY);
+    -ms-transform     : translate(@distanceX @distanceY);
+    transform         : translate(@distanceX @distanceY);
 }
 
 .translateZ(@distance:0) {
-    -webkit-transform: translateZ(@distance);
-    -moz-transform:    translateZ(@distance);
-    -ms-transform:     translateZ(@distance);
-    -o-transform:      translateZ(@distance);
-    transform:         translateZ(@distance);
+    -webkit-transform : translateZ(@distance);
+    -moz-transform    : translateZ(@distance);
+    -ms-transform     : translateZ(@distance);
+    -o-transform      : translateZ(@distance);
+    transform         : translateZ(@distance);
 }
 
 .scale(@property:1) {
-    -webkit-transform: scale(@property);
-    -ms-transform:     scale(@property);
-    transform:         scale(@property);
+    -webkit-transform : scale(@property);
+    -ms-transform     : scale(@property);
+    transform         : scale(@property);
 }

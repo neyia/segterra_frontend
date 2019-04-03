@@ -1,102 +1,106 @@
-h1, h2, h3 {
-    line-height: 1; // not mentioned in design
-    font-family: 'Open Sans Condensed', sans-serif;
-    margin: 0;
+h1, h2, h3, h4, h5 {
+    line-height : 1; // not mentioned in design
+    margin      : 0;
+    font-weight : 600;
+}
+
+h1, h2 {
+    font-family : 'Open Sans Condensed', sans-serif;
+    font-weight : 700;
 }
 
 // h1
 .promo__title {
-    font-size: @h1_font_size;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
+    font-size      : @h1_font_size;
+    letter-spacing : -0.02em;
+    text-transform : uppercase;
+    margin-top     : -5px;
 
-    @media (min-width: (@screen_width)) {
-        font-size: @h1_font_size_max;
+    @media (min-width : (@screen_width)) {
+        font-size : @h1_font_size_max;
     }
 
-    @media (max-width: 906px) {
-        font-size: @h1_font_size_min;
+    @media (max-width : 906px) {
+        font-size : @h1_font_size_min;
     }
 
-    @media (max-width: (@small_screen_width)) {
-        text-align: center;
+    @media (max-width : (@small_screen_width)) {
+        text-align : center;
     }
 }
 
 // h2
 
 .section-title {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: @h2_font_size;
-    letter-spacing: -0.02em;
-    font-weight: 600;
+    text-transform : uppercase;
+    text-align     : center;
+    font-size      : @h2_font_size;
+    letter-spacing : -0.02em;
+    margin-top     : -5px;
 
-    @media (min-width: (@screen_width)) {
-        font-size: @h2_font_size_max;
+    @media (min-width : (@screen_width)) {
+        font-size : @h2_font_size_max;
     }
 
-    @media (max-width: 906px) {
-        font-size: @h2_font_size_min;
+    @media (max-width : 906px) {
+        font-size : @h2_font_size_min;
     }
 }
 
 // h3
 .subtitle {
-    font-size: @h3_font_size;
-    margin: 4.15vw 0 0;
+    font-size : @h3_font_size;
+    margin    : 4.15vw 0 0;
 
-    @media (min-width: (@screen_width)) {
-        margin: 50px 0 0;
+    @media (min-width : (@screen_width)) {
+        margin : 50px 0 0;
     }
 
-    @media (max-width: 601.98px) {
-        margin: 25px 0 0;
+    @media (max-width : 601px) {
+        margin : 25px 0 0;
     }
 }
 
 .subtitle_promo {
-    margin: 3.3vw 0 0;
-    white-space: nowrap;
-    //TODO: maybe better???
-    text-overflow: ellipsis;
-    overflow: hidden;
-    line-height: 1.5;
+    margin      : 2.07vw 0 0;
+    line-height : 1.5;
 
-    @media (min-width: (@screen_width)) {
-        margin: 40px 0 0;
+    @media (min-width : (@screen_width)) {
+        margin : 25px 0 0;
     }
 
-    @media (max-width: 601.98px) {
-        margin: 15px 0 0;
-    }
-
-    @media (max-width: (@small_screen_width)) {
-        white-space: normal;
-        text-align: center;
-        line-height: 1.2;
+    @media (max-width : (@small_screen_width)) {
+        font-size   : 20px;
+        margin      : 10px 0 0;
+        line-height : 1.4;
+        text-align  : center;
     }
 }
 
 .subtitle_contacts {
-    font-family: @main_font;
-    text-align: center;
-    line-height: 1.4;
-    letter-spacing: 0.02em;
-    margin-top: 0;
+    font-family    : @main_font;
+    text-align     : center;
+    line-height    : 1.4;
+    letter-spacing : 0.02em;
+    margin-top     : 0;
+
+    @media (max-width : (@small_screen_width)) {
+        font-size : 24px;
+    }
 }
 
 // h4
 .step-list__title {
-    font-size: @h4_font_size;
-    font-weight: 600;
-    line-height: 1.4;
-    margin: 7px 0 0;
+    font-size   : @h4_font_size;
+    line-height : 1.4;
+    margin      : 7px 0 0;
 }
 
 // h5
 .partnership__title {
-    text-align: center;
-    font-size: 16px;
-    line-height: 2;
+    text-align  : center;
+    font-size   : 16px;
+    line-height : 2;
+    margin      : 0;
+    margin-top  : -5px;
 }
