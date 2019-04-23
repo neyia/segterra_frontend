@@ -13,12 +13,12 @@
 
 .form__contacts {
     max-width   : 370px;
-    margin      : 3.79vw auto 0;
+    margin      : 3.57vw auto 0;
     line-height : 20px;
     font-size   : @info_font_size;
 
     @media (min-width : (@screen_width)) {
-        margin-top : 48px;
+        margin-top : 43px;
     }
 
     @media (max-width : (@small_screen_width)) {
@@ -30,11 +30,13 @@
     }
 
     input {
+        .appearance();
         border     : 1px solid @link_water;
         background : #fff;
         width      : 100%;
         margin     : 8px 0 20px;
         padding    : 8px 10px;
+        border-radius: 0;
     }
 
     input::placeholder {
@@ -48,6 +50,7 @@
         background : none;
         padding    : 8px 10px;
         border     : 1px solid @link_water;
+        border-radius: 0;
     }
 
     select::-ms-expand {
@@ -55,8 +58,12 @@
     }
 
     button {
-        margin-top : 0;
+        margin-top : 10px;
         padding    : 0 25px;
+
+        @media (max-width : (@small_screen_width)) {
+            margin-top : 0;
+        }
     }
 
     .select-wrapper {
