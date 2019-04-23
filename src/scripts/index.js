@@ -1,18 +1,20 @@
+alert('hello');
+
 /*pop-up's BEGIN---*/
 var testPopup = document.getElementById('test-popup');
 var testBtn = document.getElementById('test');
 var testScreen = document.getElementById('screen');
 var cancelBtn = document.getElementById('btn-cancel');
 
-testBtn.onclick = function() {
+testBtn.onclick = function () {
     openModal();
 };
 
-cancelBtn.onclick = function() {
+cancelBtn.onclick = function () {
     closeModal();
 };
 
-testScreen.onclick = function() {
+testScreen.onclick = function () {
     closeModal();
 };
 
