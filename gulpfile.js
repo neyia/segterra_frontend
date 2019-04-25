@@ -15,7 +15,8 @@ const gulp = require('gulp'),
     replace = require('gulp-replace'),
     svgstore = require('gulp-svgstore'),
     rename = require('gulp-rename'),
-    clean = require('gulp-clean');
+    clean = require('gulp-clean'),
+    webpack = require('webpack-stream');
 
 //PATHS
 const path = {
@@ -29,7 +30,7 @@ const path = {
     },
     src: {
         html: 'src/index.html',
-        js: 'src/scripts/index.js',
+        js: 'src/scripts/app.js',
         style: 'src/styles/style.less',
         img: 'src/assets/img/**/*.*',
         svg: 'src/assets/svg/*.*',
@@ -37,7 +38,7 @@ const path = {
     },
     watch: {
         html: 'src/**/*.html',
-        js: 'src/js/**/main.js',
+        js: ['src/scripts/**/*.js', 'src/components/**/*.js'],
         style: 'src/styles/**/*.*',
         img: 'src/assets/img/**/*.*',
         svg: 'src/assets/svg/*.*',
@@ -62,9 +63,6 @@ gulp.task('styles', () => {
     return gulp.src(path.src.style)
         //.pipe(sourcemaps.init())
         .pipe(less())
-        .pipe(purgecss({
-            content: ["src/**/*.html"]
-        }))
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
@@ -75,6 +73,15 @@ gulp.task('styles', () => {
         }))
         //.pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.style))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
+});
+
+gulp.task('scripts', () => {
+    return gulp.src(path.src.js)
+        .pipe(webpack( require('./webpack.config.js') ))
+        .pipe(gulp.dest(path.build.js))
         .pipe(browserSync.reload({
             stream: true
         }));
@@ -114,6 +121,7 @@ gulp.task('clean', () => {
 gulp.task('watch', function() {
     gulp.watch(path.watch.html, gulp.series('html'));
     gulp.watch(path.watch.style, gulp.series('styles'));
+    gulp.watch(path.watch.js, gulp.series('scripts'));
 });
 
 gulp.task('serve', function() {
@@ -130,6 +138,7 @@ gulp.task('build', gulp.series(
     'clean',
     'html',
     'styles',
+    'scripts',
     'img',
     'svgsprite'
 ));

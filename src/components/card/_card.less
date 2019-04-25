@@ -1,0 +1,144 @@
+@import "../../styles/utils/variables";
+
+.card {
+    width:          270px;
+    height:         400px;
+    border-radius:  6px;
+    overflow:       hidden;
+    margin:         50px;
+    display:        flex;
+    flex-direction: column;
+    box-shadow: 0 0 15px 7px rgba(0,0,0,0.06);
+
+
+    .hide {
+        display: none;
+    }
+
+    .card-img {
+        width:      100%;
+        height:     160px;
+        background: url('../assets/img/card/lemon.jpg') no-repeat left top/cover;
+    }
+
+    &__content {
+        display:        flex;
+        flex-direction: column;
+        padding:   23px 30px 30px;
+        flex-grow: 1;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size:   20px;
+        line-height: 1.4;
+    }
+
+    &__caption {
+        font-size:      12px;
+        line-height:    1.91;
+        letter-spacing: 0.12px;
+        color:          @gray5;
+    }
+
+    &__days {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 11px;
+
+        &-item {
+            color: @gray4;
+            font-size: 11px;
+
+            .btn_card-day {
+                position: relative;
+                background: none;
+                padding: 0;
+                width: 24px;
+                height: 24px;
+                text-align: center;
+                cursor: pointer;
+                border: 1px solid @gray4;
+                border-radius: 50%;
+
+                &:hover {
+                    border-color: @green;
+
+                    .card__days-item-date {
+                        display: inline-block;
+                        font-weight: 700;
+                    }
+                }
+
+                .card__days-item-date {
+                    position: absolute;
+                    font-size: 9px;
+                    top: 25px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+                .icon-checked {
+                    display: none;
+                }
+
+            }
+
+            .btn_card-day.checked {
+                background: @green;
+                border: 1px solid @green;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                vertical-align: center;
+
+                .card__days-item-name, .card__days-item-date {
+                    display: none;
+                }
+
+                .icon-checked {
+                    fill: #fff;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        margin-top: auto;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        .btn_card-checkin {
+            font-size: 14px;
+            font-weight: 600;
+            color: @blue;
+            background: none;
+            border: 1px solid @blue;
+            border-radius: 3px;
+            padding: 7px 20px;
+        }
+
+        .btn_card-details {
+            padding: 0;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1em;
+            color: @blue;
+            background: none;
+            border: none;
+        }
+    }
+
+    &__front {
+
+    }
+
+    &__back {
+        .card-img {
+            display: none;
+        }
+    }
+}
+
