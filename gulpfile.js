@@ -32,8 +32,8 @@ const path = {
         html: 'src/index.html',
         js: 'src/scripts/app.js',
         style: 'src/styles/style.less',
-        img: 'src/assets/img/**/*.*',
-        svg: 'src/assets/svg/*.*',
+        img: ['src/assets/img/**/*.*','src/hubspot/assets/img/**/*.*'],
+        svg: ['src/assets/svg/*.*', 'src/hubspot/assets/svg/*.*'],
         fonts: 'src/assets/fonts/**/*.*'
     },
     watch: {
@@ -119,9 +119,9 @@ gulp.task('clean', () => {
 });
 
 gulp.task('watch', function() {
-    gulp.watch(path.watch.html, gulp.series('html'));
-    gulp.watch(path.watch.style, gulp.series('styles'));
-    gulp.watch(path.watch.js, gulp.series('scripts'));
+    gulp.watch(path.watch.html, gulp.parallel('html'));
+    gulp.watch(path.watch.style, gulp.parallel('styles'));
+    gulp.watch(path.watch.js, gulp.parallel('scripts'));
 });
 
 gulp.task('serve', function() {
@@ -136,11 +136,13 @@ gulp.task('serve', function() {
 
 gulp.task('build', gulp.series(
     'clean',
+    gulp.parallel(
     'html',
     'styles',
     'scripts',
     'img',
     'svgsprite'
+    )
 ));
 
 gulp.task('dev', gulp.series( 'build',
