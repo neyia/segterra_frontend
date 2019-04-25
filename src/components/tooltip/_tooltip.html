@@ -19,12 +19,14 @@
 <div class="screen"></div>
 
 <script>
-  if(window.innerWidth < 796) {
+  const TABLET = 796;
+
+  if(window.innerWidth < TABLET) {
 
     function Tooltip() {
-      let tooltipWrap = document.querySelectorAll('.tooltip-wrap');
-      let tooltip = document.querySelectorAll('.tooltip');
-      let screen = document.querySelector('.screen');
+      const tooltipWrap = document.querySelectorAll('.tooltip-wrap');
+      const tooltip = document.querySelectorAll('.tooltip');
+      const screen = document.querySelector('.screen');
 
       for(let i = 0; i < tooltipWrap.length; i++){
         tooltipWrap[i].onclick = function (e) {
