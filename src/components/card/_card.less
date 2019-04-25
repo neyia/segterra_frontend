@@ -8,7 +8,7 @@
     margin:         50px;
     display:        flex;
     flex-direction: column;
-    box-shadow: 0 0 15px 7px rgba(0,0,0,0.06);
+    box-shadow:     0 0 15px 7px rgba(0, 0, 0, 0.06);
 
 
     .hide {
@@ -24,8 +24,8 @@
     &__content {
         display:        flex;
         flex-direction: column;
-        padding:   23px 30px 30px;
-        flex-grow: 1;
+        padding:        23px 30px 30px;
+        flex-grow:      1;
     }
 
     &__title {
@@ -42,39 +42,39 @@
     }
 
     &__days {
-        display: flex;
+        display:         flex;
         justify-content: space-between;
-        margin-top: 11px;
+        margin-top:      11px;
 
         &-item {
-            color: @gray4;
+            color:     @gray4;
             font-size: 11px;
 
             .btn_card-day {
-                position: relative;
-                background: none;
-                padding: 0;
-                width: 24px;
-                height: 24px;
-                text-align: center;
-                cursor: pointer;
-                border: 1px solid @gray4;
+                position:      relative;
+                background:    none;
+                padding:       0;
+                width:         24px;
+                height:        24px;
+                text-align:    center;
+                cursor:        pointer;
+                border:        1px solid @gray4;
                 border-radius: 50%;
 
                 &:hover {
                     border-color: @green;
 
                     .card__days-item-date {
-                        display: inline-block;
+                        display:     inline-block;
                         font-weight: 700;
                     }
                 }
 
                 .card__days-item-date {
-                    position: absolute;
+                    position:  absolute;
                     font-size: 9px;
-                    top: 25px;
-                    left: 50%;
+                    top:       25px;
+                    left:      50%;
                     transform: translateX(-50%);
                 }
 
@@ -85,19 +85,19 @@
             }
 
             .btn_card-day.checked {
-                background: @green;
-                border: 1px solid @green;
-                border-radius: 50%;
-                display: flex;
+                background:      @green;
+                border:          1px solid @green;
+                border-radius:   50%;
+                display:         flex;
                 justify-content: center;
-                vertical-align: center;
+                vertical-align:  center;
 
                 .card__days-item-name, .card__days-item-date {
                     display: none;
                 }
 
                 .icon-checked {
-                    fill: #fff;
+                    fill:    #fff;
                     display: block;
                 }
             }
@@ -105,29 +105,29 @@
     }
 
     &__bottom {
-        margin-top: auto;
-        display: flex;
-        align-items: flex-end;
+        margin-top:      auto;
+        display:         flex;
+        align-items:     flex-end;
         justify-content: space-between;
 
         .btn_card-checkin {
-            font-size: 14px;
-            font-weight: 600;
-            color: @blue;
-            background: none;
-            border: 1px solid @blue;
+            font-size:     14px;
+            font-weight:   600;
+            color:         @blue;
+            background:    none;
+            border:        1px solid @blue;
             border-radius: 3px;
-            padding: 7px 20px;
+            padding:       7px 20px;
         }
 
         .btn_card-details {
-            padding: 0;
-            font-size: 12px;
+            padding:     0;
+            font-size:   12px;
             font-weight: 600;
             line-height: 1em;
-            color: @blue;
-            background: none;
-            border: none;
+            color:       @blue;
+            background:  none;
+            border:      none;
         }
     }
 
