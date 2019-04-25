@@ -5,19 +5,6 @@ body, html {
     padding : 0;
 }
 
-body {
-    font-family             : @main_font;
-    line-height             : @main_line_height;
-    font-size               : @main_font_size;
-    font-weight             : @main_font_weight;
-    color                   : @main_fontColor;
-    -webkit-font-smoothing  : antialiased;
-    -moz-osx-font-smoothing : grayscale;
-
-    @media (max-width : (@small_screen_width)) {
-        font-size : @info_font_size;
-    }
-}
 
 *, *::after, *::before {
     box-sizing: border-box;
@@ -32,23 +19,8 @@ li {
     list-style-type : none;
 }
 
-a {
-    text-decoration : none;
-    color           : currentColor;
-}
-
 p {
-    margin : 0;
-}
-
-input {
-    background : none;
-    border     : none;
-    color      : currentColor;
-}
-
-input::placeholder {
-    color : currentColor;
+    margin: 0;
 }
 
 //SVG icons
