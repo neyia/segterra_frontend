@@ -1,4 +1,48 @@
 <!--Component Tooltip-->
-<div>
 
+<div class="tooltip-wrap">
+  <div class="tooltip">
+    <span class="tooltip__title">Lorem ipsum dolor sit wsrefs esf sef sef sef sef sef sef esf amet</span>
+    <span class="tooltip__text">consectetur adipisicing elit. A ad aliquam deserunt dolore, ea earum esse
+    facere facilis hic iste modi molestiae nobis, voluptatibus. Deserunt eius facilis nostrum qui unde.</span>
+  </div>
 </div>
+
+<div class="tooltip-wrap">
+  <div class="tooltip tooltip--small">
+    <span class="tooltip__title">Lorem ipsum dolor sit amet sfees fsef sef sef e</span>
+    <span class="tooltip__text">consectetur adipisicing elit. A ad aliquam deserunt dolore, ea earum esse
+    facere facilis hic iste modi molestiae nobis, voluptatibus. Deserunt eius facilis nostrum qui unde.</span>
+  </div>
+</div>
+
+<div class="screen"></div>
+
+<script>
+  if(window.innerWidth < 796) {
+
+    function Tooltip() {
+      let tooltipWrap = document.querySelectorAll('.tooltip-wrap');
+      let tooltip = document.querySelectorAll('.tooltip');
+      let screen = document.querySelector('.screen');
+
+      for(let i = 0; i < tooltipWrap.length; i++){
+        tooltipWrap[i].onclick = function (e) {
+          e.preventDefault();
+          tooltip[i].classList.add('show');
+          screen.classList.add('is-visible');
+
+          screen.onclick = function () {
+            tooltip[i].classList.remove('show');
+            this.classList.remove('is-visible');
+          }
+        };
+      }
+    }
+
+    Tooltip();
+
+  }
+</script>
+
+
