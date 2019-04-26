@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script
+      src="https://code.jquery.com/jquery-3.4.0.min.js"
+      integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+      crossorigin="anonymous">
+    </script>
+
     <title>segterra frontend</title>
-    
+
     @@include('modules/_head.html')
 </head>
 <body>
-@@include('components/checkboxes/_checkboxes.html')
 <!--    hubspot modules-->
 
 <!--    @@include('hubspot/modules/_welcome.html')
@@ -20,7 +25,8 @@
 <!--    Component modules-->
 
 @@include('components/card/_card.html') @@include('components/tooltip/_tooltip.html') @@include('components/switcher/_switcher.html')
-
+@@include('components/text_fields/_text_field.html')
+@@include('components/checkboxes/_checkboxes.html')
 @@include('modules/_scripts.html')
 </body>
 </html>

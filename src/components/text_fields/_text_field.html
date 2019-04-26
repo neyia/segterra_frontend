@@ -1,0 +1,79 @@
+<!--Component Text Field-->
+<div class="wrapper">
+  <!--Placeholder-->
+  <div class="form-field">
+    <label class="label" for="form-field">Label</label>
+    <input class="form-control" type="text" id="form-field" name="form-field" placeholder="Placeholder">
+  </div>
+  <!--Text input-->
+  <div class="form-field">
+    <label class="label" for="form-field2">Label</label>
+    <input class="form-control"
+      type="text"
+      id="form-field2"
+      name="form-field"
+      placeholder="Placeholder"
+      value="Text input">
+  </div>
+  <!--Helper text-->
+  <div class="form-field">
+    <label class="label" for="form-field3">Label</label>
+    <input class="form-control"
+      type="text"
+      id="form-field3"
+      name="form-field"
+      placeholder="Placeholder"
+      value="Text input">
+    <ul class="helper-text">
+      <li>Helper text should not exceed a single line</li>
+    </ul>
+  </div>
+  <!--Error message-->
+  <div class="form-field">
+    <label class="label" for="form-field4">Label</label>
+    <input type="text"
+      id="form-field4"
+      name="placeholder"
+      placeholder="Placeholder"
+      class="form-control incorrect-value-input"
+      value="Text input">
+    <ul class="error-message">
+      <li>Error message should not exceed a single line</li>
+    </ul>
+  </div>
+
+  <!--Disabled-->
+  <div class="form-field">
+    <label class="label disabled" for="form-field5">Label</label>
+    <input class="form-control"
+      type="text"
+      id="form-field5"
+      name="form-field"
+      placeholder="Placeholder text"
+      disabled="disabled">
+  </div>
+
+  <!--custom select-->
+  <div class="dropdown--custom">
+    <label class="label">Label</label>
+    <div class="dropdown-wrapper">
+      <div class="dropdown__select dropdown__selected">Please select</div>
+      <ul class="dropdown__list">
+        <li class="dropdown__list-item" data-id="1">Item 1</li>
+        <li class="dropdown__list-item" data-id="2">Item 2</li>
+        <li class="dropdown__list-item" data-id="3">Item 3</li>
+      </ul>
+    </div>
+  </div>
+
+  <!--Search-->
+  <div id="search_form" enctype="multipart/form-data" class="search-form">
+    <input id="edit-submit" class="search-submit typehead" type="image" src="assets/img/search.png">
+    <input class="form-control typeahead" id="search" type="text" value="" placeholder="Search" name="search">
+  </div>
+
+  <div id="the-basics">
+    <input class="typeahead" type="text" placeholder="States of USA">
+  </div>
+
+</div>
