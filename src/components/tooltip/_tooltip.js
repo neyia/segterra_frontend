@@ -8,16 +8,16 @@ if(window.innerWidth < TABLET) {
     const screen = document.querySelector('.screen');
 
     for(let i = 0; i < tooltipWrap.length; i++){
-      tooltipWrap[i].onclick = function (e) {
+      tooltipWrap[i].addEventListener('click', function (e) {
         e.preventDefault();
         tooltip[i].classList.add('show');
         screen.classList.add('is-visible');
 
-        screen.onclick = function () {
+        screen.addEventListener('click', function () {
           tooltip[i].classList.remove('show');
           this.classList.remove('is-visible');
-        }
-      };
+        });
+      });
     }
   }
 
