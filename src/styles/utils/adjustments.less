@@ -1,8 +1,8 @@
 @import "./variables";
 
 body, html {
-    margin  : 0;
-    padding : 0;
+    margin:  0;
+    padding: 0;
 }
 
 
@@ -11,12 +11,12 @@ body, html {
 }
 
 ul {
-    margin  : 0;
-    padding : 0;
+    margin:  0;
+    padding: 0;
 }
 
 li {
-    list-style-type : none;
+    list-style-type: none;
 }
 
 p {
@@ -26,10 +26,160 @@ p {
 //SVG icons
 
 .icon {
-    display      : inline-block;
-    width        : 1em;
-    height       : 1em;
-    stroke-width : 0;
-    stroke       : currentColor;
-    fill         : currentColor;
+    display:      inline-block;
+    width:        1em;
+    height:       1em;
+    stroke-width: 0;
+    stroke:       currentColor;
+    fill:         currentColor;
+}
+
+
+// headings
+
+.heading-38 {
+    color:          @gray1;
+    letter-spacing: 0.2px;
+    font-size:      38px;
+    line-height:    1.35;
+    font-weight:    600;
+
+    @media only screen and(max-width: (@tablet)) {
+        font-size: 24px;
+    }
+}
+
+.heading-30 {
+    color:          @gray1;
+    letter-spacing: 0.2px;
+    font-size:      30px;
+    line-height:    1.35;
+    font-weight:    600;
+
+    @media only screen and(max-width: (@tablet)) {
+        font-size: 24px;
+    }
+}
+
+.heading-26 {
+    color:          @gray1;
+    letter-spacing: 0.2px;
+    font-size:      24px;
+    line-height:    1.35;
+    font-weight:    600;
+
+    @media only screen and(max-width: (@tablet)) {
+        font-size: 21px;
+    }
+}
+
+.heading-24 {
+    color:          @gray1;
+    letter-spacing: 0.2px;
+    font-size:      24px;
+    line-height:    1.35;
+    font-weight:    600;
+
+    @media only screen and(max-width: (@tablet)) {
+        font-size: 20px;
+    }
+}
+
+.heading-20 {
+    color:          @gray1;
+    letter-spacing: 0.2px;
+    font-size:      20px;
+    line-height:    1.35;
+    font-weight:    600;
+
+    @media only screen and (max-width: (@tablet)) {
+        font-size: 16px;
+    }
+
+}
+
+.heading-16 {
+    color:          @gray1;
+    letter-spacing: 0.2px;
+    font-size:      16px;
+    line-height:    1.35;
+    font-weight:    600;
+}
+
+.heading-14 {
+    color:          @gray1;
+    letter-spacing: 0.2px;
+    font-size:      14px;
+    line-height:    1.35;
+    font-weight:    600;
+}
+
+.heading-12 {
+    color:          @gray1;
+    letter-spacing: 0.2px;
+    font-size:      12px;
+    line-height:    1.35;
+    font-weight:    600;
+}
+
+.heading--bold {
+    font-weight: 700;
+}
+
+.heading--white {
+    color: #ffffff;
+}
+
+// texts
+
+.text-20 {
+    color:          @gray1;
+    letter-spacing: 0.2px;
+    font-size:      20px;
+    line-height:    1.5;
+    font-weight:    400;
+
+    @media only screen  and(max-width: (@tablet)) {
+        font-size: 16px;
+    }
+}
+
+.text-16 {
+    color:          @gray1;
+    letter-spacing: 0.2px;
+    font-size:      16px;
+    line-height:    1.5;
+    font-weight:    400;
+
+    @media only screen and(max-width: (@tablet)) {
+        font-size: 14px;
+    }
+}
+
+.text-14 {
+    color:          @gray1;
+    letter-spacing: 0.2px;
+    font-size:      14px;
+    line-height:    1.5;
+    font-weight:    400;
+}
+
+.text-12 {
+    color:          @gray1;
+    letter-spacing: 0.2px;
+    font-size:      12px;
+    line-height:    1.5;
+    font-weight:    400;
+
+    &--secondary {
+        color: @gray3;
+    }
+}
+
+.text--white {
+    color: #ffffff;
+}
+
+.text--semibold {
+    font-weight: 600;
 }
