@@ -29,7 +29,8 @@ const path = {
         style: 'build/style',
         img: 'build/assets/img',
         svg: 'build/assets/',
-        fonts: 'build/assets/fonts'
+        fonts: 'build/assets/fonts',
+        template: 'build/style/template'
     },
     src: {
         html: 'src/index.html',
@@ -37,7 +38,9 @@ const path = {
         style: 'src/styles/style.less',
         img: ['src/assets/img/**/*.*','src/hubspot/assets/img/**/*.*'],
         svg: ['src/assets/svg/*.*', 'src/hubspot/assets/svg/*.*'],
-        fonts: 'src/assets/fonts/**/*.*'
+        fonts: 'src/assets/fonts/**/*.*',
+        template: 'src/components/links/*.html',
+        templateStyle: 'src/components/links/*.less'
     },
     watch: {
         html: 'src/**/*.html',
@@ -45,13 +48,17 @@ const path = {
         style: 'src/styles/**/*.*',
         img: 'src/assets/img/**/*.*',
         svg: 'src/assets/svg/*.*',
-        fonts: 'src/assets/fonts/**/*.*'
+        fonts: 'src/assets/fonts/**/*.*',
+        template: 'src/components/links/*.*'
     },
     clean: './build'
 };
 
 gulp.task('html', () => {
-    return gulp.src(path.src.html)
+    return gulp.src([
+            path.src.html,
+            path.src.template // test links - separate page
+        ])
         .pipe(fileinclude({
             prefix: '@@',
             basepath: '@file'
@@ -63,7 +70,10 @@ gulp.task('html', () => {
 });
 
 gulp.task('styles', () => {
-    return gulp.src(path.src.style)
+    return gulp.src([
+            path.src.style,
+            path.src.templateStyle  // test links - separate page
+        ])
         //.pipe(sourcemaps.init())
         .pipe(less())
         .pipe(autoprefixer({
@@ -123,8 +133,8 @@ gulp.task('clean', () => {
 });
 
 gulp.task('watch', function() {
-    gulp.watch(path.watch.html, gulp.parallel('html'));
-    gulp.watch(path.watch.style, gulp.parallel('styles'));
+    gulp.watch([path.watch.html, path.watch.template], gulp.parallel('html'));
+    gulp.watch([path.watch.style, path.watch.template], gulp.parallel('styles'));
     gulp.watch(path.watch.js, gulp.parallel('scripts'));
 });
 
