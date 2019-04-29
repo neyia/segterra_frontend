@@ -114,8 +114,8 @@ gulp.task('svgsprite', function () {
 });
 
 gulp.task('clean', () => {
-    return gulp.src(path.build.html)
-        .pipe(clean());
+    return gulp.src(path.clean)
+        .pipe(clean()) || null;
 });
 
 gulp.task('watch', function() {
@@ -135,7 +135,7 @@ gulp.task('serve', function() {
 });
 
 gulp.task('build', gulp.series(
-    'clean',
+    //'clean',
     gulp.parallel(
     'html',
     'styles',
