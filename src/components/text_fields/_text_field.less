@@ -8,7 +8,7 @@
 .form-field {
     margin-bottom: 22px;
     position:      relative;
-
+    
     .disabled {
         color: rgba(35, 45, 55, 0.31);
     }
@@ -26,7 +26,7 @@
     font-weight:    400;
     letter-spacing: 0.26px;
     width:          271px;
-
+    
     &::placeholder {
         color:          @gray6;
         font-family:    "Open Sans", Tahoma, Helvetica, Arial, sans-serif;
@@ -35,7 +35,7 @@
         line-height:    normal;
         letter-spacing: 0.26px;
     }
-
+    
     &:focus {
         border: 1px solid @primary;
     }
@@ -71,6 +71,7 @@ label {
 }
 
 .error-message {
+    font-family:    "Open Sans", Tahoma, Helvetica, Arial, sans-serif;
     color:            @red;
     font-size:        13px;
     line-height:      17px;
@@ -83,33 +84,64 @@ label {
     background-color: #fae6e6;
 }
 
-
-.select {
-    display:       block;
-    margin-bottom: 22px;
-}
-
+/*search BEGIN*/
 .search-form {
-    position: relative;
-    display:  inline;
-
+    position:      relative;
+    display:       inline-block;
+    margin-bottom: 22px;
+    
     .form-control {
         border:        0;
         border-bottom: 1px solid @gray7;
-        padding-left:  26px;
         width:         270px;
+        height:        100%;
+        outline:       none;
+        font-size:     14px;
+        padding:       6px 10px 8px 30px;
+        box-sizing:    border-box;
     }
-
+    
     .search-submit {
-        height:   16px;
-        padding:  0;
-        position: absolute;
-        left:     0;
-        top:      0;
-        width:    16px;
-        outline:  none;
+        background:      url('../../assets/img/search.png') 50% no-repeat;
+        position:        absolute;
+        cursor:          pointer;
+        outline:         none;
+        border:          none;
+        height:          16px;
+        width:           16px;
+        padding:         0;
+        top:             50%;
+        transform:       translateY(-50%);
+        left:            5px;
+        background-size: cover;
+        z-index:         2;
+    }
+    
+    .tt-menu {
+        background: #ffffff;
+        text-align: left;
+        margin: -1px 0 0 0;
+        border: 1px solid @gray5;
+        color: #232d37;
+        font-size: 14px;
+        width: 100%;
+    }
+    
+    .tt-suggestion {
+        padding: 10px 27px;
+        cursor: pointer;
+        
+        &:last-child {
+            margin-bottom: 10px;
+        }
+        
+        &:hover {
+            background-color: @gray4;
+        }
     }
 }
+
+/*search END*/
 
 /*custom select BEGIN*/
 .dropdown-wrapper {
@@ -121,67 +153,69 @@ label {
     margin-bottom: 22px;
 }
 
-.dropdown__select {
-    font-family:         "Open Sans", Tahoma, Helvetica, Arial, sans-serif;
-    box-sizing:          border-box;
-    -webkit-appearance:  none;
-    -moz-appearance:     none;
-    -ms-appearance:      none;
-    user-select:         none;
-    touch-action:        manipulation;
-    cursor:              pointer;
-    width:               100%;
-    max-width:           271px;
-    font-size:           14px;
-    height:              36px;
-    padding:             8px 10px;
-    border:              1px solid @gray6;
-    background-color:    #ffffff;
-    background-image:    url(../../assets/img/arrow_down.png);
-    background-repeat:   no-repeat;
-    background-size:     12px;
-    background-position: 96% 50%;
-}
-
-.dropdown__arrow--down {
-    background-image: url(../../assets/img/arrow_up.png);
-}
-
-.dropdown__list {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing:    border-box;
-    box-sizing:         border-box;
-    overflow:           auto;
-    display:            none;
-    list-style:         none;
-    width:              100%;
-    max-width:          271px;
-    max-height:         350px;
-    border:             1px solid @gray6;
-    border-top-color:   @gray7;
-    position:           absolute;
-    top:                35px;
-    z-index:            3;
-    background:         #ffffff;
-
-    &.visible {
-        display: block;
+.dropdown {
+    &__select {
+        font-family:         "Open Sans", Tahoma, Helvetica, Arial, sans-serif;
+        box-sizing:          border-box;
+        -webkit-appearance:  none;
+        -moz-appearance:     none;
+        -ms-appearance:      none;
+        user-select:         none;
+        touch-action:        manipulation;
+        cursor:              pointer;
+        width:               100%;
+        max-width:           271px;
+        font-size:           14px;
+        height:              36px;
+        padding:             8px 10px;
+        border:              1px solid @gray6;
+        background-color:    #ffffff;
+        background-image:    url(../../assets/img/arrow_down.png);
+        background-repeat:   no-repeat;
+        background-size:     12px;
+        background-position: 96% 50%;
     }
-
-    &-item {
-        transition: all 0.05s ease-in-out;
-        font-size:  14px;
-        cursor:     default;
-        padding:    10px;
-        width:      100%;
-
-        &:hover,
-        &:focus {
-            background-color: @gray4;
+    
+    &__arrow--down {
+        background-image: url(../../assets/img/arrow_up.png);
+    }
+    
+    &__list {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing:    border-box;
+        box-sizing:         border-box;
+        overflow:           auto;
+        display:            none;
+        list-style:         none;
+        width:              100%;
+        max-width:          271px;
+        max-height:         350px;
+        border:             1px solid @gray6;
+        border-top-color:   @gray7;
+        position:           absolute;
+        top:                35px;
+        z-index:            3;
+        background:         #ffffff;
+        
+        &.visible {
+            display: block;
         }
-
-        &:last-child {
-            margin-bottom: 10px;
+        
+        &-item {
+            transition: all 0.05s ease-in-out;
+            font-size:  14px;
+            cursor:     default;
+            padding:    10px;
+            width:      100%;
+            
+            &:hover,
+            &:focus {
+                background-color: @gray4;
+            }
+            
+            &:last-child {
+                margin-bottom: 10px;
+            }
         }
     }
 }
@@ -192,10 +226,6 @@ label {
 
 /*custom select END*/
 
-#scrollable-dropdown-menu .tt-dropdown-menu {
-    max-height: 150px;
-    overflow-y: auto;
-}
 
 
 
