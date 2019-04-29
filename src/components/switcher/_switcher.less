@@ -8,21 +8,21 @@
     cursor:           pointer;
     height:           16px;
     width:            44px;
-
+    
     &-flex {
         display:         inline-flex;
         align-items:     center;
         justify-content: space-between;
         margin:          0 10px 10px 0;
     }
-
+    
     &__input {
         cursor:  pointer;
         height:  100%;
         width:   100%;
         opacity: 0;
     }
-
+    
     &__icon {
         background-color: @gray3;
         border-radius:    50%;
@@ -33,12 +33,12 @@
         right:            auto;
         top:              -4px;
         transition:       left 0.3s ease-in-out;
-
+        
         &--light {
             background-color: @gray6;
         }
     }
-
+    
     &__input:checked + .tumbler__icon {
         background-color: @primary;
         left:             auto;
@@ -46,14 +46,14 @@
         transition:       right 0.3s ease-in-out;
         border:           none;
     }
-
+    
     &--light {
         background-color: @gray4;
     }
-
+    
     &--disabled {
         opacity: 0.5;
-
+        
         .tumbler__icon {
             border:           1px solid @gray6;
             background-color: #ffffff;
@@ -65,17 +65,17 @@
     border:        1px solid @primary;
     border-radius: 3px;
     width:         340px;
-    cursor:        pointer;
     display:       flex;
     align-items:   center;
     text-align:    center;
-
+    overflow:      hidden;
+    
     &-flex {
         display:         flex;
         justify-content: center;
         align-items:     center;
     }
-
+    
     &__item {
         font-size:        14px;
         font-weight:      600;
@@ -85,10 +85,22 @@
         background-color: #ffffff;
         height:           35px;
         line-height:      35px;
-
+        cursor:        pointer;
+        
         &.active {
             background-color: @primary;
             color:            #ffffff;
         }
+        
+        // WHAT?
+        //&:not(.active):hover {
+        //    background-color: @primary--hover;
+        //    color: #ffffff;
+        //}
+
+    }
+    
+    &__input {
+        display: none;
     }
 }
