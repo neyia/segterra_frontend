@@ -14,7 +14,7 @@
     cursor:           default;
     display:          none;
     transition:       opacity 0.2s;
-
+    
     @media screen and (max-width: 798px) {
         position:  fixed;
         top:       10%;
@@ -22,7 +22,7 @@
         transform: translateX(-50%);
         width:     288px;
     }
-
+    
     &-wrap {
         width:            20px;
         margin:           50px auto;
@@ -31,14 +31,14 @@
         cursor:           pointer;
         color:            #fff;
         position:         relative;
-
+        
         &:hover {
             .tooltip {
                 display: block;
             }
         }
     }
-
+    
     &__title {
         color:         @gray1;
         font-size:     14px;
@@ -46,19 +46,19 @@
         margin-bottom: 5px;
         display:       block;
         //white-space:   pre;
-
+        
         @media screen and (max-width: 798px) {
             white-space: normal;
         }
     }
-
+    
     &__text {
         color:       @gray1;
         font-size:   14px;
         line-height: 18px;
         display:     block;
     }
-
+    
     &.show {
         display: block;
     }
@@ -75,7 +75,7 @@
     visibility: hidden;
     z-index:    10;
     transition: all 0.15s ease-out;
-
+    
     &.is-visible {
         visibility: visible;
         opacity:    0.6;
