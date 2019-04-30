@@ -91,16 +91,76 @@
             background-color: @primary;
             color:            #ffffff;
         }
-        
-        // WHAT?
-        //&:not(.active):hover {
-        //    background-color: @primary--hover;
-        //    color: #ffffff;
-        //}
-        
     }
     
     &__input {
         display: none;
+    }
+}
+
+.switcher {
+    margin: 0 8px 16px;
+    
+    &-wrap {
+        display:     flex;
+        align-items: center;
+        flex-wrap:   wrap;
+        position:    relative;
+        margin:      0 -8px;
+    
+        @media screen and (max-width: (@max_width)) {
+            margin: 0;
+        }
+    }
+    
+    &-grid {
+        .switcher {
+            width: calc(~"100% / 4 - 16px");
+    
+            @media screen and (max-width: (@big_tablet)) {
+                width: calc(~"100% / 3 - 16px");
+            }
+    
+            @media screen and (max-width: (@big_mobile)) {
+                width: calc(~"100% / 2 - 16px");
+            }
+    
+            @media screen and (max-width: (@middle_mobile)) {
+                width: calc(~"100% - 16px");
+            }
+        }
+    }
+    
+    &__input {
+        display: none;
+    }
+    
+    &__name {
+        display:       block;
+        border:        1px solid @gray6;
+        color:         @gray3;
+        font-size:     14px;
+        font-weight:   600;
+        line-height:   1.4;
+        transition:    all 0.02s ease-in-out;
+        border-radius: 20px;
+        text-align:    center;
+        padding:       10px;
+        cursor:        pointer;
+        min-width:     100px;
+        
+        &:hover {
+            border: 1px solid @gray2;
+            color:  @gray2;
+        }
+        
+        &--long {
+            min-width: 160px;
+        }
+    }
+    
+    &__input:checked + .switcher__name {
+        border: 1px solid @primary;
+        color:  @primary;
     }
 }
