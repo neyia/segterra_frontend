@@ -8,10 +8,6 @@
 .form-field {
     margin-bottom: 22px;
     position:      relative;
-    
-    .disabled {
-        color: rgba(35, 45, 55, 0.31);
-    }
 }
 
 .form-control {
@@ -42,9 +38,10 @@
     }
 }
 
-input[readonly],
-input[disabled] {
-    opacity: 0.3;
+.form-field.disabled {
+    .label, .form-control {
+        opacity: 0.3;
+    }
 }
 
 .label {
