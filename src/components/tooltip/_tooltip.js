@@ -3,12 +3,12 @@ if (window.innerWidth < TABLET) {
     
     function Tooltip() {
         
-        const tooltipWrap = document.querySelectorAll('.tooltip-wrap');
+        const tooltipHover = document.querySelectorAll('.tooltip-hover');
         const tooltip = document.querySelectorAll('.tooltip');
         const screen = document.querySelector('.screen');
         
-        for (let i = 0; i < tooltipWrap.length; i++) {
-            tooltipWrap[i].addEventListener('click', function (e) {
+        for (let i = 0; i < tooltipHover.length; i++) {
+            tooltipHover[i].addEventListener('click', function (e) {
                 e.preventDefault();
                 tooltip[i].classList.add('show');
                 screen.classList.add('is-visible');
