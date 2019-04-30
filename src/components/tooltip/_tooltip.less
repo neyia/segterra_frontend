@@ -8,7 +8,7 @@
     background-color: #ffffff;
     z-index:          11;
     left:             0;
-    top:              calc(~'100% + 10px');
+    top:              calc(~'100% + 5px');
     flex-shrink:      0;
     box-shadow:       0 4px 12px 1px rgba(35, 45, 55, 0.15);
     cursor:           default;
@@ -23,20 +23,25 @@
         width:     288px;
     }
     
-    &-wrap {
-        width:            20px;
-        margin:           50px auto;
-        padding:          5px;
-        background-color: @primary;
+    &-hover {
+        width:            14px;
+        height:           14px;
+        top:              3px;
+        left:             5px;
         cursor:           pointer;
-        color:            #fff;
         position:         relative;
+        background-image: url("../../assets/img/tooltip/tooltip-icon.png");
         
         &:hover {
             .tooltip {
                 display: block;
             }
         }
+    }
+    
+    &-wrap {
+        justify-content: center;
+        display: flex;
     }
     
     &__title {
