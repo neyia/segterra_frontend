@@ -1,0 +1,76 @@
+@import '../../styles/utils/variables';
+
+.radios-wrap {
+    margin: 100px;
+}
+
+.radio {
+    margin-bottom: 20px;
+    
+    &__input {
+        position: absolute;
+        left:     -9999px;
+    }
+    
+    &__label {
+        margin-bottom:  10px;
+        position:       relative;
+        padding-top:    0;
+        line-height:    20px;
+        width:          auto;
+        letter-spacing: 0.2px;
+        color:          #232d37;
+        font-family:    "Open Sans", sans-serif;
+        font-size:      14px;
+        font-weight:    400;
+        
+        &:before {
+            display:          inline-block;
+            width:            18px;
+            height:           18px;
+            margin-right:     10px;
+            background-color: #ffffff;
+            border:           1px solid #c3c8cd;
+            border-radius:    50%;
+            content:          "";
+            font-size:        35px;
+            font-weight:      600;
+            line-height:      30px;
+            text-align:       center;
+            color:            transparent;
+            vertical-align:   text-bottom;
+        }
+    }
+    
+    &__input:checked + &__label:after {
+        position:         absolute;
+        background-color: #00aaff;
+        top:              4px;
+        left:             3px;
+        display:          block;
+        height:           12px;
+        width:            12px;
+        border-radius:    50%;
+        content:          '';
+        z-index:          5;
+    }
+    
+    &__input:checked + &__label:before {
+        color:        #00aaff;
+        border-color: #00aaff;
+        background:   none;
+        font-size:    140px;
+        line-height:  30px;
+    }
+}
+
+.radio__input:checked:focus + .radio__label:before,
+.radio__input:not(:checked):focus + .radio__label:before {
+    border: 1px solid #00aaff;
+}
+
+.radio__input:disabled + .radio__label:before,
+.radio__input:checked:disabled + .radio__label:before,
+.radio__input:checked:disabled + .radio__label:after {
+    opacity: 0.3;
+}
