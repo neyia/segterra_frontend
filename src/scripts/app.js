@@ -1,5 +1,7 @@
 import '../components/card/_card'
 import '../components/tooltip/_tooltip'
 import '../components/switcher/_switcher'
+import '../components/text_fields/_text_field'
+import '../components/tab/_tab'
 import '../components/text_field/_text_field'
 import '../components/style_guide_only/_sidebar'
