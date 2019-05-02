@@ -58,3 +58,10 @@ Gulp is a build tool in JavaScript 'build' on node streams. Working directory - 
  # Code Style
 
 Segterra_Front_CodeStyle.xml
+
+
+# Babel watcher settings
+
+![Add watcher](src/docs/1.png)
+
+![Set watcher](src/docs/2.png)
