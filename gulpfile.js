@@ -3,20 +3,23 @@ const gulp = require('gulp'),
     less = require('gulp-less'),
     autoprefixer = require('gulp-autoprefixer'),
     cleancss = require('gulp-clean-css'),
-    purgecss = require('gulp-purgecss'),
     notify = require("gulp-notify"),
-    sourcemaps = require('gulp-sourcemaps'),
     imagemin = require('gulp-imagemin'),
     imgJpeg = require('imagemin-jpegoptim'),
     browserSync = require('browser-sync').create(),
-    svgSprite = require('gulp-svg-sprite'),/// if using dirty svg
-    svgmin = require('gulp-svgmin'),
-    cheerio = require('gulp-cheerio'),
     replace = require('gulp-replace'),
     svgstore = require('gulp-svgstore'),
     rename = require('gulp-rename'),
     clean = require('gulp-clean'),
     webpack = require('webpack-stream');
+    
+    // lets delete if not use
+
+    //purgecss = require('gulp-purgecss'),
+    //sourcemaps = require('gulp-sourcemaps'),
+    //svgSprite = require('gulp-svg-sprite'),/// if using dirty svg
+    //svgmin = require('gulp-svgmin'),
+    //cheerio = require('gulp-cheerio'),
 
 //PATHS
 const path = {
@@ -111,6 +114,7 @@ gulp.task('svgsprite', function () {
         .pipe(browserSync.reload({
             stream: true
         }));
+    
 });
 
 gulp.task('clean', () => {
