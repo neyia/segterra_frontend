@@ -53,8 +53,12 @@
 
 .card--checkin {
     
-    .card__content {
+    &.swiper-slide .card__content {
         height: 400px;
+        
+        @media only screen and (max-width: (@big_tablet)) {
+            height: 380px;
+        }
     }
     
     .card-days {

@@ -4,7 +4,7 @@
 /* General classes */
 
 .hide {
-    display: none !important;
+    display: none;
 }
 
 .inline-flex {
@@ -37,6 +37,21 @@
         color:       @primary;
         background:  none;
         border:      none;
+        transition:  all 0.2s ease-in-out;
+    }
+    
+    .btn-card:not(.btn-card--checkin) {
+        
+        &:hover,
+        &:focus {
+            color:           #46c3ff;
+            text-decoration: underline;
+        }
+        
+        &:active {
+            color:           #0096e1;
+            text-decoration: underline;
+        }
     }
     
     &__content {
