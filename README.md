@@ -65,3 +65,10 @@ Segterra_Front_CodeStyle.xml
 ![Add watcher](src/docs/1.png)
 
 ![Set watcher](src/docs/2.png)
+
+# Babel scope settings
+
+![Add watcher](src/docs/scope.png)
+
+![Set watcher](src/docs/babelscope.png)
+
