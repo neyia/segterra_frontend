@@ -19,9 +19,10 @@
   },
   "homepage": "https://github.com/neyia/segterra_frontend#readme",
   "devDependencies": {
-    "@babel/cli": "^7.4.3",
-    "@babel/core": "^7.4.3",
-    "@babel/preset-env": "^7.4.3",
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.4",
     "babel-loader": "^8.0.5",
     "browser-sync": "^2.26.3",
     "gulp": "^4.0.1",
@@ -42,6 +43,6 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.4.3"
+    "@babel/polyfill": "^7.4.4"
   }
 }

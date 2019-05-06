@@ -14,27 +14,122 @@
     @@include('modules/_head.html')
 </head>
 <body>
-<!--    hubspot modules-->
 
-<!--    @@include('hubspot/modules/_welcome.html')
-    @@include('hubspot/modules/_steps.html')
-    @@include('hubspot/modules/_contacts.html')
-    @@include('hubspot/modules/_partnership.html')-->
-
-<!--    Component modules-->
-
-@@include('components/card/_card.html') @@include('components/tooltip/_tooltip.html') @@include('components/switcher/_switcher.html')
-
-<section>
-    @@include('components/checkbox/_checkbox.html') @@include('components/text_field/_text_field.html')
-    @@include('components/radio/_radio.html')
-    <hr />
-    <div>
-        <h2>Links</h2>
-        @@include('components/links/_links.html')
+<div class="wrapper">
+    
+    <aside class="fixpanel">
+        <article>
+            <h3 class="heading-26">About</h3>
+            <ul>
+                <li>
+                    <a class="link-primary link-primary--active" href="#" onclick="return false" data-link="about">
+                        About this guide
+                    </a>
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h3 class="heading-26">UI Patterns</h3>
+            <ul>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="card">Cards</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="popup">Popups</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="tooltip">Tooltips</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="tab">Tabs</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="text">Text fields</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="button">Buttons</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="link">Links and pagination</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="table">Tables</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="list">Lists</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="checkbox">Checkboxes</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="radio">Radio buttons</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="tumbler">Tumbler</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="switche">Switches</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="calendar">Calendar</a>
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h3 class="heading-26">Hubspot templates</h3>
+            <ul>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="giveaway">Giveaway</a>
+                </li>
+            </ul>
+        
+        </article>
+    </aside>
+    
+    <div class="container-right items">
+        
+        <section class="item" data-link="about">
+            <h2>Internal SG Component</h2>
+            Be careful
+        </section>
+        
+        <section class="item hide" data-link="card">
+            <h2>Cards Component</h2>
+            @@include('components/card/_card.html')
+        </section>
+        
+        <section class="item hide" data-link="tooltip">
+            <h2>Tooltip Component</h2>
+            @@include('components/tooltip/_tooltip.html')
+        </section>
+        
+        <section class="item hide" data-link="switcher">
+            <h2>Switcher Component</h2>
+            @@include('components/switcher/_switcher.html')
+        </section>
+        
+        <section class="item hide" data-link="checkbox">
+            <h2>Checkbox Component</h2>
+            @@include('components/checkbox/_checkbox.html')
+        </section>
+        
+        <section class="item hide" data-link="text">
+            <h2>Text Component</h2>
+            @@include('components/text_field/_text_field.html')
+        </section>
+        
+        <section class="item hide" data-link="radio">
+            <h2>Radio Component</h2>
+            @@include('components/radio/_radio.html')
+        </section>
+        
+        <section class="item hide" data-link="link">
+            <h2>Links Component</h2>
+            @@include('components/link/_link.html')
+        </section>
     </div>
-    <hr />
-</section>
+
+</div>
 @@include('modules/_scripts.html')
 </body>
 </html>

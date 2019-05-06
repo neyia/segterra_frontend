@@ -39,8 +39,8 @@ const path = {
         img: ['src/assets/img/**/*.*','src/hubspot/assets/img/**/*.*'],
         svg: ['src/assets/svg/*.*', 'src/hubspot/assets/svg/*.*'],
         fonts: 'src/assets/fonts/**/*.*',
-        //template: 'src/components/links/*.html',
-        //templateStyle: 'src/components/links/*.less'
+        //template: 'src/components/link/*.html',
+        //templateStyle: 'src/components/link/*.less'
     },
     watch: {
         html: 'src/**/*.html',
@@ -49,7 +49,7 @@ const path = {
         img: 'src/assets/img/**/*.*',
         svg: 'src/assets/svg/*.*',
         fonts: 'src/assets/fonts/**/*.*',
-        //template: 'src/components/links/*.*'
+        //template: 'src/components/link/*.*'
     },
     clean: './build'
 };
@@ -57,7 +57,7 @@ const path = {
 gulp.task('html', () => {
     return gulp.src([
             path.src.html,
-            //path.src.template // test links - separate page
+            //path.src.template // test link - separate page
         ])
         .pipe(fileinclude({
             prefix: '@@',
@@ -72,7 +72,7 @@ gulp.task('html', () => {
 gulp.task('styles', () => {
     return gulp.src([
             path.src.style,
-            //path.src.templateStyle  // test links - separate page
+            //path.src.templateStyle  // test link - separate page
         ])
         //.pipe(sourcemaps.init())
         .pipe(less())
@@ -144,7 +144,7 @@ gulp.task('serve', function() {
         server: {
             baseDir: "./build"
         },
-        tunnel: true,
+        tunnel: false,
         notify: false
     });
 });
@@ -163,3 +163,4 @@ gulp.task('build', gulp.series(
 gulp.task('dev', gulp.series( 'build',
     gulp.parallel('watch', 'serve')
 ));
+
