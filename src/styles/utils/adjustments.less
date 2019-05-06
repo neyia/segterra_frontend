@@ -33,6 +33,19 @@ p {
     fill:         currentColor;
 }
 
+// container
+
+.container {
+    position:  relative;
+    min-width: 310px;
+    max-width: @max_width;
+    margin:    0 auto;
+    
+    @media only screen and(max-width: (@desktop)) {
+        padding: 0 16px;
+    }
+}
+
 // headings
 // хорошо будет вынести все на общие компоненты
 .heading-38 {

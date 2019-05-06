@@ -1,33 +1,72 @@
 @import "../../styles/utils/variables";
+@import "./flipper_less";
+
+/* General classes */
+
+.hide {
+    display: none !important;
+}
+
+.inline-flex {
+    display: inline-flex;
+}
+
+/*          Card general styles     */
 
 .card {
-    width:          270px;
-    height:         400px;
-    border-radius:  6px;
-    overflow:       hidden;
-    margin:         50px 50px 50px 550px;
-    display:        flex;
-    flex-direction: column;
-    box-shadow:     0 0 15px 7px rgba(0, 0, 0, 0.06);
+    width:         270px;
+    max-width:     270px;
+    height:        400px;
+    border-radius: 6px;
+    box-shadow:    0 0 15px 8px rgba(0, 0, 0, 0.06);
+    margin:        0 15px 30px;
     
-    .hide {
-        display: none;
+    @media screen and (max-width: @big_tablet) {
+        width:     256px;
+        min-width: 256px;
+        height:    380px;
+        margin:    0 8px 30px;
     }
     
-    &-img {
-        width:      100%;
-        height:     160px;
-        background: url('../assets/img/card/lemon.jpg') no-repeat left top/cover;
+    .btn-card {
+        cursor:      pointer;
+        padding:     0;
+        font-size:   12px;
+        font-weight: 600;
+        line-height: 1em;
+        color:       @primary;
+        background:  none;
+        border:      none;
     }
     
     &__content {
         display:        flex;
         flex-direction: column;
-        padding:        23px 30px 30px;
-        flex-grow:      1;
+        border-radius:  6px;
         
-        &--back {
-            display: none;
+        .card__img {
+            width:                   100%;
+            height:                  160px;
+            min-height:              160px;
+            background:              url('../assets/img/card/lemon.jpg') no-repeat left top/cover;
+            border-top-left-radius:  6px;
+            border-top-right-radius: 6px;
+            
+            @media screen and (max-width: @big_tablet) {
+                height:     152px;
+                min-height: 152px;
+            }
+        }
+        
+        &-wrapper {
+            flex-grow:      1;
+            padding:        23px 30px 30px;
+            display:        flex;
+            flex-direction: column;
+            
+            @media screen and (max-width: @big_tablet) {
+                padding: 18px 25px 25px;
+            }
         }
     }
     
@@ -35,6 +74,15 @@
         font-weight: 600;
         font-size:   20px;
         line-height: 1.4;
+        max-height:  2.8em;
+        overflow:    hidden;
+        
+        @media screen and (max-width: @big_tablet) {
+            line-height: 1.5;
+            font-size:   16px;
+            max-height:  3em;
+            overflow:    hidden;
+        }
     }
     
     &-caption {
@@ -42,134 +90,167 @@
         line-height:    1.91;
         letter-spacing: 0.12px;
         color:          @gray2;
-        display:        flex;
-        
-        &--back {
-            display: none;
-        }
-        
-        &__list {
-            display:     flex;
-            margin-left: 9px;
-            align-items: center;
-            
-            &-item {
-                width:            7px;
-                height:           7px;
-                border-radius:    50%;
-                background-color: @gray5;
-                margin-right:     3px;
-                
-                &--active {
-                    background-color: @green;
-                    
-                }
-            }
-        }
-    }
-    
-    &-days {
-        display:         flex;
-        justify-content: space-between;
-        margin-top:      11px;
-        
-        &__item {
-            color:     @gray2;
-            font-size: 11px;
-            
-            .btn_card-day {
-                position:      relative;
-                background:    none;
-                padding:       0;
-                width:         24px;
-                height:        24px;
-                text-align:    center;
-                cursor:        pointer;
-                border:        1px solid @gray2;
-                border-radius: 50%;
-                
-                &:hover {
-                    border-color: @green;
-                    
-                    .card-days__item-date {
-                        display:     inline-block;
-                        font-weight: 700;
-                    }
-                }
-                
-                .card-days__item-date {
-                    position:  absolute;
-                    font-size: 9px;
-                    top:       25px;
-                    left:      50%;
-                    transform: translateX(-50%);
-                }
-                
-                .icon-checked {
-                    display: none;
-                }
-                
-            }
-            
-            .btn_card-day.checked {
-                background:      @green;
-                border:          1px solid @green;
-                border-radius:   50%;
-                display:         flex;
-                justify-content: center;
-                align-items:     center;
-                
-                .card-days__item-name, .card-days__item-date {
-                    display: none;
-                }
-                
-                .icon-checked {
-                    fill:    #fff;
-                    display: block;
-                }
-            }
-        }
     }
     
     &__bottom {
-        margin-top:      auto;
-        display:         flex;
-        align-items:     flex-end;
-        justify-content: space-between;
+        margin-top:  auto;
+        display:     flex;
+        align-items: flex-end;
         
-        .btn_card-checkin {
-            font-size:     14px;
-            font-weight:   600;
-            color:         @primary;
-            background:    none;
-            border:        1px solid @primary;
-            border-radius: 3px;
-            padding:       7px 20px;
+        .btn-card--details {
+            margin-left: auto;
+        }
+    }
+    
+    &-recommendation {
+        
+        &__title {
+            font-weight: 600;
+            font-size:   12px;
+            line-height: 1.84;
+            margin-top:  6px;
         }
         
-        .btn_card-details {
-            padding:     0;
+        &__list {
             font-size:   12px;
-            font-weight: 600;
-            line-height: 1em;
-            color:       @primary;
-            background:  none;
-            border:      none;
+            line-height: 1.84;
+            max-height:  calc(1.84em * 3);
+            overflow:    hidden;
+        }
+    }
+    
+    .card__description {
+        margin-top:  12px;
+        line-height: 1.43;
+        font-size:   14px;
+        max-height:  calc(1.43em * 6);
+        overflow:    hidden;
+    }
+    
+    .btn-card--more {
+        font-size:    14px;
+        margin-right: auto;
+        margin-top:   3px;
+        font-weight:  400;
+    }
+    
+    .back {
+        .card-recommendation {
+            
+            &__list {
+                display:         flex;
+                flex-direction:  column;
+                flex-wrap:       wrap;
+                justify-content: space-between;
+            }
+            
+            &__item {
+                width: 95px;
+            }
         }
     }
 }
 
-.card--back {
+/*          Dashboard card          */
+
+@import "./styles/card--dashboard";
+
+/*          Action plan             */
+
+@import "./styles/card--actionplan";
+
+/*          Customizing plan cards  */
+
+@import "./styles/card--customization";
+
+.card-list--goal {
+    margin:    0 -15px;
+    display:   flex;
+    flex-wrap: wrap;
     
-    .card-img {
+    @media screen and (max-width: @big_tablet) {
+        display: block;
+    }
+}
+
+.goal-card {
+    position:      relative;
+    width:         270px;
+    height:        120px;
+    margin:        0 15px 30px;
+    border-radius: 6px;
+    background:    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+                   url('../assets/img/card/goal1.jpg') no-repeat left top/cover;
+    
+    @media screen and (max-width: @big_tablet) {
+        margin: 0 auto 30px;
+    }
+    
+    @media screen and (max-width: @big_tablet) {
+        width:  288px;
+        height: 128px;
+    }
+    
+    .goal-card__label {
+        width:       100%;
+        height:      100%;
+        padding:     30px 30px 23px;
+        display:     flex;
+        align-items: flex-end;
+    }
+    
+    .goal-card__input {
         display: none;
     }
     
-    .card__content {
-        display: none;
+    .goal-card__checkbox {
+        position:         absolute;
+        cursor:           pointer;
+        top:              10px;
+        left:             auto;
+        right:            10px;
+        width:            36px;
+        height:           36px;
+        border:           2px solid #fff;
+        border-radius:    50%;
+        box-shadow:       0 4px 15px 1px rgba(0, 0, 0, 0.35);
+        background-color: rgba(255, 255, 255, 0.5);
+        display:          flex;
+        justify-content:  center;
+        align-items:      center;
         
-        &--back {
-            display: flex;
+        .icon-checked {
+            display: none;
         }
+    }
+    
+    .goal-card__input:checked ~ .goal-card__checkbox {
+        background:   @primary;
+        border-color: @primary;
+        box-shadow:   none;
+        
+        .icon-checked {
+            fill:    #fff;
+            display: block;
+        }
+    }
+    
+    .goal-card__title {
+        color:       #fff;
+        font-size:   20px;
+        line-height: 1.4;
+    }
+    
+    .goal-card__overlay {
+        position:      absolute;
+        border-radius: 6px;
+        top:           0;
+        left:          0;
+        width:         100%;
+        height:        100%;
+    }
+    
+    .goal-card__input:checked ~ .goal-card__overlay {
+        box-shadow: 0 0 0 2px @primary;
     }
 }
