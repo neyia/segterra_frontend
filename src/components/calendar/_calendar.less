@@ -1,0 +1,57 @@
+@import "../../styles/utils/variables";
+
+.datepicker {
+    border-radius: 0;
+    border:        none;
+    
+    &--pointer {
+        display: none;
+    }
+    
+    &--nav {
+        padding:    0 0 0 14px;
+        display:    flex;
+        background: @primary;
+        color:      #fff;
+        
+        &-action {
+            order: 5;
+    
+            &:hover {
+                background: none;
+            }
+    
+            &:focus {
+                outline: none;
+            }
+            
+            svg {
+                
+                width: 42px;
+            }
+            
+            path {
+                stroke: #fff;
+            }
+        }
+        
+        &-title {
+            padding: 0;
+            color:   #fff;
+            margin-right: auto;
+            line-height: 50px;
+            
+            &:hover {
+                background: none;
+            }
+            
+            &:focus {
+                ouutline: none;
+            }
+            
+            i {
+                color: #fff;
+            }
+        }
+    }
+}
