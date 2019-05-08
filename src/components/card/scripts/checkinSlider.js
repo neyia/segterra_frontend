@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
     
-    const checkinSlider = new Swiper('.swiper-container', {
+    const checkinSlider = new Swiper('.card-swiper', {
         navigation: {
             nextEl: '.swiper-button--next',
             prevEl: '.swiper-button--prev'

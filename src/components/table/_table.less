@@ -1,83 +1,140 @@
 @import "../../styles/utils/variables";
 
 .table {
-    margin: 50px;
+    margin:    50px;
     font-size: 14px;
-    color: #232d37;
-    display: flex;
-    //overflow: hidden;
+    color:     #232d37;
+    display:   flex;
+    overflow:  hidden;
+    position:  relative;
+    width:     800px;
+    
     &__head {
-        width: 200px;
+        width:       200px;
         flex-shrink: 0;
+        
+        @media screen and (max-width: 630px) {
+            width: 40%;
+        }
+        
         .table__cell {
             text-align: left;
-            display: block;
+            display:    block;
         }
     }
+    
     &__body {
         flex-grow: 1;
+        position:  relative;
     }
+    
     &__column {
-        width: 16%;
         &:hover {
             background-color: #cdf0ff;
         }
     }
+    
     &__cell {
-        border-bottom: 1px solid #e1e4e6;
-        text-align: center;
-        line-height: 1.4;
-        padding: 12px 15px 13px;
-        position: relative;
-        display: flex;
+        border-bottom:   1px solid #e1e4e6;
+        text-align:      center;
+        line-height:     1.4;
+        padding:         12px 15px 13px;
+        position:        relative;
+        display:         flex;
         justify-content: center;
-        align-items: center;
+        align-items:     center;
+        height: 45px;
+        
         &--title {
             border-bottom: 2px solid #e1e4e6;
-            padding: 15px;
-            font-weight: 700;
-            font-size: 16px;
+            padding:       15px;
+            font-weight:   700;
+            font-size:     16px;
+            height: auto;
         }
+        
         &--bold {
             font-weight: 700;
         }
+        
+        &--bigger {
+            height: 65px;
+        }
+        
+        &--biggest {
+            height: 110px;
+        }
+        
         &--sub {
             padding-left: 60px;
         }
+        
         &--disabled {
             opacity: 0.5;
         }
     }
+    
     &__dot {
-        width: 8px;
-        height: 8px;
+        width:         8px;
+        height:        8px;
         border-radius: 50%;
-        display: inline-block;
-        margin-left: 5px;
+        display:       inline-block;
+        margin-left:   5px;
+        
         &--yellow {
             background-color: #ffcd00;
         }
+        
         &--orange {
             background-color: #ff5a00;
         }
+        
         &--brown {
             background-color: #c80000;
         }
+        
         &--green {
             background-color: #64c800;
         }
     }
+    
     &__icon {
-        width: 16px;
-        height: 16px;
+        width:            16px;
+        height:           16px;
         background-image: url(https://cdn-assets-cloud.frontify.com/local/frontify/h_lNxVXLqrDqb2kyrixW3lMmUl7n-aBRzJUzyvzD7_-h_xULlPFqYtI1jyw3JW9bPqzs8-QAhPPg9fMHSi_CLc84skgKIPu_ewopzqa5KVuFQEDLjRW9qtKtMJ9oZHft?width=2400);
-        display: inline-block;
-        position: relative;
-        top: 2px;
-        margin-right: 10px;
+        display:          inline-block;
+        position:         relative;
+        top:              2px;
+        margin-right:     10px;
     }
+    
     &__checkbox {
-        display: inline-block;
+        display:       inline-block;
         margin-bottom: 0;
+    }
+    
+    &-arrow {
+        display:  block;
+        position: absolute;
+        top:      20px;
+        z-index:  5;
+        cursor:   pointer;
+        outline: none;
+        
+        &-prev {
+            left: 16px;
+        }
+        
+        &-next {
+            right:     16px;
+            top:       16px;
+            transform: rotate(180deg);
+        }
+        
+        .icon {
+            color:  #00aaff;
+            width:  10px;
+            height: 16px;
+        }
     }
 }
