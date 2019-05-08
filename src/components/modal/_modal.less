@@ -142,14 +142,17 @@
 .wrapper-btns {
     display:     flex;
     white-space: nowrap;
-    @media screen and (max-width: (@big_mobile)) {
+    @media screen and (max-width: (@big_tablet)) {
         justify-content: center;
     }
 }
 
 .wrapper-btns--left {
     margin-left: -10px;
-    @media screen and (max-width: (@big_mobile)) {
+    @media screen and (max-width: 1100px) {
+        justify-content: center;
+    }
+    @media screen and (max-width: (@big_tablet)) {
         margin-left: 0;
     }
 }
@@ -209,7 +212,7 @@
 .wrapper-btns--right {
     justify-content: flex-end;
     margin-right:    -10px;
-    @media screen and (max-width: (@big_mobile)) {
+    @media screen and (max-width: (@big_tablet)) {
         margin-right: 0;
     }
 }
@@ -235,8 +238,8 @@
         border-radius:    3px;
     }
     
-    &__text {
-    
+    .text-14 {
+        margin: 0;
     }
     
     .text--primary {
