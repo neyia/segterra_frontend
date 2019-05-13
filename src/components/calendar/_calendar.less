@@ -5,7 +5,7 @@
     .datepicker {
         border-radius: 0;
         border:        none;
-        font-family:   "Open Sans", sans-serif;
+        font-family:    "Open Sans", Tahoma, Helvetica, Arial, sans-serif;
         
         &--pointer {
             display: none;
@@ -31,7 +31,7 @@
                 }
                 
                 svg {
-                    transform: scale(1.2, 1.2);
+                    transform: scale(1.2);
                 }
                 
                 path {
@@ -118,6 +118,12 @@
                 color:       #fff;
                 
                 &.-focus- {
+                    font-weight: 700;
+                    background:  @primary;
+                    color:       #fff;
+                }
+    
+                &.-current- {
                     font-weight: 700;
                     background:  @primary;
                     color:       #fff;
