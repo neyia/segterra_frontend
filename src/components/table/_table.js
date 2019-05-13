@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-    
+
     const checkinSlider = new Swiper('.table-swiper', {
         navigation: {
             nextEl: '.table-arrow-next',
@@ -20,5 +20,5 @@ window.addEventListener('load', () => {
             }
         },
     });
-    
+
 });
