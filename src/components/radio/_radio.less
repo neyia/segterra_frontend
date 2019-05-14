@@ -1,7 +1,7 @@
 @import '../../styles/utils/variables';
 
 .radios-wrap {
-    margin: 100px;
+    margin: 100px 0;
 }
 
 .radio {
@@ -69,8 +69,9 @@
     border: 1px solid #00aaff;
 }
 
-.radio__input:disabled + .radio__label:before,
-.radio__input:checked:disabled + .radio__label:before,
-.radio__input:checked:disabled + .radio__label:after {
+.radio__input:disabled + .radio__label,
+.radio__input:checked:disabled + .radio__label,
+.radio__input:checked:disabled + .radio__label {
     opacity: 0.3;
 }
+
