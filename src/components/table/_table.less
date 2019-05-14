@@ -9,12 +9,19 @@
     position:  relative;
     width:     800px;
     
+    @media screen and (max-width: (@mobile)) {
+        padding-bottom: 40px;
+    }
+    
     &__head {
         width:       200px;
         flex-shrink: 0;
         
         @media screen and (max-width: 630px) {
             width: 40%;
+        }
+        @media screen and (max-width: (@mobile)) {
+            box-shadow: 0 0 16px rgba(0, 0, 0, 0.06);
         }
         
         .table__cell {
@@ -45,12 +52,23 @@
         align-items:     center;
         height:          45px;
         
+        &:last-child{
+            @media screen and (max-width: (@mobile)) {
+                border-bottom: 0;
+            }
+        }
+        
         &--title {
             border-bottom: 2px solid #e1e4e6;
             padding:       15px;
             font-weight:   700;
             font-size:     16px;
             height:        auto;
+    
+            @media screen and (max-width: (@mobile)) {
+                border: 0;
+                box-shadow: 0 0 16px rgba(0, 0, 0, 0.06);
+            }
         }
         
         &--bold {
@@ -63,14 +81,17 @@
         
         &--biggest {
             height: 110px;
+            @media screen and (max-width: (@mobile)) {
+                height: 120px;
+            }
         }
         
         &--sub {
-            padding-left: 60px;
+            padding-left: 48px;
         }
         
         &--disabled {
-            opacity: 0.5;
+            color: @gray6;
         }
     }
     
@@ -123,6 +144,9 @@
         
         &-prev {
             left: 16px;
+            @media screen and (max-width: @big_mobile) {
+                display: none;
+            }
         }
         
         &-next {

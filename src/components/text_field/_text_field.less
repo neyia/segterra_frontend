@@ -26,8 +26,14 @@
         font-family:    "Open Sans", Tahoma, Helvetica, Arial, sans-serif;
         font-size:      14px;
         font-weight:    400;
-        line-height:    normal;
+        line-height:    36px;
         letter-spacing: 0.26px;
+        height:         36px;
+        vertical-align: middle;
+    }
+    
+    &::-ms-clear {
+        display: none;
     }
     
     &:focus {
@@ -44,8 +50,7 @@
 .label {
     color:          @gray1;
     cursor:         pointer;
-    padding-right:  1em;
-    margin-bottom:  0.5em;
+    margin-bottom:  6px;
     display:        block;
     font-family:    "Open Sans", Tahoma, Helvetica, Arial, sans-serif;
     font-weight:    600;
@@ -55,13 +60,14 @@
 }
 
 .helper-text {
-    color:          @gray5;
+    color:          @gray3;
     font-family:    "Open Sans", Tahoma, Helvetica, Arial, sans-serif;
     font-size:      12px;
     font-weight:    400;
     line-height:    17px;
     letter-spacing: 0.12px;
-    margin-top:     5px;
+    margin-top:     4px;
+    margin-bottom:  -15px;
 }
 
 .error-message {
@@ -70,7 +76,8 @@
     font-size:        12px;
     line-height:      17px;
     list-style-image: none;
-    margin-top:       5px;
+    margin-top:       4px;
+    margin-bottom:    -15px;
 }
 
 .incorrect-value-input {
@@ -83,15 +90,17 @@
     position:      relative;
     display:       inline-block;
     margin-bottom: 22px;
+    margin-top:    13px;
     
     .form-control {
         border:        0;
         border-bottom: 1px solid @gray7;
-        width:         270px;
-        height:        100%;
+        width:         271px;
+        line-height:   36px;
+        height:        36px;
         outline:       none;
         font-size:     14px;
-        padding:       6px 10px 8px 30px;
+        padding:       0 10px 0 32px;
         box-sizing:    border-box;
     }
     
@@ -116,7 +125,7 @@
         text-align: left;
         margin:     -1px 0 0 0;
         border:     1px solid @gray5;
-        color:      #232d37;
+        color:      @gray1;
         font-size:  14px;
         width:      100%;
     }
