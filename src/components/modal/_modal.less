@@ -1,11 +1,6 @@
 @import "../../styles/utils/variables";
 @import "../../styles/utils/adjustments";
 
-.test {
-    position: relative;
-    height:   950px;
-}
-
 .modal {
     position: absolute;
     top:      150px;
@@ -92,7 +87,7 @@
         margin-bottom: 30px;
         @media screen and (max-width: (@big_mobile)) {
             font-size:     24px;
-            margig-bottom: 20px;
+            margin-bottom: 20px;
         }
     }
     
@@ -139,7 +134,7 @@
     }
 }
 
-.wrapper-btns {
+.modal-btns {
     display:     flex;
     white-space: nowrap;
     @media screen and (max-width: (@big_tablet)) {
@@ -147,7 +142,7 @@
     }
 }
 
-.wrapper-btns--left {
+.modal-btns--left {
     margin-left: -10px;
     @media screen and (max-width: 1100px) {
         justify-content: center;
@@ -209,7 +204,7 @@
     }
 }
 
-.wrapper-btns--right {
+.modal-btns--right {
     justify-content: flex-end;
     margin-right:    -10px;
     @media screen and (max-width: (@big_tablet)) {
@@ -231,18 +226,24 @@
     
     &__wrapper {
         padding:          20px;
-        background-color: #eaf8fe;
+        background-color: @blue--light;
         max-width:        770px;
         width:            100%;
         margin:           0 auto;
         border-radius:    3px;
     }
     
-    .text-14 {
-        margin: 0;
+    &__text {
+        color:          @gray1;
+        letter-spacing: 0.2px;
+        font-size:      14px;
+        line-height:    1.5;
+        font-weight:    400;
+        margin:         0;
     }
     
-    .text--primary {
+    .modal-link--primary {
+        color:           @primary;
         text-decoration: none;
     }
 }
@@ -252,7 +253,7 @@
     bottom: 0;
     
     .modal-info__wrapper {
-        background-color: #fff8e4;
+        background-color: @yellow;
     }
 }
 
@@ -261,6 +262,6 @@
     bottom: 145px;
     
     .modal-info__wrapper {
-        background-color: #fae6e6;
+        background-color: @red--light;
     }
 }
