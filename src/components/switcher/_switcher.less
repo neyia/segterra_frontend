@@ -141,7 +141,7 @@
     
     &__name {
         display:       block;
-        border:        1px solid @gray6;
+        border:        1px solid @gray5;
         color:         @gray3;
         font-size:     14px;
         font-weight:   600;
@@ -154,12 +154,21 @@
         min-width:     100px;
         
         &:hover {
-            border: 1px solid @gray2;
-            color:  @gray2;
+            border: 1px solid @primary;
+            color:  @primary;
         }
         
         &--long {
             min-width: 160px;
+        }
+        
+        &--disabled {
+            opacity: 0.3;
+            
+            &:hover {
+                color:  @gray3;
+                border: 1px solid @gray5;
+            }
         }
     }
     
