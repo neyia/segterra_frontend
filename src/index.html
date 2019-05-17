@@ -8,21 +8,21 @@
             integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
             src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
     <script src="https://test.segterra.com/skin/js/typeahead.js" type="application/javascript"></script>
-    
+
     <title>segterra frontend</title>
-    
+
     @@include('modules/_head.html')
 </head>
 <body>
 
 <div class="wrapper">
-    
+
     <aside class="fixpanel">
         <article>
             <h3 class="heading-26">About</h3>
             <ul>
                 <li>
-                    <a class="link-primary link-primary--active" href="#" onclick="return false" data-link="about">
+                    <a class="link-primary" href="#" onclick="return false" data-link="about">
                         About this guide
                     </a>
                 </li>
@@ -53,7 +53,7 @@
                     <a class="link-primary" href="#" onclick="return false" data-link="link">Links and pagination</a>
                 </li>
                 <li>
-                    <a class="link-primary" href="#" onclick="return false" data-link="table">Tables</a>
+                    <a class="link-primary link-primary--active" href="#" onclick="return false" data-link="table">Tables</a>
                 </li>
                 <li>
                     <a class="link-primary" href="#" onclick="return false" data-link="list">Lists</a>
@@ -72,8 +72,7 @@
                 </li>
                 <li>
                     <a class="link-primary" href="#" onclick="return false" data-link="modal">Modals</a>
-                </li>
-                <li>
+                </li><li>
                     <a class="link-primary" href="#" onclick="return false" data-link="calendar">Calendar</a>
                 </li>
             </ul>
@@ -85,47 +84,47 @@
                     <a class="link-primary" href="#" onclick="return false" data-link="giveaway">Giveaway</a>
                 </li>
             </ul>
-        
+
         </article>
     </aside>
-    
+
     <div class="container-right items">
-        
-        <section class="item" data-link="about">
+
+        <section class="item hide" data-link="about">
             <h2>Internal SG Component</h2>
             Be careful
         </section>
-        
+
         <section class="item hide" data-link="card">
             <h2>Cards Component</h2>
             @@include('components/card/_card.html')
         </section>
-        
+
         <section class="item hide" data-link="tooltip">
             <h2>Tooltip Component</h2>
             @@include('components/tooltip/_tooltip.html')
         </section>
-    
+
         <section class="item hide" data-link="tab">
             <h2>Tab Component</h2>
             @@include('components/tab/_tab.html')
         </section>
-    
-        <section class="item hide" data-link="table">
+
+        <section class="item" data-link="table">
             <h2>Table Component</h2>
             @@include('components/table/_table.html')
         </section>
-        
+
         <section class="item hide" data-link="switcher">
             <h2>Switcher Component</h2>
             @@include('components/switcher/_switcher.html')
         </section>
-        
+
         <section class="item hide" data-link="checkbox">
             <h2>Checkbox Component</h2>
             @@include('components/checkbox/_checkbox.html')
         </section>
-        
+
         <section class="item hide" data-link="text">
             <h2>Text Component</h2>
             @@include('components/text_field/_text_field.html')
@@ -135,27 +134,27 @@
             <h2>Radio Component</h2>
             @@include('components/radio/_radio.html')
         </section>
-        
+
         <section class="item hide" data-link="link">
             <h2>Links Component</h2>
             @@include('components/link/_link.html')
         </section>
-        
+
         <section class="item hide" data-link="modal">
             <h2>Modals Component</h2>
             @@include('components/modal/_modal.html')
         </section>
-    
+
         <section class="item hide" data-link="button">
             <h2>Button Component</h2>
             @@include('components/button/_button.html')
         </section>
-        
+
         <section class="item hide" data-link="calendar">
             <h2>Calendar Component</h2>
             @@include('components/calendar/_calendar.html')
         </section>
-        
+
         <section class="item hide" data-link="popup">
             <h2>Popup Component</h2>
             @@include('components/popup/_popup.html')
