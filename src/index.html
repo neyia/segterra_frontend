@@ -50,10 +50,10 @@
                     <a class="link-primary" href="#" onclick="return false" data-link="button">Buttons</a>
                 </li>
                 <li>
-                    <a class="link-primary" href="#" onclick="return false" data-link="link">Links and pagination</a>
+                    <a class="link-primary link-primary--active" href="#" onclick="return false" data-link="link">Links</a>
                 </li>
                 <li>
-                    <a class="link-primary link-primary--active" href="#" onclick="return false" data-link="table">Tables</a>
+                    <a class="link-primary" href="#" onclick="return false" data-link="table">Tables</a>
                 </li>
                 <li>
                     <a class="link-primary" href="#" onclick="return false" data-link="list">Lists</a>
@@ -110,7 +110,7 @@
             @@include('components/tab/_tab.html')
         </section>
 
-        <section class="item" data-link="table">
+        <section class="item hide" data-link="table">
             <h2>Table Component</h2>
             @@include('components/table/_table.html')
         </section>
@@ -135,7 +135,7 @@
             @@include('components/radio/_radio.html')
         </section>
 
-        <section class="item hide" data-link="link">
+        <section class="item" data-link="link">
             <h2>Links Component</h2>
             @@include('components/link/_link.html')
         </section>
