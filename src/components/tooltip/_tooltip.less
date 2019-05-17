@@ -15,7 +15,7 @@
     display:          none;
     transition:       opacity 0.2s;
     
-    @media screen and (max-width: 798px) {
+    @media screen and (max-width: @tablet) {
         position:  fixed;
         top:       10%;
         left:      50%;
@@ -24,27 +24,32 @@
     }
     
     &-hover {
-        position:         relative;
-        
-        &:hover {
-            .tooltip {
-                display: block;
-            }
-        }
+        position: relative;
     }
     
     &-icon {
+        position:         relative;
         width:            14px;
         height:           14px;
         top:              3px;
         left:             5px;
         cursor:           pointer;
         background-image: url("../../assets/img/tooltip/tooltip-icon.png");
-    
+        
+        &:hover {
+            + .tooltip-hover > .tooltip {
+                display: block;
+                
+                @media screen and (max-width: @tablet) {
+                    display: none;
+                }
+            }
+            
+        }
     }
     
     &-wrap {
-        justify-content: center;
+        justify-content: start;
         display:         flex;
     }
     
@@ -54,9 +59,8 @@
         font-weight:   700;
         margin-bottom: 5px;
         display:       block;
-        //white-space:   pre;
         
-        @media screen and (max-width: 798px) {
+        @media screen and (max-width: @tablet) {
             white-space: normal;
         }
     }
