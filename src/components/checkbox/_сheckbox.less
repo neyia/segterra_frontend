@@ -40,7 +40,7 @@
             width:         18px;
             height:        18px;
             background:    transparent;
-            border:        1px solid #c3c8cd;
+            border:        1px solid @gray6;
             position:      absolute;
             top:           -1px;
             left:          0;
@@ -61,8 +61,8 @@
 }
 
 .checkbox__field:checked ~ .checkbox__label::before {
-    background-color: #00aaff;
-    border:           1px solid #00aaff;
+    background-color: @primary;
+    border:           1px solid @primary;
 }
 
 .checkbox--sm {
@@ -82,5 +82,21 @@
         width:  10px;
         height: 7px;
         left:   2px;
+    }
+}
+
+.checkboxes-wrap{
+    display: flex;
+}
+
+.checkboxes-column{
+    margin-left: 60px;
+    
+    &:first-child{
+        margin-left: 0;
+    }
+    
+    @media screen and (max-width: 400px) {
+        margin-left: 30px;
     }
 }
