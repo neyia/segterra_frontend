@@ -1,6 +1,11 @@
 @import "../../styles/utils/variables";
 @import "../../styles/utils/adjustments";
 
+.test-modal {
+    position: relative;
+    height: 320px;
+}
+
 .container--modal {
     position:  relative;
     min-width: 310px;
@@ -10,7 +15,7 @@
 
 .modal {
     position: absolute;
-    top:      150px;
+    top:      50px;
     left:     0;
     right:    0;
     z-index:  2;
@@ -19,7 +24,7 @@
     overflow: hidden;
     
     @media screen and (max-width: (@big_mobile)) {
-        top: 75px;
+        top: 25px;
     }
     
     &.show {
@@ -153,6 +158,13 @@
     }
 }
 
+.modal .btn-secondary,
+.modal .btn-primary {
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
 .modal--dashboard {
     .btn-secondary, .btn-primary {
         @media screen and (max-width: 1100px) {
@@ -177,7 +189,7 @@
 .modal--regular {
     //top:      150px;
     //только для frontify
-    top: 530px;
+    //top: 530px;
     
     .modal__title {
         margin-bottom: 20px;
