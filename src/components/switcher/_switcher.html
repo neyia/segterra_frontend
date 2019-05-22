@@ -1,18 +1,24 @@
 <!--Component Switcher-->
 
-<label class="tumbler-flex">
-  <span class="tumbler">
-    <input class="tumbler__input" type="checkbox">
-    <span class="tumbler__icon"></span>
-  </span>
-</label>
+<div class="wrapper">
 
-<label class="tumbler-flex">
-  <span class="tumbler tumbler--disabled">
-    <input class="tumbler__input" type="checkbox">
-    <span class="tumbler__icon"></span>
-  </span>
-</label>
+    <label class="tumbler-flex">
+        <span class="tumbler">
+            <input class="tumbler__input" type="checkbox">
+            <span class="tumbler__icon"></span>
+        </span>
+        <span class="tumbler-label text-14">Off</span>
+    </label>
+
+    <label class="tumbler-flex">
+        <span class="tumbler tumbler--disabled">
+            <input class="tumbler__input" type="checkbox" disabled>
+            <span class="tumbler__icon"></span>
+        </span>
+        <span class="tumbler-label text-14">Off</span>
+    </label>
+
+</div>
 
 <div class="toggler-flex">
     <div class="toggler ">
@@ -27,7 +33,7 @@
     </div>
 </div>
 
-<div class="switcher-wrap">
+<div class="switcher-wrap switcher-wrap--short">
     <label class="switcher">
         <input class="switcher__input" name="gender" type="radio" value="">
         <span class="switcher__name">Male</span>
