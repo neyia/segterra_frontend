@@ -1,6 +1,6 @@
 # Segterra Frontend
 
-Style Guide.
+Style Guide. https://neyia.github.io/segterra_frontend/
 Main idea - making reusable components.
 
 # Install
