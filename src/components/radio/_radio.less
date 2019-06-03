@@ -1,7 +1,7 @@
 @import '../../styles/utils/variables';
 
 .radios-wrap {
-    margin: 100px 0;
+    //margin: 100px 0;
 }
 
 .radio {
@@ -19,7 +19,7 @@
         line-height:    20px;
         width:          auto;
         letter-spacing: 0.2px;
-        color:          #232d37;
+        color:          @gray1;
         font-family:    "Open Sans", sans-serif;
         font-size:      14px;
         font-weight:    400;
@@ -30,7 +30,7 @@
             height:           18px;
             margin-right:     10px;
             background-color: #ffffff;
-            border:           1px solid #c3c8cd;
+            border:           1px solid @gray6;
             border-radius:    50%;
             content:          "";
             font-size:        35px;
@@ -44,7 +44,7 @@
     
     &__input:checked + &__label:after {
         position:         absolute;
-        background-color: #00aaff;
+        background-color: @primary;
         top:              4px;
         left:             3px;
         display:          block;
@@ -56,8 +56,8 @@
     }
     
     &__input:checked + &__label:before {
-        color:        #00aaff;
-        border-color: #00aaff;
+        color:        @primary;
+        border-color: @primary;
         background:   none;
         font-size:    140px;
         line-height:  30px;
@@ -66,7 +66,7 @@
 
 .radio__input:checked:focus + .radio__label:before,
 .radio__input:not(:checked):focus + .radio__label:before {
-    border: 1px solid #00aaff;
+    border: 1px solid @primary;
 }
 
 .radio__input:disabled + .radio__label,

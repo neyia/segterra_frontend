@@ -1,5 +1,5 @@
 import '../components/card/_card'
-import '../components/tooltip/_tooltip'
+// import '../components/tooltip/_tooltip'
 import '../components/switcher/_switcher'
 import '../components/tab/_tab'
 import '../components/table/_table'

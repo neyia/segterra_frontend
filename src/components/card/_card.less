@@ -181,20 +181,63 @@
             }
         }
     }
+    
+    &-rating {
+        font-size:      12px;
+        line-height:    1.91;
+        letter-spacing: 0.12px;
+        color:          @gray2;
+        
+        .inline-flex {
+            @media screen and (max-width: @big_tablet) {
+                display: flex;
+                
+            }
+        }
+        
+        &__list {
+            display:     inline-flex;
+            margin-left: 9px;
+            align-items: center;
+            
+            &-item {
+                width:            7px;
+                height:           7px;
+                border-radius:    50%;
+                background-color: @gray5;
+                margin-right:     3px;
+                
+                &--active {
+                    background-color: @green;
+                    
+                }
+            }
+        }
+        
+        .tooltip {
+            left:      50%;
+            transform: translateX(-54%);
+            
+            &__text {
+                letter-spacing: -0.09px;
+            }
+        }
+    }
 }
 
-/*          Dashboard card          */
+.card--checkin{
+    margin: 10px 0 0 0;
+}
+
+/*     Dashboard card          */
 
 @import "./styles/card--dashboard";
-
-/*          Action plan             */
+/*      Action card         */
 
 @import "./styles/card--actionplan";
-
-/*          Customizing plan cards  */
+/*    Customizing plan card       */
 
 @import "./styles/card--customization";
-
-/*          Goal cards  */
+/*    Goal card          */
 
 @import "./styles/card--goal";

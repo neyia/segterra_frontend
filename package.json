@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d build",
     "build": "gulp build",
     "dev": "gulp dev"
   },
@@ -17,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/neyia/segterra_frontend/issues"
   },
-  "homepage": "https://github.com/neyia/segterra_frontend#readme",
+  "homepage": "https://github.com/neyia/segterra_frontend",
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",

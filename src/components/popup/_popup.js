@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
     const closeBtn1 = document.getElementById('close-btn1');
     const closeX1 = document.getElementById('closeX1');
     const screen1 = document.getElementById('screen');
-    
+
     popupBtn1.onclick = function () {
         openPopup1();
     };
@@ -27,7 +27,7 @@ window.addEventListener('load', () => {
         screen1.classList.remove('is-visible');
     }
     /*---for regular popup END*/
-    
+
     /*for regular-fill mobile popup BEGIN---*/
     const popupBtn2 = document.getElementById('popupBtn2');
     const popup2= document.getElementById('popup2');
@@ -56,13 +56,13 @@ window.addEventListener('load', () => {
         screen2.classList.remove('is-visible');
     }
     /*---for regular-fill mobile popup END*/
-    
+
     /*for large popup BEGIN---*/
     const popupBtn3 = document.getElementById('popupBtn3');
     const popup3= document.getElementById('popup3');
     const closeX3 = document.getElementById('closeX3');
     const screen3 = document.getElementById('screen3');
-    
+
     popupBtn3.onclick = function () {
         openPopup3();
     };
@@ -89,17 +89,26 @@ window.addEventListener('load', () => {
     const closeBtn4 = document.getElementById('close-btn4');
     const closeX4 = document.getElementById('closeX4');
     const screen4 = document.getElementById('screen4');
+    const body = document.querySelector('body');
+    const bodyHeight = 440;
+    const const900 = 900;
+
 
     popupBtn4.onclick = function () {
+        body.style.height = '900px';
+        console.log('takeover');
         openPopup4();
     };
     closeBtn4.onclick = function () {
+        body.style.height = '240px';
         closePopup4();
     };
     screen4.onclick = function () {
+        body.style.height = '240px';
         closePopup4();
     };
     closeX4.onclick = function () {
+        body.style.height = '240px';
         closePopup4();
     };
     function openPopup4() {

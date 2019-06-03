@@ -1,5 +1,9 @@
 @import '../../styles/utils/variables';
 
+.container {
+    max-width: 970px;
+}
+
 .tumbler {
     background-color: @gray6;
     display:          inline-block;
@@ -8,6 +12,11 @@
     cursor:           pointer;
     height:           16px;
     width:            44px;
+    
+    &-label {
+        padding: 0 0 0 12px;
+        width:   33px;
+    }
     
     &-flex {
         display:         inline-flex;
@@ -115,8 +124,53 @@
         @media screen and (max-width: (@max_width)) {
             margin: 0;
         }
+        
+        &--short {
+            width: calc(~"100% / 4");
+            
+            @media screen and (max-width: 820px) {
+                width: calc(~"100% / 3 ");
+            }
+            
+            @media screen and (max-width: 420px) {
+                width: 100%;
+            }
+            
+            .switcher__name {
+                min-width: 130px;
+    
+                @media screen and (max-width: 820px) {
+                    min-width: 100px;
+                }
+    
+            }
+            
+            .switcher{
+                margin-left: 8px;
+                margin-right: auto;
+    
+                @media screen and (max-width: 820px) {
+                    margin-left: 8px;
+                    margin-right:8px;
+                }
+                @media screen and (max-width: 420px) {
+                    width: 44%;
+                }
+                
+            }
+        }
     }
     
+    &-four{
+        .switcher__name {
+            min-width: auto;
+            
+            @media screen and (max-width: 420px) {
+                min-width: calc(~"100% / 3 - 16px");
+            }
+            
+        }
+    }
     &-grid {
         .switcher {
             width: calc(~"100% / 4 - 16px");
@@ -141,7 +195,7 @@
     
     &__name {
         display:       block;
-        border:        1px solid @gray6;
+        border:        1px solid @gray5;
         color:         @gray3;
         font-size:     14px;
         font-weight:   600;
@@ -154,17 +208,65 @@
         min-width:     100px;
         
         &:hover {
-            border: 1px solid @gray2;
-            color:  @gray2;
+            border: 1px solid @primary;
+            color:  @primary;
         }
         
         &--long {
             min-width: 160px;
+        }
+        
+        &--disabled {
+            opacity: 0.3;
+            
+            &:hover {
+                color:  @gray3;
+                border: 1px solid @gray5;
+            }
         }
     }
     
     &__input:checked + .switcher__name {
         border: 1px solid @primary;
         color:  @primary;
+    }
+}
+
+
+//ds!!!!
+@media screen and (max-width: 1170px) {
+    .switcher-wrap {
+        margin: 0;
+    }
+}
+.switcher-three .switcher {
+    width: calc(100% / 4 - 16px);
+}
+@media screen and (max-width: 800px) {
+    .switcher-three .switcher {
+        width: calc(100% / 4 - 16px);
+    }
+}
+@media screen and (max-width: 630px) {
+    .switcher-three .switcher {
+        width: calc(100% / 3 - 16px);
+    }
+}
+@media screen and (max-width: 530px) {
+    .switcher-three .switcher {
+        width: calc(100% - 16px);
+    }
+}
+.switcher-four .switcher {
+    width: calc(100% / 3 - 16px);
+}
+@media screen and (max-width: 630px) {
+    .switcher-four .switcher {
+        width: calc(100% / 2 - 16px);
+    }
+}
+@media screen and (max-width: 530px) {
+    .switcher-four .switcher {
+        width: calc(100% / 3 - 16px);
     }
 }
