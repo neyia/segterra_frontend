@@ -33,7 +33,7 @@ const path = {
         //template: 'build/style/template'
     },
     src: {
-        html: 'src/index.html',
+        html: 'src/*.html',
         js: 'src/scripts/app.js',
         style: 'src/styles/style.less',
         img: ['src/assets/img/**/*.*','src/hubspot/assets/img/**/*.*'],
