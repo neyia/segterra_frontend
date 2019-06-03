@@ -951,6 +951,431 @@ app.post('/send', (req, res) => {
         </html>
     `;
     
+    const hubspot = `
+        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <meta name="x-apple-disable-message-reformatting">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin:      0 auto;
+            font-family: 'Open Sans', Arial, sans-serif;
+            color:       #232d37;
+        }
+    
+        table {
+            border-collapse:  collapse;
+            border-spacing:   0;
+            width:            100%;
+            margin:           0 auto;
+            padding:          0;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+    
+        td, p {
+            margin:  0;
+            padding: 0;
+        }
+    
+        img {
+            outline:                none;
+            -ms-interpolation-mode: bicubic;
+            display:                block;
+            margin:                 0;
+            padding:                0;
+            max-width:              100%;
+            height:                 auto;
+        }
+    
+        a {
+            color:           #12a0d2;
+            text-decoration: none;
+            font-family:     "Open Sans", Arial, sans-serif;
+        }
+    
+        a:hover {
+            color: #1ebeda !important;
+        }
+    
+        .wrapper {
+            background: #f5f5f5;
+        }
+    
+        .wrapper_td {
+            padding: 60px 0 200px;
+        }
+    
+        .email {
+            background: #ffffff;
+            width:      100%;
+            max-width:  600px;
+            min-width:  290px;
+        }
+    
+        .email-inner {
+            padding: 41px 60px 18px;
+        }
+    
+        .logo {
+            padding-bottom: 54px;
+        }
+    
+        .paragraph {
+            padding-bottom: 23px;
+            font-size:      14px;
+            line-height:    20px;
+            letter-spacing: 0.14px;
+            font-family:    "Open Sans", Arial, sans-serif;
+        }
+    
+        .paragraph-name {
+            padding-bottom: 20px;
+        }
+    
+        .paragraph-pt {
+            padding-top: 35px;
+        }
+    
+        .paragraph-pb {
+            padding-bottom: 32px;
+        }
+    
+        .paragraph-bold {
+            font-weight:    bold;
+            font-size:      14px;
+            letter-spacing: 0.14px;
+        }
+    
+        .section {
+            border-color: #e9f0f5;
+            border-style: solid;
+            border-width: 0 0 1px 0;
+            padding:      20px 0 20px;
+        }
+    
+        .section_bt {
+            border-width: 1px 0 1px 0;
+        }
+    
+        .multiple-image {
+            border-radius: 6px;
+            float:         left;
+            width:         140px;
+            height:        140px;
+        }
+    
+        .section__text {
+            padding-left:   170px;
+            font-size:      14px;
+            line-height:    20px;
+            letter-spacing: 0.14px;
+            font-family:    "Open Sans", Arial, sans-serif;
+        }
+    
+        .section__info {
+            padding-left:   170px;
+            padding-top:    10px;
+            font-weight:    600;
+            font-size:      12px;
+            letter-spacing: 0.14px;
+            font-family:    "Open Sans", Arial, sans-serif;
+        }
+    
+        .section__title {
+            font-size:      12px;
+            font-style:     italic;
+            letter-spacing: 0.14px;
+            font-family:    "Open Sans", Arial, sans-serif;
+        }
+    
+        .button-wrap {
+            padding-top:    36px;
+            padding-bottom: 55px;
+        }
+    
+        .button {
+            background-color: #00aaff;
+            text-decoration:  none;
+            display:          inline-block;
+            color:            #ffffff;
+            border-radius:    3px;
+            box-sizing:       border-box;
+            font-size:        16px;
+            font-weight:      600;
+            line-height:      36px;
+            cursor:           pointer;
+            border:           none;
+            width:            auto;
+            height:           36px;
+            padding:          0 20px;
+            letter-spacing:   0.26px;
+            font-family:      "Open Sans", Arial, sans-serif;
+        }
+    
+        .button:hover {
+            color:            #ffffff !important;
+            background-color: #46c3ff !important;
+        }
+    
+        .text--small {
+            font-size:      12px;
+            padding-bottom: 20px;
+            letter-spacing: 0.14px;
+            font-family:    "Open Sans", Arial, sans-serif;
+        }
+    
+        .footer-link {
+            display:     block;
+            padding-top: 3px;
+        }
+    
+        .footer {
+            padding: 40px 16px 17px;
+        }
+    
+        .footer-icon {
+            padding: 0 5px;
+            display: inline-block;
+            cursor:  pointer;
+        }
+    
+        .link-unsubscribe {
+            color:         #b9c3cd;
+            border-bottom: 1px solid #b9c3cd;
+        }
+    
+        .link-unsubscribe:hover {
+            color:         #b9c3cd !important;
+            border-bottom: none !important;
+        }
+    
+        .footer-icon img {
+            width:   26px;
+            height:  26px;
+            display: block;
+        }
+    
+        .footer-text {
+            font-size:      12px;
+            color:          #b9c3cd;
+            letter-spacing: 0.14px;
+            font-family:    "Open Sans", Arial, sans-serif;
+        }
+    
+        .mobile-br {
+            display: inline-block;
+            padding-bottom: 2px;
+        }
+    
+        .semibold {
+            font-weight: 600;
+        }
+    
+        /**/
+    
+        .single-image {
+            width: 100%;
+            border-radius: 6px;
+            display: block;
+            height: 250px;
+        }
+    
+        .logo-single {
+            padding-bottom: 60px;
+        }
+    
+        .paragraph-single {
+            padding-top: 35px;
+        }
+    
+        @media screen and (max-width: 450px) {
+            .wrapper_td {
+                padding: 0 0 20px !important;
+            }
+        
+            .email-inner {
+                padding-left:  16px !important;
+                padding-right: 16px !important;
+            }
+        
+            .logo {
+                padding-bottom: 40px !important;
+            }
+        
+            .paragraph-pb {
+                padding-bottom: 27px !important;
+            }
+        
+            .paragraph-pt {
+                padding-top: 30px !important;
+            }
+        
+            .section {
+                padding: 30px 0 30px !important;
+            }
+        
+            .multiple-image {
+                float:  none !important;
+                width:  100% !important;
+                height: 180px !important;
+            }
+        
+            .section__text {
+                padding-left: 0 !important;
+                padding-top:  27px !important;
+            }
+        
+            .section__info {
+                padding-left: 0 !important;
+            }
+        
+            .mobile-br {
+                display:     block!important;
+                padding-top: 3px !important;
+            }
+        
+            .unsubscribe {
+                padding-bottom: 5px !important;
+                display:        block !important;
+            }
+            .single-image {
+                height: 180px !important;
+            }
+            .footer-text {
+                color:          #b9c3cd!important;
+            }
+        }
+    </style>
+</head>
+<body style="margin: 0 auto;font-family: 'Open Sans', Arial, sans-serif;color: #232d37;">
+
+<table class="wrapper" bgcolor="#f5f5f5" style="border-collapse: collapse;border-spacing: 0;width: 100%;margin: 0 auto;padding: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;background: #f5f5f5;">
+    <tbody>
+    <tr>
+        <td class="wrapper_td" width="600px" align="center" style="margin: 0;padding: 60px 0 200px;">
+            <table class="email" style="border-collapse: collapse;border-spacing: 0;width: 100%;margin: 0 auto;padding: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;background: #ffffff;max-width: 600px;min-width: 290px;">
+                <tbody>
+                <tr>
+                    <td class="email-inner" style="margin: 0;padding: 41px 60px 18px;">
+                        <table class="content" style="border-collapse: collapse;border-spacing: 0;width: 100%;margin: 0 auto;padding: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                            <tbody>
+                            <tr>
+                                <td class="logo logo-single" style="margin: 0;padding: 0;padding-bottom: 60px;">
+                                    <img src="https://i2.yapics.com/05/27/2327vBaL05.png" alt="Inside Tracker Team" style="outline: none;-ms-interpolation-mode: bicubic;display: block;margin: 0;padding: 0;max-width: 100%;height: auto;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="margin: 0;padding: 0;">
+                                    <img class="single-image" src="https://s2.yapics.com/05/28/2228BCx905_th.jpg" alt="" style="outline: none;-ms-interpolation-mode: bicubic;display: block;margin: 0;padding: 0;max-width: 100%;height: 250px;width: 100%;border-radius: 6px;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="margin: 0;padding: 0;">
+                                    <p class="paragraph paragraph-single paragraph-name" style="margin: 0;padding: 0;padding-bottom: 20px;font-size: 14px;line-height: 20px;letter-spacing: 0.14px;font-family: &quot;Open Sans&quot;, Arial, sans-serif;padding-top: 35px;">Hi [user_name],</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="margin: 0;padding: 0;">
+                                    <p class="paragraph paragraph-name" style="margin: 0;padding: 0;padding-bottom: 20px;font-size: 14px;line-height: 20px;letter-spacing: 0.14px;font-family: &quot;Open Sans&quot;, Arial, sans-serif;">Internal site body copy.  Sit amet, consectetur adipiscing elit. Pellentesque dapibus felis
+                                        <a href="https://insidetracker.com" class="link" style="color: #12a0d2;text-decoration: none;font-family: &quot;Open Sans&quot;, Arial, sans-serif;">sit amet arcu ullamcorper</a> eleifend.
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="margin: 0;padding: 0;">
+                                    <p class="paragraph paragraph-name" style="margin: 0;padding: 0;padding-bottom: 20px;font-size: 14px;line-height: 20px;letter-spacing: 0.14px;font-family: &quot;Open Sans&quot;, Arial, sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pharetra volutpat mi, rhoncus egestas est sagittis eget. Quisque elementum convallis quam nec accumsan. Vivamus felis diam, venenatis eu auctor nec, ultrices sed odio. </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="margin: 0;padding: 0;">
+                                    <p class="paragraph" style="margin: 0;padding: 0;padding-bottom: 23px;font-size: 14px;line-height: 20px;letter-spacing: 0.14px;font-family: &quot;Open Sans&quot;, Arial, sans-serif;">Aliquam eu neque est. Cras vestibulum ipsum lectus, nec consectetur justo faucibus nec. Sed
+                                        <a href="https://insidetracker.com" class="link" style="color: #12a0d2;text-decoration: none;font-family: &quot;Open Sans&quot;, Arial, sans-serif;">gravida tortor vel lacus</a>
+                                         rutrum, sed mollis libero bibendum. Suspendisse potenti. Sed porttitor arcu sed ipsum faucibus, ipsum
+                                        <a href="https://insidetracker.com" class="link" style="color: #12a0d2;text-decoration: none;font-family: &quot;Open Sans&quot;, Arial, sans-serif;">consectetur urna</a>
+                                         imperdiet. Praesent in purus nulla. Donec dignissim, urna eu cursus vulputate, velit velit aliquam dolor.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="paragraph-bold" style="margin: 0;padding: 0;font-weight: bold;font-size: 14px;letter-spacing: 0.14px;">
+                                    <p class="semibold" style="margin: 0;padding: 0;font-weight: 600;">The InsideTracker team</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" class="button-wrap" style="margin: 0;padding: 0;padding-top: 36px;padding-bottom: 55px;">
+                                    <a href="https://insidetracker.com" target="_blank" class="button" style="color: #ffffff;text-decoration: none;font-family: &quot;Open Sans&quot;, Arial, sans-serif;background-color: #00aaff;display: inline-block;border-radius: 3px;box-sizing: border-box;font-size: 16px;font-weight: 600;line-height: 36px;cursor: pointer;border: none;width: auto;height: 36px;padding: 0 20px;letter-spacing: 0.26px;">Call to action</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" class="text--small" style="margin: 0;padding: 0;font-size: 12px;padding-bottom: 20px;letter-spacing: 0.14px;font-family: &quot;Open Sans&quot;, Arial, sans-serif;">
+                                    <p style="margin: 0;padding: 0;">
+                                        <span class="semibold" style="font-weight: 600;">Questions?</span> Our team is here to help at<span class="mobile-br" style="display: inline-block;padding-bottom: 2px;"></span>
+                                        <a href="mailto:contactus@insidetracker.com" class="link" style="color: #12a0d2;text-decoration: none;font-family: &quot;Open Sans&quot;, Arial, sans-serif;">contactus@insidetracker.com</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" class="text--small" style="margin: 0;padding: 0;font-size: 12px;padding-bottom: 20px;letter-spacing: 0.14px;font-family: &quot;Open Sans&quot;, Arial, sans-serif;">
+                                    <p style="margin: 0;padding: 0;">
+                                        The proof is in the data. Read our peer-reviewed <span class="mobile-br" style="display: inline-block;padding-bottom: 2px;"></span>paper in
+                                        <a href="https://insidetracker.com" style="color: #12a0d2;text-decoration: none;font-family: &quot;Open Sans&quot;, Arial, sans-serif;">Scientific Reports.</a>
+                                        <br>
+                                        <a href="https://insidetracker.com" class="link footer-link" style="color: #12a0d2;text-decoration: none;font-family: &quot;Open Sans&quot;, Arial, sans-serif;display: block;padding-top: 3px;">www.insidetracker.com</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" class="footer" bgcolor="#f5f5f5" style="margin: 0;padding: 40px 16px 17px;">
+                        <div class="footer-icons">
+                            <a class="footer-icon" target="_blank" href="https://www.instagram.com/InsideTracker" style="color: #12a0d2;text-decoration: none;font-family: &quot;Open Sans&quot;, Arial, sans-serif;padding: 0 5px;display: inline-block;cursor: pointer;">
+                                <img src="https://s4.yapics.com/05/27/43273HkL05_th.png" alt="" style="outline: none;-ms-interpolation-mode: bicubic;display: block;margin: 0;padding: 0;max-width: 100%;height: 26px;width: 26px;">
+                            </a>
+                            <a class="footer-icon" target="_blank" href="http://www.facebook.com/pages/InsideTracker-from-Segterra/271094716266705" style="color: #12a0d2;text-decoration: none;font-family: &quot;Open Sans&quot;, Arial, sans-serif;padding: 0 5px;display: inline-block;cursor: pointer;">
+                                <img src="https://s1.yapics.com/05/27/1327DkAO05_th.png" alt="" style="outline: none;-ms-interpolation-mode: bicubic;display: block;margin: 0;padding: 0;max-width: 100%;height: 26px;width: 26px;">
+                            </a>
+                            <a class="footer-icon" target="_blank" href="https://twitter.com/insidetracker" style="color: #12a0d2;text-decoration: none;font-family: &quot;Open Sans&quot;, Arial, sans-serif;padding: 0 5px;display: inline-block;cursor: pointer;">
+                                <img src="https://s5.yapics.com/05/27/5327lr9305_th.png" alt="" style="outline: none;-ms-interpolation-mode: bicubic;display: block;margin: 0;padding: 0;max-width: 100%;height: 26px;width: 26px;">
+                            </a>
+                            <a class="footer-icon" target="_blank" href="http://www.linkedin.com/company/segterra" style="color: #12a0d2;text-decoration: none;font-family: &quot;Open Sans&quot;, Arial, sans-serif;padding: 0 5px;display: inline-block;cursor: pointer;">
+                                <img src="https://s5.yapics.com/05/27/5327i78o05_th.png" alt="" style="outline: none;-ms-interpolation-mode: bicubic;display: block;margin: 0;padding: 0;max-width: 100%;height: 26px;width: 26px;">
+                            </a>
+                            <a class="footer-icon" target="_blank" href="http://www.youtube.com/user/InsideTracker2?feature=watch" style="color: #12a0d2;text-decoration: none;font-family: &quot;Open Sans&quot;, Arial, sans-serif;padding: 0 5px;display: inline-block;cursor: pointer;">
+                                <img src="https://s5.yapics.com/05/27/5327mVCk05_th.png" alt="" style="outline: none;-ms-interpolation-mode: bicubic;display: block;margin: 0;padding: 0;max-width: 100%;height: 26px;width: 26px;">
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" bgcolor="#f5f5f5" style="margin: 0;padding: 0;">
+                        <div class="unsubscribe footer-text" style="font-size: 12px;color: #b9c3cd;letter-spacing: 0.14px;font-family: &quot;Open Sans&quot;, Arial, sans-serif;">
+                            <a href="https://insidetracker.com" class="link-unsubscribe" style="color: #b9c3cd;text-decoration: none;font-family: &quot;Open Sans&quot;, Arial, sans-serif;border-bottom: 1px solid #b9c3cd;">Unsubscribe</a>
+                            from this list
+                        </div>
+                        <div class="footer-text" style="font-size: 12px;color: #b9c3cd;letter-spacing: 0.14px;font-family: &quot;Open Sans&quot;, Arial, sans-serif;">
+                            101 Main Street Cambridge MA, <span class="mobile-br" style="display: inline-block;padding-bottom: 2px;"></span> Phone (800) 513-2359
+                        </div>
+                        <div class="footer-text" style="font-size: 12px;color: #b9c3cd;letter-spacing: 0.14px;font-family: &quot;Open Sans&quot;, Arial, sans-serif;">
+                            &copy;2009-2019 InsideTracker, Inc. <span class="mobile-br" style="display: inline-block;padding-bottom: 2px;"></span> All rights reserved.
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
+
+ `;
+    
     let transporter = nodemailer.createTransport({
         host: 'smtp.mailgun.org',
         port: 587,
@@ -966,10 +1391,10 @@ app.post('/send', (req, res) => {
     
     let mailOptions = {
         from: '"natalia Contact" <nzhyrkova@gmail.com>',
-        to: 'rdolgopoly@biarum.com',
+        to: 'varkhipenka@biarum.com',
         subject: ' Request123123123123',
         text: '?',
-        html: output
+        html: hubspot
     };
     
     transporter.sendMail(mailOptions, (error, info) => {
@@ -981,5 +1406,6 @@ app.post('/send', (req, res) => {
         
         res.render('name_1', {msg: 'Email has been sent'});
     });
+    
 });
 app.listen(3030, () => console.log('Server started...'));
