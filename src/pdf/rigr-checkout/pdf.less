@@ -15,7 +15,7 @@ img {
 
 .pdf-list {
     box-sizing:  border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     padding:     0;
     position:    relative;
     width:       100%;
@@ -25,11 +25,13 @@ img {
 }
 
 .pdf-top {
-    display:         -webkit-flex;
-    display:         -moz-flex;
-    display:         -ms-flex;
-    display:         -o-flex;
-    display:         flex;
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin-bottom:   38px;
 }
@@ -69,11 +71,13 @@ img {
 }
 
 .order-table__row {
-    display:         -webkit-flex;
-    display:         -moz-flex;
-    display:         -ms-flex;
-    display:         -o-flex;
-    display:         flex;
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     border-bottom:   1px solid #d4d8dd;
     padding-top:     10px;
