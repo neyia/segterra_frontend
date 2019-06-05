@@ -1,7 +1,6 @@
 /node_modules/
 /build/
 /.idea/
-package-lock.json
 
 /src/**/*.css
 /src/**/*.babel.js
