@@ -1,6 +1,6 @@
 function CloseModal() {
-    var modal = document.querySelectorAll('.modal');
-    var cancelBtn = document.querySelectorAll('.modal__close');
+    let modal = document.querySelectorAll('.modal');
+    let cancelBtn = document.querySelectorAll('.modal__close');
     
     for (let i = 0; i < cancelBtn.length; i++) {
         cancelBtn[i].addEventListener('click', function (e) {
