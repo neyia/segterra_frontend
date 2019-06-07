@@ -74,21 +74,28 @@
             margin-bottom: 30px;
         }
         
-        img, svg {
-            display:    block;
-            margin:     0 auto;
-            max-width:  445px;
-            width:      100%;
-            min-height: 240px;
-            height:     100%;
-            @media screen and (max-width: (@big_width)) {
-                min-height: 130px;
-            }
-            @media screen and (max-width: (@mobile)) {
-                min-height: 100%;
-                height:     auto;
-                max-width:  200px;
-            }
+        
+    }
+    
+    &__img {
+        display:             block;
+        margin:              0 auto;
+        max-width:           445px;
+        width:               100%;
+        min-height:          240px;
+        height:              100%;
+        background-repeat:   no-repeat;
+        
+        background-position: 50%;
+        
+        @media screen and (max-width: (@big_width)) {
+            background-size: contain;
+            min-height:      130px;
+        }
+        
+        @media screen and (max-width: (@mobile)) {
+            background-size: cover;
+            max-width:       200px;
         }
     }
     
