@@ -120,7 +120,7 @@ const Pagination = {
     }
 };
 
-var init = function () {
+let init = function () {
     Pagination.Init(document.getElementById('pagination'), {
         size: 10, // pages  size
         page: 1,  // selected page
