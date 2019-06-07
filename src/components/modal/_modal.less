@@ -39,7 +39,7 @@
         padding:          54px 58px 58px 58px;
         box-sizing:       border-box;
         margin:           0 auto;
-        @media screen and (max-width: 1100px) {
+        @media screen and (max-width: (@big_width)) {
             max-width:  600px;
             text-align: center;
         }
@@ -51,7 +51,7 @@
     &__info {
         display:         flex;
         justify-content: center;
-        @media screen and (max-width: 1100px) {
+        @media screen and (max-width: (@big_width)) {
             flex-wrap: wrap;
         }
     }
@@ -59,7 +59,7 @@
     &__text {
         flex-basis:    65%;
         padding-right: 60px;
-        @media screen and (max-width: 1100px) {
+        @media screen and (max-width: (@big_width)) {
             flex-basis: 100%;
             padding:    0;
             order:      2;
@@ -68,7 +68,7 @@
     
     &__image {
         flex-basis: 35%;
-        @media screen and (max-width: 1100px) {
+        @media screen and (max-width: (@big_width)) {
             flex-basis:    100%;
             order:         1;
             margin-bottom: 30px;
@@ -81,7 +81,7 @@
             width:      100%;
             min-height: 240px;
             height:     100%;
-            @media screen and (max-width: 1100px) {
+            @media screen and (max-width: (@big_width)) {
                 min-height: 130px;
             }
             @media screen and (max-width: (@mobile)) {
@@ -167,7 +167,7 @@
 
 .modal--dashboard {
     .btn-secondary, .btn-primary {
-        @media screen and (max-width: 1100px) {
+        @media screen and (max-width: (@big_width)) {
             width:     100%;
             max-width: 119px;
             padding:   0;
@@ -178,7 +178,7 @@
 .btn-block.btn-block--left {
     max-width:   232px;
     margin-left: -10px;
-    @media screen and (max-width: 1100px) {
+    @media screen and (max-width: (@big_width)) {
         margin-left:     -8px;
         max-width:       none;
         justify-content: center;
@@ -229,7 +229,7 @@
         padding:       37px 40px;
         margin:        0 auto;
         border-radius: 6px;
-        @media screen and (max-width: 1100px) {
+        @media screen and (max-width: (@big_width)) {
             text-align: left;
         }
         @media screen and (max-width: (@big_mobile)) {
@@ -245,7 +245,7 @@
     }
     
     .btn-secondary, .btn-primary {
-        @media screen and (max-width: 1100px) {
+        @media screen and (max-width: (@big_width)) {
             width:      100%;
             max-width:  106px;
             padding:    0;
@@ -254,7 +254,7 @@
     }
     
     .btn-block--right {
-        @media screen and (max-width: 1100px) {
+        @media screen and (max-width: (@big_width)) {
             max-width:       none;
             justify-content: center;
             margin-left:     -10px;
