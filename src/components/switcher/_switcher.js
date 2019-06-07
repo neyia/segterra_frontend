@@ -1,6 +1,6 @@
 function Toggler() {
     const toggleItem = document.querySelectorAll('.toggler__item');
-
+    
     for (let i = 0; i < toggleItem.length; i++) {
         for (let j = 0; j < toggleItem.length; j++) {
             toggleItem[i].addEventListener('click', function () {
@@ -13,23 +13,22 @@ function Toggler() {
 
 Toggler();
 
+let input = document.querySelector('.tumbler__input');
+let switcherText = document.querySelector('.tumbler-label');
+// let switcherLabel = document.querySelector('.tumbler-flex');
 
-let checkbox = document.querySelector('.tumbler__input');
-let label = document.querySelector('.tumbler-flex');
-
-checkbox.addEventListener('change', function(event) {
-    if(event.target.checked===true){
-        document.querySelector('.tumbler-label').textContent="On";
-    }
-    else{
-        document.querySelector('.tumbler-label').textContent="Off";
+input.addEventListener('change', function (event) {
+    if (event.target.checked === true) {
+        switcherText.textContent = "On";
+    } else {
+        switcherText.textContent = "Off";
     }
 });
 
-button.addEventListener('click', function() {
-    checkbox.checked = !checkbox.checked;
-    triggerEvent(checkbox, 'change');
-});
+// switcherLabel.addEventListener('click', function () {
+//     input.checked = !input.checked;
+//     triggerEvent(input, 'change');
+// });
 
 function triggerEvent(element, eventName) {
     let event = document.createEvent("HTMLEvents");

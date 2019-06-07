@@ -5,8 +5,9 @@
 html,
 body,
 iframe {
-    height:440px;
+    height: 440px;
 }
+
 /*temp styles BEGIN---*/
 
 .link-wrap {
@@ -47,12 +48,12 @@ iframe {
     }
 }
 
-
-.link-secondary-light{
-    display: block;
+.link-secondary-light {
+    display:    block;
     margin-top: 20px;
-    font-size: 12px;
+    font-size:  12px;
 }
+
 /*---temp styles END*/
 
 /*popups styles BEGIN---*/
@@ -73,7 +74,7 @@ iframe {
     background-color: #ffffff;
     z-index:          12;
     box-shadow:       0 0 15px rgba(0, 0, 0, 0.06);
-    padding:          32px 30px 40px 40px;
+    padding:          32px 40px 40px 40px;
     margin:           auto;
     
     @media only screen and (max-width: @big_mobile) {
@@ -157,7 +158,6 @@ iframe {
             max-width:       none;
             justify-content: center;
             margin-left:     -10px;
-            margin-right:    -10px;
         }
     }
 }
@@ -181,7 +181,7 @@ iframe {
     z-index:          12;
     /*box-shadow:       0 4px 12px 1px rgba(35, 45, 55, 0.15); - previous version*/
     box-shadow:       0 0 15px rgba(0, 0, 0, 0.06);
-    padding:          32px 30px 40px 40px;
+    padding:          32px 40px 40px 40px;
     margin:           auto;
     
     @media only screen and (max-width: @big_mobile) {
@@ -190,7 +190,7 @@ iframe {
     }
     
     @media only screen and (max-width: @mobile) {
-        border: 1px solid @gray7;
+        border:        1px solid @gray7;
         top:           0;
         max-width:     100%;
         width:         100%;
@@ -227,6 +227,10 @@ iframe {
     
     .btn {
         margin: 0 10px;
+        
+        @media only screen and (max-width: @tablet) {
+            margin: 0 8px;
+        }
     }
     
     .link {
@@ -303,7 +307,7 @@ iframe {
         z-index:       2;
         transition:    background 0.15s ease-in-out;
         border-radius: 50%;
-    
+        
         @media only screen and (max-width: @big_mobile) {
             background-color: rgba(0, 0, 0, 0.6);
             border-radius:    50%;
@@ -340,7 +344,7 @@ iframe {
         }
         
         &:active {
-           // background: @gray6;
+            // background: @gray6;
             //color:      @primary--active;
         }
         
@@ -592,8 +596,9 @@ iframe {
         &:hover {
             background-color: @gray4;
             border-radius:    50%;
-            color: @primary;
+            color:            @primary;
         }
+        
         //    @media screen and (max-width: @big_mobile) {
         //        background-color: @gray4;
         //    }
