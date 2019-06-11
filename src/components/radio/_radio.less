@@ -75,3 +75,16 @@
     opacity: 0.3;
 }
 
+.radio__input.checked + .radio__label:after {
+    position:         absolute;
+    background-color: @primary;
+    top:              3px;
+    left:             4px;
+    display:          block;
+    height:           12px;
+    width:            12px;
+    border-radius:    50%;
+    content:          '';
+    z-index:          5;
+}
+
