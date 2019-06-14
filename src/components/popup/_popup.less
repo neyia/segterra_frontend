@@ -140,11 +140,13 @@ iframe {
         letter-spacing: 0.14px;
     }
     
-    .popup .btn-primary:last-child {
-        margin-right: 0px;
-    }
-    
-    .btn-secondary, .btn-primary {
+    .btn-secondary,
+    .btn-primary {
+        
+        &:last-child {
+            margin-right: 0;
+        }
+        
         @media screen and (max-width: @big_mobile) {
             max-width:  100%;
             width:      100%;
