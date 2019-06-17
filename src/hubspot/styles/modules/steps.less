@@ -1,6 +1,8 @@
 @import "../utils/variables";
+@import "../../../styles/utils/variables";
 
 .steps {
+    margin-top: 70px;
     padding:    calc((@section_padding) - 5px) 0 @section_padding;
     overflow-x: hidden;
     
@@ -10,6 +12,10 @@
     
     @media (max-width: 601px) {
         padding: calc((@section_padding_min) - 5px) 0 @section_padding_min;
+    }
+    
+    @media screen and (max-width: (@mid_width)) {
+        margin-top: 62px;
     }
 }
 
