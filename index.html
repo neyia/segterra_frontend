@@ -1,0 +1,2519 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <script crossorigin="anonymous"
+            integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+            src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="https://test.segterra.com/skin/js/typeahead.js" type="application/javascript"></script>
+
+    <title>segterra frontend</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/svgxuse/1.2.6/svgxuse.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet">
+
+<link href="style/style.css" rel="stylesheet">
+
+<!-- Idangerous Swiper-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+
+<!-- Air-datepicker-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.min.css">
+
+
+</head>
+<body>
+
+<div class="wrapper">
+
+    <aside class="fixpanel">
+        <article>
+            <h3 class="heading-26">About</h3>
+            <ul>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="about">
+                        About this guide
+                    </a>
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h3 class="heading-26">UI Patterns</h3>
+            <ul>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="card">Cards</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="popup">Popups</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="tooltip">Tooltips</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="tab">Tabs</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="text">Text fields</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="button">Buttons</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="link">Links</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="table">Tables</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="list">Lists</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="checkbox">Checkboxes</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="radio">Radio buttons</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="tumbler">Tumbler</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="switcher">Switches</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="modal">Modals</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="calendar">Calendar</a>
+                </li>
+                <li>
+                    <a class="link-primary link-primary--active" href="#" onclick="return false" data-link="slider">Sliders</a>
+                </li>
+                <li>
+                    <a class="link-primary" href="#" onclick="return false" data-link="pagination">Pagination</a>
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h3 class="heading-26">Hubspot templates</h3>
+            <ul>
+                <li>
+                    <a class="link-primary" href="./hubspot.html" data-link="giveaway">Giveaway</a>
+                </li>
+            </ul>
+
+        </article>
+    </aside>
+
+    <div class="container-right items">
+
+        <section class="item hide" data-link="about">
+            <h2>Internal SG Component</h2>
+            Be careful
+        </section>
+
+        <section class="item hide" data-link="card">
+            <h2>Cards Component</h2>
+            <!-- Action-plan card list   -->
+
+<div class="container">
+    <div class="card-list--actionplan">
+        
+        <!-- Action-plan card   -->
+        
+        <article class="card card--actionplan flipper rotate0">
+            <section class="card__content front">
+                <label class="card-label--customization">
+                    <input type="checkbox" class="card-input--customization" name="card">
+                    <span class="card-label__wrapper">
+                        <span class="card__img card__img--1"></span>
+                        <span class="card__content-wrapper">
+                            <span class="card__title">Daily action listed over two lines</span>
+                            <span class="card-rating">
+                                <span class="card-rating__time">0 days per week</span>
+                                <span class="tooltip-hover inline-flex">
+                                    <span class="card-rating__list">
+                                        <span class="card-rating__list-item card-rating__list-item--active"></span>
+                                        <span class="card-rating__list-item card-rating__list-item--active"></span>
+                                        <span class="card-rating__list-item card-rating__list-item--active"></span>
+                                        <span class="card-rating__list-item"></span>
+                                        <span class="card-rating__list-item"></span>
+                                    </span>
+                                    <span class="tooltip">
+                                        <span class="heading-14 tooltip__title">Rating System</span>
+                                        <span class="text-14 tooltip__text">InsideTracker ranks recommendations from 1 to 5, with 5 being the strongest. Rankings are based on peer-reviewed, scientific studies supporting each recommendation and its effectiveness.</span>
+                                    </span>
+                                </span>
+                            </span>
+                            <span class="card-recommendation">
+                                <span class="card-recommendation__title">List name:</span>
+                                <span class="card-recommendation__list">
+                                    <span class="card-recommendation__item">Item 1</span>
+                                    <span class="card-recommendation__item">Item 2</span>
+                                    <span class="card-recommendation__item">Item 3</span>
+                                    <span class="card-recommendation__item">Item 4</span>
+                                    <span class="card-recommendation__item">Item 5</span>
+                                    <span class="card-recommendation__item">Item 6</span>
+                                </span>
+                            </span>
+                            <span class="card__bottom">
+                                <button class="btn-card btn-card--details flip-front">Details</button>
+                            </span>
+                        </span>
+                    </span>
+                    <span class="card-checkbox--customization">
+                        <svg class="icon icon-checked">
+                            <use xlink:href="assets/sprite.svg#icon-checked" />
+                        </svg>
+                    </span>
+                </label>
+            </section>
+            <section class="card__content back">
+                <span class="card__content-wrapper">
+                    <span class="card__title">Daily action listed over two lines</span>
+                    <span class="card-rating">
+                        <span class="card-rating__time">0 days per week</span>
+                        <span class="tooltip-hover inline-flex">
+                            <span class="card-rating__list">
+                                <span class="card-rating__list-item card-rating__list-item--active"></span>
+                                <span class="card-rating__list-item card-rating__list-item--active"></span>
+                                <span class="card-rating__list-item card-rating__list-item--active"></span>
+                                <span class="card-rating__list-item"></span>
+                                <span class="card-rating__list-item"></span>
+                            </span>
+                            <span class="tooltip">
+                                <span class="heading-14 tooltip__title">Rating System</span>
+                                <span class="text-14 tooltip__text">InsideTracker ranks recommendations from 1 to 5, with 5 being the strongest. Rankings are based on peer-reviewed, scientific studies supporting each recommendation and its effectiveness.</span>
+                            </span>
+                        </span>
+                    </span>
+                    <span class="card-recommendation">
+                        <span class="card-recommendation__title">List name:</span>
+                        <span class="card-recommendation__list">
+                            <span class="card-recommendation__item">Item 1</span>
+                            <span class="card-recommendation__item">Item 2</span>
+                            <span class="card-recommendation__item">Item 3</span>
+                            <span class="card-recommendation__item">Item 4</span>
+                            <span class="card-recommendation__item">Item 5</span>
+                            <span class="card-recommendation__item">Item 6</span>
+                        </span>
+                    </span>
+                    <span class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        ut labore et dolore magna.</span>
+                    <button class="btn-card btn-card--more">More</button>
+                    <span class="card__bottom">
+                        <button class="btn-card btn-card--details flip-back">Back to overview</button>
+                    </span>
+                </span>
+            </section>
+        </article>
+        
+        <!-- Action-plan customization card   -->
+        
+        <article class="card card--actionplan card--customization flipper rotate0">
+            <section class="card__content front">
+                <label class="card-label--customization">
+                    <input type="checkbox" class="card-input--customization" name="card">
+                    <span class="card-label__wrapper">
+                        <span class="card__img card__img--2"></span>
+                        <span class="card__content-wrapper">
+                            <span class="card__title">Daily action listed over two lines</span>
+                            <span class="card-rating">
+                                <span class="card-rating__time">0 days per week</span>
+                                <span class="tooltip-hover inline-flex">
+                                    <span class="card-rating__list">
+                                        <span class="card-rating__list-item card-rating__list-item--active"></span>
+                                        <span class="card-rating__list-item card-rating__list-item--active"></span>
+                                        <span class="card-rating__list-item card-rating__list-item--active"></span>
+                                        <span class="card-rating__list-item"></span>
+                                        <span class="card-rating__list-item"></span>
+                                    </span>
+                                    <span class="tooltip">
+                                        <span class="heading-14 tooltip__title">Rating System</span>
+                                        <span class="text-14 tooltip__text">InsideTracker ranks recommendations from 1 to 5, with 5 being the strongest. Rankings are based on peer-reviewed, scientific studies supporting each recommendation and its effectiveness.</span>
+                                    </span>
+                                </span>
+                            </span>
+                            <span class="card-recommendation">
+                                <span class="card-recommendation__title">List name:</span>
+                                <span class="card-recommendation__list">
+                                    <span class="card-recommendation__item">Item 1</span>
+                                    <span class="card-recommendation__item">Item 2</span>
+                                    <span class="card-recommendation__item">Item 3</span>
+                                    <span class="card-recommendation__item">Item 4</span>
+                                    <span class="card-recommendation__item">Item 5</span>
+                                    <span class="card-recommendation__item">Item 6</span>
+                                </span>
+                            </span>
+                            <span class="card__bottom">
+                                <button class="btn-card btn-card--details flip-front">Details</button>
+                            </span>
+                        </span>
+                    </span>
+                    <span class="card-checkbox--customization">
+                        <svg class="icon icon-checked">
+                            <use xlink:href="assets/sprite.svg#icon-checked" />
+                        </svg>
+                    </span>
+                </label>
+            </section>
+            <section class="card__content back">
+                <span class="card__content-wrapper">
+                    <span class="card__title">Daily action listed over two lines</span>
+                    <span class="card-rating">
+                        <span class="card-rating__time">0 days per week</span>
+                        <span class="tooltip-hover inline-flex">
+                            <span class="card-rating__list">
+                                <span class="card-rating__list-item card-rating__list-item--active"></span>
+                                <span class="card-rating__list-item card-rating__list-item--active"></span>
+                                <span class="card-rating__list-item card-rating__list-item--active"></span>
+                                <span class="card-rating__list-item"></span>
+                                <span class="card-rating__list-item"></span>
+                            </span>
+                            <span class="tooltip">
+                                <span class="heading-14 tooltip__title">Rating System</span>
+                                <span class="text-14 tooltip__text">InsideTracker ranks recommendations from 1 to 5, with 5 being the strongest. Rankings are based on peer-reviewed, scientific studies supporting each recommendation and its effectiveness.</span>
+                            </span>
+                        </span>
+                    </span>
+                    <span class="card-recommendation">
+                        <span class="card-recommendation__title">List name:</span>
+                        <span class="card-recommendation__list">
+                            <span class="card-recommendation__item">Item 1</span>
+                            <span class="card-recommendation__item">Item 2</span>
+                            <span class="card-recommendation__item">Item 3</span>
+                            <span class="card-recommendation__item">Item 4</span>
+                            <span class="card-recommendation__item">Item 5</span>
+                            <span class="card-recommendation__item">Item 6</span>
+                        </span>
+                    </span>
+                    <span class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        ut labore et dolore magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        ut labore et dolore magna.</span>
+                    <button class="btn-card btn-card--more">More</button>
+                    <span class="card__bottom">
+                        <button class="btn-card btn-card--details flip-back">Back to overview</button>
+                    </span>
+                </span>
+            </section>
+        </article>
+        
+        <!-- Action-plan card   -->
+        
+        <article class="card card--actionplan flipper rotate0 no-desktop">
+            <section class="card__content front">
+                <label class="card-label--customization">
+                    <input type="checkbox" class="card-input--customization" name="card">
+                    <span class="card-label__wrapper">
+                        <span class="card__img card__img--3"></span>
+                        <span class="card__content-wrapper">
+                            <span class="card__title">Daily action listed over two lines</span>
+                            <span class="card-rating">
+                                <span class="card-rating__time">0 days per week</span>
+                                <span class="tooltip-hover inline-flex">
+                                    <span class="card-rating__list">
+                                        <span class="card-rating__list-item card-rating__list-item--active"></span>
+                                        <span class="card-rating__list-item card-rating__list-item--active"></span>
+                                        <span class="card-rating__list-item card-rating__list-item--active"></span>
+                                        <span class="card-rating__list-item"></span>
+                                        <span class="card-rating__list-item"></span>
+                                    </span>
+                                    <span class="tooltip">
+                                        <span class="heading-14 tooltip__title">Rating System</span>
+                                        <span class="text-14 tooltip__text">InsideTracker ranks recommendations from 1 to 5, with 5 being the strongest. Rankings are based on peer-reviewed, scientific studies supporting each recommendation and its effectiveness.</span>
+                                    </span>
+                                </span>
+                            </span>
+                            <span class="card-recommendation">
+                                <span class="card-recommendation__title">List name:</span>
+                                <span class="card-recommendation__list">
+                                    <span class="card-recommendation__item">Item 1</span>
+                                    <span class="card-recommendation__item">Item 2</span>
+                                    <span class="card-recommendation__item">Item 3</span>
+                                    <span class="card-recommendation__item">Item 4</span>
+                                    <span class="card-recommendation__item">Item 5</span>
+                                    <span class="card-recommendation__item">Item 6</span>
+                                </span>
+                            </span>
+                            <span class="card__bottom">
+                                <button class="btn-card btn-card--details flip-front">Details</button>
+                            </span>
+                        </span>
+                    </span>
+                    <span class="card-checkbox--customization">
+                        <svg class="icon icon-checked">
+                            <use xlink:href="assets/sprite.svg#icon-checked" />
+                        </svg>
+                    </span>
+                </label>
+            </section>
+            <section class="card__content back">
+                <span class="card__content-wrapper">
+                    <span class="card__title">Daily action listed over two lines</span>
+                    <span class="card-rating">
+                        <span class="card-rating__time">0 days per week</span>
+                        <span class="tooltip-hover inline-flex">
+                            <span class="card-rating__list">
+                                <span class="card-rating__list-item card-rating__list-item--active"></span>
+                                <span class="card-rating__list-item card-rating__list-item--active"></span>
+                                <span class="card-rating__list-item card-rating__list-item--active"></span>
+                                <span class="card-rating__list-item"></span>
+                                <span class="card-rating__list-item"></span>
+                            </span>
+                            <span class="tooltip">
+                                <span class="heading-14 tooltip__title">Rating System</span>
+                                <span class="text-14 tooltip__text">InsideTracker ranks recommendations from 1 to 5, with 5 being the strongest. Rankings are based on peer-reviewed, scientific studies supporting each recommendation and its effectiveness.</span>
+                            </span>
+                        </span>
+                    </span>
+                    <span class="card-recommendation">
+                        <span class="card-recommendation__title">List name:</span>
+                        <span class="card-recommendation__list">
+                            <span class="card-recommendation__item">Item 1</span>
+                            <span class="card-recommendation__item">Item 2</span>
+                            <span class="card-recommendation__item">Item 3</span>
+                            <span class="card-recommendation__item">Item 4</span>
+                            <span class="card-recommendation__item">Item 5</span>
+                            <span class="card-recommendation__item">Item 6</span>
+                        </span>
+                    </span>
+                    <span class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        ut labore et dolore magna.</span>
+                    <button class="btn-card btn-card--more">More</button>
+                    <span class="card__bottom">
+                        <button class="btn-card btn-card--details flip-back">Back to overview</button>
+                    </span>
+                </span>
+            </section>
+        </article>
+        
+        <!-- Action-plan customization card   -->
+        
+        <article class="card card--actionplan card--customization flipper rotate0 no-desktop">
+            <section class="card__content front">
+                <label class="card-label--customization">
+                    <input type="checkbox" class="card-input--customization" name="card">
+                    <span class="card-label__wrapper">
+                        <span class="card__img card__img--1"></span>
+                        <span class="card__content-wrapper">
+                            <span class="card__title">Daily action listed over two lines</span>
+                            <span class="card-rating">
+                                <span class="card-rating__time">0 days per week</span>
+                                <span class="tooltip-hover inline-flex">
+                                    <span class="card-rating__list">
+                                        <span class="card-rating__list-item card-rating__list-item--active"></span>
+                                        <span class="card-rating__list-item card-rating__list-item--active"></span>
+                                        <span class="card-rating__list-item card-rating__list-item--active"></span>
+                                        <span class="card-rating__list-item"></span>
+                                        <span class="card-rating__list-item"></span>
+                                    </span>
+                                    <span class="tooltip">
+                                        <span class="heading-14 tooltip__title">Rating System</span>
+                                        <span class="text-14 tooltip__text">InsideTracker ranks recommendations from 1 to 5, with 5 being the strongest. Rankings are based on peer-reviewed, scientific studies supporting each recommendation and its effectiveness.</span>
+                                    </span>
+                                </span>
+                            </span>
+                            <span class="card-recommendation">
+                                <span class="card-recommendation__title">List name:</span>
+                                <span class="card-recommendation__list">
+                                    <span class="card-recommendation__item">Item 1</span>
+                                    <span class="card-recommendation__item">Item 2</span>
+                                    <span class="card-recommendation__item">Item 3</span>
+                                    <span class="card-recommendation__item">Item 4</span>
+                                    <span class="card-recommendation__item">Item 5</span>
+                                    <span class="card-recommendation__item">Item 6</span>
+                                </span>
+                            </span>
+                            <span class="card__bottom">
+                                <button class="btn-card btn-card--details flip-front">Details</button>
+                            </span>
+                        </span>
+                    </span>
+                    <span class="card-checkbox--customization">
+                        <svg class="icon icon-checked">
+                            <use xlink:href="assets/sprite.svg#icon-checked" />
+                        </svg>
+                    </span>
+                </label>
+            </section>
+            <section class="card__content back">
+                <span class="card__content-wrapper">
+                    <span class="card__title">Daily action listed over two lines</span>
+                    <span class="card-rating">
+                        <span class="card-rating__time">0 days per week</span>
+                        <span class="tooltip-hover inline-flex">
+                            <span class="card-rating__list">
+                                <span class="card-rating__list-item card-rating__list-item--active"></span>
+                                <span class="card-rating__list-item card-rating__list-item--active"></span>
+                                <span class="card-rating__list-item card-rating__list-item--active"></span>
+                                <span class="card-rating__list-item"></span>
+                                <span class="card-rating__list-item"></span>
+                            </span>
+                            <span class="tooltip">
+                                <span class="heading-14 tooltip__title">Rating System</span>
+                                <span class="text-14 tooltip__text">InsideTracker ranks recommendations from 1 to 5, with 5 being the strongest. Rankings are based on peer-reviewed, scientific studies supporting each recommendation and its effectiveness.</span>
+                            </span>
+                        </span>
+                    </span>
+                    <span class="card-recommendation">
+                        <span class="card-recommendation__title">List name:</span>
+                        <span class="card-recommendation__list">
+                            <span class="card-recommendation__item">Item 1</span>
+                            <span class="card-recommendation__item">Item 2</span>
+                            <span class="card-recommendation__item">Item 3</span>
+                            <span class="card-recommendation__item">Item 4</span>
+                            <span class="card-recommendation__item">Item 5</span>
+                            <span class="card-recommendation__item">Item 6</span>
+                        </span>
+                    </span>
+                    <span class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        ut labore et dolore magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        ut labore et dolore magna.</span>
+                    <button class="btn-card btn-card--more">More</button>
+                    <span class="card__bottom">
+                        <button class="btn-card btn-card--details flip-back">Back to overview</button>
+                    </span>
+                </span>
+            </section>
+        </article>
+    
+    </div>
+</div>
+
+<!-- Dashboard-plan card list   -->
+
+<div class="container">
+    <div class="swiper-card swiper-container">
+        <div class="card-list--dashboard swiper-wrapper">
+            
+            <!-- Dashboard card   -->
+            
+            <article class="card card--checkin flipper rotate0 swiper-slide">
+                <section class="card__content front">
+                    <div class="card__img"></div>
+                    <div class="card__content-wrapper">
+                        <p class="card__title">Daily action listed over two lines</p>
+                        <p class="card-caption">
+                            <span class="card-caption__days">0</span>
+                            of 0 suggested days per week
+                        </p>
+                        <ul class="card-days">
+                            <li class="card-days__item">
+                                <button class="btn-card--day">
+                                    <span class="card-days__item-name">Su</span>
+                                    <span class="card-days__item-date">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day">
+                                    <span class="card-days__item-name">M</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day">
+                                    <span class="card-days__item-name">Tu</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day checked">
+                                    <span class="card-days__item-name">We</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day selected">
+                                    <span class="card-days__item-name">Th</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day btn-card--day--future">
+                                    <span class="card-days__item-name">f</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day btn-card--day--future">
+                                    <span class="card-days__item-name">Sa</span>
+                                    <span class="card-days__item-date">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="card__bottom">
+                            <button class="btn btn-primary-glass">Check-in</button>
+                            <button class="btn-card btn-card--details flip-front">Details</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="card__content back">
+                    <div class="card__content-wrapper">
+                        <p class="card__title">Daily action listed over two lines</p>
+                        <div class="card-rating">
+                            <span class="card-rating__time">0 days per week</span>
+                            <div class="tooltip-hover inline-flex">
+                                <ul class="card-rating__list">
+                                    <li class="card-rating__list-item card-rating__list-item--active"></li>
+                                    <li class="card-rating__list-item card-rating__list-item--active"></li>
+                                    <li class="card-rating__list-item card-rating__list-item--active"></li>
+                                    <li class="card-rating__list-item"></li>
+                                    <li class="card-rating__list-item"></li>
+                                </ul>
+                                <div class="tooltip">
+                                    <span class="heading-14 tooltip__title">Rating System</span>
+                                    <span class="text-14 tooltip__text">InsideTracker ranks recommendations from 1 to 5, with 5 being the strongest. Rankings are based on peer-reviewed, scientific studies supporting each recommendation and its effectiveness.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-recommendation">
+                            <p class="card-recommendation__title">List name:</p>
+                            <ul class="card-recommendation__list">
+                                <li class="card-recommendation__item">Item 1</li>
+                                <li class="card-recommendation__item">Item 2</li>
+                                <li class="card-recommendation__item">Item 3</li>
+                                <li class="card-recommendation__item">Item 4</li>
+                                <li class="card-recommendation__item">Item 5</li>
+                                <li class="card-recommendation__item">Item 6</li>
+                            </ul>
+                        </div>
+                        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna.</p>
+                        <button class="btn-card btn-card--more">More</button>
+                        <div class="card__bottom">
+                            <button class="btn-card btn-card--details flip-back">Back to overview</button>
+                        </div>
+                    </div>
+                </section>
+            </article>
+            
+            <!-- Dashboard card   -->
+            
+            <article class="card card--checkin flipper rotate0 swiper-slide">
+                <section class="card__content front">
+                    <div class="card__img"></div>
+                    <div class="card__content-wrapper">
+                        <p class="card__title">Daily action listed over two lines</p>
+                        <p class="card-caption">
+                            <span class="card-caption__days">0</span>
+                            of 0 suggested days per week
+                        </p>
+                        <ul class="card-days">
+                            <li class="card-days__item">
+                                <button class="btn-card--day">
+                                    <span class="card-days__item-name">Su</span>
+                                    <span class="card-days__item-date">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day">
+                                    <span class="card-days__item-name">M</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day">
+                                    <span class="card-days__item-name">Tu</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day checked">
+                                    <span class="card-days__item-name">We</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day selected">
+                                    <span class="card-days__item-name">Th</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day btn-card--day--future">
+                                    <span class="card-days__item-name">f</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day btn-card--day--future">
+                                    <span class="card-days__item-name">Sa</span>
+                                    <span class="card-days__item-date">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="card__bottom">
+                            <button class="btn btn-primary-glass">Check-in</button>
+                            <button class="btn-card btn-card--details flip-front">Details</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="card__content back">
+                    <div class="card__content-wrapper">
+                        <p class="card__title">Daily action listed over two lines</p>
+                        <div class="card-rating">
+                            <span class="card-rating__time">0 days per week</span>
+                            <div class="tooltip-hover inline-flex">
+                                <ul class="card-rating__list">
+                                    <li class="card-rating__list-item card-rating__list-item--active"></li>
+                                    <li class="card-rating__list-item card-rating__list-item--active"></li>
+                                    <li class="card-rating__list-item card-rating__list-item--active"></li>
+                                    <li class="card-rating__list-item"></li>
+                                    <li class="card-rating__list-item"></li>
+                                </ul>
+                                <div class="tooltip">
+                                    <span class="heading-14 tooltip__title">Rating System</span>
+                                    <span class="text-14 tooltip__text">InsideTracker ranks recommendations from 1 to 5, with 5 being the strongest. Rankings are based on peer-reviewed, scientific studies supporting each recommendation and its effectiveness.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-recommendation">
+                            <p class="card-recommendation__title">List name:</p>
+                            <ul class="card-recommendation__list">
+                                <li class="card-recommendation__item">Item 1</li>
+                                <li class="card-recommendation__item">Item 2</li>
+                                <li class="card-recommendation__item">Item 3</li>
+                                <li class="card-recommendation__item">Item 4</li>
+                                <li class="card-recommendation__item">Item 5</li>
+                                <li class="card-recommendation__item">Item 6</li>
+                            </ul>
+                        </div>
+                        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna.</p>
+                        <button class="btn-card btn-card--more">More</button>
+                        <div class="card__bottom">
+                            <button class="btn-card btn-card--details flip-back">Back to overview</button>
+                        </div>
+                    </div>
+                </section>
+            </article>
+            
+            <!-- Dashboard card   -->
+            
+            <article class="card card--checkin flipper rotate0 swiper-slide">
+                <section class="card__content front">
+                    <div class="card__img"></div>
+                    <div class="card__content-wrapper">
+                        <p class="card__title">Daily action listed over two lines</p>
+                        <p class="card-caption">
+                            <span class="card-caption__days">0</span>
+                            of 0 suggested days per week
+                        </p>
+                        <ul class="card-days">
+                            <li class="card-days__item">
+                                <button class="btn-card--day">
+                                    <span class="card-days__item-name">Su</span>
+                                    <span class="card-days__item-date">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day">
+                                    <span class="card-days__item-name">M</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day">
+                                    <span class="card-days__item-name">Tu</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day checked">
+                                    <span class="card-days__item-name">We</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day selected">
+                                    <span class="card-days__item-name">Th</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day btn-card--day--future">
+                                    <span class="card-days__item-name">f</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day btn-card--day--future">
+                                    <span class="card-days__item-name">Sa</span>
+                                    <span class="card-days__item-date">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="card__bottom">
+                            <button class="btn btn-primary-glass">Check-in</button>
+                            <button class="btn-card btn-card--details flip-front">Details</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="card__content back">
+                    <div class="card__content-wrapper">
+                        <p class="card__title">Daily action listed over two lines</p>
+                        <div class="card-rating">
+                            <span class="card-rating__time">0 days per week</span>
+                            <div class="tooltip-hover inline-flex">
+                                <ul class="card-rating__list">
+                                    <li class="card-rating__list-item card-rating__list-item--active"></li>
+                                    <li class="card-rating__list-item card-rating__list-item--active"></li>
+                                    <li class="card-rating__list-item card-rating__list-item--active"></li>
+                                    <li class="card-rating__list-item"></li>
+                                    <li class="card-rating__list-item"></li>
+                                </ul>
+                                <div class="tooltip">
+                                    <span class="heading-14 tooltip__title">Rating System</span>
+                                    <span class="text-14 tooltip__text">InsideTracker ranks recommendations from 1 to 5, with 5 being the strongest. Rankings are based on peer-reviewed, scientific studies supporting each recommendation and its effectiveness.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-recommendation">
+                            <p class="card-recommendation__title">List name:</p>
+                            <ul class="card-recommendation__list">
+                                <li class="card-recommendation__item">Item 1</li>
+                                <li class="card-recommendation__item">Item 2</li>
+                                <li class="card-recommendation__item">Item 3</li>
+                                <li class="card-recommendation__item">Item 4</li>
+                                <li class="card-recommendation__item">Item 5</li>
+                                <li class="card-recommendation__item">Item 6</li>
+                            </ul>
+                        </div>
+                        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna.</p>
+                        <button class="btn-card btn-card--more">More</button>
+                        <div class="card__bottom">
+                            <button class="btn-card btn-card--details flip-back">Back to overview</button>
+                        </div>
+                    </div>
+                </section>
+            </article>
+            
+            <!-- Dashboard card   -->
+            
+            <article class="card card--checkin flipper rotate0 swiper-slide">
+                <section class="card__content front">
+                    <div class="card__img"></div>
+                    <div class="card__content-wrapper">
+                        <p class="card__title">Daily action listed over two lines</p>
+                        <p class="card-caption">
+                            <span class="card-caption__days">0</span>
+                            of 0 suggested days per week
+                        </p>
+                        <ul class="card-days">
+                            <li class="card-days__item">
+                                <button class="btn-card--day">
+                                    <span class="card-days__item-name">Su</span>
+                                    <span class="card-days__item-date">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day">
+                                    <span class="card-days__item-name">M</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day">
+                                    <span class="card-days__item-name">Tu</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day checked">
+                                    <span class="card-days__item-name">We</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day selected">
+                                    <span class="card-days__item-name">Th</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day btn-card--day--future">
+                                    <span class="card-days__item-name">f</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day btn-card--day--future">
+                                    <span class="card-days__item-name">Sa</span>
+                                    <span class="card-days__item-date">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="card__bottom">
+                            <button class="btn btn-primary-glass">Check-in</button>
+                            <button class="btn-card btn-card--details flip-front">Details</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="card__content back">
+                    <div class="card__content-wrapper">
+                        <p class="card__title">Daily action listed over two lines</p>
+                        <div class="card-rating">
+                            <span class="card-rating__time">0 days per week</span>
+                            <div class="tooltip-hover inline-flex">
+                                <ul class="card-rating__list">
+                                    <li class="card-rating__list-item card-rating__list-item--active"></li>
+                                    <li class="card-rating__list-item card-rating__list-item--active"></li>
+                                    <li class="card-rating__list-item card-rating__list-item--active"></li>
+                                    <li class="card-rating__list-item"></li>
+                                    <li class="card-rating__list-item"></li>
+                                </ul>
+                                <div class="tooltip">
+                                    <span class="heading-14 tooltip__title">Rating System</span>
+                                    <span class="text-14 tooltip__text">InsideTracker ranks recommendations from 1 to 5, with 5 being the strongest. Rankings are based on peer-reviewed, scientific studies supporting each recommendation and its effectiveness.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-recommendation">
+                            <p class="card-recommendation__title">List name:</p>
+                            <ul class="card-recommendation__list">
+                                <li class="card-recommendation__item">Item 1</li>
+                                <li class="card-recommendation__item">Item 2</li>
+                                <li class="card-recommendation__item">Item 3</li>
+                                <li class="card-recommendation__item">Item 4</li>
+                                <li class="card-recommendation__item">Item 5</li>
+                                <li class="card-recommendation__item">Item 6</li>
+                            </ul>
+                        </div>
+                        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna.</p>
+                        <button class="btn-card btn-card--more">More</button>
+                        <div class="card__bottom">
+                            <button class="btn-card btn-card--details flip-back">Back to overview</button>
+                        </div>
+                    </div>
+                </section>
+            </article>
+            
+            <!-- Dashboard card   -->
+            
+            <article class="card card--checkin flipper rotate0 swiper-slide">
+                <section class="card__content front">
+                    <div class="card__img"></div>
+                    <div class="card__content-wrapper">
+                        <p class="card__title">Daily action listed over two lines</p>
+                        <p class="card-caption">
+                            <span class="card-caption__days">0</span>
+                            of 0 suggested days per week
+                        </p>
+                        <ul class="card-days">
+                            <li class="card-days__item">
+                                <button class="btn-card--day">
+                                    <span class="card-days__item-name">Su</span>
+                                    <span class="card-days__item-date">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day">
+                                    <span class="card-days__item-name">M</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day">
+                                    <span class="card-days__item-name">Tu</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day checked">
+                                    <span class="card-days__item-name">We</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day selected">
+                                    <span class="card-days__item-name">Th</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day btn-card--day--future">
+                                    <span class="card-days__item-name">f</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day btn-card--day--future">
+                                    <span class="card-days__item-name">Sa</span>
+                                    <span class="card-days__item-date">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="card__bottom">
+                            <button class="btn btn-primary-glass">Check-in</button>
+                            <button class="btn-card btn-card--details flip-front">Details</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="card__content back">
+                    <div class="card__content-wrapper">
+                        <p class="card__title">Daily action listed over two lines</p>
+                        <div class="card-rating">
+                            <span class="card-rating__time">0 days per week</span>
+                            <div class="tooltip-hover inline-flex">
+                                <ul class="card-rating__list">
+                                    <li class="card-rating__list-item card-rating__list-item--active"></li>
+                                    <li class="card-rating__list-item card-rating__list-item--active"></li>
+                                    <li class="card-rating__list-item card-rating__list-item--active"></li>
+                                    <li class="card-rating__list-item"></li>
+                                    <li class="card-rating__list-item"></li>
+                                </ul>
+                                <div class="tooltip">
+                                    <span class="heading-14 tooltip__title">Rating System</span>
+                                    <span class="text-14 tooltip__text">InsideTracker ranks recommendations from 1 to 5, with 5 being the strongest. Rankings are based on peer-reviewed, scientific studies supporting each recommendation and its effectiveness.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-recommendation">
+                            <p class="card-recommendation__title">List name:</p>
+                            <ul class="card-recommendation__list">
+                                <li class="card-recommendation__item">Item 1</li>
+                                <li class="card-recommendation__item">Item 2</li>
+                                <li class="card-recommendation__item">Item 3</li>
+                                <li class="card-recommendation__item">Item 4</li>
+                                <li class="card-recommendation__item">Item 5</li>
+                                <li class="card-recommendation__item">Item 6</li>
+                            </ul>
+                        </div>
+                        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna.</p>
+                        <button class="btn-card btn-card--more">More</button>
+                        <div class="card__bottom">
+                            <button class="btn-card btn-card--details flip-back">Back to overview</button>
+                        </div>
+                    </div>
+                </section>
+            </article>
+            
+            <!-- Dashboard card   -->
+            
+            <article class="card card--checkin flipper rotate0 swiper-slide">
+                <section class="card__content front">
+                    <div class="card__img"></div>
+                    <div class="card__content-wrapper">
+                        <p class="card__title">Daily action listed over two lines</p>
+                        <p class="card-caption">
+                            <span class="card-caption__days">0</span>
+                            of 0 suggested days per week
+                        </p>
+                        <ul class="card-days">
+                            <li class="card-days__item">
+                                <button class="btn-card--day">
+                                    <span class="card-days__item-name">Su</span>
+                                    <span class="card-days__item-date">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day">
+                                    <span class="card-days__item-name">M</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day">
+                                    <span class="card-days__item-name">Tu</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day checked">
+                                    <span class="card-days__item-name">We</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day selected">
+                                    <span class="card-days__item-name">Th</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day btn-card--day--future">
+                                    <span class="card-days__item-name">f</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day btn-card--day--future">
+                                    <span class="card-days__item-name">Sa</span>
+                                    <span class="card-days__item-date">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="card__bottom">
+                            <button class="btn btn-primary-glass">Check-in</button>
+                            <button class="btn-card btn-card--details flip-front">Details</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="card__content back">
+                    <div class="card__content-wrapper">
+                        <p class="card__title">Daily action listed over two lines</p>
+                        <div class="card-rating">
+                            <span class="card-rating__time">0 days per week</span>
+                            <div class="tooltip-hover inline-flex">
+                                <ul class="card-rating__list">
+                                    <li class="card-rating__list-item card-rating__list-item--active"></li>
+                                    <li class="card-rating__list-item card-rating__list-item--active"></li>
+                                    <li class="card-rating__list-item card-rating__list-item--active"></li>
+                                    <li class="card-rating__list-item"></li>
+                                    <li class="card-rating__list-item"></li>
+                                </ul>
+                                <div class="tooltip">
+                                    <span class="heading-14 tooltip__title">Rating System</span>
+                                    <span class="text-14 tooltip__text">InsideTracker ranks recommendations from 1 to 5, with 5 being the strongest. Rankings are based on peer-reviewed, scientific studies supporting each recommendation and its effectiveness.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-recommendation">
+                            <p class="card-recommendation__title">List name:</p>
+                            <ul class="card-recommendation__list">
+                                <li class="card-recommendation__item">Item 1</li>
+                                <li class="card-recommendation__item">Item 2</li>
+                                <li class="card-recommendation__item">Item 3</li>
+                                <li class="card-recommendation__item">Item 4</li>
+                                <li class="card-recommendation__item">Item 5</li>
+                                <li class="card-recommendation__item">Item 6</li>
+                            </ul>
+                        </div>
+                        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna.</p>
+                        <button class="btn-card btn-card--more">More</button>
+                        <div class="card__bottom">
+                            <button class="btn-card btn-card--details flip-back">Back to overview</button>
+                        </div>
+                    </div>
+                </section>
+            </article>
+            
+            <!-- Dashboard card   -->
+            
+            <article class="card card--checkin flipper rotate0 swiper-slide">
+                <section class="card__content front">
+                    <div class="card__img"></div>
+                    <div class="card__content-wrapper">
+                        <p class="card__title">Daily action listed over two lines</p>
+                        <p class="card-caption">
+                            <span class="card-caption__days">0</span>
+                            of 0 suggested days per week
+                        </p>
+                        <ul class="card-days">
+                            <li class="card-days__item">
+                                <button class="btn-card--day">
+                                    <span class="card-days__item-name">Su</span>
+                                    <span class="card-days__item-date">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day">
+                                    <span class="card-days__item-name">M</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day">
+                                    <span class="card-days__item-name">Tu</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day checked">
+                                    <span class="card-days__item-name">We</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day selected">
+                                    <span class="card-days__item-name">Th</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day btn-card--day--future">
+                                    <span class="card-days__item-name">f</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day btn-card--day--future">
+                                    <span class="card-days__item-name">Sa</span>
+                                    <span class="card-days__item-date">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="card__bottom">
+                            <button class="btn btn-primary-glass">Check-in</button>
+                            <button class="btn-card btn-card--details flip-front">Details</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="card__content back">
+                    <div class="card__content-wrapper">
+                        <p class="card__title">Daily action listed over two lines</p>
+                        <div class="card-rating">
+                            <span class="card-rating__time">0 days per week</span>
+                            <div class="tooltip-hover inline-flex">
+                                <ul class="card-rating__list">
+                                    <li class="card-rating__list-item card-rating__list-item--active"></li>
+                                    <li class="card-rating__list-item card-rating__list-item--active"></li>
+                                    <li class="card-rating__list-item card-rating__list-item--active"></li>
+                                    <li class="card-rating__list-item"></li>
+                                    <li class="card-rating__list-item"></li>
+                                </ul>
+                                <div class="tooltip">
+                                    <span class="heading-14 tooltip__title">Rating System</span>
+                                    <span class="text-14 tooltip__text">InsideTracker ranks recommendations from 1 to 5, with 5 being the strongest. Rankings are based on peer-reviewed, scientific studies supporting each recommendation and its effectiveness.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-recommendation">
+                            <p class="card-recommendation__title">List name:</p>
+                            <ul class="card-recommendation__list">
+                                <li class="card-recommendation__item">Item 1</li>
+                                <li class="card-recommendation__item">Item 2</li>
+                                <li class="card-recommendation__item">Item 3</li>
+                                <li class="card-recommendation__item">Item 4</li>
+                                <li class="card-recommendation__item">Item 5</li>
+                                <li class="card-recommendation__item">Item 6</li>
+                            </ul>
+                        </div>
+                        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna.</p>
+                        <button class="btn-card btn-card--more">More</button>
+                        <div class="card__bottom">
+                            <button class="btn-card btn-card--details flip-back">Back to overview</button>
+                        </div>
+                    </div>
+                </section>
+            </article>
+            
+            <!-- Dashboard card   -->
+            
+            <article class="card card--checkin flipper rotate0 swiper-slide">
+                <section class="card__content front">
+                    <div class="card__img"></div>
+                    <div class="card__content-wrapper">
+                        <p class="card__title">Daily action listed over two lines</p>
+                        <p class="card-caption">
+                            <span class="card-caption__days">0</span>
+                            of 0 suggested days per week
+                        </p>
+                        <ul class="card-days">
+                            <li class="card-days__item">
+                                <button class="btn-card--day">
+                                    <span class="card-days__item-name">Su</span>
+                                    <span class="card-days__item-date">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day">
+                                    <span class="card-days__item-name">M</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day">
+                                    <span class="card-days__item-name">Tu</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day checked">
+                                    <span class="card-days__item-name">We</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day selected">
+                                    <span class="card-days__item-name">Th</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day btn-card--day--future">
+                                    <span class="card-days__item-name">f</span>
+                                    <span class="card-days__item-date hide">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="card-days__item">
+                                <button class="btn-card--day btn-card--day--future">
+                                    <span class="card-days__item-name">Sa</span>
+                                    <span class="card-days__item-date">mm/md</span>
+                                    <svg class="icon icon-checked">
+                                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="card__bottom">
+                            <button class="btn btn-primary-glass">Check-in</button>
+                            <button class="btn-card btn-card--details flip-front">Details</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="card__content back">
+                    <div class="card__content-wrapper">
+                        <p class="card__title">Daily action listed over two lines</p>
+                        <div class="card-rating">
+                            <span class="card-rating__time">0 days per week</span>
+                            <div class="tooltip-hover inline-flex">
+                                <ul class="card-rating__list">
+                                    <li class="card-rating__list-item card-rating__list-item--active"></li>
+                                    <li class="card-rating__list-item card-rating__list-item--active"></li>
+                                    <li class="card-rating__list-item card-rating__list-item--active"></li>
+                                    <li class="card-rating__list-item"></li>
+                                    <li class="card-rating__list-item"></li>
+                                </ul>
+                                <div class="tooltip">
+                                    <span class="heading-14 tooltip__title">Rating System</span>
+                                    <span class="text-14 tooltip__text">InsideTracker ranks recommendations from 1 to 5, with 5 being the strongest. Rankings are based on peer-reviewed, scientific studies supporting each recommendation and its effectiveness.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-recommendation">
+                            <p class="card-recommendation__title">List name:</p>
+                            <ul class="card-recommendation__list">
+                                <li class="card-recommendation__item">Item 1</li>
+                                <li class="card-recommendation__item">Item 2</li>
+                                <li class="card-recommendation__item">Item 3</li>
+                                <li class="card-recommendation__item">Item 4</li>
+                                <li class="card-recommendation__item">Item 5</li>
+                                <li class="card-recommendation__item">Item 6</li>
+                            </ul>
+                        </div>
+                        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna.</p>
+                        <button class="btn-card btn-card--more">More</button>
+                        <div class="card__bottom">
+                            <button class="btn-card btn-card--details flip-back">Back to overview</button>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        
+        </div>
+        
+        <div class="card__swiper-button swiper-button--prev">
+            <svg class="icon icon-swiper--prev">
+                <use xlink:href="assets/sprite.svg#icon-swiper-arrow" />
+            </svg>
+        </div>
+        
+        <div class="card__swiper-button swiper-button--next">
+            <svg class="icon icon-swiper--next">
+                <use xlink:href="assets/sprite.svg#icon-swiper-arrow" />
+            </svg>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<!-- Goal cards   -->
+
+<div class="container">
+    <div class="card-list--goal">
+        
+        <article class="goal-card goal-card__bg--1">
+            <label class="goal-card__label">
+                <input class="goal-card__input" type="radio" name="goals">
+                <span class="goal-card__overlay"></span>
+                <span class="goal-card__checkbox">
+                    <svg class="icon icon-checked">
+                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                    </svg>
+                </span>
+                <span class="goal-card__title">Goal name 1</span>
+            </label>
+        </article>
+        
+        <article class="goal-card goal-card__bg--2 no-desktop">
+            <label class="goal-card__label">
+                <input class="goal-card__input" type="radio" name="goals">
+                <span class="goal-card__overlay"></span>
+                <span class="goal-card__checkbox">
+                    <svg class="icon icon-checked">
+                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                    </svg>
+                </span>
+                <span class="goal-card__title">Goal name 2</span>
+            </label>
+        </article>
+        
+        <article class="goal-card goal-card__bg--3 no-desktop">
+            <label class="goal-card__label">
+                <input class="goal-card__input" type="radio" name="goals">
+                <span class="goal-card__overlay"></span>
+                <span class="goal-card__checkbox">
+                    <svg class="icon icon-checked">
+                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                    </svg>
+                </span>
+                <span class="goal-card__title">Goal name 3</span>
+            </label>
+        </article>
+        
+        <article class="goal-card goal-card__bg--4">
+            <label class="goal-card__label">
+                <input class="goal-card__input" type="radio" name="goals">
+                <span class="goal-card__overlay"></span>
+                <span class="goal-card__checkbox">
+                    <svg class="icon icon-checked">
+                        <use xlink:href="assets/sprite.svg#icon-checked" />
+                    </svg>
+                </span>
+                <span class="goal-card__title">Goal name over two lines</span>
+            </label>
+        </article>
+    </div>
+</div>
+
+        </section>
+
+        <section class="item hide" data-link="tooltip">
+            <h2>Tooltip Component</h2>
+
+        </section>
+
+        <section class="item hide" data-link="tab">
+            <h2>Tab Component</h2>
+            <!--Tab component-->
+
+<div class="tab">
+    <div class="tab-menu">
+        <a class="tab-menu__item active" href="#" onclick="return false">ITEM ONE</a>
+        <a class="tab-menu__item" href="#" onclick="return false">ITEM TWO</a>
+        <a class="tab-menu__item disabled" href="#" onclick="return false">ITEM THREE</a>
+        <a class="tab-menu__item hide-tablet" href="#" onclick="return false">ITEM FOUR</a>
+        <a class="tab-menu__item hide-tablet" href="#" onclick="return false">ITEM EXTRA LONG [ ... ]</a>
+    </div>
+    <div class="tab-content">
+        <div class="tab-content__item active">ITEM ONE</div>
+        <div class="tab-content__item">ITEM TWO</div>
+        <div class="tab-content__item">ITEM THREE</div>
+        <div class="tab-content__item hide-tablet">ITEM FOUR</div>
+        <div class="tab-content__item hide-tablet">ITEM EXTRA LONG [ ... ]</div>
+    </div>
+</div>
+        </section>
+
+        <section class="item hide" data-link="table">
+            <h2>Table Component</h2>
+            <!--Table component-->
+
+<div class="table">
+    <div class="table__head">
+        <div class="table__cell table__cell--title">First column</div>
+        <div class="table__cell table__cell--bold">Row headline</div>
+        <div class="table__cell">Row standard</div>
+        <div class="table__cell"><span class="table__icon"></span>Row with icon</div>
+        <div class="table__cell table__cell--sub">Sub row</div>
+        <div class="table__cell table__cell--bigger">Row standard <br>
+            <a href="#" onclick="return false" class="link-primary">with link</a> in text</div>
+        <div class="table__cell table__cell--disabled">Row disabled</div>
+        <div class="table__cell table__cell--biggest">If text does not fit into a table cell, you may
+            truncate text or use a tooltip [ ... ]</div>
+    </div>
+    <div class="table__body">
+        <div class="table-swiper swiper-container">
+            <div class="swiper-wrapper">
+                <div class="table__column swiper-slide">
+                    <div class="table__cell table__cell--title">Column</div>
+                    <div class="table__cell">Data
+                        <span class="table__dot table__dot--yellow"></span>
+                    </div>
+                    <div class="table__cell">Data
+                        <span class="table__dot table__dot--orange"></span>
+                    </div>
+                    <div class="table__cell">Data
+                        <span class="table__dot table__dot--brown"></span>
+                    </div>
+                    <div class="table__cell">Data
+                        <span class="table__dot table__dot--green"></span>
+                    </div>
+                    <div class="table__cell table__cell--bigger">
+                        <div class="checkbox table__checkbox">
+                            <input checked class="checkbox__field" id="checkbox" name="checkbox" type="checkbox">
+                            <svg class="checkbox__icon icon-checked">
+                                <use xlink:href="assets/sprite.svg#icon-checked"></use>
+                            </svg>
+                            <label class="checkbox__label" for="checkbox"></label>
+                        </div>
+                    </div>
+                    <div class="table__cell table__cell--disabled"></div>
+                    <div class="table__cell table__cell--biggest">Data
+                        <span class="table__dot table__dot--green"></span>
+                    </div>
+                </div>
+                <div class="table__column swiper-slide">
+                    <div class="table__cell table__cell--title">Column</div>
+                    <div class="table__cell">Data
+                        <span class="table__dot table__dot--yellow"></span>
+                    </div>
+                    <div class="table__cell">Data
+                        <span class="table__dot table__dot--orange"></span>
+                    </div>
+                    <div class="table__cell">Data
+                        <span class="table__dot table__dot--brown"></span>
+                    </div>
+                    <div class="table__cell">Data
+                        <span class="table__dot table__dot--green"></span>
+                    </div>
+                    <div class="table__cell table__cell--bigger">
+                        <div class="checkbox table__checkbox">
+                            <input checked class="checkbox__field" id="checkbox2" name="checkbox" type="checkbox">
+                            <svg class="checkbox__icon icon-checked">
+                                <use xlink:href="assets/sprite.svg#icon-checked"></use>
+                            </svg>
+                            <label class="checkbox__label" for="checkbox2"></label>
+                        </div>
+                    </div>
+                    <div class="table__cell table__cell--disabled"></div>
+                    <div class="table__cell table__cell--biggest">Data
+                        <span class="table__dot table__dot--green"></span>
+                    </div>
+                </div>
+                <div class="table__column swiper-slide">
+                    <div class="table__cell table__cell--title">Column</div>
+                    <div class="table__cell">Data
+                        <span class="table__dot table__dot--yellow"></span>
+                    </div>
+                    <div class="table__cell">Data
+                        <span class="table__dot table__dot--orange"></span>
+                    </div>
+                    <div class="table__cell">Data
+                        <span class="table__dot table__dot--brown"></span>
+                    </div>
+                    <div class="table__cell">Data
+                        <span class="table__dot table__dot--green"></span>
+                    </div>
+                    <div class="table__cell table__cell--bigger">
+                        <div class="checkbox table__checkbox">
+                            <input checked class="checkbox__field" id="checkbox3" name="checkbox" type="checkbox">
+                            <svg class="checkbox__icon icon-checked">
+                                <use xlink:href="assets/sprite.svg#icon-checked"></use>
+                            </svg>
+                            <label class="checkbox__label" for="checkbox3"></label>
+                        </div>
+                    </div>
+                    <div class="table__cell table__cell--disabled"></div>
+                    <div class="table__cell table__cell--biggest">Data
+                        <span class="table__dot table__dot--green"></span>
+                    </div>
+                </div>
+                <div class="table__column swiper-slide">
+                    <div class="table__cell table__cell--title">Column</div>
+                    <div class="table__cell">Data
+                        <span class="table__dot table__dot--yellow"></span>
+                    </div>
+                    <div class="table__cell">Data
+                        <span class="table__dot table__dot--orange"></span>
+                    </div>
+                    <div class="table__cell">Data
+                        <span class="table__dot table__dot--brown"></span>
+                    </div>
+                    <div class="table__cell">Data
+                        <span class="table__dot table__dot--green"></span>
+                    </div>
+                    <div class="table__cell table__cell--bigger">
+                        <div class="checkbox table__checkbox">
+                            <input checked class="checkbox__field" id="checkbox4" name="checkbox" type="checkbox">
+                            <svg class="checkbox__icon icon-checked">
+                                <use xlink:href="assets/sprite.svg#icon-checked"></use>
+                            </svg>
+                            <label class="checkbox__label" for="checkbox4"></label>
+                        </div>
+                    </div>
+                    <div class="table__cell table__cell--disabled"></div>
+                    <div class="table__cell table__cell--biggest">Data
+                        <span class="table__dot table__dot--green"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-arrow table-arrow-prev">
+            <svg class="icon icon-swiper--prev">
+                <use xlink:href="assets/sprite.svg#icon-swiper-arrow"/>
+            </svg>
+        </div>
+        <div class="table-arrow table-arrow-next">
+            <svg class="icon icon-swiper--next">
+                <use xlink:href="assets/sprite.svg#icon-swiper-arrow"/>
+            </svg>
+        </div>
+    </div>
+
+    <div class="shadow-block">
+        <div class="shadow-block__title">First column</div>
+        <div class="shadow-block__title">Column</div>
+    </div>
+
+</div>
+
+        </section>
+
+        <section class="item hide" data-link="switcher">
+            <h2>Switcher Component</h2>
+            <!--Component Switcher-->
+
+<div class="wrapper">
+
+    <label class="tumbler-flex">
+        <span class="tumbler">
+            <input class="tumbler__input" type="checkbox">
+            <span class="tumbler__icon"></span>
+        </span>
+        <span class="tumbler-label text-14">Off</span>
+    </label>
+
+    <label class="tumbler-flex">
+        <span class="tumbler tumbler--disabled">
+            <input class="tumbler__input" type="checkbox" disabled>
+            <span class="tumbler__icon"></span>
+        </span>
+        <span class="tumbler-label text-14">Off</span>
+    </label>
+
+</div>
+
+<div class="toggler-flex">
+    <div class="toggler ">
+        <label class="toggler__item active">
+            US & Canada
+            <input class="toggler__input" name="toggler" type="radio" value="">
+        </label>
+        <label class="toggler__item">
+            International Store
+            <input class="toggler__input" name="toggler" type="radio" value="">
+        </label>
+    </div>
+</div>
+
+<div class="switcher-wrap switcher-wrap--short">
+    <label class="switcher">
+        <input class="switcher__input" name="gender" type="radio" value="">
+        <span class="switcher__name">Male</span>
+    </label>
+    <label class="switcher">
+        <input class="switcher__input" name="gender" type="radio" value="">
+        <span class="switcher__name">Female</span>
+    </label>
+</div>
+
+<div class="switcher-wrap">
+    <label class="switcher">
+        <input class="switcher__input" name="profile" type="radio" value="">
+        <span class="switcher__name">Never</span>
+    </label>
+    <label class="switcher">
+        <input class="switcher__input" name="profile" type="radio" value="">
+        <span class="switcher__name switcher__name--long">1</span>
+    </label>
+    <label class="switcher">
+        <input class="switcher__input" name="profile" type="radio" value="">
+        <span class="switcher__name switcher__name--long">2</span>
+    </label>
+    <label class="switcher">
+        <input class="switcher__input" name="profile" type="radio" value="">
+        <span class="switcher__name switcher__name--long">3</span>
+    </label>
+</div>
+
+<div class="switcher-wrap switcher-grid">
+    <label class="switcher">
+        <input class="switcher__input" name="switcher" type="radio" value="">
+        <span class="switcher__name">Never</span>
+    </label>
+    <label class="switcher">
+        <input class="switcher__input" name="switcher" type="radio" value="">
+        <span class="switcher__name switcher__name--long">1</span>
+    </label>
+    <label class="switcher">
+        <input class="switcher__input" name="switcher" type="radio" value="">
+        <span class="switcher__name switcher__name--long">2</span>
+    </label>
+    <label class="switcher">
+        <input class="switcher__input" name="switcher" type="radio" value="">
+        <span class="switcher__name switcher__name--long">3</span>
+    </label>
+</div>
+
+        </section>
+
+        <section class="item hide" data-link="checkbox">
+            <h2>Checkbox Component</h2>
+            <!--Component Checkboxes-->
+
+<div class="checkboxes-wrap">
+    <!--Regular-->
+    <div class="checkboxes-column">
+        <div class="checkbox">
+            <input checked class="checkbox__field" id="checkbox" name="checkbox" type="checkbox">
+            <svg class="checkbox__icon icon-checked">
+                <use xlink:href="assets/sprite.svg#icon-checked"></use>
+            </svg>
+            <label class="checkbox__label" for="checkbox">Label, regular</label>
+        </div>
+        <div class="checkbox">
+            <input class="checkbox__field" id="checkbox2" name="checkbox" type="checkbox">
+            <svg class="checkbox__icon icon-checked">
+                <use xlink:href="assets/sprite.svg#icon-checked"></use>
+            </svg>
+            <label class="checkbox__label" for="checkbox2">Label, regular</label>
+        </div>
+        <div class="checkbox">
+            <input class="checkbox__field" disabled id="checkbox3" name="checkbox" type="checkbox">
+            <svg class="checkbox__icon icon-checked">
+                <use xlink:href="assets/sprite.svg#icon-checked"></use>
+            </svg>
+            <label class="checkbox__label" for="checkbox3">Label, disabled</label>
+        </div>
+
+        <div class="checkbox">
+            <input checked class="checkbox__field" disabled id="checkbox4" name="checkbox" type="checkbox">
+            <svg class="checkbox__icon icon-checked">
+                <use xlink:href="assets/sprite.svg#icon-checked"></use>
+            </svg>
+            <label class="checkbox__label" for="checkbox4">Label, disabled</label>
+        </div>
+    </div>
+    <!--Small-->
+    <div class="checkboxes-column">
+        <div class="checkbox checkbox--sm">
+            <input checked class="checkbox__field" id="checkbox5" name="checkbox" type="checkbox">
+            <svg class="checkbox__icon icon-checked">
+                <use xlink:href="assets/sprite.svg#icon-checked"></use>
+            </svg>
+            <label class="checkbox__label" for="checkbox5">Label, small</label>
+        </div>
+        <div class="checkbox checkbox--sm">
+            <input checked class="checkbox__field" id="checkbox6" name="checkbox" type="checkbox">
+            <svg class="checkbox__icon icon-checked">
+                <use xlink:href="assets/sprite.svg#icon-checked"></use>
+            </svg>
+            <label class="checkbox__label" for="checkbox6">Label, small</label>
+        </div>
+        <div class="checkbox checkbox--sm">
+            <input class="checkbox__field" id="checkbox7" name="checkbox" type="checkbox" disabled>
+            <svg class="checkbox__icon icon-checked">
+                <use xlink:href="assets/sprite.svg#icon-checked"></use>
+            </svg>
+            <label class="checkbox__label" for="checkbox7">Label, disabled</label>
+        </div>
+        <div class="checkbox checkbox--sm">
+            <input checked class="checkbox__field" id="checkbox8" name="checkbox" type="checkbox" disabled>
+            <svg class="checkbox__icon icon-checked">
+                <use xlink:href="assets/sprite.svg#icon-checked"></use>
+            </svg>
+            <label class="checkbox__label" for="checkbox8">Label, disabled</label>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+        </section>
+
+        <section class="item hide" data-link="text">
+            <h2>Text Component</h2>
+            <!--Component Text Field-->
+<form class="wrapper-textfield" autocomplete="off">
+    
+    <!--Placeholder-->
+    <div class="form-field">
+        <label class="label" for="form-field">Label</label>
+        <input class="form-control" id="form-field" name="form-field" placeholder="Please type here" type="text">
+    </div>
+    
+    <!--Helper text-->
+    <div class="form-field">
+        <label class="label" for="form-field3">Label</label>
+        <input class="form-control" id="form-field3" name="form-field" placeholder="Please type here" type="text" value="Please type here">
+        <ul class="helper-text">
+            <li>Helper text</li>
+        </ul>
+    </div>
+    
+    <!--Error message-->
+    <div class="form-field">
+        <label class="label" for="form-field4">Label</label>
+        <input class="form-control incorrect-value-input"
+               id="form-field4"
+               name="placeholder"
+               placeholder="Placeholder"
+               type="text"
+               value="Text input">
+        <ul class="error-message">
+            <li>Error message</li>
+        </ul>
+    </div>
+    
+    <!--Disabled-->
+    <div class="form-field disabled">
+        <label class="label" for="form-field5">Label, disabled</label>
+        <input class="form-control" disabled="disabled" id="form-field5" name="form-field" placeholder="Placeholder text, disabled" type="text">
+    </div>
+    
+    <!--custom select-->
+    <div class="dropdown--custom">
+        <label class="label">Label, dropdown</label>
+        <div class="dropdown-wrapper">
+            <div class="dropdown__select dropdown__selected">Please select</div>
+            <ul class="dropdown__list">
+                <li class="dropdown__list-item" data-id="1">Item 1</li>
+                <li class="dropdown__list-item" data-id="2">Item 2</li>
+                <li class="dropdown__list-item" data-id="3">Item 3</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!--Search-->
+    <div class="search-form" enctype="multipart/form-data" id="search_form">
+        <input class="search-submit" type="submit" value="">
+        <input class="form-control typeahead" placeholder="Search" type="text">
+    </div>
+
+</form>
+        </section>
+
+        <section class="item hide" data-link="radio">
+            <h2>Radio Component</h2>
+            <!--Component Checkboxes-->
+
+<div class="radios-wrap">
+    <!--Regular-->
+    <div class="radio">
+        <input class="radio__input" id="option" type="radio" name="option" value="option" />
+        <label class="radio__label" for="option">Label</label>
+    </div>
+    <div class="radio">
+        <input class="radio__input" id="option2" type="radio" name="option" value="option" />
+        <label class="radio__label" for="option2">Label</label>
+    </div>
+    <div class="radio">
+        <input class="radio__input" id="option4" type="radio" name="option" value="option" disabled />
+        <label class="radio__label" for="option4">Label, disabled</label>
+    </div>
+    <div class="radio disabled">
+        <input class="radio__input" id="option3" type="radio" name="option" value="option" checked disabled />
+        <label class="radio__label" for="option3">Label, disabled</label>
+    </div>
+</div>
+
+
+
+        </section>
+
+        <section class="item hide" data-link="link">
+            <h2>Links Component</h2>
+            <!--Component Links-->
+
+<!--Links light background-->
+<div class="links-table links-table--light">
+    <div class="links-row">
+        <a class="links-item link-primary" href="#" onclick="return false">Primary link</a>
+    </div>
+    <div class="links-row">
+        <a class="links-item link-secondary" href="#" onclick="return false">Secondary link</a>
+    </div>
+</div>
+
+<!--Links dark background-->
+<div class="links-table links-table--dark">
+    <div class="links-row">
+        <a class="links-item link-white" href="#" onclick="return false">Primary menu link</a>
+    </div>
+    <div class="links-row">
+        <a class="links-item link-secondary-light" href="#" onclick="return false">Secondary menu link</a>
+    </div>
+</div>
+
+        </section>
+
+        <section class="item hide" data-link="modal">
+            <h2>Modals Component</h2>
+            <!--Component Modal-->
+<div class="test">
+    <!--Dashboard modal-->
+    <section class="modal modal--dashboard show">
+        <div class="container--modal">
+            <div class="modal__wrapper">
+                <div id="modal__close" class="modal__close"></div>
+                <div class="modal__info">
+                    <div class="modal__text">
+                        <h2 class="heading-38 modal__title">Dashboard modal</h2>
+                        <p class="modal__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                            magna aliqua. </p>
+                        <div class="btn-block btn-block--left">
+                            <a href="#" onclick="return false" class="btn-secondary">Secondary</a>
+                            <a href="#" onclick="return false" class="btn-primary">Primary</a>
+                        </div>
+                    </div>
+                    <div class="modal__image">
+                        <span class="modal__img" style="background-image: url('./assets/img/test1.svg')"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Regular modal-->
+    <section class="modal modal--regular show">
+        <div class="container">
+            <div class="modal__wrapper">
+                <div class="modal__close"></div>
+                <div class="modal__info">
+                    <div class="modal__text">
+                        <h2 class="heading-20 modal__title">Regular Modal</h2>
+                        <p class="modal__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        <div class="btn-block btn-block--right">
+                            <a href="#" onclick="return false" class="btn-secondary">Secondary</a>
+                            <a href="#" onclick="return false" class="btn-primary">Primary</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Informative modal-->
+    <section class="modal-info show">
+        <div class="container">
+            <div class="modal-info__wrapper">
+                <div class="text-14 modal-info__text">
+                    <span class="text--semibold">Informative modal</span>
+                    Lorem ipsum dolor sit amet, consectetur
+                    <a href="#" class="modal-link--primary">adipiscing eiusmod</a>
+                    tempor.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Warning modal -->
+    <section class="modal-info modal-info--warning show">
+        <div class="container">
+            <div class="modal-info__wrapper">
+                <div class="modal-info__text">
+                    <span class="text--semibold">Warning modal </span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing eiusmod tempor.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Error modal-->
+    <section class="modal-info modal-info--error show">
+        <div class="container">
+            <div class="modal-info__wrapper">
+                <div class="modal-info__text">
+                    <span class="text--semibold">Error modal</span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing eiusmod tempor.
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+        </section>
+
+        <section class="item hide" data-link="button">
+            <h2>Button Component</h2>
+            <!--Component Button-->
+
+<!--buttons BEGIN-->
+<div class="btn-wrap">
+    <!--    primary buttons-->
+    <!--    size options-->
+    <div class="btn-wrap__line btn-wrap__line--nowrap">
+        <button type="button" class="btn-primary btn--small">
+            Primary, small
+        </button>
+        <button type="button" class="btn-primary">
+            Primary, regular
+        </button>
+        <button type="button" class="btn-primary btn--large">
+            Primary, large
+        </button>
+        <button type="button" class="btn-primary btn-primary--disabled">
+            Primary, disabled
+        </button>
+    </div>
+    
+    <!--   Secondary btn state options-->
+    <div class="btn-wrap__line">
+        <button type="button" class="btn-secondary btn--small">
+            Secondary, small
+        </button>
+        <button type="button" class="btn-secondary">
+            Secondary, regular
+        </button>
+        <button type="button" class="btn-secondary btn--large">
+            Secondary, large
+        </button>
+        <button type="button" class="btn-secondary btn-secondary--disabled">
+            Secondary, disabled
+        </button>
+    </div>
+    
+    <!--   Special btn state options-->
+    <div class="btn-wrap__line">
+        <button type="button" class="btn-special btn--small">
+            Special, small
+        </button>
+        <button type="button" class="btn-special">
+            Special, regular
+        </button>
+        <button type="button" class="btn-special btn--large">
+            Special, large
+        </button>
+    </div>
+    
+    <!--   Danger btn state options-->
+    <div class="btn-wrap__line">
+        <button type="button" class="btn-danger btn--small">
+            Danger, small
+        </button>
+        <button type="button" class="btn-danger">
+            Danger, regular
+        </button>
+        <button type="button" class="btn-danger btn--large">
+            Danger, large
+        </button>
+        <button type="button" class="btn-danger btn-danger--disabled">
+            Danger, disabled
+        </button>
+    </div>
+    
+    <!--   Primary glass btn state options-->
+    <div class="btn-wrap__line">
+        <button type="button" class="btn-primary-glass btn--small">
+            Primary glass, small
+        </button>
+        <button type="button" class="btn-primary-glass">
+            Primary glass, regular
+        </button>
+        <button type="button" class="btn-primary-glass btn--large">
+            Primary glass, large
+        </button>
+        <button type="button" class="btn-primary-glass btn-primary-glass--disabled">
+            Primary glass, disabled
+        </button>
+    </div>
+    
+    <!--   Secondary glass btn state options-->
+    <div class="btn-wrap__line">
+        <button type="button" class="btn-secondary-glass btn--small">
+            Secondary glass, small
+        </button>
+        <button type="button" class="btn-secondary-glass">
+            Secondary glass, regular
+        </button>
+        <button type="button" class="btn-secondary-glass  btn--large">
+            Secondary glass, large
+        </button>
+        <button type="button" class="btn-secondary-glass btn-secondary-glass--disabled">
+            Secondary glass, disabled
+        </button>
+    </div>
+</div>
+
+
+<!--Special glass btn state options and round buttons-->
+    <!--
+    <div class="btn-wrap__line">
+        <button type="button" class="btn-special-glass">
+            Special glass
+        </button>
+        <button type="button" class="btn-special-glass btn-special-glass--hover">
+            Hover
+        </button>
+        <button type="button" class="btn-special-glass btn-special-glass--active">
+            Active
+        </button>
+        <button type="button" class="btn-special-glass btn-special-glass--disabled">
+            Disabled
+        </button>
+    </div>
+    
+   
+    <div class="btn-wrap__line">
+        <button type="button" class="btn-round">
+            Round
+        </button>
+        <button type="button" class="btn-round btn-round--hover">
+            Hover
+        </button>
+        <button type="button" class="btn-round btn-round--active">
+            Active
+        </button>
+        <button type="button" class="btn-round btn-round--disabled">
+            Disabled
+        </button>
+    </div>
+    
+    
+    <br> <br>
+    <div class="btn-wrap__line"></div>
+    <div class="btn-wrap__line"></div>
+    <div class="btn-wrap__line"></div>
+    <div class="btn-wrap__line"></div>
+    <div class="btn-wrap__line"></div>
+    <div class="btn-wrap__line"></div>
+    <div class="btn-wrap__line"></div>
+    <div class="btn-wrap__line"></div>
+    
+    <button type="button" class="btn-primary-glass--check">
+        Primary glass--check
+    </button>
+    
+    
+    <button type="button" class="btn-secondary--dark">
+        Secondary dark
+    </button>
+    
+    <button type="button" class="btn-danger--light">
+        Danger light
+    </button>
+
+-->
+<!--buttons END-->
+
+        </section>
+
+        <section class="item hide" data-link="calendar">
+            <h2>Calendar Component</h2>
+            <!--<input type='text' class="calendar" data-position="right top"/>-->
+
+<div class="container-test">
+    <label class="label">Date</label>
+    <input class="form-control calendar" data-position="right top" id="calendar" autocomplete="off" name="form-field" placeholder="Please select" type="text">
+    <i class="calendar__icon"></i>
+</div>
+
+        </section>
+
+        <section class="item hide" data-link="popup">
+            <h2>Popup Component</h2>
+            <!--Component Popups-->
+
+<!--new  format link-->
+<p class="text-14">
+  Click
+  <a id="popupBtn1" class="link-primary" href="#" onclick="return false">here</a>
+  to view popup
+</p>
+<!--\new  format link-->
+
+<div class="link-wrap">
+    <a id="popupBtn1" class="link-primary" href="#" onclick="return false">Regular <br />[*click me*]</a>
+    <a id="popupBtn2" class="link-primary" href="#" onclick="return false">Regular-fill mobile <br />[*click me*]</a>
+    <a id="popupBtn3" class="link-primary" href="#" onclick="return false">Large-recipe <br />[*click me*]</a>
+    <a id="popupBtn4" class="link-primary" href="#" onclick="return false">Fullscreen <br />[*click me*]</a>
+</div>
+
+<!--regular popup BEGIN-->
+<article id="popup1" class="popup hide">
+    <div class="close-block close-block--cards">
+        <a id="closeX1" href="#" onclick="return false" class="close-block__link">
+            <i class="close-block__icon icon-sys-close"></i>
+        </a>
+    </div>
+    <h2 class="heading-20 cancel-popup__title">Regular popup</h2>
+    <p class="text-14 cancel-popup__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. </p>
+    <div class="btn-block btn-block--right">
+        <a id="close-btn1" href="#" onclick="return false" class="btn-secondary">Secondary</a>
+        <a href="#" onclick="return false" class="btn-primary">Primary</a>
+    </div>
+</article>
+<!--regular popup END-->
+
+<!--regular popup mobile fill BEGIN-->
+<article id="popup2" class="popup popup--m-fill hide">
+    <div class="close-block close-block--cards">
+        <a id="closeX2" href="#" onclick="return false" class="close-block__link">
+            <i class="close-block__icon icon-sys-close"></i>
+        </a>
+    </div>
+    <h2 class="heading-20 cancel-popup__title">Regular popup</h2>
+    <p class="text-14 cancel-popup__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. </p>
+    <div class="btn-block btn-block--right">
+        <a id="close-btn2" href="#" onclick="return false" class="btn btn-secondary">Secondary</a>
+        <a href="#" onclick="return false" class="btn btn-primary">Primary</a>
+    </div>
+</article>
+<!--regular popup END-->
+
+<!--component Large popup BEGIN-->
+<article id="popup3" class="popup--lg hide">
+    <div class="popup-left__side recipe__img">
+        <span class="popup-left__image hide-tablet" style="background-image: url('assets/img/card/lemon.jpg');"></span>
+        <!--change the images-->
+        <span class="popup-left__image show-tablet" style="background-image: url('assets/img/card/lemon.jpg');"></span>
+        <!--change the images-->
+    </div>
+    <article class="recipe__info">
+        <div class="close-block close-block--cards">
+            <a id="closeX3" href="#" onclick="return false" class="close-block__link">
+                <i class="close-block__icon icon-sys-close"></i>
+            </a>
+        </div>
+        <h2 class="heading-20 recipe__info-title">Large popup</h2>
+        <p class="recipe__info-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+
+        <div class="recipe-recommendation recipe-recommendation--full-width">
+            <h5 class="text-12 recipe-list__title">Highlighted items</h5>
+            <ul class="recipe-list recipe-list--full-width">
+                <li class="recipe-list__item">Item 1</li>
+                <li class="recipe-list__item">Item 2</li>
+                <li class="recipe-list__item">Item 3</li>
+                <li class="recipe-list__item">Item 4</li>
+                <li class="recipe-list__item">Item 5</li>
+                <li class="recipe-list__item">Item 6</li>
+            </ul>
+        </div>
+
+        <div class="recipe-recommendation">
+            <h5 class="text-12 recipe-list__title recipe-list__title--middle">List inside popup</h5>
+            <ul class="recipe-list recipe-list">
+                <li class="recipe-list__item">Item 1</li>
+                <li class="recipe-list__item">Item 2</li>
+                <li class="recipe-list__item">Item 3</li>
+                <li class="recipe-list__item">Item 4</li>
+                <li class="recipe-list__item">Item 5</li>
+            </ul>
+        </div>
+        <div class="recipe-wrapper__text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua.</p>
+            <p>enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                occaecat cupidatat non proident,</p>
+            <p>sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </article>
+</article>
+
+<!--component Large popup END-->
+
+<!--component overlay popup BEGIN-->
+<article id="popup4" class="popup-overlay hide">
+    <div class="close-block close-block--cards">
+        <a id="closeX4" href="#" onclick="return false" class="close-block__link">
+            <i class="close-block__icon icon-sys-close"></i>
+        </a>
+    </div>
+    <div class="use-test-overlay__icon"></div>
+    <div class="container-1170">
+        <h2 class="heading-24 popup-overlay__title">
+            Full screen takeover </h2>
+        <p class="text-16 popup-overlay__text">
+            Check out the instructions for your next blood test. Pay close attention as they may require fasting before your blood is
+            drawn. </p>
+    </div>
+    <div class="btn-wrapper">
+        <div class="btn-block btn-block--centered">
+            <button id="close-btn4" class="btn btn-secondary" onclick="location.href='insidetracker.com'">
+                <span class="hide-tablet--inline">Secondary D</span>
+                <span class="show-tablet--inline">Secondary M</span>
+            </button>
+            <button class="btn btn-primary" onclick="location.href='insidetracker.com'" target="_blank">
+                <span class="hide-tablet--inline">Primary D</span>
+                <span class="show-tablet--inline">Primary M</span>
+            </button>
+        </div>
+        <a href="#" onclick="return false" class="link link-secondary-light" id="skip-personalization-link">Secondary link</a>
+    </div>
+</article>
+<!--component overlay popup END-->
+
+
+
+<div id="screen" class="screen"></div>
+
+<div id="screen2" class="screen"></div>
+<div id="screen3" class="screen"></div>
+<div id="screen4" class="screen"></div>
+
+        </section>
+    
+        <section class="item hide" data-link="pagination">
+            <h2>Pagination Component</h2>
+            <!--Component Pagination-->
+<div class="pagination" id="pagination"></div>
+<div class="pagination-circle">
+    <div class="pagination-circle__list">
+        <a href="#" onclick="return false" class="pagination-circle__link active"></a>
+        <a href="#" onclick="return false" class="pagination-circle__link"></a>
+        <a href="#" onclick="return false" class="pagination-circle__link"></a>
+        <a href="#" onclick="return false" class="pagination-circle__link"></a>
+        <a href="#" onclick="return false" class="pagination-circle__link"></a>
+        <a href="#" onclick="return false" class="pagination-circle__link"></a>
+    </div>
+</div>
+        </section>
+        
+        <section class="item" data-link="slider">
+            <h2>Sliders Component</h2>
+            <div class="ranger-line">
+    <div class="ranger-item">
+        <div class="ranger">
+            <label class="ranger__label" for="ranger">
+                    <span class="ranger__information">
+                        <span class="text-12 text--semibold">Label</span>
+                        <span class="ranger-indicator">
+                            <span class="ranger-indicator__value"></span>
+                        </span>
+                    </span>
+                <input id="ranger"
+                       data-min="0"
+                       data-max="14"
+                       data-step="1"
+                       value="2"
+                       type="hidden"
+                       name="ranger"
+                       autocomplete="off"
+                       class="ranger__input required-value"
+                       data-time="0">
+            </label>
+            <i class="ranger-track__icon"></i>
+
+            <div class="ranger-track__wrap">
+                <div class="ranger-track">
+                    <div class="ranger-track__distance">
+                        <div class="ranger-track__handle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ranger-item">
+        <div class="ranger">
+            <label class="ranger__label" for="ranger1">
+                    <span class="ranger__information">
+                        <span class="text-12 text--semibold">Label</span>
+                        <span class="ranger-indicator">
+                            <span class="ranger-indicator__value"></span>
+                        </span>
+                    </span>
+                <input id="ranger1"
+                       data-min="0"
+                       data-max="360"
+                       data-step="30"
+                       value="90"
+                       type="hidden"
+                       name="ranger1"
+                       autocomplete="off"
+                       class="ranger__input"
+                       data-time="1">
+            </label>
+            <i class="ranger-track__icon icon-clock"></i>
+            <div class="ranger-track__wrap">
+                <div class="ranger-track">
+                    <div class="ranger-track__distance">
+                        <div class="ranger-track__handle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </section>
+    </div>
+
+</div>
+<!-- Component Cards-->
+<script src="script/app.js"></script>
+
+<!-- Idangerous Swiper-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+
+<!-- Air-datepicker-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/i18n/datepicker.en.min.js"></script>
+
+</body>
+</html>
