@@ -1,0 +1,57 @@
+@import "../utils/common";
+@import "../../../styles/utils/variables";
+
+.banner {
+    display:             flex;
+    flex-direction:      column;
+    justify-content:     center;
+    align-items:         center;
+    min-height:          525px;
+    color:               #ffffff;
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center;
+    background-image:    url('/assets/img/banner.jpg');
+    text-align:          center;
+    
+    &__title {
+        font-family:    "Open Sans Condensed", Arial, sans-serif;
+        text-transform: uppercase;
+        font-size:      100px;
+        line-height:    75px;
+        font-weight:    700;
+        margin-bottom:  40px;
+        padding:        0 16px;
+        @media screen and (max-width: @desktop) {
+            font-size: 80px;
+        }
+        @media screen and (max-width: @tablet) {
+            font-size:   60px;
+            line-height: 56px;
+            margin-bottom:  20px;
+        }
+    }
+    
+    &__subtitle {
+        font-family:    "Open Sans", Arial, sans-serif;
+        font-size:      38px;
+        letter-spacing: 0.38px;
+        line-height:    34px;
+        padding:        0 16px;
+        @media screen and (max-width: @desktop) {
+            font-size: 32px;
+        }
+        @media screen and (max-width: @tablet) {
+            font-size:   23px;
+            line-height: 32px;
+            letter-spacing: .24px;
+        }
+    }
+    
+    @media screen and (max-width: @tablet) {
+        min-height: 410px;
+    }
+    @media screen and (max-width: @min_mobile) {
+        background-image:    url('/assets/img/banner_mobile.jpg');
+    }
+}
