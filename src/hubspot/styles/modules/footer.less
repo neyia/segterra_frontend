@@ -1,17 +1,31 @@
-@import "../utils/common";
 @import "../../../styles/utils/variables";
+@import "../../../styles/style";
 
-.footer {
+/*  Hubspot Footer  */
+
+.footer-new {
     
-    &-new {
-        padding:    40px 0 35px;
-        background: @gray1;
-        font-size:  14px;
-    }
+    padding:    40px 0 35px;
+    background: @gray1;
     
     @media only screen  and (max-width: (@tablet)) {
-        font-size: 16px;
-        padding:   32px 0 40px;
+        padding: 32px 0 28px;
+    }
+    
+    .link-secondary-light {
+        &:extend(.link-secondary-light);
+    }
+    
+    .container-1170 {
+        box-sizing: border-box;
+        min-width:  @min_width;
+        max-width:  @max_width;
+        margin:     0 auto;
+        width:      100%;
+        
+        @media only screen  and(max-width: (@desktop)) {
+            padding: 0 16px;
+        }
     }
     
     &__wrapper {
@@ -20,19 +34,6 @@
         @media only screen  and (max-width: (@tablet)) {
             flex-direction: column;
             text-align:     center;
-            font-size:      16px;
-        }
-    }
-    
-    &__title {
-        color:          #ffffff;
-        font-weight:    600;
-        line-height:    1.28;
-        letter-spacing: 0.02rem;
-        margin-bottom:  5px;
-        
-        @media only screen  and (max-width: (@tablet)) {
-            display: none;
         }
     }
     
@@ -40,21 +41,15 @@
         width:       14.52%;
         min-width:   150px;
         white-space: nowrap;
-        
-        @media only screen  and (max-width: (@tablet)) {
-            display: none;
-        }
-        
-        &__link {
-            line-height: 1.79;
-            color:       @gray5;
-            transition:  .2s ease-out;
-            
-            &:hover {
-                color:           @gray4;
-                text-decoration: underline;
-            }
-        }
+    }
+    
+    &__title {
+        color:          #ffffff;
+        font-weight:    600;
+        line-height:    1.28;
+        letter-spacing: 0.02rem;
+        margin-bottom:  3px;
+        font-size:      14px;
     }
     
     .menu-footer + .menu-footer {
@@ -74,7 +69,7 @@
         .contacts-icons {
             
             &-wrap {
-                border-bottom:  1px solid @gray_bg_6;
+                border-bottom:  1px solid @gray8;
                 padding-bottom: 25px;
                 order:          3;
                 
@@ -82,20 +77,9 @@
                     border-bottom: none;
                     margin-top:    26px;
                 }
-            }
-            
-            &__link {
-                display: inline-block;
-                width:   26px;
-                height:  26px;
-                margin:  11px 6px 0 0;
-                
-                @media only screen  and (max-width: (@tablet)) {
-                    width:  32px;
-                    height: 32px;
-                }
                 
                 .social-icon {
+                    display:    block;
                     width:      26px;
                     height:     26px;
                     transition: .2s ease-in;
@@ -111,11 +95,22 @@
                 }
             }
             
+            &__link {
+                display: inline-block;
+                margin:  11px 6px 0 0;
+                
+                @media only screen  and (max-width: (@tablet)) {
+                    width:  32px;
+                    height: 32px;
+                }
+            }
+            
             &__icon {
                 width:         26px;
                 height:        26px;
                 border-radius: 5px;
                 transition:    .2s ease-in;
+                display:       block;
                 
                 @media only screen  and (max-width: (@tablet)) {
                     width:  32px;
@@ -148,14 +143,12 @@
             }
         }
         
-        &__link {
-            line-height: 1.7;
-            color:       @gray5;
-            transition:  .2s ease-out;
+        .link-secondary-light {
+            font-size: 14px;
             
-            &:hover {
-                color:           @gray4;
-                text-decoration: underline;
+            @media only screen  and (max-width: (@tablet)) {
+                font-size:   16px;
+                line-height: 1.875;
             }
             
             &--sms {
@@ -181,10 +174,10 @@
         }
         
         &__subtitle {
-            color:          #ffffff;
+            color:          @gray5;
             font-size:      12px;
             line-height:    1.28;
-            letter-spacing: 0.02rem;
+            letter-spacing: 0.12px;
             margin-top:     11px;
             
             @media only screen  and (max-width: (@tablet)) {
@@ -194,14 +187,17 @@
     }
     
     .copyright {
-        color:       @gray3;
-        font-size:   12px;
-        line-height: 1.5;
-        margin-top:  28px;
+        margin-top: 28px;
         
         @media only screen  and (max-width: (@tablet)) {
             text-align: center;
             margin-top: 24px;
+        }
+        
+        &-text {
+            color:       @gray3;
+            font-size:   12px;
+            line-height: 1.5;
         }
     }
 }
