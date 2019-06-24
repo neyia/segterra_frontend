@@ -1,10 +1,89 @@
 @import "../utils/variables";
 
+.feed {
+    .modal {
+        position: absolute;
+        top:      0;
+        right:    0;
+        left:     auto;
+        z-index:  9999;
+        
+        @media (max-width: (@tablet_horizontal)) {
+            position: fixed;
+        }
+        
+        &__wrapper {
+            background: @primary;
+            position:   fixed;
+            transform:  translateX(-100%);
+            bottom:     30px;
+            border:     0;
+            max-width:  276px;
+            padding:    35px 30px 40px;
+            
+            @media (max-width: (@tablet_horizontal)) {
+                bottom:     0;
+                max-width:  100%;
+                text-align: center;
+                padding:    30px 0 20px;
+            }
+        }
+        
+        &__title {
+            color:         #ffffff;
+            text-align:    center;
+            margin-bottom: 10px;
+            
+            &--hide {
+                @media (max-width: (@tablet_horizontal)) {
+                    display: none;
+                }
+            }
+        }
+        
+        &__close:after, &__close:before {
+            transition:       all 0.3s ease-in-out;
+            background-color: #ffffff;
+        }
+        
+        &__close {
+            &:hover {
+                background-color: @gray4;
+                
+                &:before, &:after {
+                    background-color: @primary;
+                }
+            }
+        }
+        
+        &__info {
+            display: flex;
+        }
+        
+        .btn-primary-glass {
+            border:      1px solid #ffffff;
+            color:       #ffffff;
+            white-space: nowrap;
+            margin-top:  17px;
+            
+            @media (max-width: (@tablet_horizontal)) {
+                margin-top: 5px;
+            }
+            
+            &:hover {
+                color:            @primary;
+                background-color: #ffffff;
+            }
+        }
+    }
+}
+
 .blog-section {
     display:         flex;
     margin-top:      101px;
     margin-bottom:   200px;
     justify-content: space-between;
+    position:        relative;
     
     @media (max-width: (@tablet_horizontal)) {
         flex-direction: column;

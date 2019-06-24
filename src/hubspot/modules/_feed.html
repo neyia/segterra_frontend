@@ -1,13 +1,13 @@
 <section class="feed" id="feed">
     <div class="container">
-        <div class="blog-section">
+        <section class="blog-section">
             <div class="search-form post-search" enctype="multipart/form-data" id="search_form">
                 <input class="search-submit" type="submit" value="">
                 <input class="form-control typeahead" placeholder="Search" type="text">
             </div>
             <div class="post-listing-wrapper">
                 <div class="post-listing">
-                    <div class="post">
+                    <article class="post">
                         <a class="post__img" href="#">
                             <img src="assets/img/post_1.png" alt="">
                         </a>
@@ -31,8 +31,8 @@
                             has to do with chronological age. (So, don't blame the family tree just yet) Chronological aging, the number on
                             your birth certificate, is inevitable. </p>
                         <a href="#" class="post__link link-primary">Read more</a>
-                    </div>
-                    <div class="post">
+                    </article>
+                    <article class="post">
                         <a class="post__img" href="#">
                             <img src="assets/img/post_1.png" alt="">
                         </a>
@@ -53,8 +53,8 @@
                             who don’t know, the CrossFit Games, known simply as "The Games" is the Super Bowl of the CrossFit competition
                             season with the first place man and woman being crowned "The Fittest on Earth." </p>
                         <a href="#" class="post__link link-primary">Read more</a>
-                    </div>
-                    <div class="post">
+                    </article>
+                    <article class="post">
                         <a class="post__img" href="#">
                             <img src="assets/img/post_2.png" alt="">
                         </a>
@@ -75,8 +75,8 @@
                             do with lifestyle or genetics? It has to do with chronological age. (So, don't blame the family tree just yet)
                             Chronological aging, the number on your birth certificate, is inevitable. </p>
                         <a href="#" class="post__link link-primary">Read more</a>
-                    </div>
-                    <div class="post">
+                    </article>
+                    <article class="post">
                         <a class="post__img" href="#">
                             <img src="assets/img/post_3.png" alt="">
                         </a>
@@ -97,7 +97,7 @@
                             do with lifestyle or genetics? It has to do with chronological age. (So, don't blame the family tree just yet)
                             Chronological aging, the number on your birth certificate, is inevitable. </p>
                         <a href="#" class="post__link link-primary">Read more</a>
-                    </div>
+                    </article>
                 </div>
                 <div class="btn-wrap btn-block--centered">
                     <button type="button" class="btn-primary btn-posts btn-posts--next">
@@ -110,6 +110,35 @@
                 <a href="#" class="link-secondary">View full list of blog posts</a>
             </div>
             <div class="right-panel"></div>
-        </div>
+            <div class="modal modal--regular show" id="modal">
+                <div class="modal__wrapper">
+                    <div class="modal__close"></div>
+                    <div class="modal__info">
+                        <div class="modal__text">
+                            <h2 class="heading-20 modal__title">Like what you see?</h2>
+                            <p class="heading-20 modal__title modal__title--hide">Don’t miss out!</p>
+                            <a href="#" onclick="return false" class="btn-primary-glass">Subscribe to the blog</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 </section>
+<script>
+    let modal = document.querySelectorAll('.modal');
+    
+    function CloseModal() {
+        let cancelBtn = document.querySelectorAll('.modal__close');
+        
+        for (let i = 0; i < cancelBtn.length; i++) {
+            cancelBtn[i].addEventListener('click', function (e) {
+                e.preventDefault();
+                modal[i].classList.remove('show');
+            });
+        }
+    }
+    
+    CloseModal();
+   
+</script>
