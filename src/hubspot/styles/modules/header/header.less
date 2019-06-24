@@ -1,12 +1,11 @@
-@import "../../../styles/utils/variables";
-@import "../../../styles/style";
+@import "../../../../styles/utils/variables";
 
 .no-scroll {
     max-height: 100%;
     overflow:   hidden;
 }
 
-.header {
+.header-new {
     background: @gray_bg_8;
     position:   fixed;
     top:        0;
@@ -122,6 +121,7 @@
                     margin-left: 4.78%;
                     transition:  .2s ease-out;
                     flex-shrink: 0;
+                    padding:     0 !important;
                     
                     @media screen and (max-width: (@mid_width)) {
                         margin-left: 2%;
@@ -136,15 +136,16 @@
                 }
                 
                 &__link {
-                    display:        flex;
-                    align-items:    center;
-                    padding:        0 14px;
-                    height:         70px;
-                    color:          #ffffff;
-                    font-size:      16px;
-                    letter-spacing: 0.32px;
-                    border-bottom:  4px solid transparent;
-                    border-top:     4px solid transparent;
+                    display:         flex;
+                    align-items:     center;
+                    padding:         0 14px;
+                    height:          70px;
+                    color:           #ffffff;
+                    font-size:       16px;
+                    letter-spacing:  0.32px;
+                    border-bottom:   4px solid transparent;
+                    border-top:      4px solid transparent;
+                    text-decoration: none;
                     
                     @media screen and (max-width: (@mid_width)) {
                         padding: 0 10px;
@@ -212,9 +213,13 @@
             }
             
             .slider-contacts {
-                margin-top: 11px;
-                padding:    15px 19px 2px;
+                margin:     11px 0 0 0 !important;
+                padding:    15px 19px 2px !important;
                 border-top: 1px solid @gray_bg_6;
+                
+                &__item {
+                    list-style: none;
+                }
                 
                 .link-secondary-light {
                     line-height: 36px;

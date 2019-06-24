@@ -89,4 +89,5 @@ const PopUp = class {
     }
 };
 
+/** Delete ALL imports before adding to HubSpot*/
 export default PopUp;

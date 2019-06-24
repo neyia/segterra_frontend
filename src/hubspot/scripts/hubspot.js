@@ -1,3 +1,4 @@
+/** Delete ALL imports before adding to HubSpot*/
 import PopUp from './modules/PopUp';
 
 window.addEventListener('load', () => {
