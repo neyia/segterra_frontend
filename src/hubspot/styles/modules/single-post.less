@@ -1,11 +1,35 @@
 @import "../utils/common";
 @import "../../../styles/utils/variables";
 
+img {
+    max-width: 100%;
+    height:    auto;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 42px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: @gray1;
+    letter-spacing: 0.3px;
+    margin: 0;
+}
+
+h6 {
+    font-size: 12px;
+    font-weight: normal;
+    color: @gray3;
+    line-height: 30px;
+    letter-spacing: 0.12px;
+    margin: 0;
+}
+
 .single-post {
     width: calc(~"100% - 420px");
-    @media screen and (max-width: (@big_tablet)){
+    @media screen and (max-width: (@big_tablet)) {
         width: 100%;
     }
+    
     &__back {
         position:     relative;
         padding-left: 16px;
