@@ -7,27 +7,18 @@ const hidePopUp = Symbol();
  * @class
  */
 const PopUp = class {
-    /**
-     * Create a PopUp
-     * @param  {Element|Element[]} btnShow - Dom Element or Array of Dom Elements to add 'show' class on click.
-     * @param  {Element} popup - Dom Element used as a popup to get 'show' class.
-     * @param  {Element|Element[]} [btnClose=popup] - Dom Element or Array of Dom Elements to remove 'show' class on
-     *     click.
-     * @param  {String} [actionShow=click] - Event to add 'show' class on click.
-     * @param  {String} [actionHide=click] - Event to remove 'show' class on click.
-     * @returns {Object} - PopUp instance with button(s) to toggle 'show' class.
-     */
     constructor(btnShow, popup, btnClose, actionShow, actionHide) {
         this.btnShow = btnShow;
         this.popup = popup;
         this.btnClose = btnClose || popup;
+        this.className = className || 'show';
         this.actionShow = actionShow || 'click';
         this.actionHide = actionHide || 'click';
         
         /** Reveal PopUp(add 'show' class), activate Close Button(s) & prevent body scroll*/
         if (!Array.isArray(this.btnShow)) {
             this.btnShow.addEventListener(this.actionShow, () => {
-                this.popup.classList.add('show');
+                this.popup.classList.add(this.className);
                 this[addEventListenersToCloseBtn]();
                 
                 document.body.classList.add('no-scroll');
@@ -36,7 +27,7 @@ const PopUp = class {
         } else {
             this.btnShow.forEach(btn => {
                 btn.addEventListener(this.actionShow, () => {
-                    this.popup.classList.add('show');
+                    this.popup.classList.add(this.className);
                     this[addEventListenersToCloseBtn]();
                     
                     document.body.classList.add('no-scroll');
@@ -56,7 +47,7 @@ const PopUp = class {
     
     /** Hide PopUp(remove 'show' class), deactivate Close Button(s) & return body scroll*/
     [hidePopUp]() {
-        this.popup.classList.remove('show');
+        this.popup.classList.remove(this.className);
         this[removeEventListenersToCloseBtn]();
         
         document.body.classList.remove('no-scroll');
