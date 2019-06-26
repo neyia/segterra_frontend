@@ -47,6 +47,18 @@ p {
     }
 }
 
+.container-1170 {
+    box-sizing: border-box;
+    min-width:  @min_width;
+    max-width:  @max_width;
+    margin:     0 auto;
+    width:      100%;
+    
+    @media only screen  and(max-width: (@desktop)) {
+        padding: 0 16px;
+    }
+}
+
 // headings
 // хорошо будет вынести все на общие компоненты
 .heading-38 {

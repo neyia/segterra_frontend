@@ -2,9 +2,12 @@ const webpack = require("webpack");
 
 module.exports = {
     mode: "development",
-    entry: ["./src/scripts/app.js"],
+    entry: {
+        app: "./src/scripts/app.js",
+        hubspot: "./src/hubspot/scripts/hubspot.js"
+    },
     output: {
-        filename: 'app.js'
+        filename: '[name].js'
     },
     devtool: "sourcemap",
     externals: {

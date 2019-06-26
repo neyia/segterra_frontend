@@ -24,6 +24,22 @@
     }
 }
 
+.hide-tablet--horizontal {
+    display: block;
+    
+    @media only screen  and(max-width: (@tablet_horizontal)) {
+        display: none;
+    }
+}
+
+.show-tablet--horizontal {
+    display: none;
+    
+    @media only screen  and(max-width: (@tablet_horizontal)) {
+        display: block;
+    }
+}
+
 .hide-tablet--inline {
     display: inline;
     
