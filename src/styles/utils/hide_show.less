@@ -9,8 +9,6 @@
 }
 
 .hide-tablet {
-    display: block;
-    
     @media only screen  and(max-width: (@tablet)) {
         display: none;
     }
@@ -25,13 +23,19 @@
 }
 
 .hide-tablet--horizontal {
-    display: block;
-    
     @media only screen  and(max-width: (@tablet_horizontal)) {
         display: none;
     }
 }
-
+/*  Зачем задавать display: block? Элементу может требоваться display:flex
+*   Достаточно поставить min-width, display: none, !и прибавить 1px к переменной
+*
+    @media only screen  and(min-width: (@min_tablet_horizontal)) {
+        display: none;
+    }
+    
+    Ну и тоже самое ниже по всему файлу.
+*/
 .show-tablet--horizontal {
     display: none;
     
@@ -40,6 +44,11 @@
     }
 }
 
+/*  Что это за класс ? display: inline задается в основном классе элемента.
+*   Почему называется hide-tablet, а работает на разрешении big_mobile?
+
+*   Ну и тоже самое ниже по всему файлу.
+*/
 .hide-tablet--inline {
     display: inline;
     
@@ -63,6 +72,7 @@
         display: inline-block;
     }
 }
+
 .hide-tablet--inline-block {
     display: inline-block;
     

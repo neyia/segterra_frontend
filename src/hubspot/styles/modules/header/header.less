@@ -1,17 +1,21 @@
 @import "../../../../styles/utils/variables";
 
-.no-scroll {
-    max-height: 100%;
-    overflow:   hidden;
-}
-
 .header-new {
-    background: @gray_bg_8;
-    position:   fixed;
-    top:        0;
-    left:       0;
-    right:      0;
-    z-index:    9;
+    background:  @gray_bg_8;
+    position:    fixed;
+    top:         0;
+    left:        0;
+    right:       0;
+    z-index:     9;
+    font-weight: 600;
+    
+    &--padded {
+        padding-top: 70px;
+        
+        @media screen and (max-width: (@mid_width)) {
+            padding-top: 56px;
+        }
+    }
     
     &__logo {
         
@@ -27,8 +31,7 @@
             margin-bottom: 10px;
             
             @media screen and (max-width: (@mid_width)) {
-                margin:  0 auto;
-                padding: 19px 0;
+                margin: 0 auto;
             }
         }
     }
@@ -36,6 +39,10 @@
     &__content {
         display:     flex;
         align-items: center;
+        
+        @media screen and (max-width: (@mid_width)) {
+            height: 56px;
+        }
         
         .sandwich__line {
             height:     2px;
@@ -118,7 +125,7 @@
                 &__list {
                     display:     flex;
                     flex-grow:   1;
-                    margin-left: 4.78%;
+                    margin-left: 4.175rem;
                     transition:  .2s ease-out;
                     flex-shrink: 0;
                     padding:     0 !important;
@@ -133,22 +140,85 @@
                         flex-grow:      0;
                     }
                     
+                    /*******    Special selector added for hubspot, we don't have classes on    ***/
+                    /*******    Copy .main-nav__list to 'ul' tag & .main-nav__link to 'a' tag   ***/
+                    /*******    Do not forge to delete margins&paddings in .main-nav__list      ***/
+                    
+                    ul {
+                        display:     flex;
+                        flex-grow:   1;
+                        //margin-left: 4.78%;
+                        transition:  .2s ease-out;
+                        flex-shrink: 0;
+                        padding:     0 !important;
+                        
+                        @media screen and (max-width: (@mid_width)) {
+                            //margin-left: 2%;
+                        }
+                        
+                        @media screen and (max-width: (@tablet_horizontal)) {
+                            //margin-left:    0;
+                            flex-direction: column;
+                            flex-grow:      0;
+                        }
+                        
+                        a {
+                            display:         flex;
+                            align-items:     center;
+                            padding:         0 14px;
+                            height:          70px;
+                            color:           #ffffff;
+                            font-size:       16px;
+                            letter-spacing:  0.32px;
+                            border-bottom:   4px solid transparent;
+                            border-top:      4px solid transparent;
+                            text-decoration: none;
+                            font-weight:     600;
+                            
+                            @media screen and (max-width: (@mid_width)) {
+                                padding: 0 10px;
+                            }
+                            
+                            @media screen and (max-width: (@tablet_horizontal)) {
+                                padding:     0 16px 0 12px;
+                                height:      auto;
+                                line-height: 36px;
+                                border:      0;
+                                border-left: 4px solid transparent;
+                                font-size:   14px;
+                            }
+                            
+                            &:hover {
+                                border-bottom: 4px solid @primary;
+                                
+                                @media screen and (max-width: (@tablet_horizontal)) {
+                                    border-bottom: 0;
+                                    border-left:   4px solid @primary;
+                                    background:    @gray_bg_6;
+                                }
+                            }
+                        }
+                    }
+                    
+                    /*******    END      ***/
+                    
                 }
                 
                 &__link {
                     display:         flex;
                     align-items:     center;
-                    padding:         0 14px;
+                    padding:         0 .9rem;
                     height:          70px;
                     color:           #ffffff;
-                    font-size:       16px;
+                    font-size:       1.12rem;
                     letter-spacing:  0.32px;
                     border-bottom:   4px solid transparent;
                     border-top:      4px solid transparent;
                     text-decoration: none;
+                    font-weight:     600;
                     
-                    @media screen and (max-width: (@mid_width)) {
-                        padding: 0 10px;
+                    @media screen and (max-width: (@desktop)) {
+                        padding: 0 .78rem;
                     }
                     
                     @media screen and (max-width: (@tablet_horizontal)) {
@@ -158,7 +228,6 @@
                         border:      0;
                         border-left: 4px solid transparent;
                         font-size:   14px;
-                        font-weight: 600;
                     }
                     
                     &:hover {
