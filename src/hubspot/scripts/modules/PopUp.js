@@ -7,7 +7,7 @@ const hidePopUp = Symbol();
  * @class
  */
 const PopUp = class {
-    constructor(btnShow, popup, btnClose, actionShow, actionHide) {
+    constructor(btnShow, popup, btnClose, className, actionShow, actionHide) {
         this.btnShow = btnShow;
         this.popup = popup;
         this.btnClose = btnClose || popup;
