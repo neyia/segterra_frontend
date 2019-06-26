@@ -13,6 +13,7 @@
     background-position: center;
     background-image:    url('../assets/img/banner.jpg');
     text-align:          center;
+    height:              525px; // for IE11
     
     &__title {
         font-family:    "Open Sans Condensed", Arial, sans-serif;
@@ -51,6 +52,7 @@
     
     @media screen and (max-width: @tablet) {
         min-height: 410px;
+        height:     auto; // for IE11
     }
     @media screen and (max-width: @min_mobile) {
         background-image: url('../assets/img/banner_mobile.jpg');
