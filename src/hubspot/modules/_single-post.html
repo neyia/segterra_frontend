@@ -17,59 +17,72 @@
                 <div class="relation-posts__item">
                     <a href="javascript:void(0)"><img class="relation-posts__img" src="/assets/img/relation-blog.jpg" alt=""></a>
                     <a href="javascript:void(0)" class="relation-posts__name">New Year, Improved InsideTracker - 2018 Review</a>
-                    <p class="relatiom-posts__description">By Julia Reedy, Jan 16, 2019</p>
+                    <h6>By Julia Reedy, Jan 16, 2019</h6>
                 </div>
                 <div class="relation-posts__item">
                     <a href="javascript:void(0)"><img class="relation-posts__img" src="/assets/img/relation-blog.jpg" alt=""></a>
                     <a href="javascript:void(0)" class="relation-posts__name">A Milestone for Personalized Nutrition: Our First [ ... ]</a>
-                    <p class="relatiom-posts__description">By Julia Reedy, Jan 16, 2019</p>
+                    <h6>By Julia Reedy, Jan 16, 2019</h6>
                 </div>
                 <div class="relation-posts__item">
                     <a href="javascript:void(0)"><img class="relation-posts__img" src="/assets/img/relation-blog.jpg" alt=""></a>
                     <a href="javascript:void(0)" class="relation-posts__name">This InsideTracker Test is the Ultimate Level-Up</a>
-                    <p class="relatiom-posts__description">By Julia Reedy, Jan 16, 2019</p>
+                    <h6>By Julia Reedy, Jan 16, 2019</h6>
                 </div>
             </div>
         </div>
         <div class="separator"></div>
         <form class="post-form">
             <h3 class="single-post__subtitle">Comment on this post</h3>
-            <div class="post-form__row">
+            <div class="post-form__row form-field">
                 <div class="post-form__half">
-                    <label for="firstname" class="post-form__label">First name</label>
-                    <input type="text" class="post-form__input" id="firstname" name="firstname">
+                    <label for="firstname" class="label">First name</label>
+                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First name">
                 </div>
                 <div class="post-form__half">
-                    <label for="lastname" class="post-form__label">Last name</label>
-                    <input type="text" class="post-form__input" id="lastname" name="lastname">
+                    <label for="lastname" class="label">Last name</label>
+                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last name">
                 </div>
             </div>
-            <div class="post-form__row">
+            <div class="post-form__row form-field">
                 <div class="post-form__half">
-                    <label for="email" class="post-form__label">Email*</label>
-                    <input type="email" class="post-form__input" id="email" name="email">
+                    <label for="email" class="label">Email*</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
                 </div>
                 <div class="post-form__half">
-                    <label for="identify" class="post-form__label">Which do you identify most with?*</label>
-                    <select name="identify" id="identify"></select>
+                    <label for="identify" class="label">Which do you identify most with?*</label>
+                    <select name="identify" id="identify" class="form-control">
+                        <option selected disabled>Please select</option>
+                        <option value="0">1</option>
+                        <option value="0">2</option>
+                        <option value="0">3</option>
+                    </select>
                 </div>
             </div>
             <div class="post-form__full">
-                <label for="comment" class="post-form__label"></label>
-                <textarea name="comment" id="comment" class="post-form__textarea" placeholder="Please type here"></textarea>
+                <label for="comment" class="label">Comment</label>
+                <textarea name="comment" id="comment" placeholder="Please type here"></textarea>
             </div>
             <div class="post-form__info">
                 <p>InsideTracker is committed to protecting and respecting your privacy, and we’ll only use your personal information
                     to administer your account and to provide the products and services you requested from us. From time to time, we would
                     like to contact you about our products and services, as well as other content that may be of interest to you.
                     If you consent to us contacting you for this purpose, please tick below to say how you would like us to contact you:</p>
-                <div class="checkbox"></div>
+                <div class="checkbox">
+                    <input checked class="checkbox__field" id="checkbox" name="checkbox" type="checkbox">
+                    <svg class="checkbox__icon icon-checked">
+                        <use xlink:href="assets/sprite.svg#icon-checked"></use>
+                    </svg>
+                    <label class="checkbox__label" for="checkbox">I agree to receive other communications from InsideTracker.</label>
+                </div>
                 <p>You may unsubscribe from these communications at any time. For more information on how to unsubscribe,
                     our privacy practices, and how we are committed to protecting and respecting your privacy, please review our Privacy Policy.
                     By clicking submit below, you consent to allow InsideTracker to store and process the personal information
                     submitted above to provide you the content requested.</p>
             </div>
-            <a href="javascript:void(0)" class="post-form__submit">Submit comment</a>
+            <div class="btn-block btn-block--right">
+                <button type="button" href="javascript:void(0)" class="btn-primary">Submit comment</button>
+            </div>
         </form>
     </section>
     @@include('_right-panel.html')
