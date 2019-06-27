@@ -1,7 +1,7 @@
 @import "../../../../styles/utils/variables";
 
 .header-new {
-    background:  @gray_bg_8;
+    background:  @gray1;
     position:    fixed;
     top:         0;
     left:        0;
@@ -108,7 +108,7 @@
                 @media screen and (max-width: (@tablet_horizontal)) {
                     height:         100%;
                     overflow-y:     auto;
-                    background:     @gray_bg_7;
+                    background:     @gray9;
                     flex-direction: column;
                     transform:      translateX(-100%);
                     width:          360px;
@@ -139,6 +139,17 @@
                         flex-direction: column;
                         flex-grow:      0;
                     }
+    
+                    a.active {
+                        background:    @gray8;
+                        border-bottom: 4px solid @primary;
+        
+                        @media screen and (max-width: (@tablet_horizontal)) {
+                            border-bottom: 0;
+                            border-left:   4px solid @primary;
+                            background:    @gray8;
+                        }
+                    }
                     
                     /*******    Special selector added for hubspot, we don't have classes on    ***/
                     /*******    Copy .main-nav__list to 'ul' tag & .main-nav__link to 'a' tag   ***/
@@ -165,18 +176,19 @@
                         a {
                             display:         flex;
                             align-items:     center;
-                            padding:         0 14px;
                             height:          70px;
                             color:           #ffffff;
-                            font-size:       16px;
-                            letter-spacing:  0.32px;
                             border-bottom:   4px solid transparent;
                             border-top:      4px solid transparent;
                             text-decoration: none;
                             font-weight:     600;
+                            padding:         0 .9rem;
+                            font-size:       1.12rem;
+                            letter-spacing:  .028rem;
+                            transition:      all 0.1s ease-out;
                             
-                            @media screen and (max-width: (@mid_width)) {
-                                padding: 0 10px;
+                            @media screen and (max-width: (@desktop)) {
+                                padding: 0 .78rem;
                             }
                             
                             @media screen and (max-width: (@tablet_horizontal)) {
@@ -188,14 +200,39 @@
                                 font-size:   14px;
                             }
                             
+                            @media screen and (max-width: (@mid_width)) {
+                                height: 56px;
+                            }
+                            
                             &:hover {
+                                background: @gray9;
+                                
+                                @media screen and (max-width: (@tablet_horizontal)) {
+                                    border-bottom: 0;
+                                    background:    @gray8;
+                                }
+                            }
+                            
+                            &:active, &:focus {
+                                background:    @gray8;
                                 border-bottom: 4px solid @primary;
                                 
                                 @media screen and (max-width: (@tablet_horizontal)) {
                                     border-bottom: 0;
                                     border-left:   4px solid @primary;
-                                    background:    @gray_bg_6;
+                                    background:    @gray8;
                                 }
+                            }
+                        }
+    
+                        a.active {
+                            background:    @gray8;
+                            border-bottom: 4px solid @primary;
+        
+                            @media screen and (max-width: (@tablet_horizontal)) {
+                                border-bottom: 0;
+                                border-left:   4px solid @primary;
+                                background:    @gray8;
                             }
                         }
                     }
@@ -207,15 +244,16 @@
                 &__link {
                     display:         flex;
                     align-items:     center;
-                    padding:         0 .9rem;
                     height:          70px;
                     color:           #ffffff;
-                    font-size:       1.12rem;
-                    letter-spacing:  0.32px;
                     border-bottom:   4px solid transparent;
                     border-top:      4px solid transparent;
                     text-decoration: none;
                     font-weight:     600;
+                    padding:         0 .9rem;
+                    font-size:       1.12rem;
+                    letter-spacing:  .028rem;
+                    transition:      all 0.1s ease-out;
                     
                     @media screen and (max-width: (@desktop)) {
                         padding: 0 .78rem;
@@ -230,13 +268,27 @@
                         font-size:   14px;
                     }
                     
+                    @media screen and (max-width: (@mid_width)) {
+                        height: 56px;
+                    }
+                    
                     &:hover {
+                        background: @gray9;
+                        
+                        @media screen and (max-width: (@tablet_horizontal)) {
+                            border-bottom: 0;
+                            background:    @gray8;
+                        }
+                    }
+                    
+                    &:active, &:focus {
+                        background:    @gray8;
                         border-bottom: 4px solid @primary;
                         
                         @media screen and (max-width: (@tablet_horizontal)) {
                             border-bottom: 0;
                             border-left:   4px solid @primary;
-                            background:    @gray_bg_6;
+                            background:    @gray8;
                         }
                     }
                 }
@@ -284,7 +336,7 @@
             .slider-contacts {
                 margin:     11px 0 0 0 !important;
                 padding:    15px 19px 2px !important;
-                border-top: 1px solid @gray_bg_6;
+                border-top: 1px solid @gray8;
                 
                 &__item {
                     list-style: none;
