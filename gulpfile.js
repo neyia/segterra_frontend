@@ -12,7 +12,7 @@ const gulp = require('gulp'),
     rename = require('gulp-rename'),
     clean = require('gulp-clean'),
     webpack = require('webpack-stream');
-    
+
     // lets delete if not use
 
     //purgecss = require('gulp-purgecss'),
@@ -28,6 +28,7 @@ const path = {
         js: 'build/script',
         style: 'build/style',
         img: 'build/assets/img',
+        image: 'build/image',
         svg: 'build/assets/',
         fonts: 'build/assets/fonts',
         //template: 'build/style/template'
@@ -37,6 +38,7 @@ const path = {
         js: ['src/scripts/app.js', 'src/hubspot/scripts/hubspot.js'],
         style: 'src/styles/style.less',
         img: ['src/assets/img/**/*.*','src/hubspot/assets/img/**/*.*'],
+        image: 'src/image/**/*.*',
         svg: ['src/assets/svg/*.*', 'src/hubspot/assets/svg/*.*'],
         fonts: 'src/assets/fonts/**/*.*',
         //template: 'src/components/link/*.html',
@@ -47,6 +49,7 @@ const path = {
         js: ['src/**/*.js', 'src/components/**/*.js'],
         style: ['src/styles/**/*.*', 'src/hubspot/styles/**/*.*'],
         img: 'src/assets/img/**/*.*',
+        image: 'src/image/**/*.*',
         svg: 'src/assets/svg/*.*',
         fonts: 'src/assets/fonts/**/*.*',
         //template: 'src/components/link/*.*'
@@ -116,6 +119,22 @@ gulp.task('img', () => {
         }));
 });
 
+gulp.task('img:rigr', () => {
+    return gulp.src(path.src.image)
+        .pipe(imagemin([
+            imgJpeg({
+                progressive: true,
+                interlaced: true,
+                max: 70
+            }),
+            imagemin.optipng({optimizationLevel: 5})
+        ]))
+        .pipe(gulp.dest(path.build.image))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
+});
+
 gulp.task('svgsprite', function () {
     return gulp.src(path.src.svg)
         .pipe(svgstore())
@@ -124,7 +143,7 @@ gulp.task('svgsprite', function () {
         .pipe(browserSync.reload({
             stream: true
         }));
-    
+
 });
 
 gulp.task('clean', () => {
