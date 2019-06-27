@@ -15,10 +15,8 @@
 }
 
 .show-tablet {
-    display: none;
-    
-    @media only screen  and(max-width: (@tablet)) {
-        display: block;
+    @media only screen  and(min-width: (@show_tablet)) {
+        display: none;
     }
 }
 
@@ -27,79 +25,22 @@
         display: none;
     }
 }
-/*  Зачем задавать display: block? Элементу может требоваться display:flex
-*   Достаточно поставить min-width, display: none, !и прибавить 1px к переменной
-*
-    @media only screen  and(min-width: (@min_tablet_horizontal)) {
-        display: none;
-    }
-    
-    Ну и тоже самое ниже по всему файлу.
-*/
+
 .show-tablet--horizontal {
-    display: none;
-    
-    @media only screen  and(max-width: (@tablet_horizontal)) {
-        display: block;
+    @media only screen  and(min-width: (@show_tablet_horizontal)) {
+        display: none;
     }
 }
 
-/*  Что это за класс ? display: inline задается в основном классе элемента.
-*   Почему называется hide-tablet, а работает на разрешении big_mobile?
-
-*   Ну и тоже самое ниже по всему файлу.
-*/
-.hide-tablet--inline {
-    display: inline;
-    
+.hide-big_mobile {
     @media only screen  and(max-width: (@big_mobile)) {
         display: none;
     }
 }
 
-.show-tablet--inline {
-    display: none;
-    
-    @media only screen  and(max-width: (@big_mobile)) {
-        display: inline;
-    }
-}
-
-.show-tablet--inline-block {
-    display: none;
-    
-    @media only screen  and(max-width: (@tablet)) {
-        display: inline-block;
-    }
-}
-
-.hide-tablet--inline-block {
-    display: inline-block;
-    
-    @media only screen  and(max-width: (@tablet)) {
+.show-big_mobile {
+    @media only screen  and(min-width: (@show_big_mobile)) {
         display: none;
-    }
-}
-
-// @mobile = > 450px
-.show-mobile {
-    display: none;
-    @media only screen  and(max-width: (@mobile)) {
-        display: block;
-    }
-}
-
-.show-mobile--inline {
-    display: none;
-    @media only screen  and(max-width: (@mobile)) {
-        display: inline;
-    }
-}
-
-.show-mobile--inline-block {
-    display: none;
-    @media only screen  and(max-width: (@mobile)) {
-        display: inline-block;
     }
 }
 
@@ -110,16 +51,8 @@
     }
 }
 
-.hide-mobile--inline {
-    display: inline;
-    @media only screen  and(max-width: (@mobile)) {
-        display: none;
-    }
-}
-
-.hide-mobile--inline-block {
-    display: inline-block;
-    @media only screen  and(max-width: (@mobile)) {
+.show-mobile {
+    @media only screen  and(min-width: (@show_mobile)) {
         display: none;
     }
 }
