@@ -1,0 +1,76 @@
+<div class="container container--flex">
+    <section class="single-post">
+        <a href="javascript:void(0)" class="single-post__back">View all posts</a>
+        <h1>R1 type style, formatted in sentence case, running over single or double lines</h1>
+        <h6>By Julia Reedy, Jan 16, 2019</h6>
+        <div class="social-row">
+            <a href="javascript:void(0)"></a>
+        </div>
+        <a href="javascript:void(0)" class="eBook">
+            <img src="/assets/img/eBook.jpg" alt="eBook" class="eBook-desktop">
+            <img src="/assets/img/eBook-mobile.jpg" alt="eBook" class="eBook-mobile">
+        </a>
+        <div class="separator"></div>
+        <div class="relation-posts">
+            <h3 class="relation-posts__title single-post__subtitle">Some other blog posts we think you'll love!</h3>
+            <div class="relation-posts-wrap">
+                <div class="relation-posts__item">
+                    <a href="javascript:void(0)"><img class="relation-posts__img" src="/assets/img/relation-blog.jpg" alt=""></a>
+                    <a href="javascript:void(0)" class="relation-posts__name">New Year, Improved InsideTracker - 2018 Review</a>
+                    <p class="relatiom-posts__description">By Julia Reedy, Jan 16, 2019</p>
+                </div>
+                <div class="relation-posts__item">
+                    <a href="javascript:void(0)"><img class="relation-posts__img" src="/assets/img/relation-blog.jpg" alt=""></a>
+                    <a href="javascript:void(0)" class="relation-posts__name">A Milestone for Personalized Nutrition: Our First [ ... ]</a>
+                    <p class="relatiom-posts__description">By Julia Reedy, Jan 16, 2019</p>
+                </div>
+                <div class="relation-posts__item">
+                    <a href="javascript:void(0)"><img class="relation-posts__img" src="/assets/img/relation-blog.jpg" alt=""></a>
+                    <a href="javascript:void(0)" class="relation-posts__name">This InsideTracker Test is the Ultimate Level-Up</a>
+                    <p class="relatiom-posts__description">By Julia Reedy, Jan 16, 2019</p>
+                </div>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <form class="post-form">
+            <h3 class="single-post__subtitle">Comment on this post</h3>
+            <div class="post-form__row">
+                <div class="post-form__half">
+                    <label for="firstname" class="post-form__label">First name</label>
+                    <input type="text" class="post-form__input" id="firstname" name="firstname">
+                </div>
+                <div class="post-form__half">
+                    <label for="lastname" class="post-form__label">Last name</label>
+                    <input type="text" class="post-form__input" id="lastname" name="lastname">
+                </div>
+            </div>
+            <div class="post-form__row">
+                <div class="post-form__half">
+                    <label for="email" class="post-form__label">Email*</label>
+                    <input type="email" class="post-form__input" id="email" name="email">
+                </div>
+                <div class="post-form__half">
+                    <label for="identify" class="post-form__label">Which do you identify most with?*</label>
+                    <select name="identify" id="identify"></select>
+                </div>
+            </div>
+            <div class="post-form__full">
+                <label for="comment" class="post-form__label"></label>
+                <textarea name="comment" id="comment" class="post-form__textarea" placeholder="Please type here"></textarea>
+            </div>
+            <div class="post-form__info">
+                <p>InsideTracker is committed to protecting and respecting your privacy, and we’ll only use your personal information
+                    to administer your account and to provide the products and services you requested from us. From time to time, we would
+                    like to contact you about our products and services, as well as other content that may be of interest to you.
+                    If you consent to us contacting you for this purpose, please tick below to say how you would like us to contact you:</p>
+                <div class="checkbox"></div>
+                <p>You may unsubscribe from these communications at any time. For more information on how to unsubscribe,
+                    our privacy practices, and how we are committed to protecting and respecting your privacy, please review our Privacy Policy.
+                    By clicking submit below, you consent to allow InsideTracker to store and process the personal information
+                    submitted above to provide you the content requested.</p>
+            </div>
+            <a href="javascript:void(0)" class="post-form__submit">Submit comment</a>
+        </form>
+    </section>
+    @@include('_right-panel.html')
+</div>
