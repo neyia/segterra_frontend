@@ -1,5 +1,18 @@
 @import "./variables";
 
+html {
+    font-size: 14px;
+    @media only screen  and(max-width: (1170px)) {
+        font-size: 13px;
+    }
+    @media only screen  and(max-width: (1020px)) {
+        font-size: 12px;
+    }
+    @media only screen  and(max-width: (980px)) {
+        font-size: 11px;
+    }
+}
+
 body, html {
     margin:      0;
     padding:     0;
@@ -34,6 +47,11 @@ p {
     fill:         currentColor;
 }
 
+.no-scroll {
+    max-height: 100%;
+    overflow: hidden;
+}
+
 // container
 
 .container {
@@ -49,7 +67,6 @@ p {
 
 .container-1170 {
     box-sizing: border-box;
-    min-width:  @min_width;
     max-width:  @max_width;
     margin:     0 auto;
     width:      100%;
@@ -59,100 +76,24 @@ p {
     }
 }
 
-// headings
-// хорошо будет вынести все на общие компоненты
-.heading-38 {
-    color:          @gray1;
-    letter-spacing: 0.2px;
-    font-size:      38px;
-    line-height:    1.35;
-    font-weight:    600;
-    
-    @media only screen and(max-width: (@tablet)) {
-        font-size: 24px;
-    }
+//*********************** specially for hubspot
+.footer-new ul {
+    list-style: none;
+    padding:    0;
+    margin:     0;
 }
 
-.heading-30 {
-    color:          @gray1;
-    letter-spacing: 0.2px;
-    font-size:      30px;
-    line-height:    1.35;
-    font-weight:    600;
-    
-    @media only screen and(max-width: (@tablet)) {
-        font-size: 24px;
-    }
+.footer-new li {
+    list-style: none;
+    padding:    0;
+    margin:     0;
 }
 
-.heading-26 {
-    color:          @gray1;
-    letter-spacing: 0.2px;
-    font-size:      24px;
-    line-height:    1.35;
-    font-weight:    600;
-    
-    @media only screen and(max-width: (@tablet)) {
-        font-size: 21px;
-    }
+.link-secondary-light + p {
+    margin: 0;
 }
 
-.heading-24 {
-    color:          @gray1;
-    letter-spacing: 0.2px;
-    font-size:      24px;
-    line-height:    1.35;
-    font-weight:    600;
-    
-    @media only screen and(max-width: (@tablet)) {
-        font-size: 20px;
-    }
-}
-
-.heading-20 {
-    color:          @gray1;
-    letter-spacing: 0.2px;
-    font-size:      20px;
-    line-height:    1.35;
-    font-weight:    600;
-    
-    @media only screen and (max-width: (@tablet)) {
-        font-size: 16px;
-    }
-    
-}
-
-.heading-16 {
-    color:          @gray1;
-    letter-spacing: 0.2px;
-    font-size:      16px;
-    line-height:    1.35;
-    font-weight:    600;
-}
-
-.heading-14 {
-    color:          @gray1;
-    letter-spacing: 0.2px;
-    font-size:      14px;
-    line-height:    1.35;
-    font-weight:    600;
-}
-
-.heading-12 {
-    color:          @gray1;
-    letter-spacing: 0.2px;
-    font-size:      12px;
-    line-height:    1.35;
-    font-weight:    600;
-}
-
-.heading--bold {
-    font-weight: 700;
-}
-
-.heading--white {
-    color: #ffffff;
-}
+//*********************** specially for hubspot ENDED *****************
 
 // texts
 

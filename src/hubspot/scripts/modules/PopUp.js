@@ -7,6 +7,17 @@ const hidePopUp = Symbol();
  * @class
  */
 const PopUp = class {
+    /**
+     * Create a PopUp
+     * @param  {Element|Element[]} btnShow - Dom Element or Array of Dom Elements to add 'show' class on click.
+     * @param  {Element} popup - Dom Element used as a popup to get 'show' class.
+     * @param  {Element|Element[]} [btnClose=popup] - Dom Element or Array of Dom Elements to remove 'show' class on
+     *     click.
+     * @param  {String} [className='show'] - Class name to be added on click.
+     * @param  {String} [actionShow=click] - Event to add 'show' class on click.
+     * @param  {String} [actionHide=click] - Event to remove 'show' class on click.
+     * @returns {Object} - PopUp instance with button(s) to toggle 'show' class.
+     */
     constructor(btnShow, popup, btnClose, className, actionShow, actionHide) {
         this.btnShow = btnShow;
         this.popup = popup;
