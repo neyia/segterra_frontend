@@ -1,31 +1,8 @@
-@import "../utils/common";
 @import "../../../styles/utils/variables";
 
-img {
-    max-width: 100%;
-    height:    auto;
-}
-
-h1 {
-    font-size:      30px;
-    line-height:    42px;
-    font-family:    'Open Sans', Arial, sans-serif;
-    color:          @gray1;
-    letter-spacing: 0.3px;
-    margin:         0;
-}
-
-h6 {
-    font-size:      12px;
-    font-weight:    normal;
-    color:          @gray3;
-    line-height:    30px;
-    letter-spacing: 0.12px;
-    margin:         0;
-}
-
 .single-post {
-    width: calc(~"100% - 420px");
+    font-family: 'Open Sans', Arial, sans-serif;
+    width:       calc(~"100% - 420px");
     @media screen and (max-width: (@tablet_horizontal)) {
         width: 100%;
     }
@@ -36,6 +13,7 @@ h6 {
         font-size:    14px;
         margin:       53px 0 43px;
         display:      inline-block;
+        color:        @primary;
         
         &::before {
             content:           '';
@@ -63,11 +41,69 @@ h6 {
             margin-bottom: 25px;
         }
     }
+    
+    &__image {
+        border-radius: 6px;
+        margin-bottom: 18px;
+    }
+    
+    &__button-block {
+        margin: 34px 0;
+    }
+    
+    img {
+        max-width: 100%;
+        height:    auto;
+    }
+    
+    h1 {
+        font-size:      30px;
+        line-height:    42px;
+        font-family:    'Open Sans', Arial, sans-serif;
+        color:          @gray1;
+        letter-spacing: 0.3px;
+        margin:         0;
+    }
+    
+    h4 {
+        font-size:   20px;
+        font-weight: 600;
+        margin:      33px 0 0;
+        line-height: 1.35;
+    }
+    
+    h5 {
+        font-size:   15px;
+        font-weight: 600;
+        margin:      20px 0 0;
+        line-height: 1.35;
+    }
+    
+    h6 {
+        font-size:      12px;
+        font-weight:    normal;
+        color:          @gray3;
+        line-height:    30px;
+        letter-spacing: 0.12px;
+        margin:         0;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    p {
+        letter-spacing: 0.14px;
+        line-height:    20px;
+        margin:         20px 0 0;
+        font-size:      14px;
+        color:          @gray_bg_8;
+    }
 }
 
 .eBook {
     display: block;
-    margin:  63px 0;
+    margin:  68px 0 63px;
     
     &-desktop {
         max-width: 100%;
@@ -225,6 +261,7 @@ h6 {
     p {
         font-size:   12px;
         line-height: 16px;
+        margin:      0;
     }
     
     .checkbox {
@@ -248,6 +285,12 @@ h6 {
         
         @media screen and (max-width: (@big_mobile)) {
             margin-bottom: 30px;
+        }
+        
+        &:focus {
+            border: 1px solid #0af;
+            box-shadow: none;
+            outline: 0;
         }
     }
     
