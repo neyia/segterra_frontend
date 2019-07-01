@@ -35,12 +35,6 @@
             text-align:    center;
             margin-bottom: 10px;
             font-weight:   400;
-            
-            &--hide {
-                @media (max-width: (@tablet_horizontal)) {
-                    display: none;
-                }
-            }
         }
         
         &__close:after, &__close:before {
@@ -163,6 +157,10 @@ article {
         font-weight:    400;
     }
     
+    a {
+        display: block;
+    }
+    
     img {
         max-width:     none;
         width:         100%;
@@ -194,7 +192,6 @@ article {
         display:         block;
         transition:      all .2s ease-in-out;
         color:           @primary;
-        cursor:          pointer;
         text-decoration: none;
         
         &:hover, &:focus, &:active {
@@ -209,6 +206,35 @@ article {
 }
 
 .btn-posts {
+    position: relative;
+    overflow: hidden;
+    
+    &:before {
+        content:    '';
+        display:    inline-block;
+        position:   absolute;
+        background: url(../assets/img/arrow-left.svg);
+        width:      8px;
+        height:     12px;
+        top:        12px;
+    }
+    
+    &--next {
+        padding-left: 39px;
+        
+        &:before {
+            left: 20px;
+        }
+    }
+    
+    &--prev {
+        padding-right: 39px;
+        
+        &:before {
+            transform: rotate(180deg);
+            right:     20px;
+        }
+    }
     
     &:first-child {
         margin-left: 0;
@@ -223,7 +249,7 @@ article {
 .right-panel {
     max-width:        350px;
     width:            100%;
-    background-color: @white_smoke;
+    background-color: #F5F5F5;
     
     @media (max-width: (@tablet_horizontal)) {
         max-width: 100%;

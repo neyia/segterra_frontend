@@ -1,6 +1,7 @@
 <section class="feed" id="feed">
     <div class="container-1170">
         <section class="blog-section">
+            <!--поиск для теста-->
             <div class="search-form post-search" enctype="multipart/form-data" id="search_form">
                 <input class="search-submit" type="submit" value="">
                 <input class="form-control typeahead" placeholder="Search" type="text">
@@ -97,11 +98,11 @@
                     </article>
                 </div>
                 <div class="btn-wrap btn-block--centered">
-                    <button type="button" class="btn-primary btn-posts">
-                        Newer posts
+                    <button type="button" class="btn-primary btn-posts btn-posts--next">
+                        <span>Newer posts</span>
                     </button>
-                    <button type="button" class="btn-primary btn-posts">
-                        Older posts
+                    <button type="button" class="btn-primary btn-posts btn-posts--prev">
+                        <span>Older posts</span>
                     </button>
                 </div>
                 <a href="#" class="link-secondary">View full list of blog posts</a>
@@ -113,7 +114,7 @@
                     <div class="modal__info">
                         <div class="modal__text">
                             <h2 class="heading-20 modal__title">Like what you see?</h2>
-                            <p class="heading-20 modal__title modal__title--hide">Don’t miss out!</p>
+                            <p class="heading-20 modal__title hide-tablet--horizontal">Don’t miss out!</p>
                             <a href="#" onclick="return false" class="btn-primary-glass">Subscribe to the blog</a>
                         </div>
                     </div>
@@ -122,20 +123,3 @@
         </section>
     </div>
 </section>
-<script>
-    let modal = document.querySelectorAll('.modal');
-    
-    function CloseModal() {
-        let cancelBtn = document.querySelectorAll('.modal__close');
-        
-        for (let i = 0; i < cancelBtn.length; i++) {
-            cancelBtn[i].addEventListener('click', function (e) {
-                e.preventDefault();
-                modal[i].classList.remove('show');
-            });
-        }
-    }
-    
-    CloseModal();
-
-</script>
