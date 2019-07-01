@@ -96,7 +96,9 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_PopUp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/PopUp */ "./src/hubspot/scripts/modules/PopUp.js");
+/* harmony import */ var _modules_feed__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/feed */ "./src/hubspot/scripts/modules/feed.js");
 /** Delete ALL imports before adding to HubSpot*/
+
 
 window.addEventListener('load', function () {
   mobileMenu();
@@ -139,16 +141,17 @@ var PopUp =
 function () {
   /**
    * Create a PopUp
-   * @param  {Element|Element[]} btnShow - Dom Element or Array of Dom Elements to add 'show' class on click.
-   * @param  {Element} popup - Dom Element used as a popup to get 'show' class.
-   * @param  {Element|Element[]} [btnClose=popup] - Dom Element or Array of Dom Elements to remove 'show' class on
-   *     click.
-   * @param  {String} [className='show'] - Class name to be added on click.
-   * @param  {String} [actionShow=click] - Event to add 'show' class on click.
-   * @param  {String} [actionHide=click] - Event to remove 'show' class on click.
-   * @returns {Object} - PopUp instance with button(s) to toggle 'show' class.
+   @param  {Element|Element[]} btnShow - Dom Element or Array of Dom Elements to add 'show' class on click.
+   @param  {Element} popup - Dom Element used as a popup to get 'show' class.
+   @param  {Element|Element[]} [btnClose=popup] - Dom Element or Array of Dom Elements to remove 'show' class on
+   click.
+   @param  {Boolean} [noScroll=false] - Prevent scroll on window.
+   @param  {String} [className='show'] - Class name to be added on click.
+   @param  {String} [actionShow=click] - Event to add 'show' class on click.
+   @param  {String} [actionHide=click] - Event to remove 'show' class on click.
+   @returns {Object} - PopUp instance with button(s) to toggle 'show' class.
    */
-  function PopUp(btnShow, popup, btnClose, className, actionShow, actionHide) {
+  function PopUp(btnShow, popup, btnClose, noScroll, className, actionShow, actionHide) {
     var _this = this;
 
     _classCallCheck(this, PopUp);
@@ -156,6 +159,7 @@ function () {
     this.btnShow = btnShow;
     this.popup = popup;
     this.btnClose = btnClose || popup;
+    this.noScroll = noScroll || false;
     this.className = className || 'show';
     this.actionShow = actionShow || 'click';
     this.actionHide = actionHide || 'click';
@@ -163,22 +167,28 @@ function () {
 
     if (!Array.isArray(this.btnShow)) {
       this.btnShow.addEventListener(this.actionShow, function () {
-        _this.popup.classList.add(_this.className);
+        if (_this.btnShow === _this.btnClose) {
+          _this.popup.classList.toggle(_this.className);
+        } else {
+          _this.addClasslist();
+        }
 
-        _this[addEventListenersToCloseBtn]();
-
-        document.body.classList.add('no-scroll');
-        window.addEventListener("touchmove", PopUp.preventScrollOnMobile);
+        if (_this.noScroll) {
+          PopUp.addNoScroll();
+        }
       });
     } else {
       this.btnShow.forEach(function (btn) {
         btn.addEventListener(_this.actionShow, function () {
-          _this.popup.classList.add(_this.className);
+          if (_this.btnShow === _this.btnClose) {
+            _this.popup.classList.toggle(_this.className);
+          } else {
+            _this.addClasslist();
+          }
 
-          _this[addEventListenersToCloseBtn]();
-
-          document.body.classList.add('no-scroll');
-          window.addEventListener("touchmove", PopUp.preventScrollOnMobile);
+          if (_this.noScroll) {
+            PopUp.addNoScroll();
+          }
         });
       });
     }
@@ -191,8 +201,16 @@ function () {
     value: function value() {
       this.popup.classList.remove(this.className);
       this[removeEventListenersToCloseBtn]();
-      document.body.classList.remove('no-scroll');
-      window.removeEventListener("touchmove", PopUp.preventScrollOnMobile);
+
+      if (this.noScroll) {
+        PopUp.removeNoScroll();
+      }
+    }
+  }, {
+    key: "addClasslist",
+    value: function addClasslist() {
+      this.popup.classList.add(this.className);
+      this[addEventListenersToCloseBtn]();
     }
   }, {
     key: addEventListenersToCloseBtn,
@@ -231,6 +249,22 @@ function () {
       }
     }
   }], [{
+    key: "addNoScroll",
+
+    /**
+     * Prevent body scroll
+     */
+    value: function addNoScroll() {
+      document.body.classList.add('no-scroll');
+      window.addEventListener("touchmove", PopUp.preventScrollOnMobile);
+    }
+  }, {
+    key: "removeNoScroll",
+    value: function removeNoScroll() {
+      document.body.classList.remove('no-scroll');
+      window.removeEventListener("touchmove", PopUp.preventScrollOnMobile);
+    }
+  }, {
     key: "preventScrollOnMobile",
 
     /**
@@ -248,6 +282,30 @@ function () {
 
 
 /* harmony default export */ __webpack_exports__["default"] = (PopUp);
+
+/***/ }),
+
+/***/ "./src/hubspot/scripts/modules/feed.js":
+/*!*********************************************!*\
+  !*** ./src/hubspot/scripts/modules/feed.js ***!
+  \*********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _PopUp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PopUp */ "./src/hubspot/scripts/modules/PopUp.js");
+/** Delete ALL imports before adding to HubSpot*/
+
+window.addEventListener('load', function () {
+  CloseModal();
+});
+
+function CloseModal() {
+  var modal = document.querySelector('.modal');
+  var cancelBtn = document.querySelector('.modal__close');
+  new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](cancelBtn, modal, cancelBtn);
+}
 
 /***/ })
 
