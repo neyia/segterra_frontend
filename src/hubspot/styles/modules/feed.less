@@ -1,5 +1,4 @@
-@import "../utils/variables";
-@import "../utils/common";
+@import "../utils/giveaway/variables";
 
 .feed {
     .modal {
@@ -23,10 +22,11 @@
             padding:    35px 30px 40px;
             
             @media (max-width: (@tablet_horizontal)) {
-                bottom:     0;
-                max-width:  100%;
-                text-align: center;
-                padding:    30px 0 20px;
+                bottom:        0;
+                max-width:     100%;
+                text-align:    center;
+                padding:       30px 0 20px;
+                border-radius: 0;
             }
         }
         
@@ -34,6 +34,7 @@
             color:         #ffffff;
             text-align:    center;
             margin-bottom: 10px;
+            font-weight:   400;
             
             &--hide {
                 @media (max-width: (@tablet_horizontal)) {
@@ -66,6 +67,7 @@
             color:       #ffffff;
             white-space: nowrap;
             margin-top:  17px;
+            font-weight: 400;
             
             @media (max-width: (@tablet_horizontal)) {
                 margin-top: 5px;
@@ -158,6 +160,7 @@ article {
         letter-spacing: 0.12px;
         margin:         0;
         padding:        0;
+        font-weight:    400;
     }
     
     img {
@@ -166,7 +169,7 @@ article {
         height:        auto;
         display:       block;
         border-radius: 6px;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
     }
     
     p {
@@ -206,35 +209,6 @@ article {
 }
 
 .btn-posts {
-    position: relative;
-    overflow: hidden;
-    
-    &:before {
-        content:    '';
-        display:    inline-block;
-        position:   absolute;
-        background: url(../../assets/img/arrow-left.svg);
-        width:      8px;
-        height:     12px;
-        top:        12px;
-    }
-    
-    &--next {
-        padding-left: 39px;
-        
-        &:before {
-            left: 20px;
-        }
-    }
-    
-    &--prev {
-        padding-right: 39px;
-        
-        &:before {
-            transform: rotate(180deg);
-            right:     20px;
-        }
-    }
     
     &:first-child {
         margin-left: 0;
