@@ -8,9 +8,9 @@
             integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
             src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
     <script type="application/javascript" src="https://test.segterra.com/skin/js/typeahead.js"></script>
-    
+
     <title>hubspot frontend templates</title>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/svgxuse/1.2.6/svgxuse.min.js"></script>
 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
@@ -23,13 +23,90 @@
 
 <!-- Air-datepicker-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.min.css">
-
-<link href="style/style.css" rel="stylesheet">
-
 </head>
 <body>
 
+<div class="header-new--padded"></div>
+<header class="header-new">
+<!--    <div class="container-1170">-->
+        <div class="container-1170 header-new__content">
+            <button type="button" class="sandwich__line-wrapper" id="btnMenu">
+                <span class="sandwich__line"></span>
+            </button>
+            <a class="header-new__logo-wrapper" href="https://www.insidetracker.com/">
+<!--                Change link to hubspot attached logo.svg ( {{ module_asset_url("logo.svg") }} )-->
+                <img src="assets/img/logo.svg" alt="Inside Tracker" class="header-new__logo">
+            </a>
+            <div class="overlay" id="overlay">
+                <div class="sidebar">
+                    <ul class="main-nav__list">
+                        <li class="main-nav__item">
+                            <a href="https://www.insidetracker.com/about/" class="main-nav__link">About</a>
+                        </li>
+                        <li class="main-nav__item hide-tablet--horizontal">
+                            <a href="https://www.insidetracker.com/tour/" class="main-nav__link">Tour</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="https://www.insidetracker.com/science/" class="main-nav__link">Science</a>
+                        </li>
+                        <li class="main-nav__item show-tablet--horizontal">
+                            <a href="https://www.insidetracker.com/team/" class="main-nav__link">Team</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="https://blog.insidetracker.com/" class="main-nav__link">Blog</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="https://www.insidetracker.com/testimonial/" class="main-nav__link">Testimonials</a>
+                        </li>
+                        <li class="main-nav__item show-tablet--horizontal">
+                            <a href="https://www.insidetracker.com/faq" class="main-nav__link">FAQ</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="https://support.insidetracker.com/supportcenter" class="main-nav__link">Support</a>
+                        </li>
+                    </ul>
+                    <div class="auth-panel">
+                        <a href="https://www.insidetracker.com/customer/onboarding/choose-plan/" class="btn-special">Buy Now</a>
+                        <a href="https://www.insidetracker.com/public/login/" class="link-white hide-tablet--horizontal">Log In</a>
+                        <a href="https://www.insidetracker.com/public/login/" class="btn-secondary--dark show-tablet--horizontal">Log In</a>
+                    </div>
+                    <ul class="slider-contacts show-tablet--horizontal">
+                        <li class="slider-contacts__item">
+                            <a class="link-secondary-light" href="https://www.insidetracker.com/terms-of-service/">Terms</a>
+                        </li>
+                        <li class="slider-contacts__item">
+                            <a class="link-secondary-light" href="https://www.insidetracker.com/policy-privacy/">Privacy Policy</a>
+                        </li>
+                        <li class="slider-contacts__item">
+                            <a class="link-secondary-light" href="https://www.insidetracker.com/research-consent/">DNA Research Consent</a>
+                        </li>
+                        <li class="slider-contacts__item">
+                            <a class="link-secondary-light" href="https://www.insidetracker.com/product-consent/">Product Consent</a>
+                        </li>
+                    </ul>
+                    <ul class="slider-contacts show-tablet--horizontal">
+                        <li class="slider-contacts__item">
+                            <a class="link-secondary-light" href="mailto:contactus@insidetracker.com">contactus@insidetracker.com</a>
+                        </li>
+                        
+                        <li class="slider-contacts__item">
+                            <a class="link-secondary-light" href="tel:8005132359">(800) 513-2359</a>
+                        </li>
+                        <li class="slider-contacts__item">
+                            <a class="link-secondary-light" href="sms:8005132359">Send us a text</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+<!--    </div>-->
+</header>
 
+
+<section class="banner">
+    <h1 class="banner__title">WELCOME TO OUR blog</h1>
+    <h2 class="banner__subtitle">Cutting-edge information for curious people.</h2>
+</section>
 <section class="feed" id="feed">
     <div class="container-1170">
         <section class="blog-section">
@@ -172,120 +249,123 @@
 
 </script>
 
-<footer class="footer footer-new">
+<footer class="footer-new">
     <div class="container-1170">
-        <div class="footer__wrapper">
-            <ul class="menu-footer">
-                <li class="footer__title">Company</li>
+        <div class="footer-new__wrapper">
+            <ul class="menu-footer hide-tablet">
+                <li class="footer-new__title">Company</li>
                 <li class="menu-footer__item">
-                    <a href="https://www.insidetracker.com/about/" class="menu-footer__link">
+                    <a href="https://www.insidetracker.com/about/" class="link-secondary-light">
                         About
                     </a>
                 </li>
                 <li class="menu-footer__item">
-                    <a href="https://www.insidetracker.com/terms-of-service/" class="menu-footer__link">
+                    <a href="https://www.insidetracker.com/terms-of-service/" class="link-secondary-light">
                         Terms
                     </a>
                 </li>
                 <li class="menu-footer__item">
-                    <a href="https://www.insidetracker.com/team/" class="menu-footer__link">Team</a>
+                    <a href="https://www.insidetracker.com/team/" class="link-secondary-light">Team</a>
                 </li>
                 <li class="menu-footer__item">
-                    <a href="https://www.insidetracker.com/press-page/" class="menu-footer__link">In the press</a>
+                    <a href="https://www.insidetracker.com/press-page/" class="link-secondary-light">In the press</a>
                 </li>
                 <li class="menu-footer__item">
-                    <a href="https://www.insidetracker.com/policy-privacy/" class="menu-footer__link">Privacy Policy</a>
+                    <a href="https://www.insidetracker.com/policy-privacy/" class="link-secondary-light">Privacy Policy</a>
                 </li>
                 <li class="menu-footer__item">
-                    <a href="https://www.insidetracker.com/research-consent/" class="menu-footer__link">DNA Research Consent</a>
+                    <a href="https://www.insidetracker.com/research-consent/" class="link-secondary-light">DNA Research Consent</a>
                 </li>
                 <li class="menu-footer__item">
-                    <a href="https://www.insidetracker.com/product-consent/" class="menu-footer__link">Product Consent</a>
+                    <a href="https://www.insidetracker.com/product-consent/" class="link-secondary-light">Product Consent</a>
+                </li>
+                <li class="menu-footer__item">
+                    <a href="https://www.insidetracker.com/#homezone-steps" class="link-secondary-light">How does it work</a>
                 </li>
             </ul>
-            <ul class="menu-footer">
-                <li class="footer__title">Product</li>
+            <ul class="menu-footer hide-tablet">
+                <li class="footer-new__title">Product</li>
                 <li class="menu-footer__item">
-                    <a href="https://support.insidetracker.com/supportcenter" class="menu-footer__link">
+                    <a href="https://support.insidetracker.com/supportcenter" class="link-secondary-light">
                         FAQ
                     </a>
                 </li>
                 <li class="menu-footer__item">
-                    <a href="https://www.insidetracker.com/tour/" class="menu-footer__link">Tour</a>
+                    <a href="https://www.insidetracker.com/tour/" class="link-secondary-light">Tour</a>
                 </li>
                 <li class="menu-footer__item">
-                    <a href="https://www.insidetracker.com/science/" class="menu-footer__link">Science</a>
+                    <a href="https://www.insidetracker.com/science/" class="link-secondary-light">Science</a>
                 </li>
                 <li class="menu-footer__item">
-                    <a href="https://www.insidetracker.com/demo/" class="menu-footer__link">
+                    <a href="https://www.insidetracker.com/demo/" class="link-secondary-light">
                         Live Demo
                     </a>
                 </li>
                 <li class="menu-footer__item">
-                    <a href="http://blog.insidetracker.com/" class="menu-footer__link">Blog</a>
+                    <a href="http://blog.insidetracker.com/" class="link-secondary-light">Blog</a>
                 </li>
                 <li class="menu-footer__item">
-                    <a href="https://www.insidetracker.com/testimonial/" class="menu-footer__link">Testimonials</a>
+                    <a href="https://www.insidetracker.com/testimonial/" class="link-secondary-light">Testimonials</a>
                 </li>
                 <li class="menu-footer__item">
-                    <a href="http://info.insidetracker.com/partnerships" class="menu-footer__link">Partner</a>
+                    <a href="http://info.insidetracker.com/partnerships" class="link-secondary-light">Partner</a>
                 </li>
                 <li class="menu-footer__item">
-                    <a href="https://www.insidetracker.com/public/landing/pro-sports/" class="menu-footer__link">Teams</a>
+                    <a href="https://www.insidetracker.com/public/landing/pro-sports/" class="link-secondary-light">Teams</a>
                 </li>
                 <li class="menu-footer__item">
-                    <a href="https://www.insidetracker.com/public/landing/military/" class="menu-footer__link">Protective services</a>
+                    <a href="https://www.insidetracker.com/public/landing/military/" class="link-secondary-light">Protective services</a>
                 </li>
                 <li class="menu-footer__item">
-                    <a href="https://www.insidetracker.com/public/landing/fit/" class="menu-footer__link">Functional Fitness</a>
+                    <a href="https://www.insidetracker.com/public/landing/fit/" class="link-secondary-light">Functional Fitness</a>
                 </li>
                 <li class="menu-footer__item">
-                    <a href="https://www.insidetracker.com/public/landing/spartan-artwork/" class="menu-footer__link">Spartan</a>
+                    <a href="https://www.insidetracker.com/public/landing/spartan-artwork/" class="link-secondary-light">Spartan</a>
                 </li>
                 <li class="menu-footer__item">
-                    <a href="https://www.insidetracker.com/public/landing/endurance/" class="menu-footer__link">Endurance</a>
+                    <a href="https://www.insidetracker.com/public/landing/endurance/" class="link-secondary-light">Endurance</a>
                 </li>
             </ul>
-            <ul class="menu-footer">
-                <li class="footer__title">Store</li>
+            <ul class="menu-footer hide-tablet">
+                <li class="footer-new__title">Store</li>
                 <li class="menu-footer__item">
-                    <a href="https://www.insidetracker.com/customer/onboarding/compare-plans/" class="menu-footer__link">
+                    <a href="https://www.insidetracker.com/customer/onboarding/compare-plans/" class="link-secondary-light">
                         Compare
                     </a>
                 </li>
                 
                 <li class="menu-footer__item">
-                    <a href="https://www.insidetracker.com/ultimate/" class="menu-footer__link">Ultimate</a>
+                    <a href="https://www.insidetracker.com/ultimate/" class="link-secondary-light">Ultimate</a>
                 </li>
                 <li class="menu-footer__item">
-                    <a href="https://www.insidetracker.com/vitality/" class="menu-footer__link">Vitality</a>
+                    <a href="https://www.insidetracker.com/vitality/" class="link-secondary-light">Vitality</a>
                 </li>
                 <li class="menu-footer__item">
-                    <a href="https://www.insidetracker.com/high-performance/" class="menu-footer__link">High Performance</a>
+                    <a href="https://www.insidetracker.com/high-performance/" class="link-secondary-light">High Performance</a>
                 </li>
                 <li class="menu-footer__item">
-                    <a href="https://www.insidetracker.com/innerage/" class="menu-footer__link">InnerAge</a>
+                    <a href="https://www.insidetracker.com/innerage/" class="link-secondary-light">InnerAge</a>
                 </li>
                 <li class="menu-footer__item">
-                    <a href="https://www.insidetracker.com/essentials/" class="menu-footer__link">Essentials</a>
+                    <a href="https://www.insidetracker.com/essentials/" class="link-secondary-light">Essentials</a>
                 </li>
                 <li class="menu-footer__item">
-                    <a href="https://www.insidetracker.com/diy/" class="menu-footer__link">Do It Yourself</a>
+                    <a href="https://www.insidetracker.com/diy/" class="link-secondary-light">Do It Yourself</a>
                 </li>
                 <li class="menu-footer__item">
-                    <a href="https://www.insidetracker.com/home-kit/" class="menu-footer__link">Home Kit</a>
+                    <a href="https://www.insidetracker.com/home-kit/" class="link-secondary-light">Home Kit</a>
                 </li>
                 <li class="menu-footer__item">
-                    <a href="https://www.insidetracker.com/dna-analysis/" class="menu-footer__link">DNA Analysis</a>
+                    <a href="https://www.insidetracker.com/dna-analysis/" class="link-secondary-light">DNA Analysis</a>
                 </li>
                 <li class="menu-footer__item">
-                    <a href="http://info.insidetracker.com/how-to-redeem-your-gift-card" class="menu-footer__link">Gift Card</a>
+                    <a href="http://info.insidetracker.com/how-to-redeem-your-gift-card" class="link-secondary-light">Gift Card</a>
                 </li>
             </ul>
             
             <div class="footer-contacts">
                 <div class="contacts-icons-wrap">
-                    <p class="footer__title">Subscribe</p>
+                    <p class="footer-new__title hide-tablet">Subscribe</p>
                     <a class="contacts-icons__link" href="http://blog.insidetracker.com/rss.xml">
                         <svg role="img" class="contacts-icons__icon">
                             <use xlink:href="assets/img/footer.svg#rss"></use>
@@ -316,25 +396,27 @@
                     </a>
                 </div>
                 <div class="footer-contacts-block">
-                    <p class="footer__title">Help making a purchase</p>
-                    <a class="footer-contacts__link" href="mailto:contactus@insidetracker.com">contactus@insidetracker.com</a>
+                    <p class="footer-new__title hide-tablet">Help making a purchase</p>
+                    <a class="link-secondary-light" href="mailto:contactus@insidetracker.com">contactus@insidetracker.com</a>
                     <p></p>
-                    <a href="tel:8005132359" class="footer-contacts__link">(800) 513-2359</a>
-                    <a href="tel:8005132359" class="footer-contacts__link footer-contacts__link--sms">Send us a text</a>
+                    <a href="tel:8005132359" class="link-secondary-light">(800) 513-2359</a>
+                    <a href="tel:8005132359" class="link-secondary-light link-secondary-light--sms">Send us a text</a>
                 </div>
                 <div class="footer-contacts-block">
-                    <p class="footer__title">Help with your account</p>
-                    <a class="footer-contacts__link" href="https://support.insidetracker.com/supportcenter">Support center</a>
+                    <p class="footer-new__title hide-tablet">Help with your account</p>
+                    <a class="link-secondary-light" href="https://support.insidetracker.com/supportcenter">Support center</a>
                 </div>
                 <p class="footer-contacts__subtitle">Support is available Mon–Fri, 9am–5pm EST</p>
             </div>
         </div>
         
-        <p class="copyright">
+        <p class="copyright copyright-text">
             © 2009-2019 Segterra, Inc. All rights reserved. InsideTracker is a personalized nutrition model by
             Segterra.<br class="hide-tablet" /> Technology protected by U.S. Patent 8762167 and other patent pending applications. </p>
     </div>
 </footer>
 
+
+<script src="script/hubspot.js"></script>
 </body>
 </html>
