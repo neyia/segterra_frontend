@@ -3,6 +3,7 @@
 .single-post {
     font-family: 'Open Sans', Arial, sans-serif;
     width:       calc(~"100% - 420px");
+    color:       @gray1;
     @media screen and (max-width: (@tablet_horizontal)) {
         width: 100%;
     }
@@ -29,9 +30,9 @@
             background-size:   100%;
             background-image:  url('../assets/img/arrow_down.png');
         }
-    
+        
         @media screen and (max-width: (@tablet)) {
-            margin:       23px 0 24px;
+            margin: 23px 0 24px;
         }
     }
     
@@ -67,9 +68,9 @@
         color:          @gray1;
         letter-spacing: 0.3px;
         margin:         0;
-    
+        
         @media screen and (max-width: (@tablet)) {
-            font-size: 24px;
+            font-size:   24px;
             line-height: 32px;
         }
     }
@@ -291,15 +292,23 @@
         max-width:     100%;
         width:         100%;
         min-height:    100px;
+        font-size: 14px;
         
         @media screen and (max-width: (@big_mobile)) {
             margin-bottom: 30px;
+            font-size: 16px;
         }
         
         &:focus {
-            border: 1px solid #0af;
+            border:     1px solid #0af;
             box-shadow: none;
-            outline: 0;
+            outline:    0;
+        }
+        
+        &::placeholder {
+            color:       @gray6;
+            font-family: "Open Sans", Tahoma, Helvetica, Arial, sans-serif;
+            font-size: 14px;
         }
     }
     
