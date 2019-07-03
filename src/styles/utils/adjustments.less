@@ -76,6 +76,17 @@ p {
     }
 }
 
+.container-content {
+    &:extend(.container);
+    display:         flex;
+    justify-content: space-between;
+    
+    @media only screen and(max-width: (@tablet_horizontal)) {
+        flex-direction:  column;
+        justify-content: flex-start;
+    }
+}
+
 //*********************** specially for hubspot
 .footer-new ul {
     list-style: none;
