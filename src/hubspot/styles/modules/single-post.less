@@ -1,11 +1,11 @@
 @import "../../../styles/utils/variables";
 
 .single-post {
-    font-family: 'Open Sans', Arial, sans-serif;
-    width:       calc(~"100% - 420px");
-    color:       @gray1;
+    font-family:  'Open Sans', Arial, sans-serif;
+    margin-right: 70px;
+    color:        @gray1;
     @media screen and (max-width: (@tablet_horizontal)) {
-        width: 100%;
+        margin-right: 0;
     }
     
     &__back {
@@ -269,17 +269,19 @@
             background-position: calc(~"100% - 12px") 50%;
             transition:          all 0.1s ease-in-out;
             background-image:    url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAHCAYAAAA8sqwkAAAA10lEQVQoU22PvUoDURSEv8ldQQhaJI2NhSBpxJdIbbX+lCI2NoKdD2FnmUbEJrDqVta+hFgoKSxtIqgIgnsduVdEF5zuzJnvDEdU3gcfUWiNUtf8p9pDGl+BDkXlZ2AeESFusVnULea8KSFUmAC8iLEXCb4FzYFN+NxlvTjN0GWzQ+ycgAR+JWpFeVG7T+N7UC8xBB9kP+o4Z/EThQaUmn4DSWfuMusJaKH9hh951zLbekv+L5CmkWfo+Q5rKUMdPzDVgD19/BxpA8m1xYVvcmBDq0j+2/gFIlBHeskAuj0AAAAASUVORK5CYII=');
-            background-color: transparent;
+            background-color:    transparent;
+            
             &::-ms-expand {
                 display: none;
             }
+            
             &:focus {
                 background-color: transparent;
             }
         }
-    
+        
         input::-webkit-input-placeholder {
-            line-height:normal!important;
+            line-height: normal !important;
         }
     }
     
