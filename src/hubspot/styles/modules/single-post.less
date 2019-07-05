@@ -1,32 +1,10 @@
-@import "../utils/giveaway/common";
 @import "../../../styles/utils/variables";
 
-img {
-    max-width: 100%;
-    height:    auto;
-}
-
-h1 {
-    font-size: 30px;
-    line-height: 42px;
-    font-family: 'Open Sans', Arial, sans-serif;
-    color: @gray1;
-    letter-spacing: 0.3px;
-    margin: 0;
-}
-
-h6 {
-    font-size: 12px;
-    font-weight: normal;
-    color: @gray3;
-    line-height: 30px;
-    letter-spacing: 0.12px;
-    margin: 0;
-}
-
 .single-post {
-    width: calc(~"100% - 420px");
-    @media screen and (max-width: (@big_tablet)) {
+    font-family: 'Open Sans', Arial, sans-serif;
+    width:       calc(~"100% - 420px");
+    color:       @gray1;
+    @media screen and (max-width: (@tablet_horizontal)) {
         width: 100%;
     }
     
@@ -36,6 +14,7 @@ h6 {
         font-size:    14px;
         margin:       53px 0 43px;
         display:      inline-block;
+        color:        @primary;
         
         &::before {
             content:           '';
@@ -49,19 +28,95 @@ h6 {
             transform:         rotate(90deg);
             background-repeat: no-repeat;
             background-size:   100%;
-            background-image:  url('/assets/img/arrow_down.png');
+            background-image:  url('../assets/img/arrow_down.png');
+        }
+        
+        @media screen and (max-width: (@tablet)) {
+            margin: 23px 0 24px;
         }
     }
     
     &__subtitle {
-        font-size:   24px;
-        line-height: 32px;
+        font-size:     24px;
+        line-height:   32px;
+        margin-bottom: 40px;
+        @media screen and (max-width: (@big_tablet)) {
+            font-size:     20px;
+            line-height:   28px;
+            margin-bottom: 25px;
+        }
+    }
+    
+    &__image {
+        border-radius: 6px;
+        margin-bottom: 18px;
+    }
+    
+    &__button-block {
+        margin: 34px 0;
+        @media screen and (max-width: (@big_mobile)) {
+            margin: 25px 0 34px;
+        }
+    }
+    
+    img {
+        max-width: 100%;
+        height:    auto;
+    }
+    
+    h1 {
+        font-size:      30px;
+        line-height:    42px;
+        font-family:    'Open Sans', Arial, sans-serif;
+        color:          @gray1;
+        letter-spacing: 0.3px;
+        margin:         0;
+        
+        @media screen and (max-width: (@tablet)) {
+            font-size:   24px;
+            line-height: 32px;
+        }
+    }
+    
+    h4 {
+        font-size:   20px;
+        font-weight: 600;
+        margin:      33px 0 0;
+        line-height: 1.35;
+    }
+    
+    h5 {
+        font-size:   15px;
+        font-weight: 600;
+        margin:      20px 0 0;
+        line-height: 1.35;
+    }
+    
+    h6 {
+        font-size:      12px;
+        font-weight:    normal;
+        color:          @gray3;
+        line-height:    30px;
+        letter-spacing: 0.12px;
+        margin:         0;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    p {
+        letter-spacing: 0.14px;
+        line-height:    20px;
+        margin:         20px 0 0;
+        font-size:      14px;
+        color:          @gray1;
     }
 }
 
 .eBook {
     display: block;
-    margin:  63px 0;
+    margin:  68px 0 63px;
     
     &-desktop {
         max-width: 100%;
@@ -79,6 +134,10 @@ h6 {
             display: block;
         }
     }
+    
+    @media screen and (max-width: (@big_tablet)) {
+        margin: 50px 0;
+    }
 }
 
 .separator {
@@ -88,33 +147,199 @@ h6 {
 }
 
 .relation-posts {
-    margin-top: 55px;
+    margin-top: 47px;
     
     &__title {
         text-align: center;
     }
     
     &-wrap {
-        display: flex;
-        margin:  55px -15px 53px;
+        display:   flex;
+        flex-wrap: wrap;
+        margin:    55px -15px 23px;
+        @media screen and (max-width: (@desktop)) {
+            margin: 55px 0 53px;
+        }
+        @media screen and (max-width: (@big_mobile)) {
+            justify-content: center;
+            margin:          33px 0 12px;
+        }
     }
     
     &__item {
-        margin: 0 15px;
-        width:  calc(~"100% / 3 - 30px");
+        display:        flex;
+        flex-direction: column;
+        margin:         0 15px 28px;
+        width:          calc(~"100% / 3 - 30px");
+        @media screen and (max-width: (@desktop)) {
+            width:      calc(~"100% / 2 - 30px");
+            text-align: center;
+        }
+        @media screen and (max-width: (@mid_width)) {
+            width: 100%;
+        }
+        @media screen and (max-width: (@tablet_horizontal)) {
+            width: calc(~"100% / 3 - 30px");
+        }
+        @media screen and (max-width: (@big_mobile_horizontal)) {
+            width: calc(~"100% / 2 - 30px");
+        }
+        @media screen and (max-width: (@big_mobile)) {
+            width: auto;
+        }
     }
     
     &__img {
         margin-bottom: 20px;
+        display:       block;
+        
+        @media screen and (max-width: (@middle_mobile)) {
+            width:         150px;
+            margin-bottom: 15px;
+        }
+        
+        &-wrap {
+            align-self: center;
+        }
     }
     
     &__name {
         font-size:   16px;
         line-height: 24px;
         color:       @gray1;
+        font-weight: 600;
+    }
+    
+    @media screen and (max-width: (@big_tablet)) {
+        margin-top: 28px;
     }
 }
 
 .post-form {
-    margin-top: 53px;
+    margin-top: 38px;
+    
+    &__half {
+        width: 48%;
+        
+        @media screen and (max-width: (@mid_width)) {
+            width: 100%;
+        }
+        
+        @media screen and (max-width: (@tablet_horizontal)) {
+            width: 48%;
+        }
+        
+        @media screen and (max-width: (@big_mobile)) {
+            width: 100%;
+        }
+        
+        &:first-child {
+            margin-right: 4%;
+            
+            @media screen and (max-width: (@mid_width)) {
+                margin-right:  0;
+                margin-bottom: 22px;
+            }
+            
+            @media screen and (max-width: (@tablet_horizontal)) {
+                margin-right:  4%;
+                margin-bottom: 0;
+            }
+            
+            @media screen and (max-width: (@big_mobile)) {
+                margin-right:  0;
+                margin-bottom: 22px;
+            }
+        }
+    }
+    
+    &__row {
+        display:   flex;
+        flex-wrap: wrap;
+        
+        .form-control {
+            max-width:     100%;
+            border-radius: 0;
+        }
+        
+        select {
+            appearance:          none;
+            background-repeat:   no-repeat;
+            background-size:     12px;
+            background-position: calc(~"100% - 12px") 50%;
+            transition:          all 0.1s ease-in-out;
+            background-image:    url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAHCAYAAAA8sqwkAAAA10lEQVQoU22PvUoDURSEv8ldQQhaJI2NhSBpxJdIbbX+lCI2NoKdD2FnmUbEJrDqVta+hFgoKSxtIqgIgnsduVdEF5zuzJnvDEdU3gcfUWiNUtf8p9pDGl+BDkXlZ2AeESFusVnULea8KSFUmAC8iLEXCb4FzYFN+NxlvTjN0GWzQ+ycgAR+JWpFeVG7T+N7UC8xBB9kP+o4Z/EThQaUmn4DSWfuMusJaKH9hh951zLbekv+L5CmkWfo+Q5rKUMdPzDVgD19/BxpA8m1xYVvcmBDq0j+2/gFIlBHeskAuj0AAAAASUVORK5CYII=');
+            background-color: transparent;
+            &::-ms-expand {
+                display: none;
+            }
+            &:focus {
+                background-color: transparent;
+            }
+        }
+    
+        input::-webkit-input-placeholder {
+            line-height:normal!important;
+        }
+    }
+    
+    p {
+        font-size:   12px;
+        line-height: 16px;
+        margin:      0;
+    }
+    
+    .checkbox {
+        margin-top: 15px;
+        display:    inline-block;
+        
+        &__label {
+            font-size:     12px;
+            margin-bottom: 0;
+        }
+    }
+    
+    textarea {
+        margin-bottom:      30px;
+        resize:             none;
+        padding-top:        10px;
+        padding-left:       10px;
+        max-width:          100%;
+        width:              100%;
+        min-height:         100px;
+        font-size:          14px;
+        border-radius:      0;
+        box-shadow:         none;
+        outline:            0;
+        border:             1px solid #c3c8cd;
+        -webkit-appearance: none;
+        
+        @media screen and (max-width: (@big_mobile)) {
+            font-size: 16px;
+        }
+        
+        &:focus {
+            border:     1px solid #0af;
+            box-shadow: none;
+            outline:    0;
+        }
+        
+        &::placeholder {
+            color:       @gray6;
+            font-family: "Open Sans", Tahoma, Helvetica, Arial, sans-serif;
+            font-size:   14px;
+        }
+    }
+    
+    button {
+        margin: 0 0 200px;
+        
+        @media screen and (max-width: (@big_mobile)) {
+            margin: 0 0 50px;
+        }
+    }
+    
+    @media screen and (max-width: (@big_tablet)) {
+        margin-top: 28px;
+    }
 }
