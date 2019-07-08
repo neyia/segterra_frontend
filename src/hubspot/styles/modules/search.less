@@ -1,0 +1,127 @@
+/*styles for HubSpot ( css block by "Site Search Input 2019" module )*/
+
+.hs-search-field {
+    position: relative;
+}
+.hs-search-field__input {
+    box-sizing: border-box;
+    width: 100%;
+}
+.hs-search-field__bar button svg {
+    height: 10px;
+}
+.hs-search-field__suggestions {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.hs-search-field--open .hs-search-field__suggestions {
+    border: 1px solid #000;
+}
+.hs-search-field__suggestions li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.hs-search-field__suggestions #results-for {
+    font-weight: bold;
+}
+.hs-search-field__suggestions a,
+.hs-search-field__suggestions #results-for {
+    display: block;
+}
+.hs-search-field__suggestions a:hover,
+.hs-search-field__suggestions a:focus {
+    background-color:  rgba(0,0,0, .1);
+    outline: none;
+}
+
+/*custom styles BEGIN---*/
+
+.search-form {
+    position: relative;
+}
+.search-form .hs-search-field__input {
+    border: 0;
+    border-bottom: 1px solid #e1e4e6;
+    color: #232d37;
+    max-width: 100%;
+    width: 350px;
+    line-height: 41px;
+    height: 41px;
+    outline: none;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding: 0 38px 10px 38px;
+    box-sizing: border-box;
+}
+@media only screen and (max-width: 798px) {
+    .search-form .hs-search-field__input {
+        width: 100%;
+        padding: 0 10px 0 28px;
+    }
+}
+.search-form .search-btn span {
+    display: none;
+}
+.search-form .search-btn {
+    position: absolute;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDQ0Ni4yNSA0NDYuMjUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ0Ni4yNSA0NDYuMjU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48Zz4KCTxnIGlkPSJzZWFyY2giPgoJCTxwYXRoIGQ9Ik0zMTguNzUsMjgwLjVoLTIwLjRsLTcuNjQ5LTcuNjVjMjUuNS0yOC4wNSw0MC44LTY2LjMsNDAuOC0xMDcuMUMzMzEuNSw3My45NSwyNTcuNTUsMCwxNjUuNzUsMFMwLDczLjk1LDAsMTY1Ljc1ICAgIFM3My45NSwzMzEuNSwxNjUuNzUsMzMxLjVjNDAuOCwwLDc5LjA1LTE1LjMsMTA3LjEtNDAuOGw3LjY1LDcuNjQ5djIwLjRMNDA4LDQ0Ni4yNUw0NDYuMjUsNDA4TDMxOC43NSwyODAuNXogTTE2NS43NSwyODAuNSAgICBDMTAyLDI4MC41LDUxLDIyOS41LDUxLDE2NS43NVMxMDIsNTEsMTY1Ljc1LDUxUzI4MC41LDEwMiwyODAuNSwxNjUuNzVTMjI5LjUsMjgwLjUsMTY1Ljc1LDI4MC41eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojQzNDOENEIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCI+PC9wYXRoPgoJPC9nPgo8L2c+PC9nPiA8L3N2Zz4=);
+    position: absolute;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    height: 22px;
+    width: 22px;
+    padding: 0;
+    top: 30%;
+    transform: translateY(-50%);
+    left: 0;
+    background-size: cover;
+    z-index: 2;
+}
+.search-form ::-webkit-input-placeholder {
+    color: #c3c8cd;
+    font-size: 24px;
+    letter-spacing: 0.44px;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+@media only screen and (max-width: 798px) {
+    .search-form ::-webkit-input-placeholder {
+        font-size: 22px;
+    }
+}
+.search-form ::-moz-placeholder {
+    color: #c3c8cd;
+    font-size: 24px;
+    letter-spacing: 0.44px;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+@media only screen and (max-width: 798px) {
+    .search-form ::-moz-placeholder {
+        font-size: 22px;
+    }
+}
+.search-form :-moz-placeholder {
+    color: #c3c8cd;
+    font-size: 24px;
+    letter-spacing: 0.44px;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+@media only screen and (max-width: 798px) {
+    .search-form :-moz-placeholder {
+        font-size: 22px;
+    }
+}
+.search-form :-ms-input-placeholder {
+    color: #c3c8cd;
+    font-size: 24px;
+    letter-spacing: 0.44px;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+@media only screen and (max-width: 798px) {
+    .search-form :-ms-input-placeholder {
+        font-size: 22px;
+    }
+}
+/*---custom styles END*/
