@@ -11,6 +11,15 @@
         width: 100%;
     }
     
+    &--top {
+        //need mt114px for .blog-section
+        @media only screen  and(max-width: (@tablet)) {
+            position:      absolute;
+            top:           36px;
+            padding-right: 36px;
+        }
+    }
+    
     .form-control {
         border:        0;
         border-bottom: 1px solid @gray7;
@@ -30,7 +39,7 @@
     }
     
     .search-submit {
-        background:      url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IB2cksfwAAAH5QTFRFAAAAxMTEwsjMw8jNw8jNw8jNw8jMxMjNv7+/xMvLw8jMw8jNw8jNw8jOxMTOw8nNwcfNxcrPwsjNw8jNv7+/qqqqxMnOxMjLw8jO1NTUw8jNxsbGw8fNwsjPw8fNw8PSw8jNwsjOw8jO////xsbQw8nNwsLOw8fNw8jOwcnNMBzxlwAAACp0Uk5TAA1+1vv6z3AIJ97/6e0atyk1xswEA2NFugbiCeFPsxHaWMQBG/gV08lCnv0PPgAAAIlJREFUeJyNjskOgkAQRJttGCmQpZEdZFHA//9BY88c9GZdXvqlUmkiclzPD1SoyeYSAXECqKu5nQhpRpQX4FKEi/T2oWZUIjxkplqjEfqx3WrRCYPEih6DUCE3YsQkDFHIB/cZiwitwHXbjzPWzVQfDMn65N2Ysmq6YVo2xrHTd/bjL3PSrzlfbw3/CQRQVrasAAAAAElFTkSuQmCC');
+        background:      url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDQ0Ni4yNSA0NDYuMjUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ0Ni4yNSA0NDYuMjU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48Zz4KCTxnIGlkPSJzZWFyY2giPgoJCTxwYXRoIGQ9Ik0zMTguNzUsMjgwLjVoLTIwLjRsLTcuNjQ5LTcuNjVjMjUuNS0yOC4wNSw0MC44LTY2LjMsNDAuOC0xMDcuMUMzMzEuNSw3My45NSwyNTcuNTUsMCwxNjUuNzUsMFMwLDczLjk1LDAsMTY1Ljc1ICAgIFM3My45NSwzMzEuNSwxNjUuNzUsMzMxLjVjNDAuOCwwLDc5LjA1LTE1LjMsMTA3LjEtNDAuOGw3LjY1LDcuNjQ5djIwLjRMNDA4LDQ0Ni4yNUw0NDYuMjUsNDA4TDMxOC43NSwyODAuNXogTTE2NS43NSwyODAuNSAgICBDMTAyLDI4MC41LDUxLDIyOS41LDUxLDE2NS43NVMxMDIsNTEsMTY1Ljc1LDUxUzI4MC41LDEwMiwyODAuNSwxNjUuNzVTMjI5LjUsMjgwLjUsMTY1Ljc1LDI4MC41eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojQzNDOENEIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCI+PC9wYXRoPgoJPC9nPgo8L2c+PC9nPiA8L3N2Zz4=);
         position:        absolute;
         cursor:          pointer;
         outline:         none;
