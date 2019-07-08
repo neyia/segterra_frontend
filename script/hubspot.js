@@ -95,21 +95,13 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_PopUp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/PopUp */ "./src/hubspot/scripts/modules/PopUp.js");
+/* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/header */ "./src/hubspot/scripts/modules/header.js");
 /* harmony import */ var _modules_feed__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/feed */ "./src/hubspot/scripts/modules/feed.js");
+/* harmony import */ var _modules_RightPanel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/RightPanel */ "./src/hubspot/scripts/modules/RightPanel.js");
 /** Delete ALL imports before adding to HubSpot*/
 
 
-window.addEventListener('load', function () {
-  mobileMenu();
-});
-/** Create sidebar for header mobile menu */
 
-function mobileMenu() {
-  var overlay = document.querySelector('#overlay');
-  var btn = document.querySelector('#btnMenu');
-  new _modules_PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](btn, overlay);
-}
 
 /***/ }),
 
@@ -285,6 +277,34 @@ function () {
 
 /***/ }),
 
+/***/ "./src/hubspot/scripts/modules/RightPanel.js":
+/*!***************************************************!*\
+  !*** ./src/hubspot/scripts/modules/RightPanel.js ***!
+  \***************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _PopUp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PopUp */ "./src/hubspot/scripts/modules/PopUp.js");
+/** Delete ALL imports before adding to HubSpot*/
+
+window.addEventListener('load', function () {
+  postsText();
+});
+/** Shows hidden text when clicked */
+
+function postsText() {
+  var text = document.querySelectorAll('.info-content__item');
+  var btnShow = document.querySelectorAll('.info-content__link');
+
+  for (var i = 0; i < text.length; i++) {
+    new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](btnShow[i], text[i], btnShow[i]);
+  }
+}
+
+/***/ }),
+
 /***/ "./src/hubspot/scripts/modules/feed.js":
 /*!*********************************************!*\
   !*** ./src/hubspot/scripts/modules/feed.js ***!
@@ -305,6 +325,40 @@ function CloseModal() {
   var modal = document.querySelector('.modal');
   var cancelBtn = document.querySelector('.modal__close');
   new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](cancelBtn, modal, cancelBtn);
+}
+
+/***/ }),
+
+/***/ "./src/hubspot/scripts/modules/header.js":
+/*!***********************************************!*\
+  !*** ./src/hubspot/scripts/modules/header.js ***!
+  \***********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _PopUp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PopUp */ "./src/hubspot/scripts/modules/PopUp.js");
+/** Delete ALL imports before adding to HubSpot*/
+
+window.addEventListener('load', function () {
+  addActiveClass(); //add directly to hubspot module
+
+  mobileMenu();
+});
+/** Create sidebar for header mobile menu */
+
+function mobileMenu() {
+  var overlay = document.querySelector('#overlay');
+  var btn = document.querySelector('#btnMenu');
+  new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](btn, overlay);
+}
+/** !!!! Only for hubspot blog Create active class to 'blog' link */
+
+
+function addActiveClass() {
+  var blogLink = document.querySelector("a[href*='//blog.insidetracker.com']");
+  if (blogLink) blogLink.classList.add('active');
 }
 
 /***/ })
