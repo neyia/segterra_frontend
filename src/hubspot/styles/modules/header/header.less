@@ -207,6 +207,10 @@
                                 padding: 0 .78rem;
                             }
                             
+                            @media screen and (max-width: (@mid_width)) {
+                                height: 60px;
+                            }
+                            
                             @media screen and (max-width: (@tablet_horizontal)) {
                                 padding:     0 16px 0 12px;
                                 height:      auto;
@@ -214,10 +218,7 @@
                                 border:      0;
                                 border-left: 4px solid transparent;
                                 font-size:   14px;
-                            }
-                            
-                            @media screen and (max-width: (@mid_width)) {
-                                height: 56px;
+                                max-width:   100%;
                             }
                             
                             &:hover {
@@ -275,6 +276,10 @@
                         padding: 0 .78rem;
                     }
                     
+                    @media screen and (max-width: (@mid_width)) {
+                        height: 60px;
+                    }
+                    
                     @media screen and (max-width: (@tablet_horizontal)) {
                         padding:     0 16px 0 12px;
                         height:      auto;
@@ -282,10 +287,7 @@
                         border:      0;
                         border-left: 4px solid transparent;
                         font-size:   14px;
-                    }
-                    
-                    @media screen and (max-width: (@mid_width)) {
-                        height: 56px;
+                        max-width:   100%;
                     }
                     
                     &:hover {
@@ -350,9 +352,9 @@
             }
             
             .slider-contacts {
-                margin:     11px 0 0 0 !important;
-                padding:    15px 19px 2px !important;
-                border-top: 1px solid @gray8;
+                margin:      11px 0 0 0 !important;
+                padding:     15px 19px 2px !important;
+                border-top:  1px solid @gray8;
                 
                 &__item {
                     list-style: none;
@@ -360,6 +362,12 @@
                 
                 .link-secondary-light {
                     line-height: 36px;
+                    font-size:   12px;
+                    font-weight: 400;
+
+                    @media screen and (max-width: (@mobile)) {
+                        line-height: 30px;
+                    }
                 }
             }
             
