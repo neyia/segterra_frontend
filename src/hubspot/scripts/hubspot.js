@@ -2,3 +2,4 @@
 import './modules/header';
 import './modules/feed';
 import './modules/RightPanel';
+import './modules/rigr';
