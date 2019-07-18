@@ -15,6 +15,7 @@
 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Arvo:400,700" rel="stylesheet">
 
 <link href="style/style.css" rel="stylesheet">
 
@@ -27,82 +28,6 @@
 </head>
 <body>
 
-<div class="header-new--padded"></div>
-<header class="header-new">
-    <!--    <div class="container">-->
-    <div class="container header-new__content">
-        <button type="button" class="sandwich__line-wrapper show-tablet--horizontal" id="btnMenu">
-            <span class="sandwich__line"></span>
-        </button>
-        <a class="header-new__logo-wrapper" href="https://www.insidetracker.com/">
-            <span class="logo-inline logo-inline--primary"></span>
-        </a>
-        <div class="overlay" id="overlay">
-            <div class="sidebar">
-                <ul class="main-nav__list">
-                    <!--                     Change navbar to hubspot built-in navbar
-                    {% menu id="{{ module.menu_field }}" %}-->
-                    <li class="main-nav__item">
-                        <a href="https://www.insidetracker.com/about/" class="main-nav__link">About</a>
-                    </li>
-                    <li class="main-nav__item hide-tablet--horizontal">
-                        <a href="https://www.insidetracker.com/tour/" class="main-nav__link">Tour</a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a href="https://www.insidetracker.com/science/" class="main-nav__link">Science</a>
-                    </li>
-                    <li class="main-nav__item show-tablet--horizontal">
-                        <a href="https://www.insidetracker.com/team/" class="main-nav__link">Team</a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a href="https://blog.insidetracker.com/" class="main-nav__link">Blog</a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a href="https://www.insidetracker.com/testimonial/" class="main-nav__link">Testimonials</a>
-                    </li>
-                    <li class="main-nav__item show-tablet--horizontal">
-                        <a href="https://www.insidetracker.com/faq" class="main-nav__link">FAQ</a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a href="https://support.insidetracker.com/supportcenter" class="main-nav__link">Support</a>
-                    </li>
-                </ul>
-                <div class="auth-panel">
-                    <a href="https://www.insidetracker.com/customer/onboarding/choose-plan/" class="btn-special">Buy Now</a>
-                    <a href="https://www.insidetracker.com/public/login/" class="link-white hide-tablet--horizontal">Log In</a>
-                    <a href="https://www.insidetracker.com/public/login/" class="btn-secondary--dark show-tablet--horizontal">Log In</a>
-                </div>
-                <ul class="slider-contacts show-tablet--horizontal">
-                    <li class="slider-contacts__item">
-                        <a class="link-secondary-light" href="https://www.insidetracker.com/terms-of-service/">Terms</a>
-                    </li>
-                    <li class="slider-contacts__item">
-                        <a class="link-secondary-light" href="https://www.insidetracker.com/policy-privacy/">Privacy Policy</a>
-                    </li>
-                    <li class="slider-contacts__item">
-                        <a class="link-secondary-light" href="https://www.insidetracker.com/research-consent/">DNA Research Consent</a>
-                    </li>
-                    <li class="slider-contacts__item">
-                        <a class="link-secondary-light" href="https://www.insidetracker.com/product-consent/">Product Consent</a>
-                    </li>
-                </ul>
-                <ul class="slider-contacts show-tablet--horizontal">
-                    <li class="slider-contacts__item">
-                        <a class="link-secondary-light" href="mailto:contactus@insidetracker.com">contactus@insidetracker.com</a>
-                    </li>
-                    
-                    <li class="slider-contacts__item">
-                        <a class="link-secondary-light" href="tel:8005132359">(800) 513-2359</a>
-                    </li>
-                    <li class="slider-contacts__item">
-                        <a class="link-secondary-light" href="sms:8005132359">Send us a text</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!--    </div>-->
-</header>
 
 
 
@@ -307,7 +232,464 @@ Listing template
            </div>
        </div>
    </div>
-</div> //-->
+</div>
+.blog-section {
+  margin: 100px 0 200px 0;
+}
+.post-listing  .hs-blog-social-share {
+  display: none;
+}
+@media (max-width: 858px) {
+  .blog-section {
+    margin: 40px 0 0 0;
+  }
+}
+.blog-section .link-secondary {
+  font-size: 12px;
+  display: block;
+  text-align: center;
+  margin-top: 24px;
+}
+@media (max-width: 858px) {
+  .blog-section .link-secondary {
+    margin-top: 15px;
+  }
+}
+.blog-section .btn-block--centered {
+  margin: 0 auto;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.blog-section article {
+  margin-bottom: 63px;
+}
+@media (max-width: 858px) {
+  .blog-section article {
+    margin-bottom: 37px;
+  }
+}
+.blog-section article h1 {
+  color: #232d37;
+  font-weight: 600;
+  display: inline-block;
+  font-size: 30px;
+  letter-spacing: 0.3px;
+  max-width: 667px;
+  width: 100%;
+  line-height: 40px;
+  margin: 0 0 10px;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+@media (max-width: 858px) {
+  .blog-section article h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+.blog-section article h6 {
+  color: #87919b;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.12px;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+.blog-section article h6 a {
+  color: #87919b;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.12px;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  text-decoration: none;
+}
+.blog-section article img {
+  max-width: none;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  margin-bottom: 25px;
+}
+.blog-section .post-content {
+  font-weight: 400;
+  letter-spacing: 0.16px;
+  line-height: 24px;
+  margin: 20px 0 0;
+  font-size: 16px;
+  color: #232d37;
+}
+.blog-section article p span {
+  font-size: 16px;
+}
+.blog-section article p a {
+  font-size: 16px;
+  text-decoration: none;
+}
+@media (max-width: 858px) {
+  .blog-section .post-content {
+    font-size: 14px;
+  }
+}
+@media (max-width: 858px) {
+  .blog-section .post-content a {
+    font-size: 14px;
+  }
+}
+.blog-section article p a:hover,
+.blog-section article p a:focus,
+.blog-section article p a:active {
+  color: #0096e1;
+  text-decoration: underline;
+}
+@media (max-width: 858px) {
+  .blog-section article p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.post-listing-wrapper {
+  max-width: 820px;
+  width: 100%;
+}
+@media (max-width: 858px) {
+  .post-listing-wrapper {
+    max-width: 100%;
+    margin-top: 16px;
+    margin-bottom: 50px;
+  }
+}
+.post-listing {
+  margin-bottom: 93px;
+}
+@media (max-width: 858px) {
+  .post-listing {
+    margin-bottom: 45px;
+  }
+}
+.read-more {
+  margin: 12px 0;
+  font-size: 16px;
+  display: block;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #00aaff;
+  text-decoration: none;
+}
+.read-more:hover,
+.read-more:focus,
+.read-more:active {
+  color: #0096e1;
+  text-decoration: underline;
+}
+@media (max-width: 858px) {
+  .read-more {
+    font-size: 14px;
+  }
+}
+.btn-posts {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  min-width: 121px;
+  margin-top: 30px;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+@media (max-width: 850px) {
+  .btn-posts {
+    margin-top: 10px;
+  }
+}
+.btn-posts:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  background: url(https://cdn2.hubspot.net/hubfs/419889/images2019/arrow-left.svg);
+  width: 8px;
+  height: 12px;
+  top: 12px;
+}
+.btn-posts--next {
+  padding-left: 39px;
+}
+@media (max-width: 450px) {
+  .btn-posts--next {
+    padding-left: 24px;
+  }
+}
+.btn-posts--next:before {
+  left: 20px;
+}
+@media (max-width: 450px) {
+  .btn-posts--next:before {
+    left: 10px;
+  }
+}
+.btn-posts--prev {
+  padding-right: 39px;
+}
+@media (max-width: 450px) {
+  .btn-posts--prev {
+    padding-right: 24px;
+  }
+}
+.btn-posts--prev:before {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  right: 20px;
+}
+@media (max-width: 450px) {
+  .btn-posts--prev:before {
+    right: 10px;
+  }
+}
+.post-search {
+  display: none;
+}
+@media (max-width: 858px) {
+  .post-search {
+    display: block;
+  }
+}
+.post-search .form-control {
+  width: 100%;
+  max-width: 100%;
+}
+.post__header-link {
+  color: #232d37;
+  text-decoration: none;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+.post__header-link:hover,
+.post__header-link:focus,
+.post__header-link:active {
+  color: #232d37 !important;
+}
+.post-header #hubspot-author_data {
+  text-decoration: none;
+  color: #87919b;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.12px;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+.blog-content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+a.author-link {
+  color: #87919b;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.12px;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.hs-featured-image-wrapper {
+    margin-bottom: 23px;
+}
+
+.post__item-link {
+  border: 0;
+  overflow: hidden;
+  display: block;
+  border-radius: 6px;
+}
+
+/* List of posts */
+.post-listing--simple {
+  margin-top: -130px;
+}
+@media screen and (max-width: 858px) {
+  .post-listing--simple {
+    margin-top: -45px;
+  }
+}
+.post-listing--simple .post-list-item {
+  margin-bottom: 12px;
+  display: block;
+}
+.post-listing--simple .post-list-item a {
+  padding-left: 20px;
+  position: relative;
+  color: #232d37;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.14px;
+  display: inline-block;
+}
+.post-listing--simple .post-list-item .info-content__icon {
+  left: 0;
+  top: 8px;
+}
+
+
+#leadinModal-664747 .leadinModal-content {
+  bottom: 30px;
+  border-radius: 6px;
+  box-shadow: none;
+  right: 50%;
+  transform: translateX(585px);
+  transition: all 0s linear;
+  animation: none;
+}
+
+@media (max-width: 1220px) {
+  #leadinModal-664747 .leadinModal-content {
+    right: 0;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 858px) {
+  #leadinModal-664747 .leadinModal-content {
+    bottom:0;
+    border-radius:0;
+    width: 100%!important;
+  }
+}
+
+@media (max-width: 858px) {
+#leadinModal-664747 .advance-wrapper {
+  margin: 0 auto!important;
+  text-align: center;
+  }
+}
+
+@media (max-width: 858px) {
+#leadinModal-664747 h4 {
+  margin: 0 auto!important;
+  text-align: center;
+  }
+}
+
+#leadinModal-664747 .leadin-preview-wrapper {
+   padding: 35px 30px 40px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   
+}
+
+@media (max-width: 858px) {
+#leadinModal-664747 .leadin-preview-wrapper {
+  padding: 30px 0 20px;
+  }
+}
+
+#leadinModal-664747 h4 {
+  margin:0;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+#leadinModal-664747 .leadin-button {
+  border: 1px solid #fff;
+  color: #fff!important;
+  white-space: nowrap;
+  margin-top: 17px;
+  font-weight: 400;
+  background-color: transparent!important;
+  font-family: "Open Sans", Arial, sans-serif;
+  padding: 0 20px;
+  margin: 0 10px;
+  line-height: 36px;
+  display: inline-block;
+  width: auto;
+  letter-spacing: .23px;
+  line-height: 36px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  height: 36px;
+  margin-top: 10px;
+  transition: all .2s ease-out;
+}
+
+#leadinModal-664747 .leadin-button:hover {
+  color: #0af!important;
+  background-color: #fff!important;
+}
+
+#leadinModal-664747 .leadinModal-description-664747 {
+  margin:0;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: "Open Sans", Arial, sans-serif;
+  margin-top: -10px;
+}
+
+@media (max-width: 858px) {
+  #leadinModal-664747 .leadinModal-description-664747 {
+   display: none;
+  }
+}
+
+#leadinModal-664747 .leadinModal-content{
+   width: 276px;
+}
+
+#leadinModal-664747 .leadinModal-close {
+  top: 2px;
+  right: 2px;
+  border-radius: 50%;
+  transition: all .2s ease-out;
+}
+
+#leadinModal-664747 .leadinModal-close:before {
+  padding-top: 8px;
+  padding-right: 13px;
+  transition: all .2s ease-out;
+}
+
+#leadinModal-664747 .leadinModal-close:hover {
+   background-color: #f5f5f5;
+}
+
+#leadinModal-664747 .leadinModal-close:hover:before {
+   color: #0af!important;
+}
+
+#leadin-content-form-wrapper {
+  padding: 10px;
+}
+
+#leadinModal-664747 .leadin-button-wrapper .leadin-submit {
+  color: #ffffff;
+  border-style: hidden;
+  border-color: #00aaff;
+  background-color: #00aaff!important;
+}
+
+#leadinModal-664747 .leadin-button-wrapper .leadin-submit:hover,
+#leadinModal-664747 .leadin-button-wrapper .leadin-submit:focus {
+  color: #ffffff;
+  border-color: #46c3ff;
+  background-color: #46c3ff!important;
+  text-decoration: none;
+}
+ //-->
     
     <aside class="right-panel">
     <div class="wrap">
@@ -572,8 +954,8 @@ Listing template
 </div>
 
 <!--<div class="container-content">-->
-
-
+    
+    
 <!--</div>-->
 <footer class="footer-new">
     <div class="container">

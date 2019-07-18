@@ -95,12 +95,11 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/header */ "./src/hubspot/scripts/modules/header.js");
-/* harmony import */ var _modules_feed__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/feed */ "./src/hubspot/scripts/modules/feed.js");
-/* harmony import */ var _modules_RightPanel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/RightPanel */ "./src/hubspot/scripts/modules/RightPanel.js");
+/* harmony import */ var _modules_rigr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/rigr */ "./src/hubspot/scripts/modules/rigr.js");
 /** Delete ALL imports before adding to HubSpot*/
-
-
+// import './modules/header';
+// import './modules/feed';
+// import './modules/RightPanel';
 
 
 /***/ }),
@@ -155,9 +154,20 @@ function () {
     this.className = className || 'show';
     this.actionShow = actionShow || 'click';
     this.actionHide = actionHide || 'click';
+    console.log(this.popup);
+    this.popup.addEventListener('click', function (e) {
+      if (e.target.classList.contains('js-popup-link')) {
+        console.log(_this.popup.classList);
+
+        _this.popup.classList.remove(_this.className);
+      }
+
+      ;
+    });
     /** Reveal PopUp(add 'show' class), activate Close Button(s) & prevent body scroll*/
 
     if (!Array.isArray(this.btnShow)) {
+      this.btnShow.classList.add('js-popup-link');
       this.btnShow.addEventListener(this.actionShow, function () {
         if (_this.btnShow === _this.btnClose) {
           _this.popup.classList.toggle(_this.className);
@@ -171,6 +181,7 @@ function () {
       });
     } else {
       this.btnShow.forEach(function (btn) {
+        btn.classList.add('js-popup-link');
         btn.addEventListener(_this.actionShow, function () {
           if (_this.btnShow === _this.btnClose) {
             _this.popup.classList.toggle(_this.className);
@@ -214,7 +225,7 @@ function () {
       if (!Array.isArray(btnClose)) {
         btnClose.addEventListener(this.actionHide, function (_ref) {
           var target = _ref.target;
-          return target === btnClose ? _this2[hidePopUp](target) : null;
+          return target === btnClose ? _this2[hidePopUp]() : null;
         });
       } else {
         btnClose.forEach(function (btn) {
@@ -277,37 +288,9 @@ function () {
 
 /***/ }),
 
-/***/ "./src/hubspot/scripts/modules/RightPanel.js":
-/*!***************************************************!*\
-  !*** ./src/hubspot/scripts/modules/RightPanel.js ***!
-  \***************************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _PopUp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PopUp */ "./src/hubspot/scripts/modules/PopUp.js");
-/** Delete ALL imports before adding to HubSpot*/
-
-window.addEventListener('load', function () {
-  postsText();
-});
-/** Shows hidden text when clicked */
-
-function postsText() {
-  var text = document.querySelectorAll('.info-content__item');
-  var btnShow = document.querySelectorAll('.info-content__link');
-
-  for (var i = 0; i < text.length; i++) {
-    new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](btnShow[i], text[i], btnShow[i]);
-  }
-}
-
-/***/ }),
-
-/***/ "./src/hubspot/scripts/modules/feed.js":
+/***/ "./src/hubspot/scripts/modules/rigr.js":
 /*!*********************************************!*\
-  !*** ./src/hubspot/scripts/modules/feed.js ***!
+  !*** ./src/hubspot/scripts/modules/rigr.js ***!
   \*********************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -315,50 +298,41 @@ function postsText() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _PopUp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PopUp */ "./src/hubspot/scripts/modules/PopUp.js");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
 /** Delete ALL imports before adding to HubSpot*/
 
 window.addEventListener('load', function () {
-  CloseModal();
-});
-
-function CloseModal() {
-  var modal = document.querySelector('.modal');
-  var cancelBtn = document.querySelector('.modal__close');
-  new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](cancelBtn, modal, cancelBtn);
-}
-
-/***/ }),
-
-/***/ "./src/hubspot/scripts/modules/header.js":
-/*!***********************************************!*\
-  !*** ./src/hubspot/scripts/modules/header.js ***!
-  \***********************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _PopUp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PopUp */ "./src/hubspot/scripts/modules/PopUp.js");
-/** Delete ALL imports before adding to HubSpot*/
-
-window.addEventListener('load', function () {
-  addActiveClass(); //add directly to hubspot module
-
   mobileMenu();
+  faq();
 });
 /** Create sidebar for header mobile menu */
 
 function mobileMenu() {
   var overlay = document.querySelector('#overlay');
-  var btn = document.querySelector('#btnMenu');
-  new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](btn, overlay);
+  var showBtn = document.querySelector('#headerIcon');
+  var btnClose = document.querySelector('#closeIcon');
+  new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](showBtn, overlay, btnClose, true);
 }
-/** !!!! Only for hubspot blog Create active class to 'blog' link */
 
-
-function addActiveClass() {
-  var blogLink = document.querySelector("a[href*='//blog.insidetracker.com']");
-  if (blogLink) blogLink.classList.add('active');
+function faq() {
+  var faq = document.querySelector('.faq-popup');
+  var policy = document.querySelector('.policy-popup');
+  var terms = document.querySelector('.terms-popup');
+  var faqBtn = document.querySelectorAll('.faq');
+  var policyBtn = document.querySelectorAll('.policy');
+  var termsBtn = document.querySelectorAll('.terms');
+  var closeBtn = document.querySelectorAll('.close-btn');
+  var closeMobile = document.querySelectorAll('.close-mobile');
+  new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](_toConsumableArray(faqBtn), faq, [].concat(_toConsumableArray(closeMobile), _toConsumableArray(closeBtn)), true);
+  new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](_toConsumableArray(policyBtn), policy, [].concat(_toConsumableArray(closeMobile), _toConsumableArray(closeBtn)), true);
+  new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](_toConsumableArray(termsBtn), terms, [].concat(_toConsumableArray(closeMobile), _toConsumableArray(closeBtn)), true);
 }
 
 /***/ })
