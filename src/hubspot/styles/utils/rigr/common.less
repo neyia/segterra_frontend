@@ -51,6 +51,7 @@
     text-transform:   uppercase;
     background-color: @blue;
     border:           0;
+    border-radius:    0;
     font-family:      "Open Sans", Arial, sans-serif;
     text-decoration:  none;
     display:          block;
@@ -319,24 +320,24 @@
 /* Hover */
 .textfield-outlined:hover > input,
 .textfield-outlined:hover > textarea {
-    border-color: transparent @text @text;
+    border-color: transparent @gray_4 @gray_4;
 }
 
 .textfield-outlined:hover > input + span::before,
 .textfield-outlined:hover > input + span::after,
 .textfield-outlined:hover > textarea + span::before,
 .textfield-outlined:hover > textarea + span::after {
-    border-top-color: @text;
+    border-top-color: @gray_4;
 }
 
 .textfield-outlined:hover > input:not(:focus):-ms-input-placeholder,
 .textfield-outlined:hover > textarea:not(:focus):-ms-input-placeholder {
-    border-color: @text;
+    border-color: @gray_4;
 }
 
 .textfield-outlined:hover > input:not(:focus):placeholder-shown,
 .textfield-outlined:hover > textarea:not(:focus):placeholder-shown {
-    border-color: @text;
+    border-color: @gray_4;
 }
 
 .textfield-outlined > input:focus,
