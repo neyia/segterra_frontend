@@ -323,11 +323,23 @@
     border-color: transparent @gray_4 @gray_4;
 }
 
+.textfield-outlined--email:hover > input,
+.textfield-outlined--email:hover > textarea {
+    border-color: transparent @gray_5 @gray_5;
+}
+
 .textfield-outlined:hover > input + span::before,
 .textfield-outlined:hover > input + span::after,
 .textfield-outlined:hover > textarea + span::before,
 .textfield-outlined:hover > textarea + span::after {
     border-top-color: @gray_4;
+}
+
+.textfield-outlined--email:hover > input + span::before,
+.textfield-outlined--email:hover > input + span::after,
+.textfield-outlined--email:hover > textarea + span::before,
+.textfield-outlined--email:hover > textarea + span::after {
+    border-top-color: @gray_5;
 }
 
 .textfield-outlined:hover > input:not(:focus):-ms-input-placeholder,
@@ -338,6 +350,16 @@
 .textfield-outlined:hover > input:not(:focus):placeholder-shown,
 .textfield-outlined:hover > textarea:not(:focus):placeholder-shown {
     border-color: @gray_4;
+}
+
+textfield-outlined--email:hover > input:not(:focus):-ms-input-placeholder,
+.textfield-outlined--email:hover > textarea:not(:focus):-ms-input-placeholder {
+    border-color: @gray_5;
+}
+
+.textfield-outlined--email:hover > input:not(:focus):placeholder-shown,
+.textfield-outlined--email:hover > textarea:not(:focus):placeholder-shown {
+    border-color: @gray_5;
 }
 
 .textfield-outlined > input:focus,

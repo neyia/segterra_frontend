@@ -1,4 +1,4 @@
-/** Delete ALL imports before adding to HubSpot*/
+/** Deconste ALL imports before adding to HubSpot*/
 
 import PopUp from './PopUp';
 
@@ -9,22 +9,22 @@ window.addEventListener('load', () => {
 
 /** Create sidebar for header mobile menu */
 function mobileMenu() {
-    let overlay = document.querySelector('#overlay');
-    let showBtn = document.querySelector('#headerIcon');
-    let btnClose = document.querySelector('#closeIcon');
+    const overlay = document.querySelector('#overlay');
+    const showBtn = document.querySelector('#headerIcon');
+    const btnClose = document.querySelector('#closeIcon');
     
     new PopUp(showBtn, overlay, btnClose, true);
 }
 
 function faq() {
-    let faq = document.querySelector('.faq-popup');
-    let policy = document.querySelector('.policy-popup');
-    let terms = document.querySelector('.terms-popup');
-    let faqBtn = document.querySelectorAll('.faq');
-    let policyBtn = document.querySelectorAll('.policy');
-    let termsBtn = document.querySelectorAll('.terms');
-    let closeBtn = document.querySelectorAll('.close-btn');
-    let closeMobile = document.querySelectorAll('.close-mobile');
+    const faq = document.querySelector('.faq-popup');
+    const policy = document.querySelector('.policy-popup');
+    const terms = document.querySelector('.terms-popup');
+    const faqBtn = document.querySelectorAll('.faq');
+    const policyBtn = document.querySelectorAll('.policy');
+    const termsBtn = document.querySelectorAll('.terms');
+    const closeBtn = document.querySelectorAll('.close-btn');
+    const closeMobile = document.querySelectorAll('.close-mobile');
     
     new PopUp([...faqBtn], faq, [...closeMobile, ...closeBtn], true);
     new PopUp([...policyBtn], policy, [...closeMobile, ...closeBtn], true);

@@ -35,7 +35,7 @@ const path = {
     },
     src: {
         html: 'src/*.html',
-        js: ['src/scripts/app.js', 'src/hubspot/scripts/hubspot.js'],
+        js: ['src/scripts/app.js', 'src/hubspot/scripts/hubspot.js', 'src/hubspot/scripts/hubspotRigr.js'],
         style: 'src/styles/style.less',
         img: ['src/assets/img/**/*.*','src/hubspot/assets/img/**/*.*'],
         image: 'src/image/**/*.*',
