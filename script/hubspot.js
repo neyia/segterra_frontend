@@ -98,9 +98,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/header */ "./src/hubspot/scripts/modules/header.js");
 /* harmony import */ var _modules_feed__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/feed */ "./src/hubspot/scripts/modules/feed.js");
 /* harmony import */ var _modules_RightPanel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/RightPanel */ "./src/hubspot/scripts/modules/RightPanel.js");
-/* harmony import */ var _modules_rigr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/rigr */ "./src/hubspot/scripts/modules/rigr.js");
 /** Delete ALL imports before adding to HubSpot*/
-
 
 
 
@@ -373,55 +371,6 @@ function mobileMenu() {
 function addActiveClass() {
   var blogLink = document.querySelector("a[href*='//blog.insidetracker.com']");
   if (blogLink) blogLink.classList.add('active');
-}
-
-/***/ }),
-
-/***/ "./src/hubspot/scripts/modules/rigr.js":
-/*!*********************************************!*\
-  !*** ./src/hubspot/scripts/modules/rigr.js ***!
-  \*********************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _PopUp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PopUp */ "./src/hubspot/scripts/modules/PopUp.js");
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
-
-/** Deconste ALL imports before adding to HubSpot*/
-
-window.addEventListener('load', function () {
-  mobileMenu();
-  faq();
-});
-/** Create sidebar for header mobile menu */
-
-function mobileMenu() {
-  var overlay = document.querySelector('#overlay');
-  var showBtn = document.querySelector('#headerIcon');
-  var btnClose = document.querySelector('#closeIcon');
-  new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](showBtn, overlay, btnClose, true);
-}
-
-function faq() {
-  var faq = document.querySelector('.faq-popup');
-  var policy = document.querySelector('.policy-popup');
-  var terms = document.querySelector('.terms-popup');
-  var faqBtn = document.querySelectorAll('.faq');
-  var policyBtn = document.querySelectorAll('.policy');
-  var termsBtn = document.querySelectorAll('.terms');
-  var closeBtn = document.querySelectorAll('.close-btn');
-  var closeMobile = document.querySelectorAll('.close-mobile');
-  new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](_toConsumableArray(faqBtn), faq, [].concat(_toConsumableArray(closeMobile), _toConsumableArray(closeBtn)), true);
-  new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](_toConsumableArray(policyBtn), policy, [].concat(_toConsumableArray(closeMobile), _toConsumableArray(closeBtn)), true);
-  new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](_toConsumableArray(termsBtn), terms, [].concat(_toConsumableArray(closeMobile), _toConsumableArray(closeBtn)), true);
 }
 
 /***/ })
