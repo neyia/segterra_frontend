@@ -2,7 +2,7 @@
 <section class="description">
     <div class="container">
         <div class="description__img">
-            <!--<img src="assets/img/rigr/carton.png" alt="">-->
+            <!--<img src="{{ module.image_field.src }}" alt="{{ module.image_field.alt }}">-->
         </div>
         <div class="description__wrapper">
             <h1 class="title description__title">Short descriptive header</h1>
@@ -13,6 +13,11 @@
                 Cras suscipit accumsan arcu, ut egestas lacus vulputate vel. In lacus quam, finibus sit amet molestie in, vulputate quis
                 arcu. Duis lacus sem, pharetra vel hendrerit eu, finibus et libero. </p>
             <button type="button" class="btn description__btn">INSERT CTA COPY</button>
+            <!--<h1 class="title description__title">{% inline_text field="title" value="{{ module.title }}" %}</h1>-->
+            <!--<p class="text description__text">-->
+                <!--{{ module.description }}</p>-->
+            <!--<p class="text description__text">-->
+                <!--{{ module.description_copy }} </p>-->
         </div>
     </div>
 </section>
@@ -70,5 +75,13 @@
             </label>
             <button type="submit" class="btn sign-up__btn">SUBMIT</button>
         </form>
+        <!--{% form class="sign-up__form"-->
+        <!--form_to_use="{{ module.signup_form.form_id }}"-->
+        <!--response_response_type="{{ module.signup_form.response_type }}"-->
+        <!--response_message="{{ module.signup_form.message }}"-->
+        <!--response_redirect_id="{{ module.signup_form.redirect_id }}"-->
+        <!--response_redirect_url="{{module.signup_form.redirect_url}}"-->
+        <!--gotowebinar_webinar_key="{{ module.signup_form.gotowebinar_webinar_key }}"-->
+        <!--%}-->
     </div>
 </section>

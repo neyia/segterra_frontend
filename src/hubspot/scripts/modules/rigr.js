@@ -1,10 +1,10 @@
 /** Deconste ALL imports before adding to HubSpot*/
 
-import PopUp from './PopUp';
+import PopUp from './PopUp'
 
 window.addEventListener('load', () => {
     mobileMenu();
-    faq()
+    showPopup()
 });
 
 /** Create sidebar for header mobile menu */
@@ -16,7 +16,7 @@ function mobileMenu() {
     new PopUp(showBtn, overlay, btnClose, true);
 }
 
-function faq() {
+function showPopup() {
     const faq = document.querySelector('.faq-popup');
     const policy = document.querySelector('.policy-popup');
     const terms = document.querySelector('.terms-popup');
@@ -30,6 +30,35 @@ function faq() {
     new PopUp([...policyBtn], policy, [...closeMobile, ...closeBtn], true);
     new PopUp([...termsBtn], terms, [...closeMobile, ...closeBtn], true);
 }
+
+
+// for hubspot
+
+//  var IputEffect = function(){
+//      var placeholderPosition, appendInputWhenSelect, actions;
+//      actions = {
+//          activate: function(el) {
+//              el.parentNode.parentNode.classList.add('label-up');
+//          },
+//          deactivate: function(el) {
+//              if (el.value === '') el.parentNode.parentNode.classList.remove('label-up');
+//          }
+//      };
+//
+//      placeholderPosition = function (el) {
+//          if (el.value !== '') actions.activate(el);
+//          el.addEventListener('focus', function(){actions.activate(this)});
+//          el.addEventListener('blur', function(){actions.deactivate(this)});
+//      }
+//
+//      document.querySelectorAll('.input > .hs-input').forEach(function(el){
+//          placeholderPosition(el);
+//      })
+//  }
+//
+// window.addEventListener('load', function () {
+//     IputEffect();
+// });
 
 
 
