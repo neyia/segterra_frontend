@@ -1,6 +1,6 @@
 /** Deconste ALL imports before adding to HubSpot*/
 
-//import PopUp from './PopUp'
+import PopUp from './PopUp'
 
 window.addEventListener('load', () => {
     mobileMenu();
