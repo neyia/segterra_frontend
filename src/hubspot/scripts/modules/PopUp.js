@@ -27,9 +27,15 @@ const PopUp = class {
         this.className = className || 'show';
         this.actionShow = actionShow || 'click';
         this.actionHide = actionHide || 'click';
+        this.popup.addEventListener('click', (e) => {
+            if (e.target.classList.contains('js-popup-link')) {
+                this.popup.classList.remove(this.className);
+            }
+        });
         
         /** Reveal PopUp(add 'show' class), activate Close Button(s) & prevent body scroll*/
         if (!Array.isArray(this.btnShow)) {
+            this.btnShow.classList.add('js-popup-link');
             this.btnShow.addEventListener(this.actionShow, () => {
                 if (this.btnShow === this.btnClose) {
                     this.popup.classList.toggle(this.className);
@@ -43,6 +49,7 @@ const PopUp = class {
             });
         } else {
             this.btnShow.forEach(btn => {
+                btn.classList.add('js-popup-link');
                 btn.addEventListener(this.actionShow, () => {
                     if (this.btnShow === this.btnClose) {
                         this.popup.classList.toggle(this.className);
@@ -98,7 +105,7 @@ const PopUp = class {
         const {btnClose} = this;
         
         if (!Array.isArray(btnClose)) {
-            btnClose.addEventListener(this.actionHide, ({target}) => (target === btnClose) ? this[hidePopUp](target) : null);
+            btnClose.addEventListener(this.actionHide, ({target}) => (target === btnClose) ? this[hidePopUp]() : null);
         } else {
             btnClose.forEach(btn => {
                 btn.addEventListener(this.actionHide, ({target}) => (target === btn) ? this[hidePopUp]() : null);
