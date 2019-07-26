@@ -108,7 +108,7 @@
 .single-post .hubspot-editable {
     font-size:      12px;
     font-weight:    normal;
-    color:          @gray3;
+    color:          @gray5;
     letter-spacing: 0.12px;
     margin:         8px 0 24px;
 }
@@ -182,7 +182,7 @@
 .relation-posts h6 {
     font-size:      12px;
     font-weight:    normal;
-    color:          @gray3;
+    color:          @gray5;
     line-height:    18px;
     letter-spacing: 0.12px;
     margin:         5px 0 0;
@@ -307,7 +307,7 @@ img.hs-cta-img {
 }
 
 a.author-link {
-    color:           @gray3;
+    color:           @gray5;
     font-family:     "Open Sans", Arial, sans-serif;
     font-size:       12px;
     line-height:     1;
@@ -360,51 +360,51 @@ a.author-link {
 
 .post-form {
     margin-top: 38px;
-    
+
     &__half {
         width: 48%;
-        
+
         @media screen and (max-width: (@mid_width)) {
             width: 100%;
         }
-        
+
         @media screen and (max-width: (@tablet_horizontal)) {
             width: 48%;
         }
-        
+
         @media screen and (max-width: (@big_mobile)) {
             width: 100%;
         }
-        
+
         &:first-child {
             margin-right: 4%;
-            
+
             @media screen and (max-width: (@mid_width)) {
                 margin-right:  0;
                 margin-bottom: 22px;
             }
-            
+
             @media screen and (max-width: (@tablet_horizontal)) {
                 margin-right:  4%;
                 margin-bottom: 0;
             }
-            
+
             @media screen and (max-width: (@big_mobile)) {
                 margin-right:  0;
                 margin-bottom: 22px;
             }
         }
     }
-    
+
     &__row {
         display:   flex;
         flex-wrap: wrap;
-        
+
         .form-control {
             max-width:     100%;
             border-radius: 0;
         }
-        
+
         select {
             appearance:          none;
             background-repeat:   no-repeat;
@@ -413,37 +413,37 @@ a.author-link {
             transition:          all 0.1s ease-in-out;
             background-image:    url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAHCAYAAAA8sqwkAAAA10lEQVQoU22PvUoDURSEv8ldQQhaJI2NhSBpxJdIbbX+lCI2NoKdD2FnmUbEJrDqVta+hFgoKSxtIqgIgnsduVdEF5zuzJnvDEdU3gcfUWiNUtf8p9pDGl+BDkXlZ2AeESFusVnULea8KSFUmAC8iLEXCb4FzYFN+NxlvTjN0GWzQ+ycgAR+JWpFeVG7T+N7UC8xBB9kP+o4Z/EThQaUmn4DSWfuMusJaKH9hh951zLbekv+L5CmkWfo+Q5rKUMdPzDVgD19/BxpA8m1xYVvcmBDq0j+2/gFIlBHeskAuj0AAAAASUVORK5CYII=');
             background-color:    transparent;
-            
+
             &::-ms-expand {
                 display: none;
             }
-            
+
             &:focus {
                 background-color: transparent;
             }
         }
-        
+
         input::-webkit-input-placeholder {
             line-height: normal !important;
         }
     }
-    
+
     p {
         font-size:   12px;
         line-height: 16px;
         margin:      0;
     }
-    
+
     .checkbox {
         margin-top: 15px;
         display:    inline-block;
-        
+
         &__label {
             font-size:     12px;
             margin-bottom: 0;
         }
     }
-    
+
     textarea {
         margin-bottom:      30px;
         resize:             none;
@@ -458,32 +458,32 @@ a.author-link {
         outline:            0;
         border:             1px solid #c3c8cd;
         -webkit-appearance: none;
-        
+
         @media screen and (max-width: (@big_mobile)) {
             font-size: 16px;
         }
-        
+
         &:focus {
             border:     1px solid #0af;
             box-shadow: none;
             outline:    0;
         }
-        
+
         &::placeholder {
             color:       @gray6;
             font-family: "Open Sans", Tahoma, Helvetica, Arial, sans-serif;
             font-size:   14px;
         }
     }
-    
+
     button {
         margin: 0 0 200px;
-        
+
         @media screen and (max-width: (@big_mobile)) {
             margin: 0 0 50px;
         }
     }
-    
+
     @media screen and (max-width: (@big_tablet)) {
         margin-top: 28px;
     }

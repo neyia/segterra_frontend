@@ -3,7 +3,7 @@
 .ranger-line {
     display:         flex;
     justify-content: flex-start;
-    
+
     @media screen and (max-width: (@big_mobile)) {
         flex-direction: column;
     }
@@ -28,13 +28,13 @@
     user-select:  none;
     touch-action: manipulation;
     box-sizing:   border-box;
-    
+
     &__information {
         display:         flex;
         align-items:     center;
         justify-content: space-between;
     }
-    
+
     &__label {
         width:          207px;
         display:        block;
@@ -43,23 +43,23 @@
 }
 
 .ranger-track {
-    background-color: @gray5;
+    background-color: @gray6;
     position:         relative;
     cursor:           pointer;
     width:            100%;
     height:           4px;
     margin-left:      32px;
     z-index:          1;
-    
+
     &__wrap {
         width: 175px;
     }
-    
+
     &:hover &__handle::before {
         transform: translate(-50%, -50%);
         opacity:   0.1;
     }
-    
+
     &__distance {
         height:           inherit;
         background-color: @primary;
@@ -68,7 +68,7 @@
         bottom:           0;
         width:            0;
     }
-    
+
     &__handle {
         transition:       all 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53);
         transform:        translateY(50%);
@@ -81,7 +81,7 @@
         width:            15px;
         border-radius:    50%;
         z-index:          1;
-        
+
         &::before {
             transition:       all 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53);
             transform:        translate(-50%, -50%);
@@ -96,7 +96,7 @@
             content:          "";
         }
     }
-    
+
     &__icon {
         left:       0;
         bottom:     -18px;
@@ -113,7 +113,7 @@
 
 .ranger-indicator {
     position: relative;
-    
+
     &__value {
         font-weight:    600;
         font-size:      16px;
@@ -128,7 +128,7 @@
         border:           2px solid @primary;
         background-color: #ffffff;
     }
-    
+
     .ranger-indicator__value {
         color: #c3c8cd;
     }

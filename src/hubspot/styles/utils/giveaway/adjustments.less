@@ -10,10 +10,10 @@ body {
     line-height:             @main_line_height;
     font-size:               @main_font_size;
     font-weight:             @main_font_weight;
-    color:                   @main_fontColor;
+    color:                   @gray1;
     -webkit-font-smoothing:  antialiased;
     -moz-osx-font-smoothing: grayscale;
-    
+
     @media (max-width: (@small_screen_width)) {
         font-size: @info_font_size;
     }
@@ -65,7 +65,7 @@ input::placeholder {
 .container--flex {
     display:         flex;
     justify-content: space-between;
-    
+
     @media only screen  and(max-width: (@tablet_horizontal)) {
         flex-direction:  column;
         justify-content: flex-start;

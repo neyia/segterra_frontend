@@ -1,13 +1,13 @@
-@import "../../utils/giveaway/variables";
+@import "../../../../styles/utils/variables";
 
 .contacts {
-    background: @white_smoke;
+    background: @gray8;
     padding:    calc(@section_padding - 36px) 0 calc(@section_padding_max - 20px);
-    
+
     @media (min-width: (@screen_width)) {
         padding: calc(@section_padding_max - 36px) 0 calc(@section_padding_max - 20px);
     }
-    
+
     @media (max-width: (@small_screen_width)) {
         padding: 40px 0 @section_padding_min;
     }
@@ -18,58 +18,58 @@
     margin:      3.57vw auto 0;
     line-height: 20px;
     font-size:   @info_font_size;
-    
+
     @media (min-width: (@screen_width)) {
         margin-top: 43px;
     }
-    
+
     @media (max-width: (@small_screen_width)) {
         margin-top: 15px;
     }
-    
+
     label {
         font-weight:   600;
         margin-bottom: 5px;
         line-height:   20px;
     }
-    
+
     input {
         appearance:    none;
-        border:        1px solid @link_water;
+        border:        1px solid @gray6;
         background:    #fff;
         width:         100%;
         margin:        8px 0 20px;
         padding:       8px 10px;
         border-radius: 0;
     }
-    
+
     input::placeholder {
-        color: @spindle;
+        color: @gray5;
     }
-    
+
     select {
         appearance:    none;
         cursor:        pointer;
         width:         100%;
         background:    none;
         padding:       8px 10px;
-        border:        1px solid @link_water;
+        border:        1px solid @gray6;
         border-radius: 0;
     }
-    
+
     select::-ms-expand {
         display: none;
     }
-    
+
     button {
         margin-top: 10px;
         padding:    0 25px;
-        
+
         @media (max-width: (@small_screen_width)) {
             margin-top: 0;
         }
     }
-    
+
     .select-wrapper {
         position:   relative;
         margin:     10px 0 30px;

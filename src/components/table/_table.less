@@ -12,57 +12,57 @@
     overflow:  hidden;
     position:  relative;
     width:     570px;
-    
+
     @media screen and (max-width: (@big_tablet)) {
         width: 480px;
     }
-    
+
     @media screen and (max-width: (@big_mobile)) {
         width:          320px;
         padding-bottom: 40px;
         margin:         0;
     }
-    
+
     &__head {
         width:       200px;
         flex-shrink: 0;
-        
+
         @media screen and (max-width: (@big_mobile)) {
             box-shadow: 0 0 16px rgba(0, 0, 0, 0.06);
             width:      170px;
         }
-        
+
         .table__cell {
             text-align: left;
             display:    block;
         }
     }
-    
+
     &__body {
         flex-grow: 1;
         width:     340px;
         position:  relative;
-        
+
         @media screen and (max-width: (@big_tablet)) {
             width: 280px;
         }
-        
+
         @media screen and (max-width: (@big_mobile)) {
             width: 150px;
         }
     }
-    
+
     &__column {
         &:hover {
-            background-color: @blue--light;
+            background-color: @blue_tint3;
         }
-        
-        
+
+
         @media screen and (max-width: (@mobile)) {
             width: 160px;
         }
     }
-    
+
     &__cell {
         border-bottom:   1px solid @gray7;
         text-align:      center;
@@ -73,13 +73,13 @@
         justify-content: center;
         align-items:     center;
         height:          45px;
-        
+
         &:last-child {
             @media screen and (max-width: (@mobile)) {
                 border-bottom: 0;
             }
         }
-        
+
         &--title {
             border-bottom: 2px solid @gray7;
             padding:       15px;
@@ -87,56 +87,56 @@
             font-size:     16px;
             height:        auto;
         }
-        
+
         &--bold {
             font-weight: 700;
         }
-        
+
         &--bigger {
             height: 65px;
         }
-        
+
         &--biggest {
             height: 110px;
-            
+
             @media screen and (max-width: (@mobile)) {
                 height: 120px;
             }
         }
-        
+
         &--sub {
             padding-left: 48px;
         }
-        
+
         &--disabled {
             color: @gray6;
         }
     }
-    
+
     &__dot {
         width:         8px;
         height:        8px;
         border-radius: 50%;
         display:       inline-block;
         margin-left:   5px;
-        
+
         &--yellow {
-            background-color: @yellow;
+            background-color: @average;
         }
-        
+
         &--orange {
-            background-color: @orange;
+            background-color: @overall;
         }
-        
+
         &--brown {
-            background-color: @red;
+            background-color: @danger;
         }
-        
+
         &--green {
-            background-color: @green;
+            background-color: @special;
         }
     }
-    
+
     &__icon {
         width:            16px;
         height:           16px;
@@ -146,12 +146,12 @@
         top:              2px;
         margin-right:     10px;
     }
-    
+
     &__checkbox {
         display:       inline-block;
         margin-bottom: 0;
     }
-    
+
     &-arrow {
         display: none;
         position: absolute;
@@ -159,31 +159,31 @@
         z-index:  5;
         cursor:   pointer;
         outline:  none;
-    
+
         @media screen and (max-width: @max_width) {
             display: block;
         }
-        
+
         &-prev {
             left: 16px;
-            
+
             @media screen and (max-width: @mobile) {
                 top:     22px;
                 z-index: 2;
             }
         }
-        
+
         &-next {
             right:     16px;
             top:       16px;
             transform: rotate(180deg);
-            
+
             @media screen and (max-width: @mobile) {
                 top:     18px;
                 z-index: 2;
             }
         }
-        
+
         .icon {
             color:  @primary;
             width:  10px;
@@ -203,24 +203,24 @@
     background:      #ffffff;
     display:         none;
     box-shadow:      0 3px 5px rgba(0, 0, 0, .06);
-    
+
     @media screen and (max-width: @mobile) {
         display: flex;
     }
-    
+
     &__title {
         font-weight: 700;
         font-size:   16px;
-        
+
         @media screen and (max-width: @mobile) {
             text-align: center;
             width:      30%;
-            
+
             &:first-child {
                 text-align: left;
                 width:      40%;
             }
         }
     }
-    
+
 }

@@ -1,18 +1,20 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
-    <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    <script crossorigin="anonymous"
-            integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
-            src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
-    <script src="https://test.segterra.com/skin/js/typeahead.js" type="application/javascript"></script>
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <title>Segterra Frontend</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet" />
 
-    <title>segterra frontend</title>
-
-    @@include('modules/_head.html')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.min.css" />
+    <link href="style/IT/style.css" rel="stylesheet" />
 </head>
+
 <body>
 
 <div class="wrapper">
@@ -28,6 +30,7 @@
                 </li>
             </ul>
         </article>
+
         <article>
             <h3 class="heading-26">UI Patterns</h3>
             <ul>
@@ -84,16 +87,22 @@
                 </li>
             </ul>
         </article>
+
         <article>
             <h3 class="heading-26">Hubspot templates</h3>
             <ul>
                 <li>
-                    <a class="link-primary" href="./hubspot.html" data-link="giveaway">Giveaway</a>
+                    <a class="link-primary" href="./giveaway.html" data-link="giveaway">Giveaway Hubspot</a>
                 </li>
             </ul>
             <ul>
                 <li>
-                    <a class="link-primary" href="./hubspot-rigr.html" data-link="rigr">Rigr</a>
+                    <a class="link-primary" href="./it-hubspot-posts.html" data-link="giveaway">Posts Hubspot</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a class="link-primary" href="./rigr-hubspot.html" data-link="rigr">Rigr Hubspot</a>
                 </li>
             </ul>
 
@@ -103,87 +112,95 @@
     <div class="container-right items">
 
         <section class="item hide" data-link="about">
-            <h2>Internal SG Component</h2>
+            <h2 class="heading-24">Internal SG Component</h2>
             Be careful
         </section>
 
         <section class="item hide" data-link="card">
-            <h2>Cards Component</h2>
+            <h2 class="heading-24">Cards Component</h2>
             @@include('components/card/_card.html')
         </section>
 
         <section class="item hide" data-link="tooltip">
-            <h2>Tooltip Component</h2>
+            <h2 class="heading-24">Tooltip Component</h2>
             @@include('components/tooltip/_tooltip.html')
         </section>
 
         <section class="item hide" data-link="tab">
-            <h2>Tab Component</h2>
+            <h2 class="heading-24">Tab Component</h2>
             @@include('components/tab/_tab.html')
         </section>
 
         <section class="item hide" data-link="table">
-            <h2>Table Component</h2>
+            <h2 class="heading-24">Table Component</h2>
             @@include('components/table/_table.html')
         </section>
 
         <section class="item hide" data-link="switcher">
-            <h2>Switcher Component</h2>
+            <h2 class="heading-24">Switcher Component</h2>
             @@include('components/switcher/_switcher.html')
         </section>
 
         <section class="item hide" data-link="checkbox">
-            <h2>Checkbox Component</h2>
+            <h2 class="heading-24">Checkbox Component</h2>
             @@include('components/checkbox/_checkbox.html')
         </section>
 
         <section class="item hide" data-link="text">
-            <h2>Text Component</h2>
+            <h2 class="heading-24">Text Component</h2>
             @@include('components/text_field/_text_field.html')
         </section>
 
         <section class="item hide" data-link="radio">
-            <h2>Radio Component</h2>
+            <h2 class="heading-24">Radio Component</h2>
             @@include('components/radio/_radio.html')
         </section>
 
         <section class="item hide" data-link="link">
-            <h2>Links Component</h2>
+            <h2 class="heading-24">Links Component</h2>
             @@include('components/link/_link.html')
         </section>
 
         <section class="item hide" data-link="modal">
-            <h2>Modals Component</h2>
+            <h2 class="heading-24">Modals Component</h2>
             @@include('components/modal/_modal.html')
         </section>
 
         <section class="item hide" data-link="button">
-            <h2>Button Component</h2>
+            <h2 class="heading-24">Button Component</h2>
             @@include('components/button/_button.html')
         </section>
 
         <section class="item hide" data-link="calendar">
-            <h2>Calendar Component</h2>
+            <h2 class="heading-24">Calendar Component</h2>
             @@include('components/calendar/_calendar.html')
         </section>
 
         <section class="item hide" data-link="popup">
-            <h2>Popup Component</h2>
+            <h2 class="heading-24">Popup Component</h2>
             @@include('components/popup/_popup.html')
         </section>
-    
+
         <section class="item hide" data-link="pagination">
-            <h2>Pagination Component</h2>
+            <h2 class="heading-24">Pagination Component</h2>
             @@include('components/pagination/_pagination.html')
         </section>
-        
+
         <section class="item" data-link="slider">
-            <h2>Sliders Component</h2>
+            <h2 class="heading-24">Sliders Component</h2>
             @@include('components/slider/_slider.html')
         </section>
     </div>
 
 </div>
-@@include('modules/_scripts.html')
+
+    <script crossorigin="anonymous"
+            integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+            src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+
+    <script src="https://test.segterra.com/skin/js/typeahead.js" type="application/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/svgxuse/1.2.6/svgxuse.min.js"></script>
+
+    @@include('modules/_scripts.html')
 </body>
 </html>

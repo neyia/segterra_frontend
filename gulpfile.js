@@ -36,7 +36,7 @@ const path = {
     src: {
         html: 'src/*.html',
         js: ['src/scripts/app.js', 'src/hubspot/scripts/hubspot.js', 'src/hubspot/scripts/hubspotRigr.js'],
-        style: 'src/styles/style.less',
+        style: 'src/styles/**/*.less',
         img: ['src/assets/img/**/*.*','src/hubspot/assets/img/**/*.*'],
         image: 'src/image/**/*.*',
         svg: ['src/assets/svg/*.*', 'src/hubspot/assets/svg/*.*'],
@@ -47,7 +47,7 @@ const path = {
     watch: {
         html: 'src/**/*.html',
         js: ['src/**/*.js', 'src/components/**/*.js'],
-        style: ['src/styles/**/*.*', 'src/hubspot/styles/**/*.*'],
+        style: 'src/styles/**/*.less',
         img: 'src/assets/img/**/*.*',
         image: 'src/image/**/*.*',
         svg: 'src/assets/svg/*.*',

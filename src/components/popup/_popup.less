@@ -13,7 +13,7 @@ iframe {
 .link-wrap {
     display:   flex;
     flex-wrap: wrap;
-    
+
     a {
         width:  95px;
         margin: 0 40px 20px 0;
@@ -76,13 +76,13 @@ iframe {
     box-shadow:       0 0 15px rgba(0, 0, 0, 0.06);
     padding:          32px 40px 40px 40px;
     margin:           auto;
-    
+
     @media only screen and (max-width: @big_mobile) {
         top:     10%;
         width:   92%;
         padding: 32px 30px 40px 30px;
     }
-    
+
     .close-block {
         position:      absolute;
         top:           4px;
@@ -95,11 +95,11 @@ iframe {
         z-index:       2;
         transition:    background 0.15s ease-in-out;
         border-radius: 50%;
-        
+
         &:hover {
-            background-color: @gray4;
+            background-color: @gray8;
         }
-        
+
         &:before, &:after {
             position:         absolute;
             left:             48%;
@@ -109,20 +109,20 @@ iframe {
             width:            2px;
             background-color: @primary;
         }
-        
+
         &:before {
             transform: rotate(45deg);
         }
-        
+
         &:after {
             transform: rotate(-45deg);
         }
-        
+
         &:active {
             background: @gray6;
             color:      @primary--active;
         }
-        
+
         &__link {
             width:    100%;
             height:   100%;
@@ -131,7 +131,7 @@ iframe {
             z-index:  10;
         }
     }
-    
+
     &__text {
         color:          @gray1;
         font-family:    "Open Sans", "Courier New", Courier, monospace;
@@ -139,14 +139,14 @@ iframe {
         font-weight:    400;
         letter-spacing: 0.14px;
     }
-    
+
     .btn-secondary,
     .btn-primary {
-        
+
         &:last-child {
             margin-right: 0;
         }
-        
+
         @media screen and (max-width: @big_mobile) {
             max-width:  100%;
             width:      100%;
@@ -154,7 +154,7 @@ iframe {
             text-align: center;
         }
     }
-    
+
     .btn-block--right {
         @media screen and (max-width: @big_mobile) {
             max-width:       none;
@@ -185,12 +185,12 @@ iframe {
     box-shadow:       0 0 15px rgba(0, 0, 0, 0.06);
     padding:          32px 40px 40px 40px;
     margin:           auto;
-    
+
     @media only screen and (max-width: @big_mobile) {
         width:   92%;
         padding: 32px 30px 40px 30px;
     }
-    
+
     @media only screen and (max-width: @mobile) {
         border:        1px solid @gray7;
         top:           0;
@@ -226,15 +226,15 @@ iframe {
     justify-content: center;
     max-width:       inherit;
     margin:          24px auto 0;
-    
+
     .btn {
         margin: 0 10px;
-        
+
         @media only screen and (max-width: @tablet) {
             margin: 0 8px;
         }
     }
-    
+
     .link {
         width:      100%;
         flex-basis: 100%;
@@ -245,7 +245,7 @@ iframe {
     justify-content: flex-end;
     max-width:       100%;
     margin-top:      25px;
-    
+
     @media only screen and (max-width: @tablet) {
         justify-content: center;
     }
@@ -280,7 +280,7 @@ iframe {
     max-width:        902px;
     overflow:         auto;
     padding:          0;
-    
+
     @media only screen and (max-width: 1170px) {
         max-width: 90%;
     }
@@ -295,9 +295,9 @@ iframe {
         width:         100%;
         height:        100%;
         overflow:      auto;
-        
+
     }
-    
+
     .close-block {
         position:      absolute;
         top:           8px;
@@ -310,20 +310,20 @@ iframe {
         z-index:       2;
         transition:    background 0.15s ease-in-out;
         border-radius: 50%;
-        
+
         @media only screen and (max-width: @big_mobile) {
             background-color: rgba(0, 0, 0, 0.6);
             border-radius:    50%;
         }
-        
+
         &:hover {
-            background-color: @gray4;
-            
+            background-color: @gray8;
+
             @media screen and (max-width: @tablet) {
                 background-color: rgba(0, 0, 0, 0.6);
             }
         }
-        
+
         &:before, &:after {
             position:         absolute;
             left:             48%;
@@ -332,25 +332,25 @@ iframe {
             height:           12px;
             width:            2px;
             background-color: @primary;
-            
+
             @media screen and (max-width: @big_mobile) {
                 background-color: #ffffff;
             }
         }
-        
+
         &:before {
             transform: rotate(45deg);
         }
-        
+
         &:after {
             transform: rotate(-45deg);
         }
-        
+
         &:active {
             // background: @gray6;
             //color:      @primary--active;
         }
-        
+
         &__link {
             width:    100%;
             height:   100%;
@@ -359,7 +359,7 @@ iframe {
             z-index:  10;
         }
     }
-    
+
     .popup-left__side {
         display:   flex;
         flex:      0 0 auto;
@@ -368,7 +368,7 @@ iframe {
         height:    auto;
         position:  relative;
         overflow:  hidden;
-        
+
         @media only screen and (max-width: @tablet) {
             min-width: 100%;
             height:    200px;
@@ -378,7 +378,7 @@ iframe {
             height:  185px;
         }
     }
-    
+
     .popup-left__image {
         background-repeat:   no-repeat;
         background-position: center;
@@ -386,31 +386,31 @@ iframe {
         height:              100%;
         width:               100%;
     }
-    
+
     .recipe__img {
         background-size:     cover;
         background-position: 50%;
         background-repeat:   no-repeat;
         border-radius:       6px 0 0 6px;
         background-color:    @gray6;
-        
+
         @media only screen and (max-width: 798px) {
             border-radius: 0;
         }
     }
-    
+
     .recipe__info {
         flex-basis:    100%;
         border-radius: 6px;
         background:    #ffffff;
         overflow:      auto;
         padding:       44px 48px 35px 48px;
-        
+
         @media only screen and (max-width: @big_mobile) {
             padding:      24px 16px 35px 16px;
             border-right: 0;
         }
-        
+
         &-title {
             color:          @gray1;
             font-size:      24px;
@@ -420,7 +420,7 @@ iframe {
             margin:         0;
         }
     }
-    
+
     .recipe__info-description {
         color:          @gray1;
         font-size:      12px;
@@ -430,30 +430,30 @@ iframe {
         margin-top:     20px;
         margin-bottom:  20px;
     }
-    
+
     .recipe-recommendation {
         margin-bottom: 20px;
-        
+
         &--full-width {
             min-height: 103px;
             max-height: 107px;
             box-sizing: border-box;
-            background: @gray4;
+            background: @gray8;
             padding:    10px 25px 5px 55px;
             margin:     25px -48px 26px -55px;
-            
+
             @media only screen and (max-width: @big_mobile) {
                 padding: 10px 25px 5px 16px;
                 margin:  25px -16px 26px -16px;
             }
-            
+
             .recipe-list {
                 list-style-type: none;
                 padding-left:    0;
             }
         }
     }
-    
+
     .recipe-list {
         display:         flex;
         flex-flow:       column wrap;
@@ -462,7 +462,7 @@ iframe {
         padding-left:    20px;
         margin-top:      4px;
         margin-bottom:   4px;
-        
+
         &__title {
             color:       @gray1;
             font-size:   14px;
@@ -470,7 +470,7 @@ iframe {
             line-height: 1.4;
             margin:      0;
         }
-        
+
         .recipe-list__item {
             color:       @gray1;
             font-size:   12px;
@@ -478,14 +478,14 @@ iframe {
             line-height: 1.8;
             width:       auto;
             max-width:   48%;
-            
+
         }
-        
+
         .recipe-list__item:nth-child(odd) {
             margin-right: 16px;
         }
     }
-    
+
     .recipe-wrapper__text {
         p {
             color:          @gray1;
@@ -520,13 +520,13 @@ iframe {
     overflow:         auto;
     padding-top:      70px;
     z-index:          11;
-    
+
     @media only screen and (max-width: @big_mobile) {
         padding: 45px 16px 100px;
     }
-    
+
     .use-test-overlay__icon {
-        background-color:    @gray3;
+        background-color:    @gray5;
         /*change the images*/
         background-image:    url('/assets/img/giveaway.jpg');
         background-repeat:   no-repeat;
@@ -537,7 +537,7 @@ iframe {
         width:               370px;
         height:              200px;
         margin:              0 auto 24px;
-        
+
         @media only screen and (max-width: @big_mobile) {
             /*change the images*/
             background-image: url('/assets/img/giveaway.jpg');
@@ -547,7 +547,7 @@ iframe {
             width:            280px;
         }
     }
-    
+
     .popup-overlay__title {
         color:          @gray1;
         font-family:    "Open Sans", "Courier New", Courier, monospace;
@@ -556,14 +556,14 @@ iframe {
         line-height:    1.8;
         letter-spacing: 0.6px;
         margin:         0 auto 18px;
-        
+
         @media only screen and (max-width: @big_mobile) {
             font-size:     24px;
             line-height:   1.4;
             margin-bottom: 18px;
         }
     }
-    
+
     .popup-overlay__text {
         color:          @gray1;
         font-family:    "Open Sans", "Courier New", Courier, monospace;
@@ -574,12 +574,12 @@ iframe {
         max-width:      860px;
         text-align:     center;
         margin:         0 auto 0;
-        
+
         @media only screen and (max-width: @big_mobile) {
             font-size: 14px;
         }
     }
-    
+
     .close-block {
         position:    absolute;
         top:         10px;
@@ -590,24 +590,24 @@ iframe {
         width:       32px;
         z-index:     1;
         padding:     0;
-        
+
         @media only screen and (max-width: @big_mobile) {
             top:   6px;
             right: 6px;
         }
         //
         &:hover {
-            background-color: @gray4;
+            background-color: @gray8;
             border-radius:    50%;
             color:            @primary;
         }
-        
+
         //    @media screen and (max-width: @big_mobile) {
-        //        background-color: @gray4;
+        //        background-color: @gray8;
         //    }
         //}
         //
-        
+
         &:before, &:after {
             position:         absolute;
             left:             48%;
@@ -620,20 +620,20 @@ iframe {
                 //background-color: #ffffff;
             }
         }
-        
+
         &:before {
             transform: rotate(45deg);
         }
-        
+
         &:after {
             transform: rotate(-45deg);
         }
-        
+
         &:active {
             background: @gray6;
             color:      @primary--active;
         }
-        
+
         &__link {
             width:    100%;
             height:   100%;
@@ -642,7 +642,7 @@ iframe {
             z-index:  10;
         }
     }
-    
+
     .btn-secondary, .btn-primary {
         @media screen and (max-width: @big_mobile) {
             max-width:   100%;
@@ -652,7 +652,7 @@ iframe {
             white-space: nowrap;
         }
     }
-    
+
     .btn-block--centered {
         @media screen and (max-width: @big_mobile) {
             max-width:       none;

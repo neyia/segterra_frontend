@@ -3,14 +3,14 @@
 .tab {
     text-align: center;
     width:      100%;
-    
+
     &-menu {
         width:           100%;
-        border-bottom:   1px solid @gray4;
+        border-bottom:   1px solid @gray8;
         display:         flex;
         justify-content: center;
         margin:          35px 0 5px;
-        
+
         &__item {
             padding:         14px 20px;
             text-transform:  uppercase;
@@ -20,14 +20,14 @@
             font-size:       14px;
             font-weight:     600;
             position:        relative;
-            
+
             @media screen and (max-width: (@mobile)) {
                 padding: 14px 10px;
             }
-            
+
             &.active {
                 color: @primary;
-                
+
                 &::after {
                     content:          '';
                     background-color: @primary;
@@ -38,12 +38,12 @@
                     left:             0;
                 }
             }
-            
+
             &.disabled {
                 opacity:        0.3;
                 pointer-events: none;
             }
-            
+
             &:hover {
                 &::after {
                     content:          '';
@@ -57,14 +57,14 @@
             }
         }
     }
-    
+
     &-content {
         margin:     35px 0;
         text-align: center;
-        
+
         &__item {
             display: none;
-            
+
             &.active {
                 display: block;
             }

@@ -6,7 +6,7 @@
         align-items: center;
         margin-top:  60px;
     }
-    
+
     &__item {
         width:           36px;
         height:          36px;
@@ -29,29 +29,29 @@
             margin: 0 2px;
         }
     }
-    
+
     &__number {
         &--active {
             color:            #ffffff;
             background-color: @primary;
         }
-        
+
         &:hover:not(.pagination__number--active) {
-            background-color: @blue1;
+            background-color: @blue_tint2;
         }
     }
-    
+
     &__ellipsis {
         color: @gray1;
     }
-    
+
     &__prev, &__next {
         position: relative;
-        
+
         &:hover {
-            background-color: @blue1;
+            background-color: @blue_tint2;
         }
-        
+
         svg {
             fill:         none;
             stroke:       @primary;
@@ -60,32 +60,32 @@
             height:       15px;
         }
     }
-    
+
     &__next {
         svg {
             transform: rotate(180deg);
         }
     }
-    
+
 }
 
 .pagination-circle {
-    
+
     &__list {
         display:     flex;
         align-items: center;
         margin-top:  30px;
     }
-    
+
     &__link {
         width:            8px;
         height:           8px;
         margin:           0 5px;
-        background-color: @gray5;
+        background-color: @gray6;
         cursor:           pointer;
         user-select:      none;
         border-radius:    50%;
-        
+
         &.active {
             background-color: @primary;
         }

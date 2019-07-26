@@ -23,7 +23,7 @@ body, html {
     box-sizing: border-box;
 }
 
-ul {
+ul, p {
     margin:  0;
     padding: 0;
 }
@@ -32,9 +32,6 @@ li {
     list-style-type: none;
 }
 
-p {
-    margin: 0;
-}
 
 //SVG icons
 
@@ -52,40 +49,6 @@ p {
     overflow:   hidden;
 }
 
-// container
-
-.container {
-    position:  relative;
-    min-width: 310px;
-    max-width: @max_width;
-    margin:    0 auto;
-    
-    @media only screen and(max-width: (@desktop)) {
-        padding: 0 16px;
-    }
-}
-
-.container-content {
-    &:extend(.container);
-    display:         flex;
-    justify-content: space-between;
-    
-    @media only screen and(max-width: (@tablet_horizontal)) {
-        flex-direction:  column;
-        justify-content: flex-start;
-    }
-}
-
-.container-content {
-    &:extend(.container);
-    display:         flex;
-    justify-content: space-between;
-    
-    @media only screen and(max-width: (@tablet_horizontal)) {
-        flex-direction:  column;
-        justify-content: flex-start;
-    }
-}
 
 //*********************** specially for hubspot
 .footer-new ul {
@@ -102,60 +65,4 @@ p {
 
 .link-secondary-light + p {
     margin: 0;
-}
-
-//*********************** specially for hubspot ENDED *****************
-
-// texts
-
-.text-20 {
-    color:          @gray1;
-    letter-spacing: 0.2px;
-    font-size:      20px;
-    line-height:    1.5;
-    font-weight:    400;
-    
-    @media only screen  and(max-width: (@tablet)) {
-        font-size: 16px;
-    }
-}
-
-.text-16 {
-    color:          @gray1;
-    letter-spacing: 0.2px;
-    font-size:      16px;
-    line-height:    1.5;
-    font-weight:    400;
-    
-    @media only screen and(max-width: (@tablet)) {
-        font-size: 14px;
-    }
-}
-
-.text-14 {
-    color:          @gray1;
-    letter-spacing: 0.2px;
-    font-size:      14px;
-    line-height:    1.5;
-    font-weight:    400;
-}
-
-.text-12 {
-    color:          @gray1;
-    letter-spacing: 0.2px;
-    font-size:      12px;
-    line-height:    1.5;
-    font-weight:    400;
-    
-    &--secondary {
-        color: @gray5;
-    }
-}
-
-.text--white {
-    color: #ffffff;
-}
-
-.text--semibold {
-    font-weight: 600;
 }

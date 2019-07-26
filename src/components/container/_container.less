@@ -12,22 +12,24 @@ body, html {
     min-height: 450px;
     display:    flex;
     height:     auto;
-    
+
     @media only screen  and(max-width: (@max_width)) {
         overflow: scroll;
     }
 }
 
 .fixpanel {
-    border-right: 1px solid @gray2;
+    border-right: 1px solid @gray4;
     width:        @width_panel;
     position:     relative;
     padding:      30px;
-    
+
     li {
         padding: 5px 0;
     }
 }
+//for now - for index only!
+
 
 .container-right {
     width:       -webkit-calc(~'100% - 323px');
@@ -39,19 +41,56 @@ body, html {
     overflow-y:   auto;
 }
 
-//test from segplan
 .container-770 {
-    min-width:  @width_panel;
-    box-sizing: border-box;
-    margin:     0 auto;
-    max-width:  770px;
-    width:      100%;
-    
+    min-width: @min_width;
+    max-width: 770px;
+    margin:    0 auto;
+    width:     100%;
+
     @media only screen  and(max-width: (@desktop)) {
         padding: 0 16px;
     }
 }
 
+
 .container--center {
     text-align: center;
 }
+
+//todo Pasha think about it
+
+// container
+
+.container {
+    position:  relative;
+    min-width: 310px;
+    max-width: @max_width;
+    margin:    0 auto;
+
+    @media only screen and(max-width: (@desktop)) {
+        padding: 0 16px;
+    }
+}
+
+.container-content {
+    &:extend(.container);
+    display:         flex;
+    justify-content: space-between;
+
+    @media only screen and(max-width: (@tablet_horizontal)) {
+        flex-direction:  column;
+        justify-content: flex-start;
+    }
+}
+
+.container-content {
+    &:extend(.container);
+    display:         flex;
+    justify-content: space-between;
+
+    @media only screen and(max-width: (@tablet_horizontal)) {
+        flex-direction:  column;
+        justify-content: flex-start;
+    }
+}
+

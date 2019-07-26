@@ -14,29 +14,29 @@
     cursor:           pointer;
     height:           16px;
     width:            44px;
-    
+
     &-label {
         padding: 0 0 0 12px;
         width:   33px;
         font-weight: 600;
     }
-    
+
     &-flex {
         display:         inline-flex;
         align-items:     center;
         justify-content: space-between;
         margin:          0 60px 10px 0;
     }
-    
+
     &__input {
         cursor:  pointer;
         height:  100%;
         width:   100%;
         opacity: 0;
     }
-    
+
     &__icon {
-        background-color: @gray3;
+        background-color: @gray5;
         border-radius:    50%;
         position:         absolute;
         width:            24px;
@@ -45,12 +45,12 @@
         right:            auto;
         top:              -4px;
         transition:       left 0.3s ease-in-out;
-        
+
         &--light {
             background-color: @gray6;
         }
     }
-    
+
     &__input:checked + .tumbler__icon {
         background-color: @primary;
         left:             auto;
@@ -58,19 +58,19 @@
         transition:       right 0.3s ease-in-out;
         border:           none;
     }
-    
+
     &--light {
-        background-color: @gray4;
+        background-color: @gray8;
     }
-    
+
     &--disabled {
         opacity: 0.5;
-        
+
         .tumbler__icon {
             border:           1px solid @gray6;
             background-color: #ffffff;
         }
-        
+
         + .tumbler-label {
             opacity: 0.3;
         }
@@ -85,17 +85,17 @@
     align-items:   center;
     text-align:    center;
     overflow:      hidden;
-    
+
     @media screen and (max-width: (@middle_mobile)) {
         width: 288px;
     }
-    
+
     &-flex {
         display:         flex;
         justify-content: center;
         align-items:     center;
     }
-    
+
     &__item {
         font-size:        14px;
         font-weight:      600;
@@ -106,13 +106,13 @@
         height:           35px;
         line-height:      35px;
         cursor:           pointer;
-        
+
         &.active {
             background-color: @primary;
             color:            #ffffff;
         }
     }
-    
+
     &__input {
         display: none;
     }
@@ -120,42 +120,42 @@
 
 .switcher {
     margin: 0 8px 16px;
-    
+
     &-wrap {
         display:     flex;
         align-items: center;
         flex-wrap:   wrap;
         position:    relative;
         margin:      0 -8px;
-        
+
         @media screen and (max-width: (@max_width)) {
             margin: 0;
         }
-        
+
         &--short {
             width: calc(~"100% / 4");
-            
+
             @media screen and (max-width: 820px) {
                 width: calc(~"100% / 3 ");
             }
-            
+
             @media screen and (max-width: 420px) {
                 width: 100%;
             }
-            
+
             .switcher__name {
                 min-width: 130px;
-    
+
                 @media screen and (max-width: 820px) {
                     min-width: 100px;
                 }
-    
+
             }
-            
+
             .switcher{
                 margin-left: 8px;
                 margin-right: auto;
-    
+
                 @media screen and (max-width: 820px) {
                     margin-left: 8px;
                     margin-right:8px;
@@ -163,47 +163,47 @@
                 @media screen and (max-width: 420px) {
                     width: 44%;
                 }
-                
+
             }
         }
     }
-    
+
     &-four{
         .switcher__name {
             min-width: auto;
-            
+
             @media screen and (max-width: 420px) {
                 min-width: calc(~"100% / 3 - 16px");
             }
-            
+
         }
     }
     &-grid {
         .switcher {
             width: calc(~"100% / 4 - 16px");
-            
+
             @media screen and (max-width: (@big_tablet)) {
                 width: calc(~"100% / 3 - 16px");
             }
-            
+
             @media screen and (max-width: (@big_mobile)) {
                 width: calc(~"100% / 2 - 16px");
             }
-            
+
             @media screen and (max-width: (@middle_mobile)) {
                 width: calc(~"100% - 16px");
             }
         }
     }
-    
+
     &__input {
         display: none;
     }
-    
+
     &__name {
         display:       block;
-        border:        1px solid @gray5;
-        color:         @gray3;
+        border:        1px solid @gray6;
+        color:         @gray5;
         font-size:     14px;
         font-weight:   600;
         line-height:   1.4;
@@ -213,26 +213,26 @@
         padding:       10px;
         cursor:        pointer;
         min-width:     100px;
-        
+
         &:hover {
             border: 1px solid @primary;
             color:  @primary;
         }
-        
+
         &--long {
             min-width: 160px;
         }
-        
+
         &--disabled {
             opacity: 0.3;
-            
+
             &:hover {
-                color:  @gray3;
-                border: 1px solid @gray5;
+                color:  @gray5;
+                border: 1px solid @gray6;
             }
         }
     }
-    
+
     &__input:checked + .switcher__name {
         border: 1px solid @primary;
         color:  @primary;

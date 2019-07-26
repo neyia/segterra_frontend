@@ -8,36 +8,36 @@
     right:       0;
     z-index:     9;
     font-weight: 600;
-    
+
     &--padded {
-        padding-top: @header-height;
-        
+        padding-top: @col_top_height;
+
         @media screen and (max-width: (@mid_width)) {
-            padding-top: @header-height--mobile;
+            padding-top: @col_top_height_mobile;
         }
     }
-    
+
     &__logo-wrapper {
         display: inline-block;
         width:   12.21rem;
-        
+
         @media only screen  and(max-width: (@tablet_horizontal)) {
             width:  14rem;
             margin: 0;
         }
     }
-    
+
     .logo-inline {
         display:        inline-block;
         vertical-align: text-bottom;
         width:          100%;
-        
+
         &--primary {
             background-image:    url('../assets/img/blog2019logo.svg');
             /*  Change to this link in Hubspot!!!
                     background-image:    url({{ module_asset_url("logo.svg") }});
                 */
-            height:              @header-height;
+            height:              @col_top_height;
             background-position: center 37%;
             background-repeat:   no-repeat;
             position:            relative;
@@ -45,33 +45,33 @@
             display:             block;
             z-index:             1;
             top:                 0;
-            
+
             @media only screen  and(max-width: (@max_width - @infelicity*2)) {
                 background-position: center 39%;
             }
-            
+
             @media only screen  and(max-width: (@tablet_horizontal)) {
-                height: @header-height--mobile;
+                height: @col_top_height_mobile;
             }
         }
     }
-    
+
     &__content {
         display:     flex;
         align-items: center;
-        
+
         @media screen and (max-width: (@mid_width)) {
-            height:          @header-height--mobile;
+            height:          @col_top_height_mobile;
             justify-content: center;
         }
-        
+
         .sandwich__line {
             height:     2px;
             width:      18px;
             background: #ffffff;
             display:    block;
             position:   relative;
-            
+
             &::before, &::after {
                 content:    '';
                 height:     2px;
@@ -81,11 +81,11 @@
                 position:   absolute;
                 top:        -6px;
             }
-            
+
             &::after {
                 top: 6px;
             }
-            
+
             &-wrapper {
                 display:         flex;
                 justify-content: center;
@@ -101,11 +101,11 @@
                 background:      none;
             }
         }
-        
+
         .overlay {
             display:   flex;
             flex-grow: 1;
-            
+
             @media screen and (max-width: (@tablet_horizontal)) {
                 position: fixed;
                 left:     0;
@@ -116,27 +116,27 @@
                 display:  none;
                 z-index:  10;
             }
-            
+
             .sidebar {
                 display:   flex;
                 flex-grow: 1;
-                
+
                 @media screen and (max-width: (@tablet_horizontal)) {
                     height:         100%;
                     overflow-y:     auto;
-                    background:     @gray9;
+                    background:     @gray2;
                     flex-direction: column;
                     transform:      translateX(-100%);
                     width:          360px;
                     padding-bottom: 15px;
                     position:       relative;
                 }
-                
+
                 @media screen and (max-width: (@mobile)) {
                     width: 80%;
                 }
             }
-            
+
             .main-nav {
                 &__list {
                     display:     flex;
@@ -145,32 +145,32 @@
                     transition:  .2s ease-out;
                     flex-shrink: 0;
                     padding:     0 !important;
-                    
+
                     @media screen and (max-width: (@mid_width)) {
                         margin-left: 2%;
                     }
-                    
+
                     @media screen and (max-width: (@tablet_horizontal)) {
                         margin-left:    0;
                         flex-direction: column;
                         flex-grow:      0;
                     }
-                    
+
                     a.active {
-                        background:    @gray8;
+                        background:    @gray3;
                         border-bottom: 4px solid @primary;
-                        
+
                         @media screen and (max-width: (@tablet_horizontal)) {
                             border-bottom: 0;
                             border-left:   4px solid @primary;
-                            background:    @gray8;
+                            background:    @gray3;
                         }
                     }
-                    
+
                     /*******    Special selector added for hubspot, we don't have classes on    ***/
                     /*******    Copy .main-nav__list to 'ul' tag & .main-nav__link to 'a' tag   ***/
                     /*******    Do not forge to delete margins&paddings in .main-nav__list      ***/
-                    
+
                     ul {
                         display:     flex;
                         flex-grow:   1;
@@ -178,21 +178,21 @@
                         transition:  .2s ease-out;
                         flex-shrink: 0;
                         padding:     0 !important;
-                        
+
                         @media screen and (max-width: (@mid_width)) {
                             //margin-left: 2%;
                         }
-                        
+
                         @media screen and (max-width: (@tablet_horizontal)) {
                             //margin-left:    0;
                             flex-direction: column;
                             flex-grow:      0;
                         }
-                        
+
                         a {
                             display:         flex;
                             align-items:     center;
-                            height:          @header-height;
+                            height:          @col_top_height;
                             color:           #ffffff;
                             border-bottom:   4px solid transparent;
                             border-top:      4px solid transparent;
@@ -202,15 +202,15 @@
                             font-size:       1.12rem;
                             letter-spacing:  .028rem;
                             transition:      all 0.1s ease-out;
-                            
+
                             @media screen and (max-width: (@desktop)) {
                                 padding: 0 .78rem;
                             }
-                            
+
                             @media screen and (max-width: (@mid_width)) {
                                 height: 60px;
                             }
-                            
+
                             @media screen and (max-width: (@tablet_horizontal)) {
                                 padding:     0 16px 0 12px;
                                 height:      auto;
@@ -220,48 +220,48 @@
                                 font-size:   14px;
                                 max-width:   100%;
                             }
-                            
+
                             &:hover {
-                                background: @gray9;
-                                
+                                background: @gray2;
+
                                 @media screen and (max-width: (@tablet_horizontal)) {
                                     border-bottom: 0;
-                                    background:    @gray8;
+                                    background:    @gray3;
                                 }
                             }
-                            
+
                             &:active, &:focus {
-                                background:    @gray8;
+                                background:    @gray3;
                                 border-bottom: 4px solid @primary;
-                                
+
                                 @media screen and (max-width: (@tablet_horizontal)) {
                                     border-bottom: 0;
                                     border-left:   4px solid @primary;
-                                    background:    @gray8;
+                                    background:    @gray3;
                                 }
                             }
                         }
-                        
+
                         a.active {
-                            background:    @gray8;
+                            background:    @gray3;
                             border-bottom: 4px solid @primary;
-                            
+
                             @media screen and (max-width: (@tablet_horizontal)) {
                                 border-bottom: 0;
                                 border-left:   4px solid @primary;
-                                background:    @gray8;
+                                background:    @gray3;
                             }
                         }
                     }
-                    
+
                     /*******    END      ***/
-                    
+
                 }
-                
+
                 &__link {
                     display:         flex;
                     align-items:     center;
-                    height:          @header-height;
+                    height:          @col_top_height;
                     color:           #ffffff;
                     border-bottom:   4px solid transparent;
                     border-top:      4px solid transparent;
@@ -271,15 +271,15 @@
                     font-size:       1.12rem;
                     letter-spacing:  .028rem;
                     transition:      all 0.1s ease-out;
-                    
+
                     @media screen and (max-width: (@desktop)) {
                         padding: 0 .78rem;
                     }
-                    
+
                     @media screen and (max-width: (@mid_width)) {
                         height: 60px;
                     }
-                    
+
                     @media screen and (max-width: (@tablet_horizontal)) {
                         padding:     0 16px 0 12px;
                         height:      auto;
@@ -289,60 +289,60 @@
                         font-size:   14px;
                         max-width:   100%;
                     }
-                    
+
                     &:hover {
-                        background: @gray9;
-                        
+                        background: @gray2;
+
                         @media screen and (max-width: (@tablet_horizontal)) {
                             border-bottom: 0;
-                            background:    @gray8;
+                            background:    @gray3;
                         }
                     }
-                    
+
                     &:active, &:focus {
-                        background:    @gray8;
+                        background:    @gray3;
                         border-bottom: 4px solid @primary;
-                        
+
                         @media screen and (max-width: (@tablet_horizontal)) {
                             border-bottom: 0;
                             border-left:   4px solid @primary;
-                            background:    @gray8;
+                            background:    @gray3;
                         }
                     }
                 }
             }
-            
+
             .auth-panel {
                 display:     flex;
                 align-items: center;
-                
+
                 @media screen and (max-width: (@tablet_horizontal)) {
                     margin:      16px; // Padding not working on mobile ios chrome
                     order:       -1;
                     flex-shrink: 0;
                 }
-                
+
                 .btn-special {
                     margin-left: 0;
-                    
+
                     @media screen and (max-width: (@tablet_horizontal)) {
                         width:      50%;
                         text-align: center;
                     }
                 }
-                
+
                 .link-white {
                     letter-spacing: 0.28px;
                     margin-left:    6px;
-                    
+
                     @media screen and (max-width: (@tablet_horizontal)) {
                         display: none;
                     }
                 }
-                
+
                 .btn-secondary--dark {
                     display: none;
-                    
+
                     @media screen and (max-width: (@tablet_horizontal)) {
                         display:      block;
                         width:        50%;
@@ -350,16 +350,16 @@
                     }
                 }
             }
-            
+
             .slider-contacts {
                 margin:      11px 0 0 0 !important;
                 padding:     15px 19px 2px !important;
-                border-top:  1px solid @gray8;
-                
+                border-top:  1px solid @gray3;
+
                 &__item {
                     list-style: none;
                 }
-                
+
                 .link-secondary-light {
                     line-height: 36px;
                     font-size:   12px;
@@ -370,14 +370,14 @@
                     }
                 }
             }
-            
+
             &.show {
                 display: block;
-                
+
                 @media screen and (max-width: (@tablet_horizontal)) {
                     animation: fadeIn .2s ease-in forwards;
                 }
-                
+
                 .sidebar {
                     animation: toRight .2s ease-in forwards;
                 }

@@ -6,12 +6,12 @@
 
 .radio {
     margin-bottom: 20px;
-    
+
     &__input {
         position: absolute;
         left:     -9999px;
     }
-    
+
     &__label {
         margin-bottom:  10px;
         position:       relative;
@@ -23,7 +23,7 @@
         font-family:    "Open Sans", sans-serif;
         font-size:      14px;
         font-weight:    400;
-        
+
         &:before {
             display:          inline-block;
             width:            18px;
@@ -41,7 +41,7 @@
             vertical-align:   text-bottom;
         }
     }
-    
+
     &__input:checked + &__label:after {
         position:         absolute;
         background-color: @primary;
@@ -54,7 +54,7 @@
         content:          '';
         z-index:          5;
     }
-    
+
     &__input:checked + &__label:before {
         color:        @primary;
         border-color: @primary;
