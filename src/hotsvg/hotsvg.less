@@ -1,0 +1,52 @@
+.input-wrapper {
+    display:         flex;
+    padding:         2em;
+    justify-content: center;
+    align-items:     center;
+    
+    .svgloader {
+        display: none;
+    }
+    
+    label {
+        cursor: pointer;
+    }
+}
+
+.layout {
+    display:         flex;
+    flex-wrap:       wrap;
+    justify-content: space-between;
+    padding:         0;
+    
+    &__item {
+        display:    flex;
+        width:      20%;
+        margin-top: 3em;
+    }
+    
+    .icon {
+        &-info {
+            padding-left: 1em;
+            flex-grow:    1;
+        }
+        
+        &-sprited {
+            display:      inline-block;
+            height:       5em;
+            width:        5em;
+            stroke-width: 0;
+            stroke:       currentColor;
+            fill:         currentColor;
+        }
+        
+        &-name {
+            font-weight: 600;
+            font-size:   14px;
+        }
+        
+        &-title {
+            font-size:  10px;
+        }
+    }
+}
