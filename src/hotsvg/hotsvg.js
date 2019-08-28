@@ -1,13 +1,20 @@
+import {SVGLoader} from "./modules/loader";
+
 window.addEventListener('load', () => {
     initSVGLoader();
 });
 
 function initSVGLoader() {
     window.addEventListener('click', ({target}) => {
-        return target.id === 'svgloader' ? loadSvg(target) : null;
+        return target.id === 'svgloader' ? new SVGLoader(target) : null;
     })
 }
 
+
+/*
+window.addEventListener('load', () => {
+    initSVGLoader();
+});
 function loadSvg(input) {
     input.addEventListener('change', function () {
         const sprite = this.files[0];
@@ -50,7 +57,7 @@ function getSVGSymbols(text) {
 function renderSprite(svgSymbols) {
     const svgSprite = document.createDocumentFragment();
     const root = document.querySelector('#root');
-    root.innerHTML = ''
+    root.innerHTML = '';
     
     svgSymbols.forEach(svg => {
         svgSprite.appendChild(createSvgElement(svg));
@@ -67,10 +74,11 @@ function renderSprite(svgSymbols) {
                             </svg>
                             <div class="icon-info">
                                 <p class="icon-name">${svg.id}</p>
-                                ${ svg.title ? `<p class="icon-title">${svg.title}</p>` : `<p class="icon-title" style="color: red;">no title</p>`}
+                                ${svg.title ? `<p class="icon-title">${svg.title}</p>` : `<p class="icon-title" style="color: red;">no title</p>`}
                             </div>
                         </li>`;
         
         return div.firstChild;
     }
 }
+*/
