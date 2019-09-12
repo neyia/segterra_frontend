@@ -1,53 +1,44 @@
-import actionTypes from "../actions/actionTypes";
-import actions from "../actions/actions";
-import {SvgModel} from "./model";
-import {SvgLayout} from "./layout";
+import addSvgDropper from './svgDropper';
+import addSvgLoader from "./svgLoader";
 
-class Loader {
-    constructor(input) {
-        this.data = {};
-        this.input = input;
-        this.getData();
+const initLoader = (input, dropper, wrapper) => {
+    switch (input.id) {
+        case 'svgloader':
+            initSvgLoader(input, dropper, wrapper);
+            return;
+        default:
+            alert(`Input id's value must be 'svgloader'`);
     }
-    
-    getData() {
-        return {};
-    }
-}
-
-class SVGLoader extends Loader {
-    constructor(input) {
-        super(input);
-        this.wrapper = new SvgLayout(document.querySelector('#root'));
-        this.svgModel = new SvgModel(this.wrapper);
-    }
-    
-    getSprite(sprite) {
-        return new Promise(resolve => {
-            const reader = new FileReader();
-            reader.readAsText(sprite, "UTF-8");
-            
-            reader.onload = function ({target: {result}}) {
-                resolve(result);
-            }
-        })
-    }
-    
-    onLoad(data) {
-        actions.updateData(data, this.svgModel);
-    }
-    
-    getData() {
-        this.input.addEventListener('change', ({target}) => {
-            const dataSprite = target.files[0];
-            this.getSprite(dataSprite)
-            .then(result => this.onLoad({type: actionTypes.update_model_svg, data: result}))
-            .catch(e => console.log(e));
-        })
-    };
-}
-
-export {
-    SVGLoader,
-    Loader
 };
+
+function initSvgLoader(input, dropper, wrapper) {
+    addSvgLoader(input, wrapper);
+    addSvgDropper(dropper, wrapper);
+    
+    input.addEventListener('change', addPulseListeners);
+    dropper.addEventListener('drop', addPulseListeners);
+    
+    document.querySelector('#clear').addEventListener('click', () => {
+        wrapper.innerHTML= '';
+        while (document.body.firstElementChild.tagName === 'svg') {
+            document.body.firstElementChild.remove();
+        }
+        dropper.removeEventListener('mouseout', removePulse);
+        dropper.classList.add('pulse');
+    });
+    
+    function addPulseListeners() {
+        dropper.addEventListener('mouseover', addPulse);
+        dropper.addEventListener('mouseout', removePulse);
+    }
+}
+
+function addPulse({target}) {
+    target.classList.add('pulse');
+}
+
+function removePulse({target}) {
+    target.classList.remove('pulse');
+}
+
+export default initLoader;

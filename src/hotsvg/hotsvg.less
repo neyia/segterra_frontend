@@ -1,4 +1,5 @@
 .input-wrapper {
+    position:        relative;
     display:         flex;
     padding:         2em;
     justify-content: center;
@@ -13,19 +14,48 @@
     }
 }
 
+body .layout {
+    margin: 10px auto 100px;
+}
+
+.clear {
+    background: #bdbdbd;
+    position:   absolute;
+    right:      10%;
+    top:        40%;
+}
+
 .layout {
-    display:         flex;
-    flex-wrap:       wrap;
-    justify-content: space-between;
-    padding:         0;
+    padding: 0;
     
     &__item {
-        display:    flex;
-        width:      20%;
-        margin-top: 3em;
+        display:       flex;
+        flex-wrap:     wrap;
+        border-bottom: 1px solid #ccc;
+        
+        &-title {
+            width: 100%;
+            margin: 1em 0 .5em;
+        }
     }
     
     .icon {
+        &-wrapper {
+            display:   flex;
+            width:     20%;
+            margin:    1.5em 0;
+            min-width: 250px;
+            
+            svg {
+                display:      inline-block;
+                height:       5em;
+                width:        5em;
+                stroke-width: 0;
+                stroke:       currentColor;
+                fill:         currentColor;
+            }
+        }
+        
         &-info {
             padding-left: 1em;
             flex-grow:    1;
@@ -46,7 +76,7 @@
         }
         
         &-title {
-            font-size:  10px;
+            font-size: 10px;
         }
     }
 }
