@@ -151,15 +151,10 @@ function () {
     this.className = className || 'show';
     this.actionShow = actionShow || 'click';
     this.actionHide = actionHide || 'click';
-    console.log(this.popup);
     this.popup.addEventListener('click', function (e) {
       if (e.target.classList.contains('js-popup-link')) {
-        console.log(_this.popup.classList);
-
         _this.popup.classList.remove(_this.className);
       }
-
-      ;
     });
     /** Reveal PopUp(add 'show' class), activate Close Button(s) & prevent body scroll*/
 
@@ -307,7 +302,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 window.addEventListener('load', function () {
   mobileMenu();
-  faq();
+  showPopup();
 });
 /** Create sidebar for header mobile menu */
 
@@ -318,7 +313,7 @@ function mobileMenu() {
   new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](showBtn, overlay, btnClose, true);
 }
 
-function faq() {
+function showPopup() {
   var faq = document.querySelector('.faq-popup');
   var policy = document.querySelector('.policy-popup');
   var terms = document.querySelector('.terms-popup');
@@ -330,7 +325,64 @@ function faq() {
   new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](_toConsumableArray(faqBtn), faq, [].concat(_toConsumableArray(closeMobile), _toConsumableArray(closeBtn)), true);
   new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](_toConsumableArray(policyBtn), policy, [].concat(_toConsumableArray(closeMobile), _toConsumableArray(closeBtn)), true);
   new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](_toConsumableArray(termsBtn), terms, [].concat(_toConsumableArray(closeMobile), _toConsumableArray(closeBtn)), true);
-}
+} // for hubspot
+//  var IputEffect = function(){
+//      var placeholderPosition, appendInputWhenSelect, actions;
+//      actions = {
+//          activate: function(el) {
+//              el.parentNode.parentNode.classList.add('label-up');
+//          },
+//          deactivate: function(el) {
+//              if (el.value === '') el.parentNode.parentNode.classList.remove('label-up');
+//          }
+//      };
+//
+//      placeholderPosition = function (el) {
+//          if (el.value !== '') actions.activate(el);
+//          el.addEventListener('focus', function(){actions.activate(this)});
+//          el.addEventListener('blur', function(){actions.deactivate(this)});
+//      }
+//
+//      document.querySelectorAll('.input > .hs-input').forEach(function(el){
+//          placeholderPosition(el);
+//      })
+//  }
+//
+// window.addEventListener('load', function () {
+//     IputEffect();
+// });
+// "use strict";
+//
+// window.addEventListener('load', function () {
+//     showPopup();
+// });
+//
+// function showPopup() {
+//     var faq = document.querySelector('.faq-popup');
+//     var policy = document.querySelector('.policy-popup');
+//     var terms = document.querySelector('.terms-popup');
+//
+//     var faqBtn = document.querySelectorAll('.faq');
+//     var policyBtn = document.querySelectorAll('.policy');
+//     var termsBtn = document.querySelectorAll('.terms');
+//
+//     var closeBtn = document.querySelectorAll('.close-btn');
+//     var closeMobile = document.querySelectorAll('.close-mobile');
+//
+//     faqBtn = Array.prototype.slice.call( faqBtn, 0 );
+//     policyBtn = Array.prototype.slice.call( policyBtn, 0 );
+//     termsBtn = Array.prototype.slice.call( termsBtn, 0 );
+//
+//     closeBtn = Array.prototype.slice.call( closeBtn, 0 );
+//     closeMobile = Array.prototype.slice.call( closeMobile, 0 );
+//
+//
+//
+//     new PopUp(faqBtn, faq, [].concat(closeBtn, closeMobile), true);
+//     new PopUp(policyBtn, policy, [].concat(closeBtn, closeMobile), true);
+//     new PopUp(termsBtn, terms, [].concat(closeBtn, closeMobile), true);
+// }
+//
 
 /***/ })
 

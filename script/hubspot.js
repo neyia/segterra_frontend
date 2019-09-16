@@ -155,15 +155,10 @@ function () {
     this.className = className || 'show';
     this.actionShow = actionShow || 'click';
     this.actionHide = actionHide || 'click';
-    console.log(this.popup);
     this.popup.addEventListener('click', function (e) {
       if (e.target.classList.contains('js-popup-link')) {
-        console.log(_this.popup.classList);
-
         _this.popup.classList.remove(_this.className);
       }
-
-      ;
     });
     /** Reveal PopUp(add 'show' class), activate Close Button(s) & prevent body scroll*/
 
