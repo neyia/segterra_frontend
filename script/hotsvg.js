@@ -286,9 +286,9 @@ function getSVGSymbols(_ref) {
   var symbolArr = [];
   symbols.forEach(function (svg) {
     var symbol = {};
-    symbol.id = svg.match(/<symbol\s*id=["'](.*?)["']/i)[1];
+    symbol.id = svg.match(/<symbol.*id=["'](.*?)["']/i)[1] || '';
     symbol.title = svg.match(/<title>(.*?)<\/title>/i) ? svg.match(/<title>(.*?)<\/title>/i)[1] : null;
-    symbol.viewBox = svg.match(/viewBox=["'](.*?)["']/i)[1];
+    symbol.viewBox = svg.match(/viewBox=["'](.*?)["']/i)[1] || '';
     symbolArr.push(symbol);
   });
   return {
