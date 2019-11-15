@@ -5,7 +5,8 @@ module.exports = {
     entry: {
         app: "./src/scripts/app.js",
         hubspot: "./src/hubspot/scripts/hubspot.js",
-        hubspotRigr: "./src/hubspot/scripts/hubspotRigr.js"
+        hubspotRigr: "./src/hubspot/scripts/hubspotRigr.js",
+        hubspotRigrBlog: "./src/rigr_blog/scripts/hubspotRigrBlog.js"
     },
     output: {
         filename: '[name].js'
