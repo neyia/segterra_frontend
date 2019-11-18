@@ -35,9 +35,9 @@ const path = {
     },
     src: {
         html: 'src/*.html',
-        js: ['src/scripts/app.js', 'src/hubspot/scripts/hubspot.js', 'src/hubspot/scripts/hubspotRigr.js'],
+        js: ['src/scripts/app.js', 'src/hubspot/scripts/hubspot.js', 'src/hubspot/scripts/hubspotRigr.js', 'src/rigr_blog/scripts/hubspotRigrBlog.js'],
         style: 'src/styles/style.less',
-        img: ['src/assets/img/**/*.*','src/hubspot/assets/img/**/*.*'],
+        img: ['src/assets/img/**/*.*','src/hubspot/assets/img/**/*.*', 'src/rigr_blog/assets/img/**/*.*'],
         image: 'src/image/**/*.*',
         svg: ['src/assets/svg/*.*', 'src/hubspot/assets/svg/*.*'],
         fonts: 'src/assets/fonts/**/*.*',
@@ -47,7 +47,7 @@ const path = {
     watch: {
         html: 'src/**/*.html',
         js: ['src/**/*.js', 'src/components/**/*.js'],
-        style: ['src/styles/**/*.*', 'src/hubspot/styles/**/*.*'],
+        style: ['src/styles/**/*.*', 'src/hubspot/styles/**/*.*', 'src/rigr_blog/styles/**/*.*'],
         img: 'src/assets/img/**/*.*',
         image: 'src/image/**/*.*',
         svg: 'src/assets/svg/*.*',
