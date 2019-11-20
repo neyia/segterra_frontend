@@ -19,7 +19,14 @@
 
 @@include('rigr_blog/modules/_rigr-header.html')
 
-<div class="wrapper"></div>
+<div class="container">
+    <div class="flex">
+        @@include('rigr_blog/modules/_rigr-post-list.html')
+        @@include('rigr_blog/modules/_rigr-post.html')
+        <!--right panel here-->
+    </div>
+</div>
+
 
 @@include('rigr_blog/modules/_rigr-footer.html')
 @@include('rigr_blog/modules/popups/_faq.html')
