@@ -36,7 +36,7 @@ const path = {
     src: {
         html: 'src/*.html',
         js: ['src/scripts/app.js', 'src/hubspot/scripts/hubspot.js', 'src/hubspot/scripts/hubspotRigr.js', 'src/rigr_blog/scripts/hubspotRigrBlog.js'],
-        style: 'src/styles/style.less',
+        style: [ 'src/styles/style.less', 'src/rigr_blog/styles/rigrBlogStyles.less'],
         img: ['src/assets/img/**/*.*','src/hubspot/assets/img/**/*.*', 'src/rigr_blog/assets/img/**/*.*'],
         image: 'src/image/**/*.*',
         svg: ['src/assets/svg/*.*', 'src/hubspot/assets/svg/*.*'],
@@ -73,10 +73,8 @@ gulp.task('html', () => {
 });
 
 gulp.task('styles', () => {
-    return gulp.src([
-            path.src.style,
-            //path.src.templateStyle  // test link - separate page
-        ])
+    return gulp.src(path.src.style)
+        //path.src.templateStyle  // test link - separate page])
         //.pipe(sourcemaps.init())
         .pipe(less())
         .pipe(autoprefixer({
