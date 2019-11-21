@@ -140,7 +140,7 @@
         color:            @blue;
         background-color: #ffffff;
         
-        @media screen and (max-width: (@big_tablet)) {
+        @media screen and (max-width: (@big_width)) {
             color:            #ffffff;
             background-color: @blue;
         }
@@ -150,7 +150,7 @@
             color:            @blue_hover;
             background-color: #ffffff;
             
-            @media screen and (max-width: (@big_tablet)) {
+            @media screen and (max-width: (@big_width)) {
                 color:            #ffffff;
                 background-color: @blue_hover;
             }
@@ -160,7 +160,7 @@
     &-hide {
         display: none !important;
         
-        @media screen and (max-width: (@big_tablet)) {
+        @media screen and (max-width: (@big_width)) {
             display: block !important;
         }
     }
@@ -210,26 +210,9 @@
     }
 }
 
-.hideTablet {
-    @media screen and (max-width: (@tablet)) {
-        display: none;
-    }
-}
-
-.showTablet {
-    display: none;
-    @media screen and (max-width: (@tablet)) {
-        display: block;
-    }
-}
-
 .no-scroll {
     max-height: 100%;
     overflow:   hidden;
-}
-
-.hide {
-    display: none;
 }
 
 .padding-block {
