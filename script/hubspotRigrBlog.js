@@ -116,13 +116,35 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-/** Create symbols for private methods' names*/
-var addEventListenersToCloseBtn = Symbol();
-var removeEventListenersToCloseBtn = Symbol();
-var hidePopUp = Symbol();
+/**
+ * IE11 add 'classList' field to SVG element*/
+if (!("classList" in SVGElement.prototype)) {
+  Object.defineProperty(SVGElement.prototype, "classList", {
+    get: function get() {
+      var _this = this;
+
+      return {
+        contains: function contains(className) {
+          return _this.className.baseVal.split(" ").indexOf(className) !== -1;
+        },
+        add: function add(className) {
+          return _this.setAttribute('class', _this.getAttribute('class') + ' ' + className);
+        },
+        remove: function remove(className) {
+          var removedClass = _this.getAttribute('class').replace(new RegExp('(\\s|^)' + className + '(\\s|$)', 'g'), '$2');
+
+          if (_this.classList.contains(className)) {
+            _this.setAttribute('class', removedClass);
+          }
+        }
+      };
+    }
+  });
+}
 /**
  * @class
  */
+
 
 var PopUp =
 /*#__PURE__*/
@@ -140,7 +162,7 @@ function () {
    @returns {Object} - PopUp instance with button(s) to toggle 'show' class.
    */
   function PopUp(btnShow, popup, btnClose, noScroll, className, actionShow, actionHide) {
-    var _this = this;
+    var _this2 = this;
 
     _classCallCheck(this, PopUp);
 
@@ -153,7 +175,7 @@ function () {
     this.actionHide = actionHide || 'click';
     this.popup.addEventListener('click', function (e) {
       if (e.target.classList.contains('js-popup-link')) {
-        _this.popup.classList.remove(_this.className);
+        _this2.popup.classList.remove(_this2.className);
       }
     });
     /** Reveal PopUp(add 'show' class), activate Close Button(s) & prevent body scroll*/
@@ -161,27 +183,27 @@ function () {
     if (!Array.isArray(this.btnShow)) {
       this.btnShow.classList.add('js-popup-link');
       this.btnShow.addEventListener(this.actionShow, function () {
-        if (_this.btnShow === _this.btnClose) {
-          _this.popup.classList.toggle(_this.className);
+        if (_this2.btnShow === _this2.btnClose) {
+          _this2.popup.classList.toggle(_this2.className);
         } else {
-          _this.addClasslist();
+          _this2.addClasslist();
         }
 
-        if (_this.noScroll) {
+        if (_this2.noScroll) {
           PopUp.addNoScroll();
         }
       });
     } else {
       this.btnShow.forEach(function (btn) {
         btn.classList.add('js-popup-link');
-        btn.addEventListener(_this.actionShow, function () {
-          if (_this.btnShow === _this.btnClose) {
-            _this.popup.classList.toggle(_this.className);
+        btn.addEventListener(_this2.actionShow, function () {
+          if (_this2.btnShow === _this2.btnClose) {
+            _this2.popup.classList.toggle(_this2.className);
           } else {
-            _this.addClasslist();
+            _this2.addClasslist();
           }
 
-          if (_this.noScroll) {
+          if (_this2.noScroll) {
             PopUp.addNoScroll();
           }
         });
@@ -190,12 +212,12 @@ function () {
   }
 
   _createClass(PopUp, [{
-    key: hidePopUp,
+    key: "hidePopUp",
 
     /** Hide PopUp(remove 'show' class), deactivate Close Button(s) & return body scroll*/
-    value: function value() {
+    value: function hidePopUp() {
       this.popup.classList.remove(this.className);
-      this[removeEventListenersToCloseBtn]();
+      this.removeEventListenersToCloseBtn();
 
       if (this.noScroll) {
         PopUp.removeNoScroll();
@@ -205,41 +227,41 @@ function () {
     key: "addClasslist",
     value: function addClasslist() {
       this.popup.classList.add(this.className);
-      this[addEventListenersToCloseBtn]();
+      this.addEventListenersToCloseBtn();
     }
   }, {
-    key: addEventListenersToCloseBtn,
-    value: function value() {
-      var _this2 = this;
+    key: "addEventListenersToCloseBtn",
+    value: function addEventListenersToCloseBtn() {
+      var _this3 = this;
 
       var btnClose = this.btnClose;
 
       if (!Array.isArray(btnClose)) {
         btnClose.addEventListener(this.actionHide, function (_ref) {
           var target = _ref.target;
-          return target === btnClose ? _this2[hidePopUp]() : null;
+          return target === btnClose ? _this3.hidePopUp() : null;
         });
       } else {
         btnClose.forEach(function (btn) {
-          btn.addEventListener(_this2.actionHide, function (_ref2) {
+          btn.addEventListener(_this3.actionHide, function (_ref2) {
             var target = _ref2.target;
-            return target === btn ? _this2[hidePopUp]() : null;
+            return target === btn ? _this3.hidePopUp() : null;
           });
         });
       }
     }
   }, {
-    key: removeEventListenersToCloseBtn,
-    value: function value() {
-      var _this3 = this;
+    key: "removeEventListenersToCloseBtn",
+    value: function removeEventListenersToCloseBtn() {
+      var _this4 = this;
 
       var btnClose = this.btnClose;
 
       if (!Array.isArray(btnClose)) {
-        btnClose.removeEventListener(this.actionHide, this[hidePopUp]);
+        btnClose.removeEventListener(this.actionHide, this.hidePopUp);
       } else {
         btnClose.forEach(function (btn) {
-          btn.removeEventListener(_this3.actionHide, _this3[hidePopUp]);
+          btn.removeEventListener(_this4.actionHide, _this4.hidePopUp);
         });
       }
     }
@@ -333,7 +355,7 @@ function mobileMenu() {
   var overlay = document.querySelector('#overlay');
   var showBtn = document.querySelector('#headerIcon');
   var btnClose = document.querySelector('#closeIcon');
-  new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](showBtn, overlay, btnClose, true);
+  new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](showBtn, overlay, [overlay, btnClose], true);
 }
 
 function showPopup() {
