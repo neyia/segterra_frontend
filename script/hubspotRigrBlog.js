@@ -332,9 +332,8 @@ window.addEventListener('load', function () {
 function mobileMenu() {
   var overlay = document.querySelector('#overlay');
   var showBtn = document.querySelector('#headerIcon');
-  var btnClose = document.querySelector('#closeIcon'); // new PopUp(showBtn, overlay, btnClose, true);
-
-  new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](showBtn, btnClose, [].concat(showBtn, btnClose), true);
+  var btnClose = document.querySelector('#closeIcon');
+  new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](showBtn, overlay, btnClose, true);
 }
 
 function showPopup() {
