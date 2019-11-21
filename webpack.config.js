@@ -3,7 +3,6 @@ const webpack = require("webpack");
 module.exports = {
     mode: "development",
     entry: {
-        polyfill: '@babel/polyfill',
         app: "./src/scripts/app.js",
         hubspot: "./src/hubspot/scripts/hubspot.js",
         hubspotRigr: "./src/hubspot/scripts/hubspotRigr.js",
