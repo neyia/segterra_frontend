@@ -35,7 +35,7 @@ const path = {
     },
     src: {
         html: 'src/*.html',
-        js: ['src/scripts/app.js', 'src/hubspot/scripts/hubspot.js', 'src/hubspot/scripts/hubspotRigr.js', 'src/rigr_blog/scripts/hubspotRigrBlog.js'],
+        js: [ 'src/scripts/app.js', 'src/hubspot/scripts/hubspot.js', 'src/hubspot/scripts/hubspotRigr.js', 'src/rigr_blog/scripts/hubspotRigrBlog.js'],
         style: [ 'src/styles/style.less', 'src/rigr_blog/styles/rigrBlogStyles.less'],
         img: ['src/assets/img/**/*.*','src/hubspot/assets/img/**/*.*', 'src/rigr_blog/assets/img/**/*.*'],
         image: 'src/image/**/*.*',
@@ -93,6 +93,7 @@ gulp.task('styles', () => {
 });
 
 gulp.task('scripts', () => {
+    
     return gulp.src(path.src.js)
         .pipe(webpack( require('./webpack.config.js') ))
         .pipe(gulp.dest(path.build.js))

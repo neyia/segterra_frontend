@@ -1,7 +1,26 @@
-/** Create symbols for private methods' names*/
-const addEventListenersToCloseBtn = Symbol();
-const removeEventListenersToCloseBtn = Symbol();
-const hidePopUp = Symbol();
+
+/**
+ * IE11 add 'classList' field to SVG element*/
+if (!("classList" in SVGElement.prototype)) {
+    Object.defineProperty(SVGElement.prototype, "classList", {
+        get() {
+            return {
+                contains: className => {
+                    return this.className.baseVal.split(" ").indexOf(className) !== -1;
+                },
+                add: className => {
+                    return this.setAttribute('class', this.getAttribute('class') + ' ' + className);
+                },
+                remove: className => {
+                    var removedClass = this.getAttribute('class').replace(new RegExp('(\\s|^)' + className + '(\\s|$)', 'g'), '$2');
+                    if (this.classList.contains(className)) {
+                        this.setAttribute('class', removedClass);
+                    }
+                }
+            };
+        }
+    });
+}
 
 /**
  * @class
@@ -87,9 +106,9 @@ const PopUp = class {
     };
     
     /** Hide PopUp(remove 'show' class), deactivate Close Button(s) & return body scroll*/
-    [hidePopUp]() {
+    hidePopUp() {
         this.popup.classList.remove(this.className);
-        this[removeEventListenersToCloseBtn]();
+        this.removeEventListenersToCloseBtn();
         
         if (this.noScroll) {
             PopUp.removeNoScroll();
@@ -98,29 +117,29 @@ const PopUp = class {
     
     addClasslist() {
         this.popup.classList.add(this.className);
-        this[addEventListenersToCloseBtn]();
+        this.addEventListenersToCloseBtn();
     }
     
-    [addEventListenersToCloseBtn]() {
+    addEventListenersToCloseBtn() {
         const {btnClose} = this;
         
         if (!Array.isArray(btnClose)) {
-            btnClose.addEventListener(this.actionHide, ({target}) => (target === btnClose) ? this[hidePopUp]() : null);
+            btnClose.addEventListener(this.actionHide, ({target}) => (target === btnClose) ? this.hidePopUp() : null);
         } else {
             btnClose.forEach(btn => {
-                btn.addEventListener(this.actionHide, ({target}) => (target === btn) ? this[hidePopUp]() : null);
+                btn.addEventListener(this.actionHide, ({target}) => (target === btn) ? this.hidePopUp() : null);
             })
         }
     }
     
-    [removeEventListenersToCloseBtn]() {
+    removeEventListenersToCloseBtn() {
         const {btnClose} = this;
         
         if (!Array.isArray(btnClose)) {
-            btnClose.removeEventListener(this.actionHide, this[hidePopUp]);
+            btnClose.removeEventListener(this.actionHide, this.hidePopUp);
         } else {
             btnClose.forEach(btn => {
-                btn.removeEventListener(this.actionHide, this[hidePopUp]);
+                btn.removeEventListener(this.actionHide, this.hidePopUp);
             })
         }
     }
