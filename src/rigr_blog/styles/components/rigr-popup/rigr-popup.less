@@ -21,6 +21,9 @@
     padding:    0 16px;
     
     &__container {
+        max-width:       @desktop;
+        margin:          0 auto;
+        position:        relative;
         display:         flex;
         justify-content: space-between;
         align-items:     center;
@@ -76,6 +79,14 @@
     
     .footer {
         background: #ffffff;
+        
+        &__container {
+            width:     100%;
+            padding:   0 8px;
+            max-width: 1230px;
+            margin:    0 auto;
+            position:  relative;
+        }
     }
     
     .popup-overlay {
