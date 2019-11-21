@@ -290,19 +290,42 @@ function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _PopUp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PopUp */ "./src/rigr_blog/scripts/modules/PopUp.js");
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
-
 /** Deconste ALL imports before adding to HubSpot*/
+ // window.addEventListener('load', () => {
+//     mobileMenu();
+//     showPopup()
+// });
+//
+// /** Create sidebar for header mobile menu */
+// function mobileMenu() {
+//     const overlay = document.querySelector('#overlay');
+//     const showBtn = document.querySelector('#headerIcon');
+//     const btnClose = document.querySelector('#closeIcon');
+//
+//     new PopUp(showBtn, overlay, btnClose, true);
+// }
+//
+// function showPopup() {
+//     const faq = document.querySelector('.faq-popup');
+//     const policy = document.querySelector('.policy-popup');
+//     const terms = document.querySelector('.terms-popup');
+//     const faqBtn = document.querySelectorAll('.faq');
+//     const policyBtn = document.querySelectorAll('.policy');
+//     const termsBtn = document.querySelectorAll('.terms');
+//     const closeBtn = document.querySelectorAll('.close-btn');
+//     const closeMobile = document.querySelectorAll('.close-mobile');
+//
+//     new PopUp([...faqBtn], faq, [...closeMobile, ...closeBtn], true);
+//     new PopUp([...policyBtn], policy, [...closeMobile, ...closeBtn], true);
+//     new PopUp([...termsBtn], terms, [...closeMobile, ...closeBtn], true);
+// }
+// for hubspot
+
+"use strict";
 
 window.addEventListener('load', function () {
-  mobileMenu();
   showPopup();
+  mobileMenu();
 });
 /** Create sidebar for header mobile menu */
 
@@ -310,7 +333,7 @@ function mobileMenu() {
   var overlay = document.querySelector('#overlay');
   var showBtn = document.querySelector('#headerIcon');
   var btnClose = document.querySelector('#closeIcon');
-  new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](showBtn, overlay, btnClose, true);
+  new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](showBtn, overlay, btnClose, true); // new PopUp(showBtn, btnClose, [].concat(showBtn,btnClose), true);
 }
 
 function showPopup() {
@@ -322,67 +345,15 @@ function showPopup() {
   var termsBtn = document.querySelectorAll('.terms');
   var closeBtn = document.querySelectorAll('.close-btn');
   var closeMobile = document.querySelectorAll('.close-mobile');
-  new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](_toConsumableArray(faqBtn), faq, [].concat(_toConsumableArray(closeMobile), _toConsumableArray(closeBtn)), true);
-  new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](_toConsumableArray(policyBtn), policy, [].concat(_toConsumableArray(closeMobile), _toConsumableArray(closeBtn)), true);
-  new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](_toConsumableArray(termsBtn), terms, [].concat(_toConsumableArray(closeMobile), _toConsumableArray(closeBtn)), true);
-} // for hubspot
-//  var IputEffect = function(){
-//      var placeholderPosition, appendInputWhenSelect, actions;
-//      actions = {
-//          activate: function(el) {
-//              el.parentNode.parentNode.classList.add('label-up');
-//          },
-//          deactivate: function(el) {
-//              if (el.value === '') el.parentNode.parentNode.classList.remove('label-up');
-//          }
-//      };
-//
-//      placeholderPosition = function (el) {
-//          if (el.value !== '') actions.activate(el);
-//          el.addEventListener('focus', function(){actions.activate(this)});
-//          el.addEventListener('blur', function(){actions.deactivate(this)});
-//      }
-//
-//      document.querySelectorAll('.input > .hs-input').forEach(function(el){
-//          placeholderPosition(el);
-//      })
-//  }
-//
-// window.addEventListener('load', function () {
-//     IputEffect();
-// });
-// "use strict";
-//
-// window.addEventListener('load', function () {
-//     showPopup();
-// });
-//
-// function showPopup() {
-//     var faq = document.querySelector('.faq-popup');
-//     var policy = document.querySelector('.policy-popup');
-//     var terms = document.querySelector('.terms-popup');
-//
-//     var faqBtn = document.querySelectorAll('.faq');
-//     var policyBtn = document.querySelectorAll('.policy');
-//     var termsBtn = document.querySelectorAll('.terms');
-//
-//     var closeBtn = document.querySelectorAll('.close-btn');
-//     var closeMobile = document.querySelectorAll('.close-mobile');
-//
-//     faqBtn = Array.prototype.slice.call( faqBtn, 0 );
-//     policyBtn = Array.prototype.slice.call( policyBtn, 0 );
-//     termsBtn = Array.prototype.slice.call( termsBtn, 0 );
-//
-//     closeBtn = Array.prototype.slice.call( closeBtn, 0 );
-//     closeMobile = Array.prototype.slice.call( closeMobile, 0 );
-//
-//
-//
-//     new PopUp(faqBtn, faq, [].concat(closeBtn, closeMobile), true);
-//     new PopUp(policyBtn, policy, [].concat(closeBtn, closeMobile), true);
-//     new PopUp(termsBtn, terms, [].concat(closeBtn, closeMobile), true);
-// }
-//
+  faqBtn = Array.prototype.slice.call(faqBtn, 0);
+  policyBtn = Array.prototype.slice.call(policyBtn, 0);
+  termsBtn = Array.prototype.slice.call(termsBtn, 0);
+  closeBtn = Array.prototype.slice.call(closeBtn, 0);
+  closeMobile = Array.prototype.slice.call(closeMobile, 0);
+  new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](faqBtn, faq, [].concat(closeBtn, closeMobile), true);
+  new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](policyBtn, policy, [].concat(closeBtn, closeMobile), true);
+  new _PopUp__WEBPACK_IMPORTED_MODULE_0__["default"](termsBtn, terms, [].concat(closeBtn, closeMobile), true);
+}
 
 /***/ })
 
