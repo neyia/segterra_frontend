@@ -3,7 +3,7 @@
 .flex {
     display:         flex;
     justify-content: space-between;
-
+    
     @media screen and (max-width: @mid_width) {
         flex-direction: column;
     }
@@ -29,10 +29,11 @@
     margin-top: 130px;
     max-width:  350px;
     width:      100%;
-
+    
     @media screen and (max-width: @mid_width) {
         margin-top: 0;
         max-width:  100%;
+        margin-bottom: 40px;
     }
 }
 
@@ -48,11 +49,11 @@
     font-size:    16px;
     line-height:  24px;
     position:     relative;
-
+    
     &-wrap {
         position: relative;
         display:  block;
-
+        
         &::before {
             content:          '';
             background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASBAMAAACk4JNkAAAAAXNSR0IB2cksfwAAACpQTFRFAAAAj4+Lj4+Mjo6Mjo6Mjo6MjY2Lj4+Kjo6Mj4+Njo6Ojo6Mj4+Pjo6M2a35WQAAAA50Uk5TAECf7/+ggDDwfz/PENDT4leIAAAAZUlEQVR4nGNgYFR2VmQAgxAXFxcFEIPVJZE9xQnEEnFnYGB3EQBJJgCJlAAg0VIAkjAAEi4gJSwOcLEGFHUIvawus9inuMLtCNkDYjFGeATyeh+AWM3Ac2UPlMVwFqvgHRiL5wAAn3kYJm2na/EAAAAASUVORK5CYII=');
@@ -69,7 +70,11 @@
     background-color: @light_blue;
     padding:          35px 40px;
     margin-top:       40px;
-
+    
+    @media screen and (max-width: @mid_width) {
+        margin-top: 30px;
+    }
+    
     &__title {
         font-family: 'Arvo', Arial, sans-serif;
         font-weight: normal;
@@ -77,28 +82,28 @@
         line-height: 40px;
         margin:      0 0 21px;
     }
-
+    
     &--blue {
         background-image: radial-gradient(ellipse 40px 40px, @blue, #139bd2 25%, @blue_link 0);
         background-size:  19px 19px;
         color:            #ffffff;
-
+        
         h3 {
             color: #ffffff;
         }
-
+        
         p {
             font-size:   14px;
             line-height: 20px;
         }
-
+        
         h5 {
             font-size:   18px;
             font-weight: 700;
             margin:      21px 0 0;
         }
     }
-
+    
     a:hover {
         text-decoration: underline;
     }
@@ -110,7 +115,7 @@
     margin-bottom: 10px;
     padding-left:  20px;
     position:      relative;
-
+    
     &::before {
         content:           '';
         position:          absolute;
@@ -128,10 +133,10 @@
     font-size:     14px;
     line-height:   20px;
     margin-bottom: 20px;
-
+    
     &__count {
         color: @blue;
-
+        
         &:hover {
             color: @blue_hover;
         }
@@ -143,18 +148,14 @@
     align-items:   center;
     margin-top:    15px;
     margin-bottom: 5px;
-
-    @media screen and (max-width: (@big_tablet)) {
-        justify-content: center;
-    }
-
+    
     &-link {
         display:         flex;
         justify-content: center;
         align-items:     center;
         width:           22px;
         height:          21px;
-
+        
         & + .social-link {
             margin-left: 22px;
         }
