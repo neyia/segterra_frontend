@@ -13,10 +13,13 @@ h1, h2 {
 
 // h1
 .promo__title {
+    font-family:    'Open Sans Condensed', sans-serif;
     font-size:      @h1_font_size;
-    letter-spacing: -0.02em;
     text-transform: uppercase;
+    letter-spacing: -0.02em;
+    max-width:      415px;
     margin-top:     -5px;
+    line-height:    0.85;
     
     @media (min-width: (@screen_width)) {
         font-size: @h1_font_size_max;
@@ -27,17 +30,21 @@ h1, h2 {
     }
     
     @media (max-width: (@small_screen_width)) {
+        letter-spacing: normal;
         text-align: center;
+        max-width: none;
+        line-height: 1;
     }
 }
 
 // h2
 
 .section-title {
-    text-transform: uppercase;
-    text-align:     center;
+    font-family:    'Open Sans Condensed', sans-serif;
     font-size:      @h2_font_size;
+    text-transform: uppercase;
     letter-spacing: -0.02em;
+    text-align:     center;
     margin-top:     -5px;
     
     @media (min-width: (@screen_width)) {
@@ -46,6 +53,14 @@ h1, h2 {
     
     @media (max-width: 906px) {
         font-size: @h2_font_size_min;
+    }
+}
+
+.section-title--wysiwyg{
+    padding-bottom: 45px;
+    
+    @media (max-width: (@small_screen_width)) {
+        padding-bottom: 20px;
     }
 }
 
@@ -64,18 +79,22 @@ h1, h2 {
 }
 
 .subtitle_promo {
-    margin:      2.07vw 0 0;
-    line-height: 1.5;
+    margin:         2.07vw 0 0;
+    letter-spacing: 0.6px;
+    font-weight:    600;
+    line-height:    1.5;
     
     @media (min-width: (@screen_width)) {
-        margin: 25px 0 0;
+        margin: 35px 0 0;
+        
     }
     
     @media (max-width: (@small_screen_width)) {
-        font-size:   20px;
-        margin:      10px 0 0;
-        line-height: 1.4;
+        letter-spacing: 0.4px;
+        margin:      25px 0 0;
         text-align:  center;
+        font-size:   20px;
+        line-height: 1.4;
     }
 }
 
@@ -95,14 +114,6 @@ h1, h2 {
 .step-list__title {
     font-size:   @h4_font_size;
     line-height: 1.4;
-    margin:      7px 0 0;
+    margin:      0 0 0;
 }
 
-// h5
-.partnership__title {
-    text-align:  center;
-    font-size:   16px;
-    line-height: 2;
-    margin:      0;
-    margin-top:  -5px;
-}

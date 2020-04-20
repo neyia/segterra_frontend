@@ -2,12 +2,12 @@
 @import "../../../../styles/utils/variables";
 
 .steps {
-    margin-top: 70px;
+    background: @white_smoke;
     padding:    calc((@section_padding) - 5px) 0 @section_padding;
     overflow-x: hidden;
     
     @media (min-width: (@screen_width)) {
-        padding: calc((@section_padding_max) - 5px) 0 @section_padding_max;
+        padding: calc((@section_padding_max) - 30px) 0 (@section_padding_max - 25px);
     }
     
     @media (max-width: 601px) {
@@ -17,6 +17,11 @@
     @media screen and (max-width: (@mid_width)) {
         margin-top: 62px;
     }
+    
+    @media screen and (max-width: (450px)) {
+        margin-top: 52px;
+        padding-bottom: 0;
+    }
 }
 
 .step-list {
@@ -24,11 +29,12 @@
     margin:  50px -29px 0;
     
     @media (max-width: 819px) {
+        margin:  50px -20px 0;
         flex-wrap: wrap;
     }
     
     @media (max-width: 450px) {
-        margin: 24px 0 0;
+        margin: 34px 0 0;
     }
 }
 
@@ -42,11 +48,12 @@
 
 .step-list__item {
     text-align: center;
-    margin:     0 29px;
-    width:      calc(~"25% - 2 * 29px");
+    margin:     0 20px;
+    width:      calc(~"25% - 2 * 20px");
     
     @media (max-width: 819px) {
         width: calc(~"50% - 2 * 29px");
+        margin-bottom: 30px;
     }
     
     @media (max-width: 450px) {
@@ -56,10 +63,10 @@
 }
 
 .step-list__counter {
-    text-transform: uppercase;
-    font-weight:    700;
+    font-family:    'Open Sans Semibold', sans-serif;
     font-size:      @info_font_size;
-    font-family:    'Open Sans Condensed', sans-serif;
+    padding:        15px 0 0 0;
+    letter-spacing: 0.14px;
 }
 
 .step-list__desc {

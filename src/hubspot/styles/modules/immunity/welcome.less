@@ -42,7 +42,7 @@
     padding:    calc((@section_padding) - 5px) 0 calc((@section_padding) - 5px) @section_padding;
     
     @media (min-width: (@screen_width)) {
-        padding: calc((@section_padding_max) - 5px) 0 calc((@section_padding_max) - 5px) @section_padding_max;
+        padding: calc((@section_padding_max) - 5px) 0 calc((@section_padding_max - 20px) - 5px) @section_padding_max;
     }
     
     @media (max-width: (@screen_width)) {
@@ -55,24 +55,94 @@
     }
     
     @media (max-width: (@small_screen_width)) {
-        width:        100%;
-        padding-left: @content_margin;
+        padding-left:   @content_margin;
+        width:          100%;
+        padding-top:    50px;
+        padding-bottom: 64px;
     }
 }
 
 .promo-text__wrapper {
     max-width: 670px;
+    
+    @media (max-width: (@small_screen_width)) {
+        max-width: none;
+    }
+}
+
+.button-block {
+    
+    @media (max-width: (@small_screen_width)) {
+        text-align: center;
+    }
+    
+    
+    .btn_primary {
+        padding:   0 26px;
+        font-size: 16px;
+        
+        @media (max-width: (@small_screen_width)) {
+            padding:    0 24px;
+            font-size:  14px;
+            margin-top: 25px;
+        }
+    }
 }
 
 .promo__desc {
     margin-top: 1.66vw;
     
     @media (min-width: (@screen_width)) {
-        margin-top: 20px;
+        margin-top: 25px;
     }
     
     @media (max-width: 905px) {
-        margin-top: 15px;
+        letter-spacing: 0.14px;
+        margin-top:     20px;
+        font-size:      14px;
+        line-height:    1.45;
+    }
+    
+    p {
+        margin-top: 25px;
+        
+        @media (max-width: 905px) {
+            margin-top: 20px;
+        }
+        
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    
+    ul {
+        padding-left: 30px;
+        margin-top:   30px;
+        
+        li {
+            list-style-type: disc;
+        }
+    }
+}
+
+.promo__text {
+    font-family:    "Open Sans", sans-serif;
+    font-size:      12px;
+    line-height:    18px;
+    letter-spacing: 0.12px;
+    font-style:     italic;
+    padding-top:    40px;
+    
+    @media (max-width: (@small_screen_width)) {
+        padding-top: 25px;
+    }
+    
+    p {
+        padding-top: 10px;
+        
+        &:first-child {
+            padding-top: 0;
+        }
     }
 }
 
@@ -99,7 +169,10 @@
     margin-top: 2.49vw;
     
     @media (min-width: (@screen_width)) {
-        margin-top: 30px;
+        margin-top: 20px;
+    }
+    @media (max-width: (@small_screen_width)) {
+        margin-top: 20px;
     }
 }
 
