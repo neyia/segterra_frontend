@@ -13,7 +13,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/neyia/segterra_frontend.git"
+
+    "url": "https://27ed60aa2557d32ac965d911fd10e7db4d5a9b85@github.com/neyia/segterra_frontend.git"
   },
   "author": "Pavel Kuznetsov",
   "license": "ISC",
