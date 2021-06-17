@@ -6,6 +6,10 @@
 @import "../../components/button/_button";
 @import "../utils/hide_show";
 
+.podcast {
+    background: #ffffff;
+}
+
 .podcast-header {
     width:            100%;
     box-shadow:       0 0 40px rgba(0, 0, 0, 0.06);
@@ -143,6 +147,12 @@
 }
 
 .cards-section {
+    padding: 113px 0 193px;
+
+    @media only screen and (max-width: (@mobile)) {
+        padding: 43px 0 93px;
+    }
+
     &__title {
         color:          @gray1;
         font-family:    "Open Sans", sans-serif;
@@ -155,27 +165,33 @@
         margin:         0 0 59px;
 
         @media only screen and (max-width: (@mobile)) {
-            font-size:   30px;
-            line-height: 1.33;
-            text-align:  center;
+            font-size:     30px;
+            line-height:   1.33;
+            text-align:    center;
+            margin-bottom: 41px;
         }
     }
 
-    /////
     .cards-wrapper {
-        background: chocolate;
-        width:      100%;
-        height:     1000px;
-        padding:    113px 16px 193px;
+        width:     100%;
+        max-width: 1200px;
+        display:   flex;
+        flex-wrap: wrap;
+
+        @media only screen and (max-width: 1230px) {
+            justify-content: center;
+        }
 
         .card {
             width:         100%;
             max-width:     370px;
-            height:        408px;
+            //min-height:    408px;
+            height:    408px;
             background:    #fff;
             border-radius: 15px;
             box-shadow:    0 0 50px rgba(0, 0, 0, 0.08);
             overflow:      hidden;
+            margin:        0 15px 30px;
 
             @media only screen and (max-width: (@mobile)) {
                 border-bottom: 1px solid #e1e4e6;
@@ -183,26 +199,76 @@
                 border-radius: 0;
                 width:         100%;
                 height:        auto;
+                margin-bottom: 20px;
             }
 
             &__top {
-                height: 200px;
+                position: relative;
+                height:   200px;
+
+                @media only screen and (max-width: (@mobile)) {
+                    display:    flex;
+                    height:     auto;
+                    min-height: 65px;
+                    padding:    0 4px 0;
+                }
 
                 .card__top--cover {
-                    display:          flex;
-                    flex-direction:   column;
-                    align-items:      flex-start;
-                    height:           100%;
-                    max-width:        285px;
-                    max-width:        100%;
-                    background:
-                        linear-gradient(90deg, #013972 0, #145494 58%, rgba(29, 102, 175, 0) 100%) left no-repeat,
-                                      url('../../assets/img/hubspot/person-photo.jpg') right 0 no-repeat;
-                                      //url('../../assets/img/hubspot/3.png') right  0 no-repeat;
-                    background-size: auto 200px;
-                    padding:          28px 0 19px 24px;
+                    height:              100%;
+                    max-width:           100%;
+                    background-size:     auto 200px;
+                    background-repeat:   no-repeat;
+                    background-position: right 0;
+                    //background:
+                    //    linear-gradient(90deg, #013972 0, #145494 58%, rgba(29, 102, 175, 0) 75%) left no-repeat,
+                    //                  url('../../assets/img/hubspot/person-photo.png') right 0 no-repeat;
 
-                    position: relative;
+                    &::before {
+                        content:    '';
+                        position:   absolute;
+                        top:        0;
+                        left:       0;
+                        height:     100%;
+                        width:      100%;
+                        background: linear-gradient(90deg, #013972 0, #145494 58%, rgba(29, 102, 175, 0) 75%) left no-repeat;
+
+                        @media only screen and (max-width: (@mobile)) {
+                            display: none;
+                        }
+                    }
+
+                    @media only screen and (max-width: (@mobile)) {
+                        //background:          url('../../assets/img/hubspot/person-photo.png') no-repeat;
+                        width:               65px;
+                        height:              65px;
+                        background-position: center;
+                        background-size:     cover;
+                        border-radius:       9px;
+                        flex-shrink:         0;
+                    }
+                }
+
+                .card__top--info {
+                    display:        flex;
+                    flex-direction: column;
+                    align-items:    flex-start;
+                    height:         100%;
+                    max-width:      100%;
+                    position:       absolute;
+                    top:            0;
+                    left:           0;
+                    padding:        28px 16px 19px 24px;
+
+                    @media only screen and (max-width: (@mobile)) {
+                        position:   relative;
+                        top:        0;
+                        left:       0;
+                        flex-flow:  row wrap;
+                        height:     auto;
+                        min-height: 65px;
+                        width:      100%;
+                        padding:    0 0 0 24px;
+                    }
                 }
             }
 
@@ -210,12 +276,19 @@
                 display:        flex;
                 flex-direction: column;
                 align-items:    flex-start;
-                height:         208px;
+                //min-height:     208px;
+                height:     208px;
                 padding:        20px 24px 30px 24px;
+
+                @media only screen and (max-width: (@mobile)) {
+                    height:  auto;
+                    padding: 0 4px 20px 94px;
+                }
             }
 
             &__episode-count {
                 display:          inline-flex;
+                align-items:      center;
                 border-radius:    3px;
                 background-color: #64c800;
                 height:           26px;
@@ -225,10 +298,10 @@
                 font-size:        14px;
                 font-style:       normal;
                 letter-spacing:   1.3px;
-                line-height:      1.5;
+                line-height:      1.2;
                 text-align:       center;
                 text-transform:   uppercase;
-                padding:          1px 15px;
+                padding:          0 15px;
                 margin-left:      6px;
 
                 @media only screen and (max-width: (@mobile)) {
@@ -236,6 +309,7 @@
                     height:      21px;
                     line-height: 21px;
                     padding:     0 7px;
+                    margin:      0 10px 0 0;
                 }
             }
 
@@ -247,18 +321,19 @@
                 @media only screen and (max-width: (@mobile)) {
                     width:  96px;
                     height: 15px;
+                    margin: 3px 0;
                 }
             }
 
             &__person-photo {
-                width: 100%;
-                max-width: 162px;
-                height: 100%;
-                position: absolute;
-                right: 0;
-                top: 0;
-                z-index: 0;
-                background-repeat: no-repeat;
+                width:                 100%;
+                max-width:             162px;
+                height:                100%;
+                position:              absolute;
+                right:                 0;
+                top:                   0;
+                z-index:               0;
+                background-repeat:     no-repeat;
                 background-position-x: 2px;
             }
 
@@ -272,6 +347,12 @@
                 letter-spacing: 0.3px;
                 text-align:     left;
                 margin:         auto 0 6px;
+
+                @media only screen and (max-width: (@mobile)) {
+                    font-size: 20px;
+                    color:     #232d37;
+                    margin:    5px 0 0;
+                }
             }
 
             &__episode-name {
@@ -285,7 +366,8 @@
                 text-align:     left;
 
                 @media only screen and (max-width: (@mobile)) {
-
+                    font-size:   14px;
+                    font-weight: 400;
                 }
             }
 
@@ -299,9 +381,11 @@
                 text-align:     left;
                 cursor:         pointer;
                 margin-top:     8px;
+                margin-bottom:  35px;
 
                 @media only screen and (max-width: (@mobile)) {
-                    font-size: 12px;
+                    font-size:     12px;
+                    margin-bottom: 0;
                 }
             }
 
@@ -311,6 +395,10 @@
                 width:           100%;
                 box-sizing:      border-box;
                 margin-top:      auto;
+
+                @media only screen and (max-width: (@mobile)) {
+                    margin-top: 15px;
+                }
             }
 
             &__btn {
@@ -329,6 +417,10 @@
 
                 & + .card__btn {
                     margin-left: 14px;
+                }
+
+                @media only screen and (max-width: (@mobile)) {
+                    padding: 0 12px;
                 }
             }
         }
