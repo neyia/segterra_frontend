@@ -4,6 +4,7 @@ module.exports = {
     mode: "development",
     entry: {
         app: "./src/scripts/app.js",
+        podcast: "./src/scripts/podcast.js",
         hubspot: "./src/hubspot/scripts/hubspot.js",
         hubspotRigr: "./src/hubspot/scripts/hubspotRigr.js",
         hubspotRigrBlog: "./src/rigr_blog/scripts/hubspotRigrBlog.js"

@@ -5,7 +5,20 @@ window.addEventListener('load', () => {
     const closeBtn = document.getElementById('close-btn');
     const close = document.getElementById('close');
     const screen = document.getElementById('screen');
-
+    
+    const podcastForm = document.getElementById('podcast-form');
+    
+    podcastForm.onsubmit = function(e) {
+        const success = document.querySelector('.top-section__success');
+        e.preventDefault();
+        this.classList.add("hide");
+        success.classList.add("fadeIn");
+        const fadeOut = function () {
+            success.classList.add("fadeOut")
+        }
+        setTimeout(fadeOut,5000);
+    };
+    
     popupLink.onclick = function () {
         openPopup2();
     };

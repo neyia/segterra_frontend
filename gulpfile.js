@@ -35,7 +35,7 @@ const path = {
     },
     src: {
         html: 'src/*.html',
-        js: [ 'src/scripts/app.js', 'src/hubspot/scripts/hubspot.js', 'src/hubspot/scripts/hubspotRigr.js', 'src/rigr_blog/scripts/hubspotRigrBlog.js'],
+        js: [ 'src/scripts/app.js', 'src/hubspot/scripts/hubspot.js', 'src/hubspot/scripts/hubspotRigr.js', 'src/rigr_blog/scripts/hubspotRigrBlog.js', 'src/scripts/podcast.js'],
         style: [ 'src/styles/style.less', 'src/rigr_blog/styles/rigrBlogStyles.less', 'src/styles/immunity_plans.less', 'src/styles/hubspot_template.less', 'src/styles/hubspot_email_pages.less', 'src/styles/podcast/podcast.less'],
         img: ['src/assets/img/**/*.*','src/hubspot/assets/img/**/*.*', 'src/rigr_blog/assets/img/**/*.*'],
         image: 'src/image/**/*.*',
