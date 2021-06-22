@@ -3,43 +3,47 @@
 @import "../utils/normalize";
 @import "../utils/adjustments";
 @import "../../components/link/_link";
+@import "../../components/heading/_heading";
+@import "../../components/text/_text.css";
 @import "../../components/button/_button";
+@import "../../components/popup/_popup";
 @import "../utils/hide_show";
 
 .podcast {
     background: #ffffff;
-    
+
     &-header {
         width:            100%;
         box-shadow:       0 0 40px rgba(0, 0, 0, 0.06);
         background-color: #ffffff;
+    background-color: #ffffff;
         z-index:          10;
         position:         sticky;
         top:              0;
-        
+
         @media only screen and (max-width: (@tablet)) {
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
         }
-        
+
         &__logo {
             @media only screen and (max-width: (@tablet)) {
                 width:  164px;
                 height: 23px;
             }
         }
-        
+
         &__container {
             display:         flex;
             align-items:     center;
             justify-content: space-between;
             height:          88px;
-            
+
             @media only screen and (max-width: (@tablet)) {
                 justify-content: center;
                 height:          70px;
             }
         }
-        
+
         &__text {
             color:          @gray1;
             font-family:    "Open Sans", Arial, sans-serif;
@@ -51,17 +55,17 @@
             text-transform: uppercase;
             margin-right:   26px;
         }
-        
+
         &__subscribe {
             display:     flex;
             align-items: center;
-            
+
             @media only screen and (max-width: (@tablet)) {
                 display: none;
             }
         }
     }
-    
+
     &__title {
         font-size: 36px;
     }
@@ -70,7 +74,7 @@
 .social-icons {
     display:     flex;
     align-items: center;
-    
+
     &__icon {
         cursor:          pointer;
         transition:      0.2s ease-in;
@@ -82,29 +86,29 @@
         align-items:     center;
         justify-content: center;
         border-radius:   6px;
-        
+
         &:last-child {
             margin-right: 0;
         }
-        
+
         &:hover {
             opacity: 0.6;
         }
     }
-    
+
     &--large {
         justify-content: center;
-        
+
         .social-icons__icon {
             width:            64px;
             height:           64px;
             background-color: #ffffff;
             margin-right:     20px;
-            
+
             &:last-child {
                 margin-right: 0;
             }
-            
+
             @media only screen and (max-width: (@big_mobile)) {
                 width:        56px;
                 height:       56px;
@@ -120,7 +124,8 @@
     justify-content:  center;
     flex-direction:   column;
     padding:          45px 0 51px;
-    
+        padding:          45px 0 51px;
+
     &__text {
         color:          @gray1;
         font-family:    "Open Sans", Arial, sans-serif;
@@ -132,7 +137,7 @@
         text-transform: uppercase;
         margin-bottom:  30px;
         text-align:     center;
-        
+
         @media only screen and (max-width: (@big_mobile)) {
             font-size: 14px;
         }
@@ -149,21 +154,21 @@
     letter-spacing:  0.3px;
     text-align:      center;
     padding-top:     58px;
-    
+
     @media only screen and (max-width: (@big_mobile)) {
         background:      url("../../assets/img/hubspot/mountains_mobile@2x.jpg") no-repeat;
         background-size: cover;
         height:          812px;
         padding-top:     34px;
     }
-    
+
     &__title {
         font-size:     52px;
         font-weight:   600;
         line-height:   78px;
         margin-top:    7px;
         margin-bottom: 20px;
-        
+
         @media only screen and (max-width: (@big_mobile)) {
             font-size:     38px;
             margin-top:    5px;
@@ -171,30 +176,30 @@
             line-height:   1.4;
         }
     }
-    
+
     &__subtitle {
         font-size:   24px;
         line-height: 36px;
         font-weight: 400;
-        
+
         @media only screen and (max-width: (@big_mobile)) {
             font-size: 20px;
             margin:    0;
         }
     }
-    
+
     &__text {
         font-size:      16px;
         font-weight:    600;
         letter-spacing: 3px;
         line-height:    24px;
         text-transform: uppercase;
-        
+
         @media only screen and (max-width: (@big_mobile)) {
             font-size: 14px;
         }
     }
-    
+
     &-form {
         max-width:        470px;
         width:            100%;
@@ -203,34 +208,34 @@
         background-color: #ffffff;
         padding:          44px 44px 60px;
         margin:           80px auto 0;
-        
+
         @media only screen and (max-width: (@big_mobile)) {
             padding:    30px 20px 40px;
             margin-top: 33px;
         }
-        
+
         &__title {
             font-size:   30px;
             font-weight: 600;
             line-height: 44px;
-            
+
             @media only screen and (max-width: (@big_mobile)) {
                 font-size:   24px;
                 line-height: 1.4;
             }
         }
-        
+
         &__text {
             font-size:     16px;
             line-height:   24px;
             margin-top:    12px;
             margin-bottom: 34px;
-            
+
             @media only screen and (max-width: (@big_mobile)) {
                 margin-bottom: 45px;
             }
         }
-        
+
         .form-field {
             width:         100%;
             max-width:     350px;
@@ -243,11 +248,11 @@
             font-size:     16px;
             padding-left:  20px;
             outline:       transparent;
-            
+
             @media only screen and (max-width: (@big_mobile)) {
                 max-width: 295px;
             }
-            
+
             &::placeholder {
                 color:          @gray3;
                 font-size:      16px;
@@ -256,13 +261,13 @@
                 line-height:    24px;
                 text-align:     left;
             }
-            
+
             &:focus,
             &:hover {
                 border-color: @primary;
             }
         }
-        
+
         &__btn {
             width:       100%;
             max-width:   350px;
@@ -270,17 +275,17 @@
             line-height: 48px;
             font-size:   16px;
             margin:      20px auto 0;
-            
+
             @media only screen and (max-width: (@big_mobile)) {
                 max-width: 295px;
             }
         }
-        
+
         &.error {
             .form-field {
                 border-color: @red;
             }
-            
+
             .error-message {
                 font-family:      "Open Sans", Tahoma, Helvetica, Arial, sans-serif;
                 color:            @red;
@@ -294,7 +299,7 @@
             }
         }
     }
-    
+
     &__success {
         max-width:        470px;
         width:            100%;
@@ -305,19 +310,19 @@
         margin:           80px auto 0;
         opacity:          0;
         transition:       opacity 0.3s ease-in;
-        
+
         @media only screen and (max-width: (@big_mobile)) {
             padding: 30px 22px 40px;
         }
-        
+
         &.fadeIn {
             opacity: 1;
         }
-        
+
         &.fadeOut {
             opacity: 0;
         }
-        
+
         .success-title {
             font-size:     30px;
             font-weight:   600;
@@ -326,7 +331,7 @@
             margin-top:    29px;
             margin-bottom: 8px;
         }
-        
+
         .success-text {
             font-size:   16px;
             font-style:  normal;
@@ -338,11 +343,11 @@
 
 .cards-section {
     padding: 113px 0 193px;
-    
+
     @media only screen and (max-width: (@mobile)) {
         padding: 43px 0 93px;
     }
-    
+
     &__title {
         color:          @gray1;
         font-family:    "Open Sans", sans-serif;
@@ -353,7 +358,7 @@
         line-height:    1.5;
         text-align:     center;
         margin:         0 0 59px;
-        
+
         @media only screen and (max-width: (@mobile)) {
             font-size:     30px;
             line-height:   1.33;
@@ -361,17 +366,17 @@
             margin-bottom: 41px;
         }
     }
-    
+
     .cards-wrapper {
         width:     100%;
         max-width: 1200px;
         display:   flex;
         flex-wrap: wrap;
-        
+
         @media only screen and (max-width: 1230px) {
             justify-content: center;
         }
-        
+
         .card {
             width:         100%;
             max-width:     370px;
@@ -382,7 +387,7 @@
             box-shadow:    0 0 50px rgba(0, 0, 0, 0.08);
             overflow:      hidden;
             margin:        0 15px 30px;
-            
+
             @media only screen and (max-width: (@mobile)) {
                 border-bottom: 1px solid @gray7;
                 box-shadow:    none;
@@ -391,18 +396,18 @@
                 height:        auto;
                 margin-bottom: 20px;
             }
-            
+
             &__top {
                 position: relative;
                 height:   200px;
-                
+
                 @media only screen and (max-width: (@mobile)) {
                     display:    flex;
                     height:     auto;
                     min-height: 65px;
                     padding:    0 4px 0;
                 }
-                
+
                 .card__top--cover {
                     height:              100%;
                     max-width:           100%;
@@ -412,7 +417,7 @@
                     //background:
                     //    linear-gradient(90deg, #013972 0, #145494 58%, rgba(29, 102, 175, 0) 75%) left no-repeat,
                     //                  url('../../assets/img/hubspot/person-photo.png') right 0 no-repeat;
-                    
+
                     &::before {
                         content:    '';
                         position:   absolute;
@@ -421,12 +426,12 @@
                         height:     100%;
                         width:      100%;
                         background: linear-gradient(90deg, #013972 0, #145494 58%, rgba(29, 102, 175, 0) 75%) left no-repeat;
-                        
+
                         @media only screen and (max-width: (@mobile)) {
                             display: none;
                         }
                     }
-                    
+
                     @media only screen and (max-width: (@mobile)) {
                         //background:          url('../../assets/img/hubspot/person-photo.png') no-repeat;
                         width:               65px;
@@ -437,7 +442,7 @@
                         flex-shrink:         0;
                     }
                 }
-                
+
                 .card__top--info {
                     display:        flex;
                     flex-direction: column;
@@ -448,7 +453,7 @@
                     top:            0;
                     left:           0;
                     padding:        28px 16px 19px 24px;
-                    
+
                     @media only screen and (max-width: (@mobile)) {
                         position:   relative;
                         top:        0;
@@ -461,7 +466,7 @@
                     }
                 }
             }
-            
+
             &__bottom {
                 display:        flex;
                 flex-direction: column;
@@ -469,13 +474,13 @@
                 //min-height:     208px;
                 height:         208px;
                 padding:        20px 24px 30px 24px;
-                
+
                 @media only screen and (max-width: (@mobile)) {
                     height:  auto;
                     padding: 0 4px 20px 94px;
                 }
             }
-            
+
             &__episode-count {
                 display:          inline-flex;
                 align-items:      center;
@@ -493,7 +498,7 @@
                 text-transform:   uppercase;
                 padding:          0 15px;
                 margin-left:      6px;
-                
+
                 @media only screen and (max-width: (@mobile)) {
                     font-size:   10px;
                     height:      21px;
@@ -502,19 +507,19 @@
                     margin:      0 10px 0 0;
                 }
             }
-            
+
             &__waves {
                 width:      146px;
                 height:     24px;
                 margin-top: 48px;
-                
+
                 @media only screen and (max-width: (@mobile)) {
                     width:  96px;
                     height: 15px;
                     margin: 3px 0;
                 }
             }
-            
+
             &__person-photo {
                 width:                 100%;
                 max-width:             162px;
@@ -526,7 +531,7 @@
                 background-repeat:     no-repeat;
                 background-position-x: 2px;
             }
-            
+
             &__person-name {
                 color:          #ffffff;
                 font-family:    "Open Sans", sans-serif;
@@ -537,14 +542,14 @@
                 letter-spacing: 0.3px;
                 text-align:     left;
                 margin:         auto 0 6px;
-                
+
                 @media only screen and (max-width: (@mobile)) {
                     font-size: 20px;
                     color:     @gray1;
                     margin:    5px 0 0;
                 }
             }
-            
+
             &__episode-name {
                 color:          @gray1;
                 font-family:    "Open Sans", sans-serif;
@@ -554,13 +559,13 @@
                 line-height:    1.5;
                 letter-spacing: 0.3px;
                 text-align:     left;
-                
+
                 @media only screen and (max-width: (@mobile)) {
                     font-size:   14px;
                     font-weight: 400;
                 }
             }
-            
+
             &__popup-link {
                 color:          #87919b;
                 font-family:    "Open Sans", sans-serif;
@@ -572,25 +577,25 @@
                 cursor:         pointer;
                 margin-top:     8px;
                 margin-bottom:  35px;
-                
+
                 @media only screen and (max-width: (@mobile)) {
                     font-size:     12px;
                     margin-bottom: 0;
                 }
             }
-            
+
             &__buttons-block {
                 display:         flex;
                 justify-content: center;
                 width:           100%;
                 box-sizing:      border-box;
                 margin-top:      auto;
-                
+
                 @media only screen and (max-width: (@mobile)) {
                     margin-top: 15px;
                 }
             }
-            
+
             &__btn {
                 background-color: @gray4;
                 border:           none;
@@ -598,17 +603,17 @@
                 flex-grow:        1;
                 letter-spacing:   0.3px;
                 text-align:       center;
-                
+
                 &:focus,
                 &:hover {
                     color:            #fff;
                     background-color: @primary--hover;
                 }
-                
+
                 & + .card__btn {
                     margin-left: 14px;
                 }
-                
+
                 @media only screen and (max-width: (@mobile)) {
                     padding: 0 12px;
                 }
@@ -622,7 +627,7 @@
     padding:          74px 0 200px;
     font-family:      "Open Sans", Arial, sans-serif;
     color:            @gray1;
-    
+
     &__title {
         font-size:      36px;
         font-weight:    600;
@@ -631,12 +636,12 @@
         line-height:    54px;
         text-align:     center;
     }
-    
+
     &__cards {
         display:         flex;
         justify-content: space-between;
     }
-    
+
     &__card {
         width:            100%;
         max-width:        564px;
@@ -644,16 +649,16 @@
         background-color: #ffffff;
         margin-top:       97px;
         padding:          0 70px 50px;
-        
+
         &:first-child {
             margin-right: 15px;
         }
-        
+
         &:nth-child(2) {
             margin-left: 15px;
         }
     }
-    
+
     &__image {
         width:         240px;
         height:        240px;
@@ -661,7 +666,7 @@
         display:       block;
         margin:        -50px auto 39px;
     }
-    
+
     &__name {
         font-size:      24px;
         font-weight:    600;
@@ -671,7 +676,7 @@
         text-align:     left;
         margin-bottom:  11px;
     }
-    
+
     &__text {
         font-size:      16px;
         font-style:     normal;
@@ -680,14 +685,14 @@
         text-align:     left;
         margin-bottom:  15px;
     }
-    
+
     .separator {
         width:            100%;
         height:           1px;
         background-color: @gray7;
         margin:           47px 0;
     }
-    
+
     &__featured {
         font-weight:    600;
         font-style:     normal;
@@ -696,7 +701,7 @@
         text-align:     left;
         text-transform: uppercase;
     }
-    
+
     &__quote {
         font-size:      30px;
         font-style:     normal;
@@ -704,25 +709,186 @@
         line-height:    44px;
         text-align:     center;
     }
-    
+
     &__quote-image {
         display: block;
         margin:  12px 51px 0 auto;
     }
-    
+
     &__logos {
         display:     flex;
         align-items: baseline;
         flex-wrap:   wrap;
         margin-top:  29px;
     }
-    
+
     &__logo {
         margin-right:  28px;
         margin-bottom: 20px;
-        
+
         &:last-child {
             margin-right: 0;
         }
+    }
+}
+/* podcast episode popup BEGIN--- */
+.popup-episode {
+    font-family:      "Open Sans", sans-serif;
+    position:         fixed;
+    top:              50%;
+    left:             50%;
+    right:            50%;
+    transform:        translate(-50%, -50%);
+    border-radius:    15px;
+    box-sizing:       border-box;
+    bottom:           inherit;
+    width:            100%;
+    max-width:        830px;
+    height:           auto;
+    background-color: #fff;
+    z-index:          12;
+    box-shadow:       0 0 10px 2px rgba(0, 0, 0, 0.06);
+    overflow:         auto;
+    max-height:       98%;
+    padding:          60px 71px 60px;
+    margin:           auto;
+
+    @media only screen and (max-width: (@tablet_horizontal)) {
+        max-width: 98%;
+        padding:   60px 36px 60px;
+    }
+    @media only screen and (max-width: (@big_mobile)) {
+        height:        100%;
+        max-height:    100%;
+        width:         100%;
+        max-width:     100%;
+        border-radius: 0;
+        padding:       50px 20px 100px;
+    }
+
+    .close-block {
+        width:  48px;
+        height: 48px;
+    }
+
+    .close-block:after,
+    .close-block:before {
+        height: 21px;
+        left:   49%;
+        top:    27%;
+    }
+
+    .popup-episode__photo {
+        display: flex;
+
+        &-item {
+            width:               60px;
+            height:              60px;
+            background-size:     cover;
+            background-position: center;
+            background-repeat:   no-repeat;
+            border-radius:       50%;
+
+            & + .popup-episode__photo-item {
+                margin-left: 16px;
+
+                @media only screen and (max-width: (@big_mobile)) {
+                    margin-left: 12px;
+                }
+            }
+
+            @media only screen and (max-width: (@big_mobile)) {
+                width:  44px;
+                height: 44px;
+            }
+        }
+
+    }
+
+    &__title {
+        max-width:   630px;
+        line-height: 1.45;
+        margin:      26px 0 0;
+
+        @media only screen and (max-width: (@big_mobile)) {
+            line-height: 1.5;
+            margin:      21px 0 0;
+        }
+    }
+
+    &__date {
+        font-family:    "Open Sans", sans-serif;
+        color:          #6e7882;
+        font-size:      14px;
+        font-style:     normal;
+        letter-spacing: 0.3px;
+        line-height:    1.42;
+        text-align:     left;
+        margin-top:     10px;
+
+        span {
+            margin-left: 7px;
+        }
+    }
+
+    &__text {
+        margin-top:     26px;
+        letter-spacing: 0.27px;
+        font-size:      16px;
+
+        @media only screen and (max-width: (@tablet)) {
+            font-size: 16px;
+        }
+    }
+
+    &__link {
+        font-size: 16px;
+    }
+
+    .card__buttons-block {
+        margin-top: 30px;
+
+        @media only screen and (max-width: (@big_mobile)) {
+            display:         flex;
+            justify-content: center;
+        }
+
+        .card__btn {
+            border:     none;
+            text-align: center;
+            max-width:  200px;
+            margin:     0;
+
+            & + .card__btn {
+                margin-left: 16px;
+
+                @media only screen and (max-width: (@big_mobile)) {
+                    margin-left: 21px;
+                }
+            }
+
+            @media only screen and (max-width: (@big_mobile)) {
+                flex-grow: 1;
+            }
+        }
+    }
+}
+
+/* ---podcast episode popup END */
+.screen {
+    background: #000000;
+    position:   fixed;
+    top:        0;
+    right:      0;
+    bottom:     0;
+    left:       0;
+    opacity:    0;
+    visibility: hidden;
+    z-index:    10;
+    transition: all 0.15s ease-out;
+
+    &.is-visible {
+        visibility: visible;
+        opacity:    0.6;
     }
 }

@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
 
-    const popupLink = document.getElementsByClassName('card__btn');
+    const popupLink = document.getElementById('card__popup-link');
     const popup= document.getElementById('popup');
     const closeBtn = document.getElementById('close-btn');
     const close = document.getElementById('close');
@@ -20,22 +20,22 @@ window.addEventListener('load', () => {
     };
     
     popupLink.onclick = function () {
-        openPopup2();
+        openPopup();
     };
     closeBtn.onclick = function () {
-        closePopup2();
+        closePopup();
     };
     screen.onclick = function () {
-        closePopup2();
+        closePopup();
     };
     close.onclick = function () {
-        closePopup2();
+        closePopup();
     };
-    function openPopup2() {
+    function openPopup() {
         popup.classList.remove('hide');
         screen.classList.add('is-visible');
     }
-    function closePopup2() {
+    function closePopup() {
         popup.classList.add('hide');
         screen.classList.remove('is-visible');
     }
