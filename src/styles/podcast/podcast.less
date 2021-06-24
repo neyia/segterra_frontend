@@ -146,21 +146,24 @@
 }
 
 .top-section {
-    background:      url("../../assets/img/hubspot/mountains@2x.jpg") no-repeat;
-    height:          800px;
-    background-size: cover;
-    color:           @gray1;
-    font-family:     "Open Sans", Arial, sans-serif;
-    font-style:      normal;
-    letter-spacing:  0.3px;
-    text-align:      center;
-    padding-top:     58px;
+    background:          url("../../assets/img/hubspot/mountains@2x.jpg") no-repeat;
+    height:              800px;
+    background-size:     cover;
+    background-position: 50%;
+    background-repeat:   no-repeat;
+    color:               @gray1;
+    font-family:         "Open Sans", Arial, sans-serif;
+    font-style:          normal;
+    letter-spacing:      0.3px;
+    text-align:          center;
+    padding-top:         58px;
     
     @media only screen and (max-width: (@big_mobile)) {
-        background:      url("../../assets/img/hubspot/mountains_mobile@2x.jpg") no-repeat;
-        background-size: cover;
-        height:          812px;
-        padding-top:     34px;
+        background:          url("../../assets/img/hubspot/mountains_mobile@2x.jpg") no-repeat;
+        background-size:     cover;
+        background-position: 30%;
+        height:              812px;
+        padding-top:         34px;
     }
     
     &__title {
@@ -169,6 +172,8 @@
         line-height:   78px;
         margin-top:    7px;
         margin-bottom: 20px;
+        font-family:   "Open Sans", Arial, sans-serif;
+        color:         @gray1;
         
         @media only screen and (max-width: (@big_mobile)) {
             font-size:     38px;
@@ -182,6 +187,7 @@
         font-size:   24px;
         line-height: 36px;
         font-weight: 400;
+        font-family: "Open Sans", Arial, sans-serif;
         
         @media only screen and (max-width: (@big_mobile)) {
             font-size: 20px;
@@ -249,6 +255,7 @@
             font-size:     16px;
             padding-left:  20px;
             outline:       transparent;
+            font-weight:   400;
             
             @media only screen and (max-width: (@big_mobile)) {
                 max-width: 295px;
@@ -997,4 +1004,160 @@
         visibility: visible;
         opacity:    0.6;
     }
+}
+
+// for hubspot only {
+form {
+    max-width:        470px;
+    width:            100%;
+    box-shadow:       0 0 40px rgba(0, 0, 0, 0.06);
+    border-radius:    12px;
+    background-color: #ffffff;
+    padding:          44px 44px 60px;
+    margin:           80px auto 0;
+    
+    @media only screen and (max-width: (@big_mobile)) {
+        padding:    30px 20px 40px;
+        margin-top: 33px;
+    }
+}
+
+.submitted-message {
+    max-width:        470px;
+    width:            100%;
+    box-shadow:       0 0 40px rgba(0, 0, 0, 0.06);
+    border-radius:    12px;
+    background-color: #ffffff;
+    padding:          50px 50px 71px;
+    margin:           80px auto 0;
+    opacity:          0;
+    transition:       opacity 0.3s ease-in;
+    
+    @media only screen and (max-width: (@big_mobile)) {
+        padding: 30px 22px 40px;
+    }
+    
+    &.fadeIn {
+        opacity: 1;
+    }
+    
+    &.fadeOut {
+        opacity: 0;
+    }
+    
+    div {
+        &:first-child {
+            display:         flex;
+            justify-content: center;
+        }
+        
+        &:nth-child(2) {
+            font-size:     30px;
+            font-weight:   600;
+            line-height:   44px;
+            text-align:    center;
+            margin-top:    29px;
+            margin-bottom: 8px;
+            font-family:   "Open Sans", sans-serif;
+        }
+        
+        &:nth-child(3) {
+            font-size:   16px;
+            font-style:  normal;
+            line-height: 24px;
+            text-align:  center;
+            font-family: "Open Sans", sans-serif;
+        }
+    }
+}
+
+.hs-richtext.hs-main-font-element {
+    h1 {
+        font-size:   30px !important;
+        font-weight: 600;
+        line-height: 44px;
+        font-family: "Open Sans", sans-serif;
+        
+        @media only screen and (max-width: (@big_mobile)) {
+            font-size:   24px;
+            line-height: 1.4;
+        }
+    }
+}
+
+.hs-richtext.hs-main-font-element {
+    p {
+        font-size:     16px;
+        line-height:   24px;
+        margin-top:    12px;
+        margin-bottom: 34px;
+        font-family:   "Open Sans", sans-serif;
+        
+        @media only screen and (max-width: (@big_mobile)) {
+            margin-bottom: 45px;
+        }
+    }
+}
+
+.hs-button.primary {
+    transition:       all .2s ease-out;
+    border-radius:    3px;
+    display:          inline-block;
+    font-weight:      600 !important;
+    letter-spacing:   .23px;
+    box-sizing:       border-box;
+    cursor:           pointer;
+    border-style:     hidden;
+    border-color:     #0af !important;
+    background-color: #0af;
+    text-decoration:  none;
+    padding:          0 20px !important;
+    width:            100%;
+    max-width:        350px;
+    height:           48px;
+    line-height:      48px;
+    font-size:        16px !important;
+    margin:           20px auto 0;
+    color:            #ffffff !important;
+    text-align:       center !important;
+    outline:          transparent !important;
+    
+    &:hover,
+    &:focus {
+        color:            #fff;
+        border-color:     #46c3ff;
+        background-color: #46c3ff;
+        text-decoration:  none;
+    }
+    
+    &:active {
+        color:            #055f8c;
+        border-color:     #0096e1;
+        background-color: #0096e1;
+    }
+    
+    @media only screen and (max-width: (@big_mobile)) {
+        max-width: 295px;
+    }
+}
+
+.hs-error-msgs {
+    list-style: none !important;
+}
+
+.hs-error-msgs > li > label,
+.hs-error-msg {
+    font-family:   "Open Sans", Arial, sans-serif;
+    color:         @red !important;
+    font-size:     12px;
+    line-height:   17px;
+    margin-top:    4px;
+    margin-bottom: 0;
+    text-align:    left;
+    padding-left:  20px;
+    font-weight:   400 !important;
+}
+
+.hs-input.invalid.error {
+    border-color: @red;
 }
