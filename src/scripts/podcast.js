@@ -1,13 +1,12 @@
 window.addEventListener('load', () => {
 
-    const popupLink = document.getElementById('card__popup-link');
+    const popupLink = document.getElementById("card__popup-link");
     const popup= document.getElementById('popup');
-    const closeBtn = document.getElementById('close-btn');
     const close = document.getElementById('close');
     const screen = document.getElementById('screen');
-    
+
     const podcastForm = document.getElementById('podcast-form');
-    
+
     podcastForm.onsubmit = function(e) {
         const success = document.querySelector('.top-section__success');
         e.preventDefault();
@@ -18,12 +17,9 @@ window.addEventListener('load', () => {
         }
         setTimeout(fadeOut,5000);
     };
-    
+
     popupLink.onclick = function () {
         openPopup();
-    };
-    closeBtn.onclick = function () {
-        closePopup();
     };
     screen.onclick = function () {
         closePopup();
