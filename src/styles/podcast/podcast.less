@@ -1161,3 +1161,39 @@ form {
 .hs-input.invalid.error {
     border-color: @red;
 }
+
+.podcast-form-wrapper-js {
+    input[type="email"] {
+        width:         100%;
+        max-width:     350px;
+        height:        48px;
+        line-height:   48px;
+        border-radius: 3px;
+        border:        1px solid @gray7 !important;
+        font-family:   "Open Sans", Arial, sans-serif;
+        color:         @gray1;
+        font-size:     16px;
+        padding:       0 0 0 16px !important;
+        outline:       transparent;
+        margin-bottom: 0 !important;
+        font-weight:   400;
+        
+        @media only screen and (max-width: (@big_mobile)) {
+            max-width: 295px;
+        }
+        
+        &::placeholder {
+            color:          @gray3;
+            font-size:      16px;
+            font-style:     normal;
+            letter-spacing: 0.3px;
+            line-height:    24px;
+            text-align:     left;
+        }
+        
+        &:focus,
+        &:hover {
+            border-color: @primary;
+        }
+    }
+}
