@@ -19,31 +19,31 @@ window.addEventListener('load', () => {
     // };
     
     // for hubspot
-    const podcastForm = document.getElementsByClassName('podcast-form-wrapper-js')[0];
-    podcastForm.addEventListener('submit', function(e){
-        e.preventDefault();
-        const fadeOut = function () {
-            const success = document.getElementsByClassName('submitted-message')[0];
-            success.classList.add("fadeOut")
-        }
-        setTimeout(fadeOut,5000);
-    });
-    
-    popupLink.onclick = function () {
-        openPopup();
-    };
-    screen.onclick = function () {
-        closePopup();
-    };
-    close.onclick = function () {
-        closePopup();
-    };
-    function openPopup() {
-        popup.classList.remove('hide');
-        screen.classList.add('is-visible');
-    }
-    function closePopup() {
-        popup.classList.add('hide');
-        screen.classList.remove('is-visible');
-    }
+    // const podcastForm = document.getElementsByClassName('podcast-form-wrapper-js')[0];
+    // podcastForm.addEventListener('submit', function(e){
+    //     e.preventDefault();
+    //     const fadeOut = function () {
+    //         const success = document.getElementsByClassName('submitted-message')[0];
+    //         success.classList.add("fadeOut")
+    //     }
+    //     setTimeout(fadeOut,5000);
+    // });
+    //
+    // popupLink.onclick = function () {
+    //     openPopup();
+    // };
+    // screen.onclick = function () {
+    //     closePopup();
+    // };
+    // close.onclick = function () {
+    //     closePopup();
+    // };
+    // function openPopup() {
+    //     popup.classList.remove('hide');
+    //     screen.classList.add('is-visible');
+    // }
+    // function closePopup() {
+    //     popup.classList.add('hide');
+    //     screen.classList.remove('is-visible');
+    // }
 });
