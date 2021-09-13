@@ -72,3 +72,4 @@ Segterra_Front_CodeStyle.xml
 
 ![Set watcher](src/docs/babelscope.png)
 
+# segterra_local_frontend
